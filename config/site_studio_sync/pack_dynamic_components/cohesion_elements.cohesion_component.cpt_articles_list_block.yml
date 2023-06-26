@@ -1,0 +1,63 @@
+uuid: 6ce25421-9b69-4616-80c0-9ed8b1bdfd02
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_custom_styles.cohesion_custom_style.63181883
+    - cohesion_elements.cohesion_component.cpt_drupal_blocks
+    - cohesion_elements.cohesion_component_category.cpt_cat_dynamic_components
+label: 'Articles list block'
+id: cpt_articles_list_block
+json_values: |
+  {
+      "canvas": [
+          {
+              "uid": "cpt_drupal_blocks",
+              "type": "component",
+              "title": "Drupal blocks",
+              "enabled": true,
+              "category": "category-3",
+              "componentId": "cpt_drupal_blocks",
+              "componentType": "container",
+              "iconColor": "custom",
+              "uuid": "fd84c3a2-c2cb-4847-9026-7b8cd2848903",
+              "parentUid": "root",
+              "status": {},
+              "children": []
+          }
+      ],
+      "componentForm": [],
+      "mapper": {},
+      "model": {
+          "fd84c3a2-c2cb-4847-9026-7b8cd2848903": {
+              "settings": {
+                  "title": "Drupal blocks"
+              },
+              "33477453-ecf9-49b5-873b-67737b65fefe": "views_block_article_listing_block",
+              "dda7054d-09f6-4fdc-82f6-138404466a96": "dark-title",
+              "609b5301-04bf-45ce-82af-509436f29597": "coh-style-margin-bottom-small"
+          }
+      },
+      "previewModel": {
+          "fd84c3a2-c2cb-4847-9026-7b8cd2848903": {}
+      },
+      "variableFields": {
+          "fd84c3a2-c2cb-4847-9026-7b8cd2848903": []
+      },
+      "disabledNodes": [],
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_dynamic_components
+preview_image: ''
+has_quick_edit: null
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-articles-list-block
+weight: 0

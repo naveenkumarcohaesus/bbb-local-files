@@ -1,0 +1,31 @@
+core.entity_form_display.node.team_member.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_metatags:
+          region: content
+          settings:
+            sidebar: true
+            use_details: true
+          third_party_settings: {  }
+          type: metatag_firehose
+          weight: 27
+core.entity_view_display.node.team_member.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_metatags:
+          label: above
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+          type: metatag_empty_formatter
+          weight: 102
+field.field.node.team_member.field_team_member_group:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false

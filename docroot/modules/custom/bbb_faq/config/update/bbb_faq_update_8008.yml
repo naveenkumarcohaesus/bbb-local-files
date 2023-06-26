@@ -1,0 +1,16 @@
+core.entity_form_display.taxonomy_term.faq_category.default:
+  expected_config: { }
+  update_actions:
+    add:
+      content:
+        field_cta_url:
+          settings:
+            enabled_attributes:
+              title: false
+    change:
+      content:
+        field_cta_url:
+          settings:
+            enabled_attributes:
+              aria-label: false
+              name: true

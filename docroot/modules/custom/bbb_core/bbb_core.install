@@ -1,0 +1,151 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the BBB Core module.
+ */
+
+use Drupal\block\Entity\Block;
+
+/**
+ * Enable simple sitemap config.
+ */
+function bbb_core_update_8001() {
+
+  $configs = [
+    'simple_sitemap.bundle_settings.default.node.article',
+    'simple_sitemap.bundle_settings.default.node.case_study',
+    'simple_sitemap.bundle_settings.default.node.event',
+    'simple_sitemap.bundle_settings.default.node.landing_page',
+    'simple_sitemap.bundle_settings.default.node.news',
+    'simple_sitemap.bundle_settings.default.node.page',
+    'simple_sitemap.bundle_settings.default.node.person',
+    'simple_sitemap.bundle_settings.default.node.place',
+    'simple_sitemap.bundle_settings.default.node.product',
+    'simple_sitemap.bundle_settings.index.node.article',
+    'simple_sitemap.bundle_settings.index.node.case_study',
+    'simple_sitemap.bundle_settings.index.node.event',
+    'simple_sitemap.bundle_settings.index.node.landing_page',
+    'simple_sitemap.bundle_settings.index.node.news',
+    'simple_sitemap.bundle_settings.index.node.page',
+    'simple_sitemap.bundle_settings.index.node.place',
+    'simple_sitemap.bundle_settings.index.node.product',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_core', 'install');
+  }
+}
+
+/**
+ * Enable metatag modules and config.
+ */
+function bbb_core_update_8002() {
+
+  // Install metatag modules.
+  \Drupal::service('module_installer')->install([
+    'metatag_verification',
+    'schema_organization',
+  ]);
+
+  // Import metatag configs.
+  $configs = [
+    'metatag.settings',
+    'metatag.metatag_defaults.403',
+    'metatag.metatag_defaults.404',
+    'metatag.metatag_defaults.front',
+    'metatag.metatag_defaults.global',
+    'metatag.metatag_defaults.node__page',
+    'metatag.metatag_defaults.node__person',
+    'metatag.metatag_defaults.node__place',
+    'metatag.metatag_defaults.node',
+    'metatag.metatag_defaults.taxonomy_term',
+    'metatag.metatag_defaults.user',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_core', 'optional');
+  }
+}
+
+/**
+ * Import main menu navigation block.
+ */
+function bbb_core_update_8003() {
+  // Import main menu navigation blocks.
+  _bbb_article_rewrite_configuration('block.block.mainnavigation_level4', 'bbb_core', 'install');
+  _bbb_article_rewrite_configuration('block.block.mainnavigation_level2', 'bbb_core', 'install');
+  _bbb_article_rewrite_configuration('block.block.mainnavigation_level3', 'bbb_core', 'install');
+  _bbb_article_rewrite_configuration('block.block.mainnavigation_level5', 'bbb_core', 'install');
+  // Place main navigation blocks to site studio hidden region.
+  $block = Block::load('mainnavigation_level4');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+  $block = Block::load('mainnavigation_level2');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+  $block = Block::load('mainnavigation_level3');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+  $block = Block::load('mainnavigation_level5');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+}
+
+/**
+ * Update metadata settings file.
+ */
+function bbb_core_update_8004() {
+  _bbb_article_rewrite_configuration('metatag.settings', 'bbb_core', 'optional');
+}
+
+/**
+ * Import Footnotes group block.
+ */
+function bbb_core_update_8005() {
+  // Import Footnotes group block.
+  _bbb_article_rewrite_configuration('block.block.footnotesgroup', 'bbb_core', 'optional');
+  // Place Footnotes group blocks to site studio hidden region.
+  $block = Block::load('footnotesgroup');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+}
+
+/**
+ * Import metatag configs.
+ */
+function bbb_core_update_8006() {
+  $configs = [
+    'metatag.metatag_defaults.node__news',
+    'metatag.metatag_defaults.node',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_core', 'optional');
+  }
+}
+
+/**
+ * Import Alert Banner block.
+ */
+function bbb_core_update_8007() {
+  _bbb_article_rewrite_configuration('block.block.alertbanner', 'bbb_core', 'install');
+  // Place Alert Banner block to Header region.
+  $block = Block::load('alertbanner');
+  $block->setRegion('header');
+  $block->save();
+}
+
+/**
+ * Import Webform CDN configuration, to avoid CDN error message.
+ */
+function bbb_core_update_8008() {
+  _bbb_article_rewrite_configuration('webform.settings', 'bbb_core', 'rewrite');
+}
+
+/**
+ * Import Moderation Dashboard configuration, to enable Pull chart.js from CDN.
+ */
+function bbb_core_update_8009() {
+  _bbb_article_rewrite_configuration('moderation_dashboard.settings', 'bbb_core', 'rewrite');
+}

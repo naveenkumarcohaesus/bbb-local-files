@@ -1,0 +1,21 @@
+uuid: 0e6eec84-e459-41db-b5c6-a415045af527
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_programme_application_date
+    - taxonomy.vocabulary.programme
+  module:
+    - datetime_range
+id: taxonomy_term.programme.field_programme_application_date
+field_name: field_programme_application_date
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme Application Date'
+description: 'The dates that applications can be accepted between the start and end dates'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

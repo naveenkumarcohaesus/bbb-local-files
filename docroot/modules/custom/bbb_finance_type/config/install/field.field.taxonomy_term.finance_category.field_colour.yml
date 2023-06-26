@@ -1,0 +1,21 @@
+uuid: 4ac26fbf-3486-485f-98ba-dcf064f37c3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_colour
+    - taxonomy.vocabulary.finance_category
+  module:
+    - options
+id: taxonomy_term.finance_category.field_colour
+field_name: field_colour
+entity_type: taxonomy_term
+bundle: finance_category
+label: Colour
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

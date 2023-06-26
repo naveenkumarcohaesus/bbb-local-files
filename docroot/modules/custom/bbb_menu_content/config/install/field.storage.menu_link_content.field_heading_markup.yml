@@ -1,0 +1,30 @@
+uuid: 73dd827d-fbea-4f70-8a24-0fa9580f3562
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+    - options
+id: menu_link_content.field_heading_markup
+field_name: field_heading_markup
+entity_type: menu_link_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: h2
+      label: h2
+    -
+      value: h3
+      label: h3
+    -
+      value: h4
+      label: h4
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

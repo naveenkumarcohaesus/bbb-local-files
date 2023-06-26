@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: x_large_image_w816_h300
+label: 'X Large Image W816 H300'
+effects:
+  f551eced-2b9b-4450-b481-5c936e236eb4:
+    uuid: f551eced-2b9b-4450-b481-5c936e236eb4
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 816
+      height: 300
+      crop_type: focal_point

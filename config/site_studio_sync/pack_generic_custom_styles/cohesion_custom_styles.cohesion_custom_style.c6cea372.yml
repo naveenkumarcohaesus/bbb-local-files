@@ -1,0 +1,156 @@
+uuid: 4a98dd5d-1930-489b-be23-b27743c53764
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.spacing
+label: 'Spacing 7 Bottom'
+id: c6cea372
+json_values: |
+  {
+      "preview": {
+          "text": "<div class=\"coh-preview\">Default content for 'Generic'.<\/div>\n",
+          "textFormat": "cohesion"
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "styles": {
+          "settings": {
+              "element": "div",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "styles": {
+              "xs": {
+                  "margin": {
+                      "margin-bottom": {
+                          "value": "[style-guide:spacing:spacing-7-small-size]"
+                      }
+                  }
+              },
+              "sm": {
+                  "margin": {
+                      "margin-bottom": {
+                          "value": "[style-guide:spacing:spacing-7-medium-size]"
+                      }
+                  }
+              },
+              "xl": {
+                  "margin": {
+                      "margin-bottom": {
+                          "value": "[style-guide:spacing:spacing-7-large-size]"
+                      }
+                  }
+              }
+          }
+      },
+      "variableFields": [
+          "styles.styles.xs.margin.margin-bottom.value",
+          "styles.styles.sm.margin.margin-bottom.value",
+          "styles.styles.xl.margin.margin-bottom.value"
+      ],
+      "previewModel": {
+          "styles": {
+              "styles": {
+                  "xs": {
+                      "margin": {
+                          "margin-bottom": {
+                              "value": "[style-guide:spacing:spacing-7-small-size]"
+                          }
+                      }
+                  },
+                  "sm": {
+                      "margin": {
+                          "margin-bottom": {
+                              "value": "[style-guide:spacing:spacing-7-medium-size]"
+                          }
+                      }
+                  },
+                  "xl": {
+                      "margin": {
+                          "margin-bottom": {
+                              "value": "[style-guide:spacing:spacing-7-large-size]"
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Layout",
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "layout",
+                  "children": [
+                      {
+                          "formKey": "margin",
+                          "breakpoints": [
+                              {
+                                  "name": "xs"
+                              },
+                              {
+                                  "name": "sm"
+                              },
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "margin-equal",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-top",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-bottom",
+                                  "active": true
+                              },
+                              {
+                                  "name": "margin-left",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-right",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-block-start",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-block-end",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-inline-start",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-inline-end",
+                                  "active": false
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-spacing-7-bottom
+custom_style_type: generic
+available_in_wysiwyg: true
+parent: null
+weight: 399

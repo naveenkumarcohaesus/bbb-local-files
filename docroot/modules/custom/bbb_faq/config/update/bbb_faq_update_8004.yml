@@ -1,0 +1,80 @@
+field.field.taxonomy_term.faq_category.field_cta_url:
+  expected_config:
+    required: false
+  update_actions:
+    change:
+      required: true
+views.view.faq:
+  expected_config:
+    display:
+      default:
+        display_options:
+          relationships: {  }
+  update_actions:
+    add:
+      display:
+        default:
+          display_options:
+            filters:
+              parent_target_id:
+                admin_label: ''
+                entity_field: parent
+                entity_type: taxonomy_term
+                expose:
+                  description: ''
+                  identifier: ''
+                  label: ''
+                  max_placeholder: ''
+                  min_placeholder: ''
+                  multiple: false
+                  operator: ''
+                  operator_id: ''
+                  operator_limit_selection: false
+                  operator_list: {  }
+                  placeholder: ''
+                  remember: false
+                  remember_roles:
+                    authenticated: authenticated
+                  required: false
+                  use_operator: false
+                exposed: false
+                field: parent_target_id
+                group: 1
+                group_info:
+                  default_group: All
+                  default_group_multiple: {  }
+                  description: ''
+                  group_items: {  }
+                  identifier: ''
+                  label: ''
+                  multiple: false
+                  optional: true
+                  remember: false
+                  widget: select
+                group_type: group
+                id: parent_target_id
+                is_grouped: false
+                operator: empty
+                plugin_id: numeric
+                relationship: parent_target_id
+                table: taxonomy_term__parent
+                value:
+                  max: ''
+                  min: ''
+                  value: ''
+    change:
+      display:
+        default:
+          display_options:
+            relationships:
+              parent_target_id:
+                admin_label: Parent
+                entity_field: parent
+                entity_type: taxonomy_term
+                field: parent_target_id
+                group_type: group
+                id: parent_target_id
+                plugin_id: standard
+                relationship: none
+                required: false
+                table: taxonomy_term__parent

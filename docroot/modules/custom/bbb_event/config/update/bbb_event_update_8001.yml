@@ -1,0 +1,95 @@
+field.field.node.event.field_business_structure:
+  expected_config:
+    description: null
+    required: false
+    settings:
+      handler_settings:
+        target_bundles:
+          - business_structure
+  update_actions:
+    delete:
+      settings:
+        handler_settings:
+          target_bundles:
+            - business_structure
+    add:
+      settings:
+        handler_settings:
+          auto_create: false
+          auto_create_bundle: ''
+          sort:
+            direction: asc
+            field: name
+    change:
+      description: ''
+      required: true
+      settings:
+        handler_settings:
+          target_bundles:
+            business_structure: business_structure
+field.field.node.event.field_content_owner:
+  expected_config:
+    description: null
+    required: false
+  update_actions:
+    change:
+      description: ''
+      required: true
+field.field.node.event.field_region:
+  expected_config:
+    description: null
+    required: false
+    settings:
+      handler_settings:
+        target_bundles:
+          - region
+  update_actions:
+    delete:
+      settings:
+        handler_settings:
+          target_bundles:
+            - region
+    add:
+      settings:
+        handler_settings:
+          auto_create: false
+          auto_create_bundle: ''
+          sort:
+            direction: asc
+            field: name
+    change:
+      description: ''
+      required: true
+      settings:
+        handler_settings:
+          target_bundles:
+            region: region
+field.field.node.event.field_topic:
+  expected_config:
+    description: null
+    required: false
+    settings:
+      handler_settings:
+        target_bundles:
+          - business_topic
+  update_actions:
+    delete:
+      settings:
+        handler_settings:
+          target_bundles:
+            - business_topic
+    add:
+      settings:
+        handler_settings:
+          auto_create: false
+          auto_create_bundle: ''
+          sort:
+            direction: asc
+            field: name
+    change:
+      description: ''
+      required: true
+      settings:
+        handler_settings:
+          target_bundles:
+            business_topic: business_topic

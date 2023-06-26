@@ -1,0 +1,16 @@
+{{ attach_library('bbb_previously_read_articles/previously_read_articles_list') }}
+<div class="prev-read-wrapper">
+  <{{ settings['headingTag'] }} class="prev-read-heading">{{ settings['headingText'] }}</{{ settings['headingTag'] }}>
+  <ul class="prev-read-ul" vocab="https://schema.org/" typeof="ItemList">
+    <meta property="numberOfItems" content="0">
+    <template id="prev-read-row">
+      <li class="prev-read-li-wrapper" property="itemListElement" typeof="ListItem">
+        <article class="prev-read-article" vocab="https://schema.org/" typeof="Article">
+          <a class="prev-read-link" href="" target={{ settings['linkTarget'] }} property="url"></a>
+          <span property="genre" class="prev-read-text"></span>
+        </article>
+        <meta content="0" property="position" />
+      </li>
+    </template>
+  </ul>
+</div>

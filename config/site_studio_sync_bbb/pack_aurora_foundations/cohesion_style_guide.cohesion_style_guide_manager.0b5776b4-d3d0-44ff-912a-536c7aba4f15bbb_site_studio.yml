@@ -1,0 +1,2232 @@
+uuid: 72368660-82ac-44c0-ba8e-dc3e6b720f2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.aurora_foundations
+    - cohesion_website_settings.cohesion_color.base-bbbsecondary40
+    - cohesion_website_settings.cohesion_color.base-bbbsecondary50
+    - cohesion_website_settings.cohesion_color.base-bbi-caution
+    - cohesion_website_settings.cohesion_color.base-bbi-negative
+    - cohesion_website_settings.cohesion_color.base-bbi-positive
+    - cohesion_website_settings.cohesion_color.base-bbicaution30
+    - cohesion_website_settings.cohesion_color.base-bbinegative30
+    - cohesion_website_settings.cohesion_color.base-bbineutral10
+    - cohesion_website_settings.cohesion_color.base-bbineutral20
+    - cohesion_website_settings.cohesion_color.base-bbineutral50
+    - cohesion_website_settings.cohesion_color.base-bbineutral80
+    - cohesion_website_settings.cohesion_color.base-bbineutraldefault
+    - cohesion_website_settings.cohesion_color.base-bbineutralstrong
+    - cohesion_website_settings.cohesion_color.base-bbineutralsubdued
+    - cohesion_website_settings.cohesion_color.base-bbipositive20
+    - cohesion_website_settings.cohesion_color.bbb-backgroundaccent2
+    - cohesion_website_settings.cohesion_color.bbb-backgroundaccent3
+    - cohesion_website_settings.cohesion_color.bbi-brand-factory-blue20
+    - cohesion_website_settings.cohesion_color.gray-12
+    - cohesion_website_settings.cohesion_color.gray-35
+    - cohesion_website_settings.cohesion_color.textprimary
+    - cohesion_website_settings.cohesion_font_stack.brhendrix-light
+    - cohesion_website_settings.cohesion_font_stack.brhendrix-regular
+    - cohesion_website_settings.cohesion_font_stack.brhendrix-semibold
+label: 'Aurora Foundations BBB Site Studio'
+id: 0b5776b4-d3d0-44ff-912a-536c7aba4f15bbb_site_studio
+json_values: |
+  {
+      "model": {
+          "0b5776b4-d3d0-44ff-912a-536c7aba4f15": {
+              "33157749-3ec0-4872-b851-1a4bd0f174ff": {
+                  "link": true,
+                  "value": {
+                      "hex": "#0054ba",
+                      "rgba": "rgba(0, 84, 186, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/40",
+                  "uid": "base-bbbsecondary40",
+                  "class": ".coh-color-base-bbbsecondary40",
+                  "variable": "$coh-color-base-bbbsecondary40",
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "wysiwyg": true,
+                  "inuse": false
+              },
+              "6f025f13-472c-4cf9-9134-fa60dd746996": {
+                  "value": {
+                      "hex": "#152328",
+                      "rgba": "rgba(21, 35, 40, 0.08)"
+                  }
+              },
+              "e59f9a73-470a-4e0c-8173-92b326f05e95": {
+                  "link": true,
+                  "value": {
+                      "hex": "#152328",
+                      "rgba": "rgba(21, 35, 40, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/10",
+                  "uid": "base-bbineutral10",
+                  "class": ".coh-color-base-bbineutral10",
+                  "variable": "$coh-color-base-bbineutral10",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "54d8e19c-d511-45ae-af95-7be01cd4a634": {
+                  "value": {
+                      "hex": "#29383d",
+                      "rgba": "rgba(41, 56, 61, 0.4)"
+                  }
+              },
+              "c1325f2a-2d93-49b1-a615-15d0dc6f0cc8": "$coh-font-brhendrix-semibold",
+              "c2136995-553a-4f59-9333-9c0946b931f0": "$coh-font-brhendrix-semibold",
+              "3f4767ab-2ecc-4fc5-a12e-d7e98812ef45": "$coh-font-brhendrix-semibold",
+              "ca8ca1ad-858f-4253-a0ad-1dc525801124": "$coh-font-brhendrix-semibold",
+              "3a19c8fd-3edf-4e90-8b7f-72c4b271a9a3": "$coh-font-brhendrix-semibold",
+              "5e45a7a7-3ffa-49e9-b959-f7a40034f7f3": "$coh-font-brhendrix-semibold",
+              "0035bf28-1839-4f19-9fb7-7fc88c7c5241": "$coh-font-brhendrix-semibold",
+              "ffc5c38b-1fec-4343-8045-f811b63ef469": "$coh-font-brhendrix-semibold",
+              "0f2fe607-5885-4bdc-9fad-5a69fb3cdf00": "$coh-font-brhendrix-light",
+              "4a9d43e3-aaa9-4ae9-ace4-ee2c16471bdb": "$coh-font-brhendrix-light",
+              "3046e682-d9e2-484d-9b84-a09f2fbbe603": "$coh-font-brhendrix-light",
+              "5d744fcc-0573-47f8-a6ed-223bee1f5fc7": "$coh-font-brhendrix-regular",
+              "cb27ce5b-9c77-44ff-9088-d3c54c8e446c": "$coh-font-brhendrix-regular",
+              "59b49c11-5572-4307-bb45-0b4aa2c5501e": "$coh-font-brhendrix-regular",
+              "7c722bf1-a8a9-4c98-b6a8-41a2182c5b15": 36,
+              "602e4cf3-2a39-4e8c-9731-e495efccbfbc": 32,
+              "deced9b9-5d02-406a-9626-7796f24ed1cd": 28,
+              "b922db4a-023b-4cb6-8d6d-e338dd99576b": 60,
+              "34bafc17-f73e-4aca-af1d-786dc4a843e8": 72,
+              "d4dd50b0-2817-484b-8513-0aafee61cad0": 48,
+              "466389cf-097a-436f-b013-3d19dbb4b21c": 56,
+              "bb9d59fc-de07-4644-b235-51e49c72eff0": 40,
+              "ce7d1df6-a087-4145-85a0-a3162cf6b28a": 44,
+              "06134acc-695a-4734-984a-2f0ceb9d475b": 24,
+              "70dc5fa8-d461-4c8d-bad0-07bbc2f2d196": 32,
+              "c937d0fd-71b9-4f0d-87b9-83a3798a964e": 36,
+              "74e3635c-017e-49ab-b82f-af3ed9ec1bab": 22,
+              "6e235a80-7200-4f22-8b47-fd493895e075": 24,
+              "98b036fb-a416-40d5-ad7e-60d55afe8ebd": 28,
+              "091f6122-efca-482e-9919-939f56469e5e": 20,
+              "096b5ebb-6426-4279-9de9-d541f1553d4c": 22,
+              "26e928bb-3b8c-4f80-9973-81c496b96bdd": 24,
+              "78a56601-3b5c-4eb8-aa42-71f7986589e4": 18,
+              "1b37f4ae-e2da-4188-a9a2-6a8b0622eb52": 18,
+              "0fbf73a0-a7ab-4e4f-8179-6877627ae744": 20,
+              "ff1408bd-75c7-4951-9a77-b9b5c72cb053": 16,
+              "81e04a13-edcc-4259-8d17-0fb08f4479e6": 16,
+              "d6e19142-fca7-47a5-9bda-c657bd131d5d": 18,
+              "044f6eb0-8510-426d-8723-d1c0eabe647f": 20,
+              "1a88162b-95ab-4ecf-95c7-c5ee26cb14d3": 22,
+              "124f6775-1cdf-4966-9ff2-eaadab8bf9b4": 24,
+              "237163ca-e8e3-4c85-9e31-39732a405f0b": 18,
+              "b3da11c5-1853-4b6c-bac3-06e0e6a105d3": 18,
+              "dbef4b05-39d1-4f5b-8be3-25bd2189bd1a": 20,
+              "f99ba956-e6bc-4c34-a89d-262d77dfc56d": 16,
+              "cde66c3e-e0da-47e3-b4b0-6f62e64b00fc": 16,
+              "0a5abb74-28ff-4c60-8cba-6731291cf638": 18,
+              "47d9e18b-19db-45a8-8ea8-c338ff3a8e9a": 16,
+              "eedd12ba-5f1b-4413-b8e2-cf56999e63bb": 16,
+              "70f85d09-cabf-474d-8da9-082795ef28d5": 18,
+              "18181ad9-e10b-4b0c-897d-8ddabc450958": 14,
+              "84fd4342-ce58-42cb-bf0e-119e55e76049": 14,
+              "88df12ce-cafd-4986-a47d-c347ab2be4bf": 16,
+              "3e3cfe6d-eec3-4c67-b235-c1b0f93e0810": 12,
+              "7fefa28c-8627-4e4d-b6ef-4bb93a2e3545": 12,
+              "69e6fa47-eded-4bfc-bed0-43ae0219f818": 14,
+              "459d193f-4a75-4447-a513-2f15e47d0a90": "40",
+              "a8503d96-1257-4f03-ad71-b64b5edd2423": "64",
+              "10e0888a-2981-4e71-b589-0fdd6138134c": "88",
+              "915f35c9-655b-4fc3-8357-3c7447ed0e89": "-0.02em",
+              "f1a8ac6d-0e8c-4007-b811-fd93132e6d36": "-0.02em",
+              "a26f10f0-7e0c-49ac-8b36-3117fdb23cbd": "-0.02em",
+              "638af169-87f6-43ab-93f9-c627502fb84c": "-0.02em",
+              "fe863177-e61e-4c10-a140-be09df13019f": "-0.02em",
+              "2616b485-81f5-409e-93ce-f4d440d902da": "-0.02em",
+              "f341f01b-12e8-47a4-9209-83ddbc312a85": "-0.02em",
+              "a456135c-e586-43f1-aef1-9bab1c7ca990": "-0.02em",
+              "1dc9f593-7937-4109-b680-79865fedbf5e": "-0.02em",
+              "99f6cca6-b27f-4944-a2d4-b2ef6c6dc0fa": "64",
+              "4ce450d5-bb69-4cd5-baa8-b3800fdbeef9": "56",
+              "629a71ee-7c31-42c0-bd2d-cc5666e1cc84": "40",
+              "4bda00ea-958c-47f8-af62-e51908b7acf9": "32",
+              "2af9afdd-b743-476f-82ec-ca30dc7cb60c": "48",
+              "33719cc7-8895-4f3e-afe1-ed6a9ccfe18f": "56",
+              "1ce6d68e-bb5f-4e24-aa75-fd14442d6242": 28,
+              "df7c446c-1a3f-4b88-ba9b-2fe3cd25d8fd": 40,
+              "71f6eb24-1a41-414e-a8d3-4c6f281572f7": 44,
+              "73a74bb6-acb9-4ad7-980d-0e820e99c87d": "-0.02em",
+              "f6b390b8-62b0-44d7-9199-c176d20221f7": "-0.02em",
+              "04799cf8-ad4a-4d88-a9bd-e55024560ab6": "-0.02em",
+              "6b5e0fa8-8fe2-40e4-85c7-c49b0e5fc658": "-0.01em",
+              "16c5b0b9-2cbb-443a-8abf-914fa535db9a": "-0.01em",
+              "f6727656-2963-4ee6-842a-92093bafb82e": "-0.01em",
+              "8139a886-be1b-4103-b5d3-6d69f1bf66e5": "28",
+              "f06de3ac-6303-4d2d-9279-2f205b33b7dc": "28",
+              "b60e9df6-b8f0-48cf-a297-aec2196ec5f5": "32",
+              "e4b42fdb-ad59-41db-a311-be8f03676633": "24",
+              "c1e5d9ba-b05f-4094-a9ea-4ad32014107f": "24",
+              "5b87d959-0342-4de4-9fea-a7e9593469ea": "28",
+              "f8807b33-cd74-41ee-9394-1d21b5b44551": "-0.01em",
+              "f4058dc3-7333-45d8-8ab2-c2e5670dc283": "-0.01em",
+              "a3af99c9-abdc-4552-9daf-ae3692b35100": "-0.01em",
+              "6bfe3e7f-50fc-45f1-98eb-92fbfc3fb197": "24",
+              "c54f006b-a372-4759-a473-678331a4552b": "24",
+              "b2946148-3bf2-4f46-af08-3edf86dbde6a": "28",
+              "fec50f8e-6b18-4875-89ae-d1f719bf9a3a": "normal",
+              "47ee4994-24b9-4bb1-a6c2-8cd8fca3bd79": "normal",
+              "541752a5-7650-4a59-9b4e-ca060a1c374e": "normal",
+              "3cd7d614-8a51-4ee6-a7cc-50686ca4df19": "20",
+              "95b7307c-d54f-4918-acb0-2e8ab3e8ad3c": "20",
+              "844f6489-b52b-4297-bcf7-a9c200e45ed2": "24",
+              "cefe17ce-18f1-4f62-afab-de0720b917a2": "normal",
+              "0436023f-d0f7-48e5-b54b-7fdeaacf8da8": "normal",
+              "e48c7fd0-7cab-47cf-83d4-220be4805220": "normal",
+              "8ef1558b-d44a-4a39-b88b-ab6f1adfd4ef": "32",
+              "1cf02ec2-a9fb-44f2-8e39-ff0e212bf09a": "32",
+              "5b4b15b3-640a-4643-9a0d-a73ca9a5c096": "36",
+              "97a3519e-0ea8-482e-b042-d1d434591e3f": "normal",
+              "f1e814ea-c79e-485c-b369-ebce744963d4": "normal",
+              "452a6874-db8c-4d9e-ad43-9938f68f55b7": "normal",
+              "89475478-693c-49f9-bf04-fe23dbecbda5": "28",
+              "130ee09d-e480-4fb4-931c-0878bd659391": "28",
+              "4bba97bb-8ff4-4369-a90a-781f1d69f061": "32",
+              "71915915-37f6-45ec-bfa7-61cf6fc9c5cf": "normal",
+              "45d6a348-e7ed-482e-969a-5ee5fa815125": "normal",
+              "9433ca21-22e4-4e44-a4be-6e413fc03931": "normal",
+              "16cf8863-4b8c-4438-ad2d-3ebe04920b8b": "24",
+              "25802373-5e0c-48af-ac60-0a45233a473d": "24",
+              "e7eccdfb-95dd-4b1e-8b0a-13d5478de6e9": "28",
+              "e0523789-9f39-4a52-af0d-e661bf98fc99": "normal",
+              "31afc1fa-b34e-4b5a-b429-a9f620c5ba66": "normal",
+              "38af3b39-4b9f-4e90-a586-dd166ce9b36b": "normal",
+              "e928cafe-77fc-4064-8240-e8bc4c73ee57": "20",
+              "a6b5f4da-4094-4c37-8d57-a5b703f67985": "20",
+              "71a2faad-c06a-40cc-9b19-6fccdf3171b2": "20",
+              "a177d7f2-ed5f-4308-9715-ea24e8740fcb": "normal",
+              "3fbfd20d-1601-471d-8047-32e5386a3690": "normal",
+              "d2b9a452-71c1-48f0-919c-2e3581c4b640": "normal",
+              "c343e6c1-7c14-423b-b807-bc801177cdb7": "16",
+              "5db99f37-a47d-4c1a-a193-f061aea24a33": "16",
+              "d7d7564f-56de-49fa-b6d2-bdd7ce999e07": "20",
+              "15426193-887c-457b-bee6-4acc6cdec512": "normal",
+              "aee4499f-e515-4ac3-ac3c-4b989eb513fd": "normal",
+              "88c8977b-97f2-4987-9cc3-5c7e7959cd2f": "normal",
+              "7ab332fa-f300-4693-9f23-7ac4710c2cb2": "16",
+              "dbc366d3-98e3-42de-b4c8-e4d61a7fdc70": "16",
+              "ef5272ad-b505-4bbf-b2d0-2fdfc69282eb": "16",
+              "83abd168-277d-41c5-8753-9292b742bd11": "normal",
+              "af326b42-27cb-4eeb-925d-a18aa8000a29": "normal",
+              "9f78e907-eb2e-4f9f-9faf-5f0bdbe54e20": "normal",
+              "2409d355-db8e-4ced-8421-08fc3c4e034a": {
+                  "link": true,
+                  "value": {
+                      "hex": "#50c5a7",
+                      "rgba": "rgba(80, 197, 167, 1)"
+                  },
+                  "name": "BBB Background\/accent\/2",
+                  "uid": "bbb-backgroundaccent2",
+                  "class": ".coh-color-bbb-backgroundaccent2",
+                  "variable": "$coh-color-bbb-backgroundaccent2",
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "320647c2-f1e4-4a5b-b257-5096e8f5fe98": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "b5c38787-5857-4b8b-8ebc-a14eb003e65d": {
+                  "link": true,
+                  "value": {
+                      "hex": "#0054ba",
+                      "rgba": "rgba(0, 84, 186, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/40",
+                  "uid": "base-bbbsecondary40",
+                  "class": ".coh-color-base-bbbsecondary40",
+                  "variable": "$coh-color-base-bbbsecondary40",
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "wysiwyg": true,
+                  "inuse": false
+              },
+              "cca8210e-e4ba-49f4-81a7-d2509a6c6fa2": {
+                  "link": true,
+                  "value": {
+                      "hex": "#5b5950",
+                      "rgba": "rgba(91, 89, 80, 1)"
+                  },
+                  "name": "Text\/Primary",
+                  "uid": "textprimary",
+                  "class": ".coh-color-textprimary",
+                  "variable": "$coh-color-textprimary",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Text"
+                  ],
+                  "inuse": true
+              },
+              "0fa96e64-5529-4fc2-abed-89ef0b205fd9": {
+                  "link": true,
+                  "value": {
+                      "hex": "#0054ba",
+                      "rgba": "rgba(0, 84, 186, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/40",
+                  "uid": "base-bbbsecondary40",
+                  "class": ".coh-color-base-bbbsecondary40",
+                  "variable": "$coh-color-base-bbbsecondary40",
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "wysiwyg": true,
+                  "inuse": false
+              },
+              "fd777d8c-9dbb-42b9-aea2-0107fb019e12": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffb500",
+                      "rgba": "rgba(255, 181, 0, 1)"
+                  },
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Caution"
+                  ],
+                  "name": "Base BBI\/Caution\/50",
+                  "uid": "base-bbi-caution",
+                  "class": ".coh-color-base-bbi-caution",
+                  "variable": "$coh-color-base-bbi-caution",
+                  "inuse": true
+              },
+              "c7140104-8fba-490a-8e83-af475f84edb3": {
+                  "value": {
+                      "hex": "#00152e",
+                      "rgba": "rgba(0, 21, 46, 1)"
+                  }
+              },
+              "6c20c714-e648-4c1a-b0ef-f93a1be78f29": {
+                  "value": {
+                      "hex": "#00295c",
+                      "rgba": "rgba(0, 41, 92, 1)"
+                  }
+              },
+              "7d78e07b-cddf-4223-bb3d-15f93a1ebd18": {
+                  "value": {
+                      "hex": "#003e8a",
+                      "rgba": "rgba(0, 62, 138, 1)"
+                  }
+              },
+              "d0cfb5d3-434c-4e49-970e-775c9dbeb1a1": {
+                  "link": true,
+                  "value": {
+                      "hex": "#0054ba",
+                      "rgba": "rgba(0, 84, 186, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/40",
+                  "uid": "base-bbbsecondary40",
+                  "class": ".coh-color-base-bbbsecondary40",
+                  "variable": "$coh-color-base-bbbsecondary40",
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "wysiwyg": true,
+                  "inuse": false
+              },
+              "2dc24e90-5491-40f7-a37d-bf4b9b2e53fc": {
+                  "value": {
+                      "hex": "#0e6ee1",
+                      "rgba": "rgba(14, 110, 225, 1)"
+                  }
+              },
+              "11342d3d-945b-4544-9b37-42b713f89359": {
+                  "value": {
+                      "hex": "#3188f2",
+                      "rgba": "rgba(49, 136, 242, 1)"
+                  }
+              },
+              "bbf4b1cd-9441-4988-b80e-501798ba50d9": {
+                  "value": {
+                      "hex": "#66a6f5",
+                      "rgba": "rgba(102, 166, 245, 1)"
+                  }
+              },
+              "c82b6603-f8c5-4441-9fae-1798be9e825d": {
+                  "value": {
+                      "hex": "#9ac5f9",
+                      "rgba": "rgba(154, 197, 249, 1)"
+                  }
+              },
+              "0762a42c-5fe5-4413-90b5-843ece53f705": {
+                  "value": {
+                      "hex": "#c5ddfb",
+                      "rgba": "rgba(197, 221, 251, 1)"
+                  }
+              },
+              "432a57a0-cf4c-4605-8029-d8f5f57ffba5": {
+                  "value": {
+                      "hex": "#e7f1fd",
+                      "rgba": "rgba(231, 241, 253, 1)"
+                  }
+              },
+              "ec78b6d5-5160-469d-9302-8b749978e222": {
+                  "value": {
+                      "hex": "#f5f9ff",
+                      "rgba": "rgba(245, 249, 255, 1)"
+                  }
+              },
+              "44461629-44e9-4921-9911-5ee61808ad48": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "1c17876b-ff39-44c5-a750-d2fc89e300bc": {
+                  "link": true,
+                  "value": {
+                      "hex": "#152328",
+                      "rgba": "rgba(21, 35, 40, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/10",
+                  "uid": "base-bbineutral10",
+                  "class": ".coh-color-base-bbineutral10",
+                  "variable": "$coh-color-base-bbineutral10",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "35949122-287b-4c3d-9b57-2ceb69528b81": {
+                  "link": true,
+                  "value": {
+                      "hex": "#29383d",
+                      "rgba": "rgba(41, 56, 61, 1)"
+                  },
+                  "wysiwyg": false,
+                  "name": "Base BBI\/Neutral\/20",
+                  "uid": "base-bbineutral20",
+                  "class": ".coh-color-base-bbineutral20",
+                  "variable": "$coh-color-base-bbineutral20",
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "6b60a3a9-3739-4495-8f19-434bea4da543": {
+                  "link": true,
+                  "value": {
+                      "hex": "#566e76",
+                      "rgba": "rgba(86, 110, 118, 1)"
+                  },
+                  "name": "Gray 35",
+                  "uid": "gray-35",
+                  "class": ".coh-color-gray-35",
+                  "variable": "$coh-color-gray-35",
+                  "tags": [
+                      "Light"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "3d530f1a-d42f-402d-bbe0-7874942dc8fb": {
+                  "link": true,
+                  "value": {
+                      "hex": "#74929a",
+                      "rgba": "rgba(116, 146, 154, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/50",
+                  "uid": "base-bbineutral50",
+                  "class": ".coh-color-base-bbineutral50",
+                  "variable": "$coh-color-base-bbineutral50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "eed22078-97e6-4550-ab06-9175d3336f57": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ccdce1",
+                      "rgba": "rgba(204, 220, 225, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/80",
+                  "uid": "base-bbineutral80",
+                  "class": ".coh-color-base-bbineutral80",
+                  "variable": "$coh-color-base-bbineutral80",
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "03c8524f-fe41-465f-888d-e89f1782151e": {
+                  "link": true,
+                  "value": {
+                      "hex": "#dfe9ec",
+                      "rgba": "rgba(223, 233, 236, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Strong",
+                  "uid": "base-bbineutralstrong",
+                  "class": ".coh-color-base-bbineutralstrong",
+                  "variable": "$coh-color-base-bbineutralstrong",
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "51191755-fa66-4cba-aa11-806cf4608d2d": {
+                  "link": true,
+                  "value": {
+                      "hex": "#eff4f6",
+                      "rgba": "rgba(239, 244, 246, 1)"
+                  },
+                  "name": "Gray 12",
+                  "uid": "gray-12",
+                  "class": ".coh-color-gray-12",
+                  "variable": "$coh-color-gray-12",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Light"
+                  ],
+                  "inuse": true
+              },
+              "06d1f955-434c-49c8-8797-7f466c5ff3ca": {
+                  "link": true,
+                  "value": {
+                      "hex": "#f9fbfb",
+                      "rgba": "rgba(249, 251, 251, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Subdued",
+                  "uid": "base-bbineutralsubdued",
+                  "class": ".coh-color-base-bbineutralsubdued",
+                  "variable": "$coh-color-base-bbineutralsubdued",
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "5f2b4060-3f43-42dd-8130-b6ed29931dec": {
+                  "link": true,
+                  "value": {
+                      "hex": "#174f41",
+                      "rgba": "rgba(23, 79, 65, 1)"
+                  },
+                  "wysiwyg": false,
+                  "name": "Base BBI\/Positive\/20",
+                  "uid": "base-bbi-positive",
+                  "class": ".coh-color-base-bbi-positive",
+                  "variable": "$coh-color-base-bbi-positive",
+                  "tags": [
+                      "Base BBI Positive"
+                  ],
+                  "inuse": true
+              },
+              "24f329ab-fbc9-4967-ada6-21b18059ad8e": {
+                  "link": true,
+                  "value": {
+                      "hex": "#257e68",
+                      "rgba": "rgba(37, 126, 104, 1)"
+                  },
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Positive"
+                  ],
+                  "name": "Base BBI\/Positive\/30",
+                  "uid": "base-bbipositive20",
+                  "class": ".coh-color-base-bbipositive20",
+                  "variable": "$coh-color-base-bbipositive20",
+                  "inuse": true
+              },
+              "d9dd418b-5f37-4f64-a46f-209e12d47975": {
+                  "link": true,
+                  "value": {
+                      "hex": "#50c5a7",
+                      "rgba": "rgba(80, 197, 167, 1)"
+                  },
+                  "name": "BBB Background\/accent\/2",
+                  "uid": "bbb-backgroundaccent2",
+                  "class": ".coh-color-bbb-backgroundaccent2",
+                  "variable": "$coh-color-bbb-backgroundaccent2",
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "f297fd56-8542-4fa1-8249-b67c963b64fc": {
+                  "link": true,
+                  "value": {
+                      "hex": "#996d00",
+                      "rgba": "rgba(153, 109, 0, 1)"
+                  },
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Caution"
+                  ],
+                  "name": "Base BBI\/Caution\/30",
+                  "uid": "base-bbicaution30",
+                  "class": ".coh-color-base-bbicaution30",
+                  "variable": "$coh-color-base-bbicaution30",
+                  "inuse": true
+              },
+              "e77a643f-20c0-4593-9467-8210b43435ba": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffb500",
+                      "rgba": "rgba(255, 181, 0, 1)"
+                  },
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Caution"
+                  ],
+                  "name": "Base BBI\/Caution\/50",
+                  "uid": "base-bbi-caution",
+                  "class": ".coh-color-base-bbi-caution",
+                  "variable": "$coh-color-base-bbi-caution",
+                  "inuse": true
+              },
+              "bb01ed33-c391-4b24-8388-808e569894d5": {
+                  "link": true,
+                  "value": {
+                      "hex": "#910815",
+                      "rgba": "rgba(145, 8, 21, 1)"
+                  },
+                  "name": "Base BBI\/Negative\/30",
+                  "uid": "base-bbinegative30",
+                  "class": ".coh-color-base-bbinegative30",
+                  "variable": "$coh-color-base-bbinegative30",
+                  "tags": [
+                      "Base BBI Negative"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "850c3bd1-485a-4d5d-839b-8f885e16cd43": {
+                  "link": true,
+                  "value": {
+                      "hex": "#da0b20",
+                      "rgba": "rgba(218, 11, 32, 1)"
+                  },
+                  "name": "Base BBI\/Negative\/50",
+                  "uid": "base-bbi-negative",
+                  "class": ".coh-color-base-bbi-negative",
+                  "variable": "$coh-color-base-bbi-negative",
+                  "tags": [
+                      "Base BBI Negative"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "deb7f944-6ff0-4935-bae1-344cf81e784c": {
+                  "value": {
+                      "hex": "#ffa0b4",
+                      "rgba": "rgba(255, 160, 180, 1)"
+                  }
+              },
+              "1bdeeb6c-86c1-4f11-9fa0-d8a105477c4c": {
+                  "link": true,
+                  "value": {
+                      "hex": "#50c5a7",
+                      "rgba": "rgba(80, 197, 167, 1)"
+                  },
+                  "name": "BBB Background\/accent\/2",
+                  "uid": "bbb-backgroundaccent2",
+                  "class": ".coh-color-bbb-backgroundaccent2",
+                  "variable": "$coh-color-bbb-backgroundaccent2",
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "1b34fcd6-32d0-41ca-98b0-5ba5a4b8daa8": {
+                  "link": true,
+                  "value": {
+                      "hex": "#55c0ff",
+                      "rgba": "rgba(85, 192, 255, 1)"
+                  },
+                  "name": "BBB  background\/accent\/3",
+                  "uid": "bbb-backgroundaccent3",
+                  "class": ".coh-color-bbb-backgroundaccent3",
+                  "variable": "$coh-color-bbb-backgroundaccent3",
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "dcda777f-c1c8-489f-83ce-8d7517aa8175": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "a1155f81-a572-4ef7-a1c4-684334ee7fb0": {
+                  "link": true,
+                  "value": {
+                      "hex": "#f9fbfb",
+                      "rgba": "rgba(249, 251, 251, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Subdued",
+                  "uid": "base-bbineutralsubdued",
+                  "class": ".coh-color-base-bbineutralsubdued",
+                  "variable": "$coh-color-base-bbineutralsubdued",
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "11c21130-61ee-4394-bad5-0d40b0f4fc58": {
+                  "link": true,
+                  "value": {
+                      "hex": "#eff4f6",
+                      "rgba": "rgba(239, 244, 246, 1)"
+                  },
+                  "name": "Gray 12",
+                  "uid": "gray-12",
+                  "class": ".coh-color-gray-12",
+                  "variable": "$coh-color-gray-12",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Light"
+                  ],
+                  "inuse": true
+              },
+              "dbe33f31-93f5-480c-b0dc-0afa2aa772c2": {
+                  "link": true,
+                  "value": {
+                      "hex": "#dfe9ec",
+                      "rgba": "rgba(223, 233, 236, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Strong",
+                  "uid": "base-bbineutralstrong",
+                  "class": ".coh-color-base-bbineutralstrong",
+                  "variable": "$coh-color-base-bbineutralstrong",
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "a0d63c9e-5130-4d5f-aea3-0342819c84b0": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "84e889cf-05e1-42ea-b1bd-298966123353": {
+                  "link": true,
+                  "value": {
+                      "hex": "#0054ba",
+                      "rgba": "rgba(0, 84, 186, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/40",
+                  "uid": "base-bbbsecondary40",
+                  "class": ".coh-color-base-bbbsecondary40",
+                  "variable": "$coh-color-base-bbbsecondary40",
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "wysiwyg": true,
+                  "inuse": false
+              },
+              "7cf8d377-bf9e-4926-b446-f42de6715174": {
+                  "value": {
+                      "hex": "#00295c",
+                      "rgba": "rgba(0, 41, 92, 1)"
+                  }
+              },
+              "971b613e-0e62-40a9-a501-3d3e16e19be7": {
+                  "value": {
+                      "hex": "#003e8a",
+                      "rgba": "rgba(0, 62, 138, 1)"
+                  }
+              },
+              "795ac287-5b97-4698-a398-71ab5b8ac37b": {
+                  "value": {
+                      "hex": "#00295c",
+                      "rgba": "rgba(0, 41, 92, 1)"
+                  }
+              },
+              "d7adcbf9-8042-4ae5-8874-6be0cc375769": {
+                  "value": {
+                      "hex": "#152328",
+                      "rgba": "rgba(21, 35, 40, 0.08)"
+                  }
+              },
+              "0c71da11-8556-4c6c-b0b2-c6056dac6b27": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "a5da6886-2b32-484b-ac56-cb9c40d9d6a4": {
+                  "value": {
+                      "hex": "#9ac5f9",
+                      "rgba": "rgba(154, 197, 249, 1)"
+                  }
+              },
+              "0dafb6b6-2658-41c8-81b1-ccc9894b2b1f": {
+                  "value": {
+                      "hex": "#c5ddfb",
+                      "rgba": "rgba(197, 221, 251, 1)"
+                  }
+              },
+              "a556b6d2-64f7-45d4-9979-e639d7278839": {
+                  "value": {
+                      "hex": "#9ac5f9",
+                      "rgba": "rgba(154, 197, 249, 1)"
+                  }
+              },
+              "dd689cff-ed42-44ac-92e0-44dc8e1270fd": {
+                  "value": {
+                      "hex": "#dfe9ec",
+                      "rgba": "rgba(223, 233, 236, 0.4)"
+                  }
+              },
+              "78656bfa-af83-4d9c-a6c1-021f4b364949": {
+                  "link": true,
+                  "value": {
+                      "hex": "#257e68",
+                      "rgba": "rgba(37, 126, 104, 1)"
+                  },
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Positive"
+                  ],
+                  "name": "Base BBI\/Positive\/30",
+                  "uid": "base-bbipositive20",
+                  "class": ".coh-color-base-bbipositive20",
+                  "variable": "$coh-color-base-bbipositive20",
+                  "inuse": true
+              },
+              "28e18215-1b04-47d6-9bee-9a2a874925f1": {
+                  "link": true,
+                  "value": {
+                      "hex": "#da0b20",
+                      "rgba": "rgba(218, 11, 32, 1)"
+                  },
+                  "name": "Base BBI\/Negative\/50",
+                  "uid": "base-bbi-negative",
+                  "class": ".coh-color-base-bbi-negative",
+                  "variable": "$coh-color-base-bbi-negative",
+                  "tags": [
+                      "Base BBI Negative"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "3b612ca3-f89b-4da6-bb8b-8656daa0ed40": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "33590def-2d84-4f5f-9e70-24bd8fe44465": {
+                  "value": {
+                      "hex": "#ffa0b4",
+                      "rgba": "rgba(255, 160, 180, 1)"
+                  }
+              },
+              "dd896b4d-d6cf-46f4-abfa-597b88c82279": {
+                  "link": true,
+                  "value": {
+                      "hex": "#55c0ff",
+                      "rgba": "rgba(85, 192, 255, 1)"
+                  },
+                  "name": "BBB  background\/accent\/3",
+                  "uid": "bbb-backgroundaccent3",
+                  "class": ".coh-color-bbb-backgroundaccent3",
+                  "variable": "$coh-color-bbb-backgroundaccent3",
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "7cb1c03c-3ed8-4390-9e53-171c4703c257": {
+                  "link": true,
+                  "value": {
+                      "hex": "#152328",
+                      "rgba": "rgba(21, 35, 40, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/10",
+                  "uid": "base-bbineutral10",
+                  "class": ".coh-color-base-bbineutral10",
+                  "variable": "$coh-color-base-bbineutral10",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "98520976-5e79-45ca-b09f-d8809f146c25": {
+                  "link": true,
+                  "value": {
+                      "hex": "#566e76",
+                      "rgba": "rgba(86, 110, 118, 1)"
+                  },
+                  "name": "Gray 35",
+                  "uid": "gray-35",
+                  "class": ".coh-color-gray-35",
+                  "variable": "$coh-color-gray-35",
+                  "tags": [
+                      "Light"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "1fcc9f53-e5b9-4f10-983b-c25f3622f20f": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "9d888a0b-6ad4-4289-8472-3946526ed963": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "f942749b-4bce-45ed-961e-e23e503a6ee2": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "df5a3dd9-054b-40c3-a68a-2eca4d17d567": {
+                  "link": true,
+                  "value": {
+                      "hex": "#0054ba",
+                      "rgba": "rgba(0, 84, 186, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/40",
+                  "uid": "base-bbbsecondary40",
+                  "class": ".coh-color-base-bbbsecondary40",
+                  "variable": "$coh-color-base-bbbsecondary40",
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "wysiwyg": true,
+                  "inuse": false
+              },
+              "46e60ffc-2544-47ef-b033-3adbd2a9b2f1": {
+                  "value": {
+                      "hex": "#00295c",
+                      "rgba": "rgba(0, 41, 92, 1)"
+                  }
+              },
+              "b4aa1ba1-114c-4774-b08b-a55be8d8fe15": {
+                  "value": {
+                      "hex": "#003e8a",
+                      "rgba": "rgba(0, 62, 138, 1)"
+                  }
+              },
+              "1b2c4418-9610-4c21-aab8-a303f7a34484": {
+                  "value": {
+                      "hex": "#00295c",
+                      "rgba": "rgba(0, 41, 92, 1)"
+                  }
+              },
+              "65f28a37-d2d6-49cd-8c7e-20ef1ca8990a": {
+                  "value": {
+                      "hex": "#29383d",
+                      "rgba": "rgba(41, 56, 61, 0.4)"
+                  }
+              },
+              "efc8f081-b781-4504-a6ca-26903f501b58": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "913bd949-c36e-4f14-ab84-4b19719da880": {
+                  "value": {
+                      "hex": "#29383d",
+                      "rgba": "rgba(41, 56, 61, 0.4)"
+                  }
+              },
+              "824715f3-e900-4983-aac6-589a52ecc355": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "b51b9731-1cdf-4e32-81d3-107932d8e820": {
+                  "value": {
+                      "hex": "#9ac5f9",
+                      "rgba": "rgba(154, 197, 249, 1)"
+                  }
+              },
+              "60293a81-4380-482a-9c75-45430da7001d": {
+                  "value": {
+                      "hex": "#c5ddfb",
+                      "rgba": "rgba(197, 221, 251, 1)"
+                  }
+              },
+              "d0f8b5ad-1604-4ac3-b9d3-cdcaddfed075": {
+                  "value": {
+                      "hex": "#9ac5f9",
+                      "rgba": "rgba(154, 197, 249, 1)"
+                  }
+              },
+              "8c2f618b-8123-4f01-9b93-670207acc42e": {
+                  "value": {
+                      "hex": "#dfe9ec",
+                      "rgba": "rgba(223, 233, 236, 0.4)"
+                  }
+              },
+              "8fde285d-a502-4c8e-a6ec-2569b442c62a": {
+                  "link": true,
+                  "value": {
+                      "hex": "#201e48",
+                      "rgba": "rgba(32, 30, 72, 1)"
+                  },
+                  "name": "BBI Brand Factory Blue\/20",
+                  "uid": "bbi-brand-factory-blue20",
+                  "class": ".coh-color-bbi-brand-factory-blue20",
+                  "variable": "$coh-color-bbi-brand-factory-blue20",
+                  "wysiwyg": false,
+                  "tags": [
+                      "BBI Brand Factory Blue"
+                  ],
+                  "inuse": true
+              },
+              "ff5e33a2-0d58-40a2-8c30-dc2617e29855": {
+                  "value": {
+                      "hex": "#dfe9ec",
+                      "rgba": "rgba(223, 233, 236, 0.4)"
+                  }
+              },
+              "cdf45979-feb5-4ea3-bb97-f6a2fc46dc3a": {
+                  "link": true,
+                  "value": {
+                      "hex": "#174f41",
+                      "rgba": "rgba(23, 79, 65, 1)"
+                  },
+                  "wysiwyg": false,
+                  "name": "Base BBI\/Positive\/20",
+                  "uid": "base-bbi-positive",
+                  "class": ".coh-color-base-bbi-positive",
+                  "variable": "$coh-color-base-bbi-positive",
+                  "tags": [
+                      "Base BBI Positive"
+                  ],
+                  "inuse": true
+              },
+              "604658ec-e1fd-4b21-a210-fafdfe5bf20b": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "ffd1adc6-ae64-4541-8ceb-b871aaf22328": {
+                  "link": true,
+                  "value": {
+                      "hex": "#996d00",
+                      "rgba": "rgba(153, 109, 0, 1)"
+                  },
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Caution"
+                  ],
+                  "name": "Base BBI\/Caution\/30",
+                  "uid": "base-bbicaution30",
+                  "class": ".coh-color-base-bbicaution30",
+                  "variable": "$coh-color-base-bbicaution30",
+                  "inuse": true
+              },
+              "b2f5b7c1-958e-4b88-8451-bd9708e8acc5": {
+                  "link": true,
+                  "value": {
+                      "hex": "#152328",
+                      "rgba": "rgba(21, 35, 40, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/10",
+                  "uid": "base-bbineutral10",
+                  "class": ".coh-color-base-bbineutral10",
+                  "variable": "$coh-color-base-bbineutral10",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "d9211906-29de-44b2-8b18-aefe7590f591": {
+                  "link": true,
+                  "value": {
+                      "hex": "#910815",
+                      "rgba": "rgba(145, 8, 21, 1)"
+                  },
+                  "name": "Base BBI\/Negative\/30",
+                  "uid": "base-bbinegative30",
+                  "class": ".coh-color-base-bbinegative30",
+                  "variable": "$coh-color-base-bbinegative30",
+                  "tags": [
+                      "Base BBI Negative"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "08dab28a-6d60-4e6c-a1d6-740ecac00313": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "38d1c748-f7b3-417a-829a-1345e9d59ff2": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "ac785da2-cd12-4554-8188-4ddf57f0e99b": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "2e285fc4-7082-4693-a58f-a5e876019df6": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "95d94ed5-2ea9-462f-bf58-37b9bb7d60b1": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "e47f4d99-39f4-4daf-8072-82bbc051ccbe": {
+                  "link": true,
+                  "value": {
+                      "hex": "#152328",
+                      "rgba": "rgba(21, 35, 40, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/10",
+                  "uid": "base-bbineutral10",
+                  "class": ".coh-color-base-bbineutral10",
+                  "variable": "$coh-color-base-bbineutral10",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "229161cd-7783-4d6e-ba4f-185d0f899adb": {
+                  "link": true,
+                  "value": {
+                      "hex": "#566e76",
+                      "rgba": "rgba(86, 110, 118, 1)"
+                  },
+                  "name": "Gray 35",
+                  "uid": "gray-35",
+                  "class": ".coh-color-gray-35",
+                  "variable": "$coh-color-gray-35",
+                  "tags": [
+                      "Light"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "2f6a0fe6-4f6f-485d-9920-b4ecb51c3c67": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "2eb52a0b-d662-435e-a701-8fec95d85306": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "270a9dcb-db1b-432d-841d-2a8a9d0fef66": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "f02ca84e-ded0-43f1-8b58-09d2a459b427": {
+                  "value": {
+                      "hex": "#00295c",
+                      "rgba": "rgba(0, 41, 92, 1)"
+                  }
+              },
+              "0efeef6c-94b3-4bbb-9141-cc83d15c3882": {
+                  "value": {
+                      "hex": "#00295c",
+                      "rgba": "rgba(0, 41, 92, 1)"
+                  }
+              },
+              "58efb95a-b4d9-453d-aa32-fa23df836a93": {
+                  "value": {
+                      "hex": "#29383d",
+                      "rgba": "rgba(41, 56, 61, 0.4)"
+                  }
+              },
+              "41f4404a-1d6c-4f7c-bef5-71d6f0ce4fba": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "3dd8837b-5186-49cb-becb-18280fd0841d": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "172b54f8-680b-431e-8be1-4daac17f112c": {
+                  "value": {
+                      "hex": "#9ac5f9",
+                      "rgba": "rgba(154, 197, 249, 1)"
+                  }
+              },
+              "a60eb0b8-5241-473f-84c6-29d61298c446": {
+                  "value": {
+                      "hex": "#003e8a",
+                      "rgba": "rgba(0, 62, 138, 1)"
+                  }
+              },
+              "e9ffc0a3-24e9-4e04-bd25-9b48ee190a05": {
+                  "value": {
+                      "hex": "#c5ddfb",
+                      "rgba": "rgba(197, 221, 251, 1)"
+                  }
+              },
+              "cafdb89d-4800-4668-8112-8004b5fae0ef": {
+                  "value": {
+                      "hex": "#9ac5f9",
+                      "rgba": "rgba(154, 197, 249, 1)"
+                  }
+              },
+              "a6736d6b-5cd5-4859-a2c1-552d46029b43": {
+                  "value": {
+                      "hex": "#dfe9ec",
+                      "rgba": "rgba(223, 233, 236, 0.4)"
+                  }
+              },
+              "e398d1fe-876e-4edc-b728-57bb9bcb8012": {
+                  "value": {
+                      "hex": "#00295c",
+                      "rgba": "rgba(0, 41, 92, 1)"
+                  }
+              },
+              "77a9afd0-5122-43fa-9572-0d215774dab4": {
+                  "value": {
+                      "hex": "#29383d",
+                      "rgba": "rgba(41, 56, 61, 0.4)"
+                  }
+              },
+              "b8f757b6-4180-482d-8269-31e5f9c476f6": {
+                  "value": {
+                      "hex": "#dfe9ec",
+                      "rgba": "rgba(223, 233, 236, 0.4)"
+                  }
+              },
+              "62926957-b866-46fa-b24f-001417f517f9": {
+                  "link": true,
+                  "value": {
+                      "hex": "#257e68",
+                      "rgba": "rgba(37, 126, 104, 1)"
+                  },
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Positive"
+                  ],
+                  "name": "Base BBI\/Positive\/30",
+                  "uid": "base-bbipositive20",
+                  "class": ".coh-color-base-bbipositive20",
+                  "variable": "$coh-color-base-bbipositive20",
+                  "inuse": true
+              },
+              "e0e44abd-4be2-42c5-9f6f-7d9173e9a4fb": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "acb2ec5f-ebe8-4b01-b589-00535bcef14d": {
+                  "link": true,
+                  "value": {
+                      "hex": "#996d00",
+                      "rgba": "rgba(153, 109, 0, 1)"
+                  },
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Caution"
+                  ],
+                  "name": "Base BBI\/Caution\/30",
+                  "uid": "base-bbicaution30",
+                  "class": ".coh-color-base-bbicaution30",
+                  "variable": "$coh-color-base-bbicaution30",
+                  "inuse": true
+              },
+              "57d20379-9c69-4ed1-8bf6-8cc596f2ccbe": {
+                  "link": true,
+                  "value": {
+                      "hex": "#152328",
+                      "rgba": "rgba(21, 35, 40, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/10",
+                  "uid": "base-bbineutral10",
+                  "class": ".coh-color-base-bbineutral10",
+                  "variable": "$coh-color-base-bbineutral10",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "7fd5a4d4-0e72-4316-a452-90ba5eaac076": {
+                  "link": true,
+                  "value": {
+                      "hex": "#da0b20",
+                      "rgba": "rgba(218, 11, 32, 1)"
+                  },
+                  "name": "Base BBI\/Negative\/50",
+                  "uid": "base-bbi-negative",
+                  "class": ".coh-color-base-bbi-negative",
+                  "variable": "$coh-color-base-bbi-negative",
+                  "tags": [
+                      "Base BBI Negative"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "ec0d85f1-e914-4b01-988d-248755801fdc": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "c6b83c1d-630f-48c9-815d-97a110fdc447": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "1a83dd92-573c-4e49-9791-d600db92f270": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "b8ac13f7-be77-47c2-b451-8d2d71fcd137": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "7b150f0f-1de4-4eec-b568-944b3943fd0e": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "0478afe2-51e1-4272-b58c-9a84c69d5686": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "5e82893b-4541-4603-9366-3285a894967f": {
+                  "link": true,
+                  "value": {
+                      "hex": "#74929a",
+                      "rgba": "rgba(116, 146, 154, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/50",
+                  "uid": "base-bbineutral50",
+                  "class": ".coh-color-base-bbineutral50",
+                  "variable": "$coh-color-base-bbineutral50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "af09af1d-970d-4bac-9b66-86301035b708": {
+                  "link": true,
+                  "value": {
+                      "hex": "#dfe9ec",
+                      "rgba": "rgba(223, 233, 236, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Strong",
+                  "uid": "base-bbineutralstrong",
+                  "class": ".coh-color-base-bbineutralstrong",
+                  "variable": "$coh-color-base-bbineutralstrong",
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "c6ab6775-8352-4a75-ad3f-4139dd916e8e": {
+                  "link": true,
+                  "value": {
+                      "hex": "#152328",
+                      "rgba": "rgba(21, 35, 40, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/10",
+                  "uid": "base-bbineutral10",
+                  "class": ".coh-color-base-bbineutral10",
+                  "variable": "$coh-color-base-bbineutral10",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "7d1d8bf4-d173-4da5-aaea-cfb143770c52": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "e77e4fd6-d4a3-4492-bf40-0ef63f85b2ca": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "fb778779-757d-4f65-a804-c828ece7401f": {
+                  "link": true,
+                  "value": {
+                      "hex": "#0054ba",
+                      "rgba": "rgba(0, 84, 186, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/40",
+                  "uid": "base-bbbsecondary40",
+                  "class": ".coh-color-base-bbbsecondary40",
+                  "variable": "$coh-color-base-bbbsecondary40",
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "wysiwyg": true,
+                  "inuse": false
+              },
+              "3d8e993a-21e8-4118-89c0-9789de14f2aa": {
+                  "link": true,
+                  "value": {
+                      "hex": "#0054ba",
+                      "rgba": "rgba(0, 84, 186, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/40",
+                  "uid": "base-bbbsecondary40",
+                  "class": ".coh-color-base-bbbsecondary40",
+                  "variable": "$coh-color-base-bbbsecondary40",
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "wysiwyg": true,
+                  "inuse": false
+              },
+              "ed718e67-4993-4e9d-a955-879b37b4ae89": {
+                  "value": {
+                      "hex": "#00295c",
+                      "rgba": "rgba(0, 41, 92, 1)"
+                  }
+              },
+              "98682f65-73b4-46ca-a6fc-bc0410494256": {
+                  "value": {
+                      "hex": "#003e8a",
+                      "rgba": "rgba(0, 62, 138, 1)"
+                  }
+              },
+              "503859f5-2767-4070-97de-73316f539ead": {
+                  "value": {
+                      "hex": "#3188f2",
+                      "rgba": "rgba(49, 136, 242, 1)"
+                  }
+              },
+              "51468b06-ef36-463c-aabb-3e13592e5517": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "7934538e-6a30-4bb2-bc12-383774e13b8d": {
+                  "value": {
+                      "hex": "#29383d",
+                      "rgba": "rgba(41, 56, 61, 0.4)"
+                  }
+              },
+              "9ccbf90b-5dd0-46df-828f-3bb0c09dcf0a": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffffff",
+                      "rgba": "rgba(255, 255, 255, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/Default",
+                  "uid": "base-bbineutraldefault",
+                  "class": ".coh-color-base-bbineutraldefault",
+                  "variable": "$coh-color-base-bbineutraldefault",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "de7065c0-a955-4bdf-862b-38aae7810889": {
+                  "value": {
+                      "hex": "#3188f2",
+                      "rgba": "rgba(49, 136, 242, 1)"
+                  }
+              },
+              "4ca91d50-db95-4d0d-a550-2ca973ec62cd": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "09b5bcf7-f38d-4dee-8d73-fd60c46e3478": {
+                  "value": {
+                      "hex": "#dfe9ec",
+                      "rgba": "rgba(223, 233, 236, 0.4)"
+                  }
+              },
+              "efb48e28-2016-40e5-b275-2b209b7f8db5": {
+                  "link": true,
+                  "value": {
+                      "hex": "#74929a",
+                      "rgba": "rgba(116, 146, 154, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/50",
+                  "uid": "base-bbineutral50",
+                  "class": ".coh-color-base-bbineutral50",
+                  "variable": "$coh-color-base-bbineutral50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "33c371fb-a212-4608-b82a-82323be6eec5": {
+                  "link": true,
+                  "value": {
+                      "hex": "#152328",
+                      "rgba": "rgba(21, 35, 40, 1)"
+                  },
+                  "name": "Base BBI\/Neutral\/10",
+                  "uid": "base-bbineutral10",
+                  "class": ".coh-color-base-bbineutral10",
+                  "variable": "$coh-color-base-bbineutral10",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBI Neutral"
+                  ],
+                  "inuse": true
+              },
+              "78d11f9f-90c3-49aa-a3ac-425f55912bbd": {
+                  "link": true,
+                  "value": {
+                      "hex": "#0054ba",
+                      "rgba": "rgba(0, 84, 186, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/40",
+                  "uid": "base-bbbsecondary40",
+                  "class": ".coh-color-base-bbbsecondary40",
+                  "variable": "$coh-color-base-bbbsecondary40",
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "wysiwyg": true,
+                  "inuse": false
+              },
+              "456f8ef3-e2ff-49bc-b944-125c439a2d92": {
+                  "link": true,
+                  "value": {
+                      "hex": "#da0b20",
+                      "rgba": "rgba(218, 11, 32, 1)"
+                  },
+                  "name": "Base BBI\/Negative\/50",
+                  "uid": "base-bbi-negative",
+                  "class": ".coh-color-base-bbi-negative",
+                  "variable": "$coh-color-base-bbi-negative",
+                  "tags": [
+                      "Base BBI Negative"
+                  ],
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "ce0b6958-04c3-49e3-a6c2-79cf75d58bd8": {
+                  "value": {
+                      "hex": "#29383d",
+                      "rgba": "rgba(41, 56, 61, 0.4)"
+                  }
+              },
+              "2fd9c3f7-f816-48e7-b91b-8183f1198680": {
+                  "value": {
+                      "hex": "#fff5f7",
+                      "rgba": "rgba(255, 245, 247, 1)"
+                  }
+              },
+              "a451d93c-28c1-41ec-afdb-008ef0f39656": {
+                  "value": {
+                      "hex": "#ffecf0",
+                      "rgba": "rgba(255, 236, 240, 1)"
+                  }
+              },
+              "46c01344-4cc6-43fe-810d-53a2fda4acfe": {
+                  "value": {
+                      "hex": "#ffd6df",
+                      "rgba": "rgba(255, 214, 223, 1)"
+                  }
+              },
+              "6dfe771a-66af-4884-bcb0-9edb0d8d5bbd": {
+                  "value": {
+                      "hex": "#f7fcfb",
+                      "rgba": "rgba(247, 252, 251, 1)"
+                  }
+              },
+              "6924a2dd-d58c-45cb-8af0-246a6c11fa5d": {
+                  "value": {
+                      "hex": "#ecf9f5",
+                      "rgba": "rgba(236, 249, 245, 1)"
+                  }
+              },
+              "2976efe2-c80c-4e73-afef-382f816e2fbe": {
+                  "value": {
+                      "hex": "#d9f2ec",
+                      "rgba": "rgba(217, 242, 236, 1)"
+                  }
+              },
+              "6659feed-a13b-4568-97b1-7fd46b849e44": {
+                  "value": {
+                      "hex": "#f6fafe",
+                      "rgba": "rgba(246, 250, 254, 1)"
+                  }
+              },
+              "9f060058-9d70-41cb-aaf9-7e5b987457cd": {
+                  "value": {
+                      "hex": "#e8f1fc",
+                      "rgba": "rgba(232, 241, 252, 1)"
+                  }
+              }
+          }
+      },
+      "changedFields": [
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.33157749-3ec0-4872-b851-1a4bd0f174ff",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.6f025f13-472c-4cf9-9134-fa60dd746996",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e59f9a73-470a-4e0c-8173-92b326f05e95",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.54d8e19c-d511-45ae-af95-7be01cd4a634",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.c1325f2a-2d93-49b1-a615-15d0dc6f0cc8",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.c2136995-553a-4f59-9333-9c0946b931f0",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.3f4767ab-2ecc-4fc5-a12e-d7e98812ef45",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ca8ca1ad-858f-4253-a0ad-1dc525801124",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.3a19c8fd-3edf-4e90-8b7f-72c4b271a9a3",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.5e45a7a7-3ffa-49e9-b959-f7a40034f7f3",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.0035bf28-1839-4f19-9fb7-7fc88c7c5241",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ffc5c38b-1fec-4343-8045-f811b63ef469",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.0f2fe607-5885-4bdc-9fad-5a69fb3cdf00",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.4a9d43e3-aaa9-4ae9-ace4-ee2c16471bdb",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.3046e682-d9e2-484d-9b84-a09f2fbbe603",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.5d744fcc-0573-47f8-a6ed-223bee1f5fc7",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.cb27ce5b-9c77-44ff-9088-d3c54c8e446c",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.59b49c11-5572-4307-bb45-0b4aa2c5501e",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.7c722bf1-a8a9-4c98-b6a8-41a2182c5b15",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.602e4cf3-2a39-4e8c-9731-e495efccbfbc",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.deced9b9-5d02-406a-9626-7796f24ed1cd",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.b922db4a-023b-4cb6-8d6d-e338dd99576b",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.34bafc17-f73e-4aca-af1d-786dc4a843e8",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.d4dd50b0-2817-484b-8513-0aafee61cad0",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.466389cf-097a-436f-b013-3d19dbb4b21c",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.bb9d59fc-de07-4644-b235-51e49c72eff0",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ce7d1df6-a087-4145-85a0-a3162cf6b28a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.06134acc-695a-4734-984a-2f0ceb9d475b",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.70dc5fa8-d461-4c8d-bad0-07bbc2f2d196",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.c937d0fd-71b9-4f0d-87b9-83a3798a964e",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.74e3635c-017e-49ab-b82f-af3ed9ec1bab",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.6e235a80-7200-4f22-8b47-fd493895e075",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.98b036fb-a416-40d5-ad7e-60d55afe8ebd",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.091f6122-efca-482e-9919-939f56469e5e",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.096b5ebb-6426-4279-9de9-d541f1553d4c",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.26e928bb-3b8c-4f80-9973-81c496b96bdd",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.78a56601-3b5c-4eb8-aa42-71f7986589e4",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.1b37f4ae-e2da-4188-a9a2-6a8b0622eb52",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.0fbf73a0-a7ab-4e4f-8179-6877627ae744",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ff1408bd-75c7-4951-9a77-b9b5c72cb053",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.81e04a13-edcc-4259-8d17-0fb08f4479e6",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.d6e19142-fca7-47a5-9bda-c657bd131d5d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.044f6eb0-8510-426d-8723-d1c0eabe647f",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.1a88162b-95ab-4ecf-95c7-c5ee26cb14d3",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.124f6775-1cdf-4966-9ff2-eaadab8bf9b4",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.237163ca-e8e3-4c85-9e31-39732a405f0b",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.b3da11c5-1853-4b6c-bac3-06e0e6a105d3",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.dbef4b05-39d1-4f5b-8be3-25bd2189bd1a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f99ba956-e6bc-4c34-a89d-262d77dfc56d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.cde66c3e-e0da-47e3-b4b0-6f62e64b00fc",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.0a5abb74-28ff-4c60-8cba-6731291cf638",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.47d9e18b-19db-45a8-8ea8-c338ff3a8e9a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.eedd12ba-5f1b-4413-b8e2-cf56999e63bb",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.70f85d09-cabf-474d-8da9-082795ef28d5",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.18181ad9-e10b-4b0c-897d-8ddabc450958",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.84fd4342-ce58-42cb-bf0e-119e55e76049",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.88df12ce-cafd-4986-a47d-c347ab2be4bf",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.3e3cfe6d-eec3-4c67-b235-c1b0f93e0810",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.7fefa28c-8627-4e4d-b6ef-4bb93a2e3545",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.69e6fa47-eded-4bfc-bed0-43ae0219f818",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.459d193f-4a75-4447-a513-2f15e47d0a90",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a8503d96-1257-4f03-ad71-b64b5edd2423",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.10e0888a-2981-4e71-b589-0fdd6138134c",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.915f35c9-655b-4fc3-8357-3c7447ed0e89",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f1a8ac6d-0e8c-4007-b811-fd93132e6d36",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a26f10f0-7e0c-49ac-8b36-3117fdb23cbd",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.638af169-87f6-43ab-93f9-c627502fb84c",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.fe863177-e61e-4c10-a140-be09df13019f",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.2616b485-81f5-409e-93ce-f4d440d902da",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f341f01b-12e8-47a4-9209-83ddbc312a85",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a456135c-e586-43f1-aef1-9bab1c7ca990",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.1dc9f593-7937-4109-b680-79865fedbf5e",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.99f6cca6-b27f-4944-a2d4-b2ef6c6dc0fa",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.4ce450d5-bb69-4cd5-baa8-b3800fdbeef9",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.629a71ee-7c31-42c0-bd2d-cc5666e1cc84",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.4bda00ea-958c-47f8-af62-e51908b7acf9",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.2af9afdd-b743-476f-82ec-ca30dc7cb60c",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.33719cc7-8895-4f3e-afe1-ed6a9ccfe18f",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.1ce6d68e-bb5f-4e24-aa75-fd14442d6242",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.df7c446c-1a3f-4b88-ba9b-2fe3cd25d8fd",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.71f6eb24-1a41-414e-a8d3-4c6f281572f7",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.73a74bb6-acb9-4ad7-980d-0e820e99c87d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f6b390b8-62b0-44d7-9199-c176d20221f7",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.04799cf8-ad4a-4d88-a9bd-e55024560ab6",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.6b5e0fa8-8fe2-40e4-85c7-c49b0e5fc658",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.16c5b0b9-2cbb-443a-8abf-914fa535db9a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f6727656-2963-4ee6-842a-92093bafb82e",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.8139a886-be1b-4103-b5d3-6d69f1bf66e5",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f06de3ac-6303-4d2d-9279-2f205b33b7dc",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.b60e9df6-b8f0-48cf-a297-aec2196ec5f5",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e4b42fdb-ad59-41db-a311-be8f03676633",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.c1e5d9ba-b05f-4094-a9ea-4ad32014107f",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.5b87d959-0342-4de4-9fea-a7e9593469ea",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f8807b33-cd74-41ee-9394-1d21b5b44551",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f4058dc3-7333-45d8-8ab2-c2e5670dc283",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a3af99c9-abdc-4552-9daf-ae3692b35100",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.6bfe3e7f-50fc-45f1-98eb-92fbfc3fb197",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.c54f006b-a372-4759-a473-678331a4552b",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.b2946148-3bf2-4f46-af08-3edf86dbde6a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.fec50f8e-6b18-4875-89ae-d1f719bf9a3a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.47ee4994-24b9-4bb1-a6c2-8cd8fca3bd79",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.541752a5-7650-4a59-9b4e-ca060a1c374e",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.3cd7d614-8a51-4ee6-a7cc-50686ca4df19",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.95b7307c-d54f-4918-acb0-2e8ab3e8ad3c",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.844f6489-b52b-4297-bcf7-a9c200e45ed2",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.cefe17ce-18f1-4f62-afab-de0720b917a2",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.0436023f-d0f7-48e5-b54b-7fdeaacf8da8",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e48c7fd0-7cab-47cf-83d4-220be4805220",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.8ef1558b-d44a-4a39-b88b-ab6f1adfd4ef",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.1cf02ec2-a9fb-44f2-8e39-ff0e212bf09a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.5b4b15b3-640a-4643-9a0d-a73ca9a5c096",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.97a3519e-0ea8-482e-b042-d1d434591e3f",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f1e814ea-c79e-485c-b369-ebce744963d4",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.452a6874-db8c-4d9e-ad43-9938f68f55b7",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.89475478-693c-49f9-bf04-fe23dbecbda5",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.130ee09d-e480-4fb4-931c-0878bd659391",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.4bba97bb-8ff4-4369-a90a-781f1d69f061",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.71915915-37f6-45ec-bfa7-61cf6fc9c5cf",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.45d6a348-e7ed-482e-969a-5ee5fa815125",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.9433ca21-22e4-4e44-a4be-6e413fc03931",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.16cf8863-4b8c-4438-ad2d-3ebe04920b8b",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.25802373-5e0c-48af-ac60-0a45233a473d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e7eccdfb-95dd-4b1e-8b0a-13d5478de6e9",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e0523789-9f39-4a52-af0d-e661bf98fc99",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.31afc1fa-b34e-4b5a-b429-a9f620c5ba66",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.38af3b39-4b9f-4e90-a586-dd166ce9b36b",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e928cafe-77fc-4064-8240-e8bc4c73ee57",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a6b5f4da-4094-4c37-8d57-a5b703f67985",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.71a2faad-c06a-40cc-9b19-6fccdf3171b2",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a177d7f2-ed5f-4308-9715-ea24e8740fcb",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.3fbfd20d-1601-471d-8047-32e5386a3690",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.d2b9a452-71c1-48f0-919c-2e3581c4b640",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.c343e6c1-7c14-423b-b807-bc801177cdb7",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.5db99f37-a47d-4c1a-a193-f061aea24a33",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.d7d7564f-56de-49fa-b6d2-bdd7ce999e07",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.15426193-887c-457b-bee6-4acc6cdec512",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.aee4499f-e515-4ac3-ac3c-4b989eb513fd",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.88c8977b-97f2-4987-9cc3-5c7e7959cd2f",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.7ab332fa-f300-4693-9f23-7ac4710c2cb2",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.dbc366d3-98e3-42de-b4c8-e4d61a7fdc70",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ef5272ad-b505-4bbf-b2d0-2fdfc69282eb",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.83abd168-277d-41c5-8753-9292b742bd11",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.af326b42-27cb-4eeb-925d-a18aa8000a29",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.9f78e907-eb2e-4f9f-9faf-5f0bdbe54e20",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.2409d355-db8e-4ced-8421-08fc3c4e034a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.320647c2-f1e4-4a5b-b257-5096e8f5fe98",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.b5c38787-5857-4b8b-8ebc-a14eb003e65d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.cca8210e-e4ba-49f4-81a7-d2509a6c6fa2",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.0fa96e64-5529-4fc2-abed-89ef0b205fd9",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.fd777d8c-9dbb-42b9-aea2-0107fb019e12",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.c7140104-8fba-490a-8e83-af475f84edb3",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.6c20c714-e648-4c1a-b0ef-f93a1be78f29",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.7d78e07b-cddf-4223-bb3d-15f93a1ebd18",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.d0cfb5d3-434c-4e49-970e-775c9dbeb1a1",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.2dc24e90-5491-40f7-a37d-bf4b9b2e53fc",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.11342d3d-945b-4544-9b37-42b713f89359",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.bbf4b1cd-9441-4988-b80e-501798ba50d9",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.c82b6603-f8c5-4441-9fae-1798be9e825d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.0762a42c-5fe5-4413-90b5-843ece53f705",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.432a57a0-cf4c-4605-8029-d8f5f57ffba5",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ec78b6d5-5160-469d-9302-8b749978e222",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.44461629-44e9-4921-9911-5ee61808ad48",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.1c17876b-ff39-44c5-a750-d2fc89e300bc",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.35949122-287b-4c3d-9b57-2ceb69528b81",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.6b60a3a9-3739-4495-8f19-434bea4da543",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.3d530f1a-d42f-402d-bbe0-7874942dc8fb",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.eed22078-97e6-4550-ab06-9175d3336f57",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.03c8524f-fe41-465f-888d-e89f1782151e",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.51191755-fa66-4cba-aa11-806cf4608d2d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.06d1f955-434c-49c8-8797-7f466c5ff3ca",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.5f2b4060-3f43-42dd-8130-b6ed29931dec",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.24f329ab-fbc9-4967-ada6-21b18059ad8e",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.d9dd418b-5f37-4f64-a46f-209e12d47975",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f297fd56-8542-4fa1-8249-b67c963b64fc",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e77a643f-20c0-4593-9467-8210b43435ba",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.bb01ed33-c391-4b24-8388-808e569894d5",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.850c3bd1-485a-4d5d-839b-8f885e16cd43",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.deb7f944-6ff0-4935-bae1-344cf81e784c",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.1bdeeb6c-86c1-4f11-9fa0-d8a105477c4c",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.1b34fcd6-32d0-41ca-98b0-5ba5a4b8daa8",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.dcda777f-c1c8-489f-83ce-8d7517aa8175",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a1155f81-a572-4ef7-a1c4-684334ee7fb0",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.11c21130-61ee-4394-bad5-0d40b0f4fc58",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.dbe33f31-93f5-480c-b0dc-0afa2aa772c2",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a0d63c9e-5130-4d5f-aea3-0342819c84b0",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.84e889cf-05e1-42ea-b1bd-298966123353",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.7cf8d377-bf9e-4926-b446-f42de6715174",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.971b613e-0e62-40a9-a501-3d3e16e19be7",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.795ac287-5b97-4698-a398-71ab5b8ac37b",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.d7adcbf9-8042-4ae5-8874-6be0cc375769",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.0c71da11-8556-4c6c-b0b2-c6056dac6b27",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a5da6886-2b32-484b-ac56-cb9c40d9d6a4",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.0dafb6b6-2658-41c8-81b1-ccc9894b2b1f",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a556b6d2-64f7-45d4-9979-e639d7278839",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.dd689cff-ed42-44ac-92e0-44dc8e1270fd",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.78656bfa-af83-4d9c-a6c1-021f4b364949",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.28e18215-1b04-47d6-9bee-9a2a874925f1",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.3b612ca3-f89b-4da6-bb8b-8656daa0ed40",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.33590def-2d84-4f5f-9e70-24bd8fe44465",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.dd896b4d-d6cf-46f4-abfa-597b88c82279",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.7cb1c03c-3ed8-4390-9e53-171c4703c257",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.98520976-5e79-45ca-b09f-d8809f146c25",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.1fcc9f53-e5b9-4f10-983b-c25f3622f20f",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.9d888a0b-6ad4-4289-8472-3946526ed963",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f942749b-4bce-45ed-961e-e23e503a6ee2",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.df5a3dd9-054b-40c3-a68a-2eca4d17d567",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.46e60ffc-2544-47ef-b033-3adbd2a9b2f1",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.b4aa1ba1-114c-4774-b08b-a55be8d8fe15",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.1b2c4418-9610-4c21-aab8-a303f7a34484",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.65f28a37-d2d6-49cd-8c7e-20ef1ca8990a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.efc8f081-b781-4504-a6ca-26903f501b58",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.913bd949-c36e-4f14-ab84-4b19719da880",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.824715f3-e900-4983-aac6-589a52ecc355",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.b51b9731-1cdf-4e32-81d3-107932d8e820",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.60293a81-4380-482a-9c75-45430da7001d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.d0f8b5ad-1604-4ac3-b9d3-cdcaddfed075",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.8c2f618b-8123-4f01-9b93-670207acc42e",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.8fde285d-a502-4c8e-a6ec-2569b442c62a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ff5e33a2-0d58-40a2-8c30-dc2617e29855",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.cdf45979-feb5-4ea3-bb97-f6a2fc46dc3a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.604658ec-e1fd-4b21-a210-fafdfe5bf20b",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ffd1adc6-ae64-4541-8ceb-b871aaf22328",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.b2f5b7c1-958e-4b88-8451-bd9708e8acc5",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.d9211906-29de-44b2-8b18-aefe7590f591",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.08dab28a-6d60-4e6c-a1d6-740ecac00313",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.38d1c748-f7b3-417a-829a-1345e9d59ff2",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ac785da2-cd12-4554-8188-4ddf57f0e99b",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.2e285fc4-7082-4693-a58f-a5e876019df6",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.95d94ed5-2ea9-462f-bf58-37b9bb7d60b1",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e47f4d99-39f4-4daf-8072-82bbc051ccbe",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.229161cd-7783-4d6e-ba4f-185d0f899adb",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.2f6a0fe6-4f6f-485d-9920-b4ecb51c3c67",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.2eb52a0b-d662-435e-a701-8fec95d85306",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.270a9dcb-db1b-432d-841d-2a8a9d0fef66",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.f02ca84e-ded0-43f1-8b58-09d2a459b427",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.0efeef6c-94b3-4bbb-9141-cc83d15c3882",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.58efb95a-b4d9-453d-aa32-fa23df836a93",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.41f4404a-1d6c-4f7c-bef5-71d6f0ce4fba",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.3dd8837b-5186-49cb-becb-18280fd0841d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.172b54f8-680b-431e-8be1-4daac17f112c",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a60eb0b8-5241-473f-84c6-29d61298c446",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e9ffc0a3-24e9-4e04-bd25-9b48ee190a05",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.cafdb89d-4800-4668-8112-8004b5fae0ef",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a6736d6b-5cd5-4859-a2c1-552d46029b43",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e398d1fe-876e-4edc-b728-57bb9bcb8012",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.77a9afd0-5122-43fa-9572-0d215774dab4",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.b8f757b6-4180-482d-8269-31e5f9c476f6",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.62926957-b866-46fa-b24f-001417f517f9",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e0e44abd-4be2-42c5-9f6f-7d9173e9a4fb",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.acb2ec5f-ebe8-4b01-b589-00535bcef14d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.57d20379-9c69-4ed1-8bf6-8cc596f2ccbe",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.7fd5a4d4-0e72-4316-a452-90ba5eaac076",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ec0d85f1-e914-4b01-988d-248755801fdc",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.c6b83c1d-630f-48c9-815d-97a110fdc447",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.1a83dd92-573c-4e49-9791-d600db92f270",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.b8ac13f7-be77-47c2-b451-8d2d71fcd137",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.7b150f0f-1de4-4eec-b568-944b3943fd0e",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.0478afe2-51e1-4272-b58c-9a84c69d5686",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.5e82893b-4541-4603-9366-3285a894967f",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.af09af1d-970d-4bac-9b66-86301035b708",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.c6ab6775-8352-4a75-ad3f-4139dd916e8e",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.7d1d8bf4-d173-4da5-aaea-cfb143770c52",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.e77e4fd6-d4a3-4492-bf40-0ef63f85b2ca",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.fb778779-757d-4f65-a804-c828ece7401f",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.3d8e993a-21e8-4118-89c0-9789de14f2aa",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ed718e67-4993-4e9d-a955-879b37b4ae89",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.98682f65-73b4-46ca-a6fc-bc0410494256",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.503859f5-2767-4070-97de-73316f539ead",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.51468b06-ef36-463c-aabb-3e13592e5517",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.7934538e-6a30-4bb2-bc12-383774e13b8d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.9ccbf90b-5dd0-46df-828f-3bb0c09dcf0a",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.de7065c0-a955-4bdf-862b-38aae7810889",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.4ca91d50-db95-4d0d-a550-2ca973ec62cd",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.09b5bcf7-f38d-4dee-8d73-fd60c46e3478",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.efb48e28-2016-40e5-b275-2b209b7f8db5",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.33c371fb-a212-4608-b82a-82323be6eec5",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.78d11f9f-90c3-49aa-a3ac-425f55912bbd",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.456f8ef3-e2ff-49bc-b944-125c439a2d92",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.ce0b6958-04c3-49e3-a6c2-79cf75d58bd8",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.2fd9c3f7-f816-48e7-b91b-8183f1198680",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.a451d93c-28c1-41ec-afdb-008ef0f39656",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.46c01344-4cc6-43fe-810d-53a2fda4acfe",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.6dfe771a-66af-4884-bcb0-9edb0d8d5bbd",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.6924a2dd-d58c-45cb-8af0-246a6c11fa5d",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.2976efe2-c80c-4e73-afef-382f816e2fbe",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.6659feed-a13b-4568-97b1-7fd46b849e44",
+          "model.0b5776b4-d3d0-44ff-912a-536c7aba4f15.9f060058-9d70-41cb-aaf9-7e5b987457cd"
+      ]
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: false
+selectable: true
+theme: bbb_site_studio
+style_guide_uuid: 0b5776b4-d3d0-44ff-912a-536c7aba4f15

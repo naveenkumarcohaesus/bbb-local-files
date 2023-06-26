@@ -1,0 +1,17 @@
+search_api.index.solr_index:
+  expected_config: {  }
+  update_actions:
+    delete:
+      field_settings:
+        rendered_item:
+          configuration:
+            roles:
+              anonymous: anonymous
+    change:
+      field_settings:
+        rendered_item:
+          configuration:
+            roles:
+              - anonymous
+      options:
+        index_directly: false

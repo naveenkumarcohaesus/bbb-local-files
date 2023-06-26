@@ -1,0 +1,10 @@
+field.field.media.image.image:
+  expected_config:
+    settings:
+      alt_field_required: false
+      file_extensions: 'png gif jpg jpeg'
+  update_actions:
+    change:
+      settings:
+        alt_field_required: true
+        file_extensions: 'png gif jpg jpeg svg'

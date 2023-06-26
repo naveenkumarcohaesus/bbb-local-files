@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: small_related_content_w358_h192
+label: 'Small Related Content W358 H192'
+effects:
+  457b6f69-39b3-40db-a0cd-975ced025f1b:
+    uuid: 457b6f69-39b3-40db-a0cd-975ced025f1b
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 358
+      height: 192
+      crop_type: focal_point

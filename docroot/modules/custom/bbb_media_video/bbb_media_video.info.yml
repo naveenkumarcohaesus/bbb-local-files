@@ -1,0 +1,9 @@
+name: 'BBB Media Video'
+description: 'Provides video media type and related configuration.'
+type: module
+package: BBB
+core_version_requirement: '^9 || ^10'
+dependencies:
+  - drupal:field
+  - drupal:media
+  - drupal:acquia_cms_video

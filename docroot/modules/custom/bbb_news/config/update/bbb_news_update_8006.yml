@@ -1,0 +1,23 @@
+core.entity_form_display.node.news.default:
+  expected_config:
+    content:
+      field_quick_links:
+        type: link_default
+  update_actions:
+    add:
+      content:
+        field_quick_links:
+          settings:
+            enabled_attributes:
+              accesskey: false
+              aria-label: false
+              class: false
+              id: false
+              name: true
+              rel: true
+              target: true
+              title: false
+    change:
+      content:
+        field_quick_links:
+          type: link_attributes

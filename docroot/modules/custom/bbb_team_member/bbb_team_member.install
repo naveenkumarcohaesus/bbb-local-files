@@ -1,0 +1,135 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Config\FileStorage;
+
+/**
+ * Update help text for team member node title.
+ */
+function bbb_team_member_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_team_member', 'bbb_team_member_update_8001');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Remove body field and metatag field to team member content type.
+ */
+function bbb_team_member_update_8002() {
+
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_team_member') . '/config/install';
+  $source = new FileStorage($config_path);
+  // Manually import metatag config from install folder.
+  $config_storage = \Drupal::service('config.storage');
+  // Meta tag team member.
+  $config_storage->write('field.field.node.team_member.field_metatags', $source->read('field.field.node.team_member.field_metatags'));
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_team_member', 'bbb_team_member_update_8002');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update teaser text field description.
+ */
+function bbb_team_member_update_8003() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_team_member', 'bbb_team_member_update_8003');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Enable Card view mode.
+ */
+function bbb_team_member_update_8005() {
+
+  // Import card configs.
+  $configs = [
+    'core.entity_form_display.node.team_member.default',
+    'core.entity_view_display.node.team_member.card',
+    'core.entity_view_display.node.team_member.default',
+    'field.field.node.team_member.field_image',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_team_member', 'install');
+  }
+}
+
+/**
+ * Team member view block.
+ */
+function bbb_team_member_update_8006() {
+  // Team member views.
+  _bbb_article_rewrite_configuration('views.view.team_member', 'bbb_team_member', 'install');
+  // Import team member block.
+  _bbb_article_rewrite_configuration('block.block.views_block__team_member_team_member_block', 'bbb_team_member', 'install');
+
+  // Place team member block to dx8_hidden region.
+  $block = Block::load('views_block__team_member_team_member_block');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+}
+
+/**
+ * Updated view modes for Team Member.
+ */
+function bbb_team_member_update_8007() {
+  $configs = [
+    'core.entity_view_display.node.team_member.card_h2',
+    'core.entity_view_display.node.team_member.card_h4',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_team_member', 'install');
+  }
+}
+
+/**
+ * Adds a custom block for Hero Team Member and import it's default content.
+ */
+function bbb_team_member_update_8008() {
+  // Import hero_team_member block's content.
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_team_member");
+  // Import hero_team_member block.
+  _bbb_article_rewrite_configuration('block.block.hero_team_member', 'bbb_team_member', 'optional');
+  // Place hero_team_member block to content region.
+  $block = Block::load('hero_team_member');
+  $block->setRegion('content');
+  $block->save();
+}
+
+/**
+ * Update Team Member view modes to fix fatal errors.
+ */
+function bbb_team_member_update_8009() {
+  $configs = [
+    'core.entity_view_display.node.team_member.default',
+    'core.entity_view_display.node.team_member.card',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_team_member', 'install');
+  }
+}

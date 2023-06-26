@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the acquia_cms_document module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function bbb_media_document_install() {
+  $check_doc_type_field = \Drupal::service('entity_field.manager')->getFieldDefinitions("media", "document");
+  if (isset($check_doc_type_field["field_document_type"]) && !empty($check_doc_type_field["field_document_type"])) {
+    \Drupal::entityTypeManager()
+      ->getStorage('entity_view_display')
+      ->load('media.document.default')
+      ->setComponent('field_document_type', [
+        'type' => 'entity_reference_label',
+        'label' => 'above',
+        'settings' => ['link_to_entity' => 'true'],
+        'weight' => 5,
+        'region' => 'content',
+      ])->save();
+    \Drupal::entityTypeManager()
+      ->getStorage('entity_form_display')
+      ->load('media.document.default')
+      ->setComponent('field_document_type', [
+        'type' => 'options_select',
+        'weight' => 2,
+        'region' => 'content',
+      ])->save();
+  }
+}
+
+/**
+ * Install Media Entity Download module.
+ */
+function bbb_media_document_update_8001() {
+  \Drupal::service('module_installer')->install(['media_entity_download']);
+  _bbb_article_create_field_storage('field.storage.media.field_download_assistive_text', 'bbb_media_document', 'optional');
+  _bbb_article_create_field_storage('field.storage.media.field_download_cta', 'bbb_media_document', 'optional');
+
+  _bbb_article_create_entity_field('media.document.field_download_assistive_text', 'field.field.media.document.field_download_assistive_text', 'bbb_media_document', 'optional');
+  _bbb_article_create_entity_field('media.document.field_download_cta', 'field.field.media.document.field_download_cta', 'bbb_media_document', 'optional');
+  // Update media document displays.
+  _bbb_article_rewrite_configuration('core.entity_form_display.media.document.default', 'bbb_media_document', 'optional');
+  _bbb_article_rewrite_configuration('core.entity_form_display.media.document.media_library', 'bbb_media_document', 'optional');
+  _bbb_article_rewrite_configuration('core.entity_view_display.media.document.token', 'bbb_media_document', 'optional');
+}

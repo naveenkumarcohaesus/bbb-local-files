@@ -1,0 +1,26 @@
+uuid: 796da691-4689-443b-8e6c-7e707bc704ee
+langcode: en
+status: true
+dependencies: {  }
+id: pack_read_more_component
+label: 'Read more Component'
+description: 'Contains Read more Component package'
+excluded_entity_types: '{"cohesion_base_styles":true,"cohesion_color":true,"cohesion_custom_style":true,"cohesion_font_library":true,"cohesion_font_stack":true,"cohesion_icon_library":true,"image_style":true,"cohesion_website_settings":true}'
+settings: |
+  {
+      "eca73b97-1965-47fd-b174-1ba78b2b9b31": {
+          "type": "cohesion_component",
+          "items": {
+              "eca73b97-1965-47fd-b174-1ba78b2b9b31": {
+                  "type": "cohesion_component"
+              },
+              "54afe04e-c6ce-4247-8ba9-61c5d3cc5b2b": {
+                  "type": "cohesion_component_category"
+              },
+              "29e5c27e-8b91-45fb-b30c-47ce7dcc9cf3": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

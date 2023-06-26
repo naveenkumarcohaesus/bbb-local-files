@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Delete field for mobile video from hero_video.
+ */
+function bbb_media_hero_video_update_8001() {
+
+  // Deleting mobile video field.
+  if ($field_instance = FieldConfig::loadByName('media', 'hero_video', 'field_mobile_video')) {
+    $field_instance->delete();
+  }
+
+  // Deleting field storage for mobile video field.
+  if ($field = FieldStorageConfig::loadByName('media', 'field_mobile_video')) {
+    $field->delete();
+  }
+}
+
+/**
+ * Import hero video config changes.
+ */
+function bbb_media_hero_video_update_8002() {
+  _bbb_article_rewrite_configuration('field.field.media.hero_video.field_media_video_file', 'bbb_media_hero_video', 'install');
+}

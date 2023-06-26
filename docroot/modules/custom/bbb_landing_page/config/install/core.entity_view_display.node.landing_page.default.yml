@@ -1,0 +1,52 @@
+uuid: bff8a2bf-32fa-4912-97df-9695b612121a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.field_image
+    - field.field.node.landing_page.field_layout_canvas
+    - field.field.node.landing_page.field_metatags
+    - field.field.node.landing_page.field_teaser_text
+    - node.type.landing_page
+  module:
+    - cohesion_elements
+    - metatag
+    - user
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  field_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_layout_canvas:
+    type: cohesion_entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_teaser_text: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,105 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\Core\Config\FileStorage;
+
+/**
+ * Add validation for required fields.
+ */
+function bbb_landing_page_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_landing_page', 'bbb_landing_page_update_8001');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update help text for landing page node title.
+ */
+function bbb_landing_page_update_8002() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_landing_page', 'bbb_landing_page_update_8002');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Removed bbb_landing_page_update_8003.
+ *
+ * Remove body field and update required field validation.
+ */
+function bbb_landing_page_update_8004() {
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_landing_page') . '/config/install';
+  $source = new FileStorage($config_path);
+  // Manually import metatag config from install folder.
+  $config_storage = \Drupal::service('config.storage');
+  // Meta tag for landing page.
+  $config_storage->write('field.field.node.landing_page.field_metatags', $source->read('field.field.node.landing_page.field_metatags'));
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_landing_page', 'bbb_landing_page_update_8003');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Fix missing config during the updb of 8003 for Landing page CT.
+ */
+function bbb_landing_page_update_8005() {
+  // Manually import view mode config from install folder.
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_landing_page') . '/config/install';
+
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+
+  $config_storage->write('core.entity_form_display.node.landing_page.default', $source->read('core.entity_form_display.node.landing_page.default'));
+}
+
+/**
+ * Removed bbb_landing_page_update_8006.
+ *
+ * Removed bbb_landing_page_update_8007.
+ *
+ * Removed bbb_landing_page_update_8008.
+ *
+ * Manually import config for Landing page CT.
+ */
+function bbb_landing_page_update_8009() {
+  // Manually import view mode config from install folder.
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_landing_page') . '/config/install';
+
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+
+  $config_storage->write('core.entity_form_display.node.landing_page.default', $source->read('core.entity_form_display.node.landing_page.default'));
+}
+
+/**
+ * Updated view modes for Landing Page.
+ */
+function bbb_landing_page_update_8010() {
+  $configs = [
+    'core.entity_view_display.node.landing_page.card_h2',
+    'core.entity_view_display.node.landing_page.card_h4',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_landing_page', 'install');
+  }
+}

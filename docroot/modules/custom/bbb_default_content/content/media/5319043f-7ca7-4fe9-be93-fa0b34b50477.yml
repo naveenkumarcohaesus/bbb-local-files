@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 5319043f-7ca7-4fe9-be93-fa0b34b50477
+  bundle: image
+  default_langcode: en
+  depends:
+    21a62341-85f0-4469-90d9-01f1465496af: taxonomy_term
+    b252566a-ae0e-43b2-a0f0-d5e0a2d0f1a2: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'BBB White.png'
+  created:
+    -
+      value: 1665576272
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_image_type:
+    -
+      entity: 21a62341-85f0-4469-90d9-01f1465496af
+  image:
+    -
+      entity: b252566a-ae0e-43b2-a0f0-d5e0a2d0f1a2
+      alt: 'This is alt'
+      title: ''
+      width: 129
+      height: 48

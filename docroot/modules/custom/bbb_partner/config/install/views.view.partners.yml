@@ -1,0 +1,1495 @@
+uuid: 4191fa61-024e-4a74-bf01-301fd8a65911
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.partner_list
+    - taxonomy.vocabulary.finance_type
+    - taxonomy.vocabulary.financial_variant
+    - taxonomy.vocabulary.investment_types
+    - taxonomy.vocabulary.partner
+    - taxonomy.vocabulary.programme
+    - taxonomy.vocabulary.region
+    - taxonomy.vocabulary.sector
+    - taxonomy.vocabulary.stages
+  module:
+    - better_exposed_filters
+    - taxonomy
+    - user
+id: partners
+label: Partners
+module: views
+description: ''
+tag: ''
+base_table: taxonomy_term_field_data
+base_field: tid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Partner List'
+      fields:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 1
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: true
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+        rendered_entity:
+          id: rendered_entity
+          table: taxonomy_term_data
+          field: rendered_entity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          plugin_id: rendered_entity
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view_mode: partner_list
+      pager:
+        type: none
+        options:
+          offset: 0
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: "<div class=\"no-results\">\r\n<div class=\"no-results-text coh-style-headline-3\">No results found</div>\r\n<div class=\"no-results-desc coh-style-body-large\">Try adjusting your filters to find what you are looking for.</div>\r\n</div>"
+            format: filtered_html
+          tokenize: false
+      sorts:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+          value:
+            partner: partner
+          group: 1
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_investment_types_value:
+          id: field_investment_types_value
+          table: taxonomy_term__field_investment_types
+          field: field_investment_types_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_investment_types_value_op
+            label: 'Investment Types'
+            description: ''
+            use_operator: false
+            operator: field_investment_types_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_investment_types_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        field_stages_value:
+          id: field_stages_value
+          table: taxonomy_term__field_stages
+          field: field_stages_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_stages_value_op
+            label: Stages
+            description: ''
+            use_operator: false
+            operator: field_stages_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_stages_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        field_programme_target_id:
+          id: field_programme_target_id
+          table: taxonomy_term__field_programme
+          field: field_programme_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_programme_target_id_op
+            label: Programme
+            description: ''
+            use_operator: false
+            operator: field_programme_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_programme_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: programme
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_finance_type_target_id:
+          id: field_finance_type_target_id
+          table: taxonomy_term__field_finance_type
+          field: field_finance_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_finance_type_target_id_op
+            label: 'Finance Type'
+            description: ''
+            use_operator: false
+            operator: field_finance_type_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_finance_type_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: finance_type
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_region_target_id:
+          id: field_region_target_id
+          table: taxonomy_term__field_region
+          field: field_region_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_region_target_id_op
+            label: Region
+            description: ''
+            use_operator: false
+            operator: field_region_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_region_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: region
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          grouping:
+            -
+              field: name
+              rendered: true
+              rendered_strip: false
+          row_class: ''
+          default_row_class: true
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline:
+            name: name
+          separator: '|'
+          hide_empty: false
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags:
+            - partner_list
+      relationships: {  }
+      css_class: ''
+      use_ajax: true
+      group_by: false
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.taxonomy_term.faq.default'
+        - 'config:core.entity_view_display.taxonomy_term.faq_category.default'
+        - 'config:core.entity_view_display.taxonomy_term.partner.default'
+        - 'config:core.entity_view_display.taxonomy_term.partner.notes_to_editor'
+        - 'config:core.entity_view_display.taxonomy_term.partner.partner_list'
+        - 'config:core.entity_view_display.taxonomy_term.programme.default'
+  attachment_1:
+    id: attachment_1
+    display_title: Attachment
+    display_plugin: attachment
+    position: 2
+    display_options:
+      fields:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: count
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: '<a href="{{ name__value }}">{{ name__value }}</a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 1
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+      pager:
+        type: none
+        options:
+          offset: 0
+      empty: {  }
+      arguments:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: string
+          default_action: summary
+          exception:
+            value: all
+            title_enable: true
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          default_argument_skip_url: false
+          summary_options:
+            base_path: '#'
+            count: false
+            override: false
+            items_per_page: 25
+            inline: true
+            separator: '|'
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: unformatted_summary
+          specify_validation: true
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          glossary: true
+          limit: 1
+          case: upper
+          path_case: lower
+          transform_dash: false
+          break_phrase: false
+          add_table: false
+          require_value: false
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+          value:
+            partner: partner
+          group: 1
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline:
+            name: name
+          separator: ''
+          hide_empty: false
+      defaults:
+        empty: false
+        css_class: false
+        group_by: false
+        style: false
+        row: false
+        fields: false
+        arguments: false
+        filters: false
+        filter_groups: false
+      css_class: ''
+      group_by: false
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+      displays:
+        partner_list: partner_list
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user.permissions
+      tags: {  }
+  partner_list:
+    id: partner_list
+    display_title: Block
+    display_plugin: block
+    position: 1
+    display_options:
+      title: ''
+      fields:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '{{ name__value|upper }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 1
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: true
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          convert_spaces: false
+        rendered_entity:
+          id: rendered_entity
+          table: taxonomy_term_data
+          field: rendered_entity
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          plugin_id: rendered_entity
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view_mode: partner_list
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: 'Reset all filters'
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: filtered_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: true
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+              reset_button_always_show: true
+            filter:
+              tid:
+                plugin_id: bef
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: true
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+                options_show_only_used: 0
+                options_show_only_used_filtered: 0
+                options_hide_when_empty: 0
+              field_inv_types_target_id:
+                plugin_id: bef
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: true
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+                options_show_only_used: 1
+                options_show_only_used_filtered: 1
+                options_hide_when_empty: 0
+              field_programme_target_id:
+                plugin_id: bef
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: true
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+                options_show_only_used: 1
+                options_show_only_used_filtered: 1
+                options_hide_when_empty: 0
+              field_region_target_id:
+                plugin_id: bef
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: true
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+                options_show_only_used: 1
+                options_show_only_used_filtered: 1
+                options_hide_when_empty: 0
+              field_finance_type_target_id:
+                plugin_id: bef
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: true
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+                options_show_only_used: 1
+                options_show_only_used_filtered: 1
+                options_hide_when_empty: 0
+              field_partner_sector_target_id:
+                plugin_id: bef
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: true
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+                options_show_only_used: 1
+                options_show_only_used_filtered: 1
+                options_hide_when_empty: 0
+              field_partner_stages_target_id:
+                plugin_id: bef
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: true
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: false
+                options_show_only_used: 1
+                options_show_only_used_filtered: 1
+                options_hide_when_empty: 0
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: "<div class=\"no-results\">\r\n<div class=\"no-results-text coh-style-headline-3\">No results found</div>\r\n<div class=\"no-results-desc coh-style-body-large\">Try adjusting your filters to find what you are looking for.</div>\r\n</div>"
+            format: cohesion
+          tokenize: false
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+          value:
+            partner: partner
+          group: 1
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        tid:
+          id: tid
+          table: taxonomy_term_field_data
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: tid
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_op
+            label: 'Financial Variant'
+            description: ''
+            use_operator: false
+            operator: tid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: tid
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: financial_variant
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_inv_types_target_id:
+          id: field_inv_types_target_id
+          table: taxonomy_term__field_inv_types
+          field: field_inv_types_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_inv_types_target_id_op
+            label: 'Investment Types'
+            description: ''
+            use_operator: false
+            operator: field_inv_types_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_inv_types_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: investment_types
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_programme_target_id:
+          id: field_programme_target_id
+          table: taxonomy_term__field_programme
+          field: field_programme_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_programme_target_id_op
+            label: Programme
+            description: ''
+            use_operator: false
+            operator: field_programme_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_programme_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: programme
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_region_target_id:
+          id: field_region_target_id
+          table: taxonomy_term__field_region
+          field: field_region_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_region_target_id_op
+            label: Region
+            description: ''
+            use_operator: false
+            operator: field_region_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_region_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: region
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_finance_type_target_id:
+          id: field_finance_type_target_id
+          table: taxonomy_term__field_finance_type
+          field: field_finance_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_finance_type_target_id_op
+            label: 'Finance Type'
+            description: ''
+            use_operator: false
+            operator: field_finance_type_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_finance_type_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: finance_type
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_partner_sector_target_id:
+          id: field_partner_sector_target_id
+          table: taxonomy_term__field_partner_sector
+          field: field_partner_sector_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_partner_sector_target_id_op
+            label: Sector
+            description: ''
+            use_operator: false
+            operator: field_partner_sector_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_partner_sector_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: sector
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_partner_stages_target_id:
+          id: field_partner_stages_target_id
+          table: taxonomy_term__field_partner_stages
+          field: field_partner_stages_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_partner_stages_target_id_op
+            label: Stages
+            description: ''
+            use_operator: false
+            operator: field_partner_stages_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_partner_stages_target_id
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              administrator: '0'
+              developer: '0'
+              site_builder: '0'
+              content_administrator: '0'
+              content_author: '0'
+              content_editor: '0'
+              user_administrator: '0'
+              anonymous: '0'
+              content_factory: '0'
+              bankers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: stages
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: OR
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          grouping:
+            -
+              field: name
+              rendered: true
+              rendered_strip: false
+          row_class: ''
+          default_row_class: false
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline:
+            name: name
+          separator: ''
+          hide_empty: false
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: true
+          replica: false
+          query_tags:
+            - partner_list
+      defaults:
+        empty: false
+        query: false
+        title: false
+        css_class: false
+        use_ajax: false
+        exposed_form: false
+        style: false
+        row: false
+        fields: false
+        filters: false
+        filter_groups: false
+        header: false
+      css_class: coh-style-logo-list-styles
+      use_ajax: true
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: 'Showing @start - @end of @total results'
+      exposed_block: false
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.taxonomy_term.faq.default'
+        - 'config:core.entity_view_display.taxonomy_term.faq_category.default'
+        - 'config:core.entity_view_display.taxonomy_term.partner.default'
+        - 'config:core.entity_view_display.taxonomy_term.partner.notes_to_editor'
+        - 'config:core.entity_view_display.taxonomy_term.partner.partner_list'
+        - 'config:core.entity_view_display.taxonomy_term.programme.default'

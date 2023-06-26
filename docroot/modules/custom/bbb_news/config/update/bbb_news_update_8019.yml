@@ -1,0 +1,14 @@
+core.entity_view_display.node.news.horizontal_card:
+  expected_config:
+    content:
+      field_content_typology:
+        label: above
+      field_teaser_text:
+        label: above
+  update_actions:
+    change:
+      content:
+        field_content_typology:
+          label: hidden
+        field_teaser_text:
+          label: hidden

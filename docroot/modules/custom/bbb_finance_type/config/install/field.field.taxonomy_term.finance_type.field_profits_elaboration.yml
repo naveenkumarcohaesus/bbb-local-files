@@ -1,0 +1,19 @@
+uuid: d4c72bc7-467a-4832-ab81-82935b898497
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_profits_elaboration
+    - taxonomy.vocabulary.finance_type
+id: taxonomy_term.finance_type.field_profits_elaboration
+field_name: field_profits_elaboration
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'Profits elaboration'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

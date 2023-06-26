@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 49c1c4c3-bd31-4427-8c24-4ad0fb332b56
+  bundle: image
+  default_langcode: en
+  depends:
+    97c2f9ba-caf5-453b-b4ba-5f2d9bb40ba0: taxonomy_term
+    52b537c3-bb36-46ea-8b20-b7a8fcaca01e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'BPC White.png'
+  created:
+    -
+      value: 1666006716
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_image_type:
+    -
+      entity: 97c2f9ba-caf5-453b-b4ba-5f2d9bb40ba0
+  image:
+    -
+      entity: 52b537c3-bb36-46ea-8b20-b7a8fcaca01e
+      alt: 'BPC White Logo'
+      title: ''
+      width: 369
+      height: 170

@@ -1,0 +1,23 @@
+views.view.partners:
+  expected_config:
+    display:
+      partner_list:
+        display_options:
+          exposed_form:
+            options:
+              bef:
+                filter:
+                  tid:
+                    options_show_only_used: 1
+  update_actions:
+    change:
+      display:
+        partner_list:
+          display_options:
+            exposed_form:
+              options:
+                bef:
+                  filter:
+                    tid:
+                      options_hide_when_empty: 0
+                      options_show_only_used: 0

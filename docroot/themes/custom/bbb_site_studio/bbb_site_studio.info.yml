@@ -1,0 +1,44 @@
+name: BBB Site Studio
+type: theme
+description: British Business Bank Site Studio Sub Theme
+core_version_requirement: ^9 || ^10
+
+# Defines the base theme.
+base theme: cohesion_theme
+
+
+cohesion: true
+ckeditor_stylesheets:
+  - css/ckeditor.css
+
+# Defines theme regions available.
+regions:
+  header: Header
+  featured: Featured
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer
+  dx8_hidden: Site Studio hidden region
+
+libraries-override:
+  collapsiblock/core: false
+  cohesion/global_libraries.windowscroll: false
+  cohesion/element_templates.slider-container: false
+  cohesion/element_templates.modal: false
+  cohesion/element_templates.row-for-columns: false
+  cohesion/global_libraries.jquery_ui: false
+  cohesion/global_libraries.jquery_ui_effect_bounce: false
+  cohesion/global_libraries.jquery_ui_effect_clip: false
+  cohesion/global_libraries.jquery_ui_effect_drop: false
+  cohesion/global_libraries.jquery_ui_effect_explode: false
+  cohesion/global_libraries.jquery_ui_effect_fade: false
+  cohesion/global_libraries.jquery_ui_effect_fold: false
+  cohesion/global_libraries.jquery_ui_effect_puff: false
+  cohesion/global_libraries.jquery_ui_effect_pulsate: false
+  cohesion/global_libraries.jquery_ui_effect_scale: false
+  cohesion/global_libraries.jquery_ui_effect_shake: false
+  cohesion/global_libraries.jquery_ui_effect_size: false
+  cohesion/global_libraries.parallax_scrolling: false
+  cohesion/global_libraries.animateonview: false
+  cohesion/global_libraries.cohMatchHeights: false

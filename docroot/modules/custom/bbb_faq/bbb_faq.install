@@ -1,0 +1,118 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\block\Entity\Block;
+
+/**
+ * Update faq category taxonomy to remove image style.
+ */
+function bbb_faq_update_8001() {
+  _bbb_article_rewrite_configuration('core.entity_view_display.taxonomy_term.faq_category.default', 'bbb_faq', 'install');
+}
+
+/**
+ * Adding views and block of FAQ.
+ */
+function bbb_faq_update_8002() {
+  _bbb_article_rewrite_configuration('views.view.faq', 'bbb_faq', 'install');
+  _bbb_article_rewrite_configuration('block.block.views_block__faq_faq_categories', 'bbb_faq', 'install');
+  $block = Block::load('views_block__faq_faq_categories');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+}
+
+/**
+ * Adding views and block of FAQ.
+ */
+function bbb_faq_update_8003() {
+  _bbb_article_rewrite_configuration('views.view.faq', 'bbb_faq', 'install');
+}
+
+/**
+ * Added relationship between taxonomy and also added required link field.
+ */
+function bbb_faq_update_8004() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_faq', 'bbb_faq_update_8004');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update rabbit hole settings for taxonomies.
+ */
+function bbb_faq_update_8005() {
+  $configs = [
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_faq',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_faq_category',
+  ];
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_faq', 'install');
+  }
+}
+
+/**
+ * Disable rabbit hole settings to override.
+ */
+function bbb_faq_update_8006() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_faq', 'bbb_faq_update_8006');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Make FAQ CTA url text mandatory.
+ */
+function bbb_faq_update_8007() {
+  $configs = [
+    'field.field.taxonomy_term.faq_category.field_cta_url',
+  ];
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_faq', 'install');
+  }
+}
+
+/**
+ * Enable cta link field attribute for assisstive text.
+ */
+function bbb_faq_update_8008() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_faq', 'bbb_faq_update_8008');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Imports FAQ question list view.
+ */
+function bbb_faq_update_8009() {
+  // Execute configuration update definitions with logging of success.
+  _bbb_article_rewrite_configuration('views.view.faq_question_list', 'bbb_faq', 'install');
+  _bbb_article_rewrite_configuration('block.block.views_block__faq_question_list_block_1', 'bbb_faq', 'install');
+  $block = Block::load('views_block__faq_question_list_block_1');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+}
+
+/**
+ * Filter Show on website.
+ */
+function bbb_faq_update_8010() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_faq', 'bbb_faq_update_8010');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

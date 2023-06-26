@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Contains implementations for common, shared functionality.
+ */
+
+/**
+ * Implements template_preprocess_media().
+ */
+function bbb_media_hero_video_preprocess_media(array &$variables) {
+  $variables['media'] = $variables['elements']['#media'];
+  if ($variables['media']->bundle() == 'hero_video') {
+    $variables['language_name'] = \Drupal::languageManager()->getCurrentLanguage()->getName();
+    $variables['langcode'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  }
+}

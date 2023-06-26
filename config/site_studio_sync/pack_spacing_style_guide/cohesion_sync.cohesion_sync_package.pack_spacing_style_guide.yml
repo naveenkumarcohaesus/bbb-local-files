@@ -1,0 +1,32 @@
+uuid: e3d9d4a2-3ff3-4b9e-97a2-4fa9b6272c4b
+langcode: en
+status: true
+dependencies: {  }
+id: pack_spacing_style_guide
+label: 'Spacing Style Guide'
+description: 'Spacing Style Guide'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "43588489-f5fe-4025-b7ba-34b422e37b32": {
+          "type": "cohesion_style_guide",
+          "items": {
+              "43588489-f5fe-4025-b7ba-34b422e37b32": {
+                  "type": "cohesion_style_guide"
+              }
+          },
+          "checked": true
+      },
+      "a94a3af5-75b3-4ccb-8502-7233a07a8345": {
+          "type": "cohesion_style_guide_manager",
+          "items": {
+              "43588489-f5fe-4025-b7ba-34b422e37b32": {
+                  "type": "cohesion_style_guide"
+              },
+              "a94a3af5-75b3-4ccb-8502-7233a07a8345": {
+                  "type": "cohesion_style_guide_manager"
+              }
+          },
+          "checked": true
+      }
+  }

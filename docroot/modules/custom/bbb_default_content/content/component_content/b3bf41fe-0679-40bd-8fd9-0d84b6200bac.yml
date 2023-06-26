@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: component_content
+  uuid: b3bf41fe-0679-40bd-8fd9-0d84b6200bac
+  default_langcode: en
+  depends:
+    155e2764-8453-4cb4-80dc-6e645d48f2ec: cohesion_layout
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'BBI White Logo'
+  uid:
+    -
+      target_id: 1
+  created:
+    -
+      value: 1663299826
+  layout_canvas:
+    -
+      entity: 155e2764-8453-4cb4-80dc-6e645d48f2ec
+  component:
+    -
+      target_id: cpt_logo_card
+  revision_translation_affected:
+    -
+      value: true

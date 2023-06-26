@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node_title_help_text
+third_party_settings:
+  node_title_help_text:
+    title_help: 'H1,H2 Headings should be no longer than [10] words in length'
+name: Article
+type: article
+description: 'A Unstructured content type used for creating various types of articles.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

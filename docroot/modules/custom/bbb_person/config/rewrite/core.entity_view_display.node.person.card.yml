@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.person.field_email
+    - field.field.node.person.field_job_title
+    - field.field.node.person.field_person_mobile
+    - field.field.node.person.field_person_telephone
+    - node.type.person
+  module:
+    - user
+  enforced:
+    module:
+      - acquia_cms_person
+id: node.person.card
+targetEntityType: node
+bundle: person
+mode: card
+content: {  }
+hidden:
+  content_moderation_control: true
+  field_email: true
+  field_job_title: true
+  field_person_mobile: true
+  field_person_telephone: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

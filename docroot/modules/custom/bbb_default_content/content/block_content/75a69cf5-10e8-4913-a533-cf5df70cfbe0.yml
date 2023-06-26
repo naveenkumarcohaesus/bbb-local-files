@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 75a69cf5-10e8-4913-a533-cf5df70cfbe0
+  bundle: custom_layout_canvas_block
+  default_langcode: en
+  depends:
+    a364cd1b-c2ce-48b0-a12d-d96e0a5db222: cohesion_layout
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Alert Banner'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_layout_canvas:
+    -
+      entity: a364cd1b-c2ce-48b0-a12d-d96e0a5db222

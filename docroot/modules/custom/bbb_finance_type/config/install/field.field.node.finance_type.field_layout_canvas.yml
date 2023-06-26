@@ -1,0 +1,24 @@
+uuid: d7c5468e-75a9-49e7-ab53-d571c11513fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_layout_canvas
+    - node.type.finance_type
+  module:
+    - cohesion_elements
+id: node.finance_type.field_layout_canvas
+field_name: field_layout_canvas
+entity_type: node
+bundle: finance_type
+label: 'Layout Canvas'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:cohesion_layout'
+  handler_settings: {  }
+  access_elements: '0'
+field_type: cohesion_entity_reference_revisions

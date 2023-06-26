@@ -1,0 +1,11 @@
+name: BBB Media Image
+type: module
+description: Provides config and functionality related to image media.
+package: BBB
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:content_translation
+  - drupal:file
+  - drupal:image
+  - drupal:media
+  - drupal:acquia_cms_image

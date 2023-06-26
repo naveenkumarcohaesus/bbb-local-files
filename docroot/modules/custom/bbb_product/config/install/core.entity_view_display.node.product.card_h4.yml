@@ -1,0 +1,53 @@
+uuid: be96d50a-dca1-4aa9-8598-db3b4981cf6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_h4
+    - field.field.node.product.field_audience
+    - field.field.node.product.field_business_structure
+    - field.field.node.product.field_content_owner
+    - field.field.node.product.field_content_typology
+    - field.field.node.product.field_image
+    - field.field.node.product.field_layout_canvas
+    - field.field.node.product.field_metatags
+    - field.field.node.product.field_programme
+    - field.field.node.product.field_teaser_text
+    - node.type.product
+  module:
+    - text
+    - user
+id: node.product.card_h4
+targetEntityType: node
+bundle: product
+mode: card_h4
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: medium
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_teaser_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_audience: true
+  field_business_structure: true
+  field_content_owner: true
+  field_content_typology: true
+  field_hero_background_pattern: true
+  field_layout_canvas: true
+  field_metatags: true
+  field_programme: true
+  footnotes_group: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

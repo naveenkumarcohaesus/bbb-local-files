@@ -1,0 +1,41 @@
+uuid: 04b673ba-eaa9-416a-8662-23hkh4aea914
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.team_member.field_designation
+    - field.field.node.team_member.field_team_member_group
+    - field.field.node.team_member.field_teaser_text
+    - node.type.team_member
+  module:
+    - user
+id: node.team_member.card
+targetEntityType: node
+bundle: team_member
+mode: card
+content:
+  field_designation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_team_member_group:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_image: true
+  field_layout_canvas: true
+  field_metatags: true
+  field_teaser_text: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

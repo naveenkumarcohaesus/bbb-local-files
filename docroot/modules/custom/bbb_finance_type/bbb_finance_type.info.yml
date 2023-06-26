@@ -1,0 +1,10 @@
+name: BBB Finance type
+description: 'Provides Finance type content type related configuration.'
+type: module
+core_version_requirement: '^9 || ^10'
+package: BBB
+dependencies:
+  - bbb_article:bbb_article
+  - bbb_taxonomy:bbb_taxonomy
+  - bbb_case_study:bbb_case_study
+  - bbb_partner:bbb_partner

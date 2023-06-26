@@ -1,0 +1,263 @@
+{
+    "name": "acquia/drupal-recommended-project",
+    "description": "Acquia-compatible Drupal application based on the Drupal Recommended Project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Acquia Engineering",
+            "homepage": "https://www.acquia.com",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "acquia/acquia-cms-starterkit": "^1",
+        "acquia/blt": "^13.5",
+        "acquia/blt-acsf": "^1.0",
+        "acquia/blt-site-studio": "2.x-dev",
+        "acquia/drupal-environment-detector": "^1",
+        "acquia/http-hmac-php": "6.0.0",
+        "acquia/memcache-settings": "^1",
+        "acquia/sitestudio_contenthub": "^6.9",
+        "ckeditor/tabletoolstoolbar": "^0.0.1",
+        "composer/installers": "^2.1",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-ckeditor-libraries-group/fakeobjects": "^4.19",
+        "drupal-ckeditor-libraries-group/indentblock": "^4.20",
+        "drupal/acquia_claro": "^1.3.2",
+        "drupal/acquia_cms_image": "^1.5",
+        "drupal/acquia_cms_page": "^1.3",
+        "drupal/acquia_cms_search": "^1.3",
+        "drupal/acquia_cms_site_studio": "^1.3",
+        "drupal/acquia_cms_starter": "^1.3",
+        "drupal/acquia_cms_toolbar": "^1.3",
+        "drupal/acquia_cms_tour": "^2.0",
+        "drupal/acquia_contenthub": "^2.34",
+        "drupal/acquia_purge": "^1.3",
+        "drupal/admin_menu_levels": "^1.0",
+        "drupal/autologout": "^1.4",
+        "drupal/better_exposed_filters": "^5.2.0",
+        "drupal/calendar_link": "^3.0",
+        "drupal/chosen": "^3.0",
+        "drupal/ckeditor_indentblock": "^1.0@beta",
+        "drupal/ckeditor_tabletoolstoolbar": "^2.0@RC",
+        "drupal/clamav": "^2.0",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-recommended": "^9.4",
+        "drupal/devel": "^5.0@beta",
+        "drupal/dx8_addtoany": "^1.4",
+        "drupal/editor_advanced_link": "^2.0",
+        "drupal/fakeobjects": "^1.1",
+        "drupal/features": "^3.12",
+        "drupal/footnotes": "^3.0",
+        "drupal/form_options_attributes": "^2.0",
+        "drupal/ga_login": "^1.0@alpha",
+        "drupal/link_attributes": "^1.12",
+        "drupal/media_entity_download": "^2.1",
+        "drupal/menu_breadcrumb": "^1.16",
+        "drupal/menu_item_extras": "^2.19",
+        "drupal/moderation_dashboard": "^1.4",
+        "drupal/moderation_sidebar": "^1.7",
+        "drupal/multiple_select": "^2.0",
+        "drupal/node_title_help_text": "^1.2",
+        "drupal/openid_connect_windows_aad": "^1.4",
+        "drupal/page_manager": "^4.0@RC",
+        "drupal/panels": "^4.7",
+        "drupal/purge": "^3.4",
+        "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/real_aes": "^2.4",
+        "drupal/recaptcha_v3": "^1.7",
+        "drupal/remove_http_headers": "^1.0",
+        "drupal/robotstxt": "^1.5",
+        "drupal/samlauth": "^3.6",
+        "drupal/selective_better_exposed_filters": "^3.0@beta",
+        "drupal/session_limit": "^2.0@beta",
+        "drupal/shield": "^1.7",
+        "drupal/site_settings": "^1.20",
+        "drupal/site_studio_webform": "^1.1",
+        "drupal/sitestudio_acsf": "^1.0@beta",
+        "drupal/smtp": "^1.1",
+        "drupal/svg_image": "^1.16",
+        "drupal/tablefield": "^2.3",
+        "drupal/theme_tokens": "^1.3",
+        "drupal/update_helper": "^3.0",
+        "drupal/upgrade_status": "^3.13",
+        "drupal/vapn": "^1.5",
+        "drupal/webform": "^6.1",
+        "drupal/webprofiler": "^9.0",
+        "drush/drush": "^10.6 || ^11",
+        "mikemadison13/blt-azure-pipelines": "dev-master",
+        "mnsami/composer-custom-directory-installer": "^2.0",
+        "nedsbeds/blt-secrets-management": "^1.0",
+        "oomphinc/composer-installers-extender": "^1.1 || ^2",
+        "psr/http-factory-implementation": "*",
+        "shelane/toggle-modules": "^1.0"
+    },
+    "require-dev": {
+        "acquia/blt-phpcs": "^1.0",
+        "acquia/coding-standards": "^1.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "mglaman/phpstan-drupal": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^1.6",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-composer-scaffold": true,
+            "ergebnis/composer-normalize": true,
+            "oomphinc/composer-installers-extender": true,
+            "phpstan/extension-installer": true,
+            "acquia/blt": true,
+            "acquia/blt-phpcs": true,
+            "mnsami/composer-custom-directory-installer": true,
+            "php-http/discovery": true
+        },
+        "platform": {
+            "php": "8.0"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": false,
+        "drupal-scaffold": {
+            "allowed-packages": [
+                "acquia/acquia_cms"
+            ],
+            "file-mapping": {
+                "[web-root]/.htaccess": false
+            },
+            "gitignore": false,
+            "locations": {
+                "profile-root": "docroot/profiles/contrib/acquia_cms",
+                "web-root": "docroot/"
+            },
+            "excludes": [
+                ".htaccess"
+            ]
+        },
+        "enable-patching": "true",
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset",
+                "harvesthq/chosen"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "Fix The 'node' entity cannot have a URI on preview[https://www.drupal.org/project/drupal/issues/2914233]": "https://www.drupal.org/files/issues/2019-06-24/node_preview_error-2914233-20.patch",
+                "Allowed start date and end date to be optional": "https://www.drupal.org/files/issues/2020-09-18/3133982-3.patch",
+                "Negate form value for condition plugins should be cast to boolean in validation[https://www.drupal.org/project/drupal/issues/3114467]": "https://www.drupal.org/files/issues/2021-11-18/3114467-25.patch",
+                "ExtensionList Fatal error after update to D9.1.10": "https://www.drupal.org/files/issues/2021-06-16/fix_for_ExtensionList_0.patch"
+            },
+            "drupal/focal_point": {
+                "Allow SVG Image": "https://www.drupal.org/files/issues/2021-10-27/svg_support-3122722-13.patch"
+            },
+            "acquia/blt-site-studio": {
+                "Added support to MultiImport": "https://patch-diff.githubusercontent.com/raw/davidtrainer/blt-site-studio/pull/33.patch",
+                "BBB Site Specific Multi-Import": "patches/blt-site-studio/bbb-multi-site-import-v1.patch"
+            },
+            "drupal/config_rewrite": {
+                "Skip Rewrite issue[https://www.drupal.org/project/config_rewrite/issues/3143747]": "https://www.drupal.org/files/issues/2020-05-29/config_rewrite-avoid-error-on-installation-3143747.patch"
+            },
+            "drupal/footnotes": {
+                "Fixed styling for footnotes in CKEditor": "patches/footnotes/footnotes-styling-change.patch",
+                "Add Footnotes as block[https://www.drupal.org/project/footnotes/issues/3098138]": "https://www.drupal.org/files/issues/2022-04-15/footnotes-all-footnotes-one-block-3098138-34_0.patch",
+                "Fix caching issue[https://www.drupal.org/project/footnotes/issues/3252527]": "https://www.drupal.org/files/issues/2022-05-16/footnotes-n3252527-10.patch"
+            },
+            "drupal/better_exposed_filters": {
+                "Fix AJAX issue on reset filter": "https://www.drupal.org/files/issues/2022-09-14/better_exposed_filters-reset_button_ajax_5x-2996297-74.patch"
+            },
+            "drupal/schema_metatag": {
+                "Fix mutilvalue field issue for schema metatag": "patches/schema_metatag/schema_metatag_fix_mutilvalue_field.patch"
+            },
+            "drupal/selective_better_exposed_filters": {
+                "Filtered result options issue[3.x], fix for no result, empty field id": "patches/selective_better_exposed_filter/filtered-result-issue.patch"
+            },
+            "drupal/multiple_select": {
+                "Settings not available when the machine for entities are same[https://www.drupal.org/project/multiple_select/issues/3339924]": "https://www.drupal.org/files/issues/2023-02-08/multiple-select-3339924-2.patch",
+                "Remove jQuery dependency[https://www.drupal.org/project/multiple_select/issues/3333054]": "https://www.drupal.org/files/issues/2023-02-13/multiple-select-removejquery-dependency-3333054-3.patch"
+            },
+            "drupal/redirect": {
+                "Redirect error, when the \"From\" field has a URL Alias of an existing content.": "https://www.drupal.org/files/issues/2022-12-07/existing_url_alias_issue-3181995-24.patch"
+            },
+            "acquia/cohesion": {
+                "Alters the Element styles dropdown elemnts order in WYSIWYG.": "patches/cohesion/cohesion-wysiwyg_order_element_styles.patch"
+            }
+        }
+    },
+    "repositories": {
+        "blt-site-studio": {
+            "type": "vcs",
+            "url": "https://github.com/davidtrainer/blt-site-studio.git",
+            "no-api": true
+        },
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "ckeditor.tabletoolstoolbar": {
+            "type": "package",
+            "package": {
+                "name": "ckeditor/tabletoolstoolbar",
+                "version": "0.0.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/tabletoolstoolbar/releases/tabletoolstoolbar_0.0.1.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "acms:install": [
+            "./vendor/bin/acms acms:install"
+        ],
+        "nuke": [
+            "rm -rf docroot/core vendor composer.lock"
+        ],
+        "post-install-cmd": [
+            "test -e docroot/robots.txt && rm docroot/robots.txt || echo robots is setup"
+        ],
+        "post-update-cmd": [
+            "test -e docroot/robots.txt && rm docroot/robots.txt || echo robots is setup"
+        ]
+    }
+}

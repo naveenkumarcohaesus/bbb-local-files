@@ -1,0 +1,42 @@
+uuid: 56b1fb70-f355-4f9b-ac6a-35f8c8064e6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_h4
+    - field.field.node.page.field_categories
+    - field.field.node.page.field_hero_background_pattern
+    - field.field.node.page.field_layout_canvas
+    - field.field.node.page.field_metatags
+    - field.field.node.page.field_page_image
+    - field.field.node.page.field_tags
+    - node.type.page
+  module:
+    - user
+  enforced:
+    module:
+      - acquia_cms_page
+id: node.page.card_h4
+targetEntityType: node
+bundle: page
+mode: card_h4
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_categories: true
+  field_hero_background_pattern: true
+  field_layout_canvas: true
+  field_metatags: true
+  field_page_image: true
+  field_tags: true
+  langcode: true
+  search_api_excerpt: true

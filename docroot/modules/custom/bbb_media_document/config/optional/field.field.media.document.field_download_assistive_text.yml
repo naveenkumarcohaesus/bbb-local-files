@@ -1,0 +1,19 @@
+uuid: 84be9765-271c-4a73-8141-44626d10ce0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_download_assistive_text
+    - media.type.document
+id: media.document.field_download_assistive_text
+field_name: field_download_assistive_text
+entity_type: media
+bundle: document
+label: 'Assistive text for Download'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,108 @@
+uuid: 0864c117-cc28-43cb-bdff-fb33b8808168
+langcode: en
+status: true
+dependencies: {  }
+label: 'Upper Alphabetical List'
+id: 48bf703c
+json_values: |
+  {
+      "preview": {
+          "text": "<p><strong>Unordered list<\/strong><\/p>\n\n<ul class=\"coh-preview\">\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ul>\n\n<p>&nbsp;<\/p>\n\n<p><strong>Ordered list<\/strong><\/p>\n\n<ol class=\"coh-preview\">\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ol>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "ul,ol,dl",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "d77fa12d-e056-46d9-a314-713b622c4fbb": {
+              "settings": {
+                  "element": "li",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xs": {
+                      "custom-css": [
+                          {
+                              "customCssProperty": {
+                                  "value": "list-style-type"
+                              },
+                              "customCss": {
+                                  "value": "upper-latin !important"
+                              }
+                          }
+                      ]
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "List",
+          "selectorType": "topLevel",
+          "formDefinition": [],
+          "items": [
+              {
+                  "title": "li",
+                  "type": "container",
+                  "items": [],
+                  "form": null,
+                  "selectorType": "child",
+                  "model": "li",
+                  "uuid": "d77fa12d-e056-46d9-a314-713b622c4fbb",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo",
+                      "modifier"
+                  ],
+                  "formDefinition": [
+                      {
+                          "formKey": "custom-css",
+                          "children": [
+                              {
+                                  "formKey": "css-property-and-css-value",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xs"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "custom-css",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customCssProperty",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customCss",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-upper-alphabetical-list
+custom_style_type: list
+available_in_wysiwyg: true
+parent: null
+weight: 0

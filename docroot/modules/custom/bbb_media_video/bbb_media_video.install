@@ -1,0 +1,117 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\Core\Config\FileStorage;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Updated display of video media type so that video field is visible.
+ */
+function bbb_media_video_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_media_video', 'bbb_media_video_update_8001');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Updated manage display settings.
+ */
+function bbb_media_video_update_8002() {
+  \Drupal::entityTypeManager()
+    ->getStorage('entity_view_display')
+    ->load('media.video.default')
+    ->setComponent('field_media_oembed_video', [
+      'type' => 'oembed',
+      'label' => 'hidden',
+      'settings' => [],
+      'weight' => 2,
+      'region' => 'content',
+    ])->save();
+  \Drupal::entityTypeManager()
+    ->getStorage('entity_view_display')
+    ->load('media.video.default')
+    ->setComponent('name', [
+      'type' => 'string',
+      'label' => 'hidden',
+      'settings' => [],
+      'weight' => 3,
+      'region' => 'content',
+    ])->save();
+  \Drupal::entityTypeManager()
+    ->getStorage('entity_view_display')
+    ->load('media.video.default')
+    ->setComponent('thumbnail', [
+      'type' => 'image',
+      'label' => 'hidden',
+      'settings' => [],
+      'weight' => 2,
+      'region' => 'hidden',
+    ])->save();
+}
+
+/**
+ * Video configs.
+ */
+function bbb_media_video_update_8003() {
+  // Manually import config from install folder.
+  $module_path = \Drupal::service('extension.list.module')->getPath('bbb_media_video');
+  $config_install_path = $module_path . '/config/optional';
+
+  // Config Storage Service.
+  $config_storage = \Drupal::service('config.storage');
+
+  // Manually import config from optional folder.
+  $source = new FileStorage($config_install_path);
+  $config_storage->write('field.field.media.video.field_video_caption', $source->read('field.field.media.video.field_video_caption'));
+  $config_storage->write('field.storage.media.field_video_caption', $source->read('field.storage.media.field_video_caption'));
+  $config_storage->write('field.field.media.video.field_video_caption', $source->read('field.field.media.video.field_video_caption'));
+  $config_storage->write('core.entity_view_mode.media.default_video', $source->read('core.entity_view_mode.media.default_video'));
+  $config_storage->write('core.entity_view_display.media.video.default_video', $source->read('core.entity_view_display.media.video.default_video'));
+  $config_storage->write('core.entity_form_display.media.video.default', $source->read('core.entity_form_display.media.video.default'));
+}
+
+/**
+ * Delete the configs for video caption field and recreate field.
+ */
+function bbb_media_video_update_8004() {
+  // Delete the configs for video caption field.
+  \Drupal::configFactory()->getEditable('field.storage.media.field_video_caption')->delete();
+  \Drupal::configFactory()->getEditable('field.field.media.video.field_video_caption')->delete();
+
+  // Manually import config from optional folder.
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_media_video') . '/config/optional';
+  $source = new FileStorage($config_path);
+  $config_record = $source->read('field.storage.media.field_video_caption');
+  $field = FieldStorageConfig::loadByName($config_record['entity_type'], $config_record['field_name']);
+
+  if ($field) {
+    // Deleting field storage for video caption field.
+    FieldStorageConfig::loadByName('media', 'field_video_caption')->delete();
+  }
+
+  // Create video caption field.
+  FieldStorageConfig::create($config_record)->save();
+  // Create a new field instance from the yaml configuration and save.
+  \Drupal::entityTypeManager()->getStorage('field_config')
+    ->create($source->read('field.field.media.video.field_video_caption'))
+    ->save();
+}
+
+/**
+ * Add the missing remote url field on video media form.
+ */
+function bbb_media_video_update_8005() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_media_video', 'bbb_media_video_update_8005');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

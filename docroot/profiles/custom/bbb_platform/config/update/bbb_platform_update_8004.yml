@@ -1,0 +1,28 @@
+shield.settings:
+  expected_config:
+    allowlist: ''
+    credentials:
+      key:
+        pass_key: ''
+        user: ''
+      multikey:
+        user_pass_key: ''
+      shield:
+        pass: ''
+        user: ''
+    shield_enable: false
+  update_actions:
+    delete:
+      credentials:
+        key:
+          pass_key: ''
+          user: ''
+        multikey:
+          user_pass_key: ''
+    change:
+      allowlist: 127.0.0.1
+      credentials:
+        shield:
+          pass: 'gyr#teys346'
+          user: bbbweb
+      shield_enable: true

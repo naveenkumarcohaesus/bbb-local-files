@@ -1,0 +1,109 @@
+uuid: d8b2ed95-1bc7-4c3d-b633-6ec0d3569d87
+langcode: en
+status: true
+dependencies: {  }
+label: align-right
+id: base_align_right
+json_values: |
+  {
+      "preview": {
+          "text": "<p>Add your preview HTML element here.<\/p>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "article.align-right"
+          },
+          "styles": {
+              "md": {
+                  "margin": {
+                      "margin-left": {
+                          "value": "32"
+                      }
+                  }
+              },
+              "xl": {
+                  "margin": {
+                      "margin-bottom": {
+                          "value": "16"
+                      },
+                      "margin-left": {
+                          "value": "48"
+                      }
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": null,
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "layout",
+                  "children": [
+                      {
+                          "formKey": "margin",
+                          "breakpoints": [
+                              {
+                                  "name": "md"
+                              },
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "margin-equal",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-top",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-bottom",
+                                  "active": true
+                              },
+                              {
+                                  "name": "margin-left",
+                                  "active": true
+                              },
+                              {
+                                  "name": "margin-right",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-block-start",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-block-end",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-inline-start",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-inline-end",
+                                  "active": false
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+custom: null

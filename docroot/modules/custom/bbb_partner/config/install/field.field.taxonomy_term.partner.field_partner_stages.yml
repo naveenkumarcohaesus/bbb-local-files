@@ -1,0 +1,29 @@
+uuid: e8226b2e-2a91-469e-b5df-a39839c10327
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_partner_stages
+    - taxonomy.vocabulary.partner
+    - taxonomy.vocabulary.stages
+id: taxonomy_term.partner.field_partner_stages
+field_name: field_partner_stages
+entity_type: taxonomy_term
+bundle: partner
+label: Stages
+description: 'This field is BPC specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      stages: stages
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

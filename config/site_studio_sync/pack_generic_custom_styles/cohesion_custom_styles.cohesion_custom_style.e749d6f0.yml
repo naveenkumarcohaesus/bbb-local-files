@@ -1,0 +1,854 @@
+uuid: c8ca1aec-000f-469a-b1b6-48cd0723ecac
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.aurora_foundations
+label: 'Focusable content'
+id: e749d6f0
+json_values: |
+  {
+      "preview": {
+          "text": "<div class=\"coh-preview\">Default content for 'Generic'.<\/div>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "div",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "64f9bad6-2e16-4f99-a5b6-3f6598c0c5bd": {
+              "settings": {
+                  "element": "input, select, textarea",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              }
+          },
+          "fe6bc432-48e2-414f-86bd-b002d9908172": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":focus"
+              },
+              "styles": {
+                  "xs": {
+                      "outline-width": {
+                          "value": "2"
+                      },
+                      "outline-offset": {
+                          "value": "2"
+                      },
+                      "outline-style": {
+                          "value": "solid"
+                      },
+                      "outline-color": {
+                          "value": "[style-guide:aurora_foundations:borderinteractivefocus-outer]"
+                      }
+                  },
+                  "xl": {}
+              }
+          },
+          "styles": {
+              "64f9bad6-2e16-4f99-a5b6-3f6598c0c5bd": {
+                  "styles": {
+                      "xl": {
+                          "box-shadow": [
+                              {
+                                  "boxshadowType": {
+                                      "value": "null"
+                                  }
+                              }
+                          ]
+                      }
+                  }
+              },
+              "fe6bc432-48e2-414f-86bd-b002d9908172": {
+                  "styles": {
+                      "xl": {
+                          "box-shadow": [
+                              {
+                                  "boxshadowType": {
+                                      "value": "null"
+                                  }
+                              }
+                          ]
+                      },
+                      "xs": {
+                          "box-shadow": [
+                              {
+                                  "boxshadowType": {
+                                      "value": "null"
+                                  }
+                              }
+                          ]
+                      }
+                  }
+              },
+              "b04b1b9c-a814-4e9c-8195-a4a1363d9718": {
+                  "styles": {
+                      "xl": {
+                          "box-shadow": [
+                              {
+                                  "boxshadowType": {
+                                      "value": "null"
+                                  }
+                              }
+                          ]
+                      }
+                  }
+              },
+              "6b06c1cf-86a3-47f3-8362-6bbed74fa653": {
+                  "styles": {
+                      "xl": {
+                          "box-shadow": [
+                              {
+                                  "boxshadowType": {
+                                      "value": "null"
+                                  }
+                              }
+                          ]
+                      },
+                      "xs": {
+                          "box-shadow": [
+                              {
+                                  "boxshadowType": {
+                                      "value": "null"
+                                  }
+                              }
+                          ]
+                      }
+                  }
+              },
+              "c5116873-55a0-43bb-8eb3-46dcd4915910": {
+                  "styles": {
+                      "xl": {
+                          "box-shadow": [
+                              {
+                                  "boxshadowType": {
+                                      "value": "null"
+                                  }
+                              }
+                          ]
+                      },
+                      "xs": {
+                          "box-shadow": [
+                              {
+                                  "boxshadowType": {
+                                      "value": "null"
+                                  }
+                              }
+                          ]
+                      }
+                  }
+              },
+              "83e43414-633c-4d28-96aa-b2f918e6b9d3": {
+                  "styles": {
+                      "xs": {
+                          "box-shadow": [
+                              {
+                                  "boxshadowType": {
+                                      "value": "null"
+                                  }
+                              }
+                          ]
+                      }
+                  }
+              }
+          },
+          "b04b1b9c-a814-4e9c-8195-a4a1363d9718": {
+              "settings": {
+                  "element": ".card-link",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              }
+          },
+          "6b06c1cf-86a3-47f3-8362-6bbed74fa653": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":focus"
+              },
+              "styles": {
+                  "xs": {
+                      "box-shadow": [
+                          {
+                              "boxshadowType": {
+                                  "value": "none"
+                              }
+                          }
+                      ]
+                  },
+                  "xl": {}
+              }
+          },
+          "c5116873-55a0-43bb-8eb3-46dcd4915910": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":after"
+              },
+              "styles": {
+                  "xs": {
+                      "outline-width": {
+                          "value": "2"
+                      },
+                      "outline-offset": {
+                          "value": "2"
+                      },
+                      "outline-style": {
+                          "value": "solid"
+                      },
+                      "outline-color": {
+                          "value": "[style-guide:aurora_foundations:borderinteractivefocus-outer]"
+                      }
+                  },
+                  "xl": {}
+              }
+          },
+          "5ae7a3db-c2c7-4c58-a4c7-84ac888c90e2": {
+              "settings": {
+                  "element": "a[role=\"link\"]",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xs": {
+                      "display": {
+                          "value": "block"
+                      }
+                  }
+              }
+          },
+          "0dd8c10a-a410-45c6-98af-a3a6cf3a1561": {
+              "settings": {
+                  "element": "button,input[type=\"submit\"]",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {}
+          },
+          "83e43414-633c-4d28-96aa-b2f918e6b9d3": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":focus"
+              },
+              "styles": {
+                  "xs": {
+                      "custom-css": [
+                          {
+                              "customCssProperty": {
+                                  "value": "clip-path"
+                              },
+                              "customCss": {
+                                  "value": "none !important"
+                              }
+                          }
+                      ],
+                      "outline-width": {
+                          "value": "2"
+                      },
+                      "outline-offset": {
+                          "value": "2"
+                      },
+                      "outline-style": {
+                          "value": "solid"
+                      },
+                      "outline-color": {
+                          "value": "[style-guide:aurora_foundations:borderinteractivefocus-outer]"
+                      }
+                  }
+              }
+          },
+          "94b1bc5c-146c-4d89-9839-0ba19c3c6ed1": {
+              "settings": {
+                  "element": "a.button",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {}
+          },
+          "6e9a07a3-51bf-43dc-973e-62005579fc87": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":focus"
+              },
+              "styles": {
+                  "xs": {
+                      "custom-css": [
+                          {
+                              "customCssProperty": {
+                                  "value": "clip-path"
+                              },
+                              "customCss": {
+                                  "value": "none"
+                              }
+                          },
+                          {
+                              "customCssProperty": {
+                                  "value": "box-shadow"
+                              },
+                              "customCss": {
+                                  "value": "none"
+                              }
+                          }
+                      ],
+                      "outline-width": {
+                          "value": "2"
+                      },
+                      "outline-offset": {
+                          "value": "2"
+                      },
+                      "outline-style": {
+                          "value": "solid"
+                      },
+                      "outline-color": {
+                          "value": "[style-guide:aurora_foundations:borderinteractivefocus-outer]"
+                      }
+                  }
+              }
+          },
+          "07304d0a-b1a5-4cf3-9762-956c53554161": {
+              "settings": {
+                  "element": "a",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {}
+          },
+          "6cb59a53-16bf-4116-9ca2-a286114fb863": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":focus"
+              },
+              "styles": {
+                  "xs": {
+                      "outline-width": {
+                          "value": "2"
+                      },
+                      "outline-offset": {
+                          "value": "0"
+                      },
+                      "outline-style": {
+                          "value": "solid"
+                      },
+                      "outline-color": {
+                          "value": "[style-guide:aurora_foundations:borderinteractivefocus-outer]"
+                      }
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": [
+          "styles.fe6bc432-48e2-414f-86bd-b002d9908172.styles.xs.outline-color.value",
+          "styles.c5116873-55a0-43bb-8eb3-46dcd4915910.styles.xs.outline-color.value",
+          "styles.83e43414-633c-4d28-96aa-b2f918e6b9d3.styles.xs.outline-color.value",
+          "styles.6e9a07a3-51bf-43dc-973e-62005579fc87.styles.xs.outline-color.value",
+          "styles.6cb59a53-16bf-4116-9ca2-a286114fb863.styles.xs.outline-color.value"
+      ]
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Layout",
+          "selectorType": "topLevel",
+          "formDefinition": [],
+          "items": [
+              {
+                  "title": "input, select, textarea",
+                  "type": "container",
+                  "items": [
+                      {
+                          "title": ":focus",
+                          "type": "container",
+                          "items": [],
+                          "form": null,
+                          "selectorType": "pseudo",
+                          "uuid": "fe6bc432-48e2-414f-86bd-b002d9908172",
+                          "allowedTypes": [
+                              "child",
+                              "pseudo"
+                          ],
+                          "formDefinition": [
+                              {
+                                  "formKey": "border-and-outline",
+                                  "children": [
+                                      {
+                                          "formKey": "outline-width-style-and-color",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xs"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "outline-width",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-offset",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-color",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-style",
+                                                  "active": true
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "form": null,
+                  "selectorType": "child",
+                  "model": "input, select, textarea",
+                  "uuid": "64f9bad6-2e16-4f99-a5b6-3f6598c0c5bd",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo",
+                      "modifier"
+                  ],
+                  "formDefinition": []
+              },
+              {
+                  "title": ".card-link",
+                  "type": "container",
+                  "items": [
+                      {
+                          "title": ":focus",
+                          "type": "container",
+                          "items": [
+                              {
+                                  "title": ":after",
+                                  "type": "container",
+                                  "items": [],
+                                  "form": null,
+                                  "selectorType": "pseudo",
+                                  "uuid": "c5116873-55a0-43bb-8eb3-46dcd4915910",
+                                  "allowedTypes": [
+                                      "child",
+                                      "pseudo"
+                                  ],
+                                  "formDefinition": [
+                                      {
+                                          "formKey": "border-and-outline",
+                                          "children": [
+                                              {
+                                                  "formKey": "outline-width-style-and-color",
+                                                  "breakpoints": [
+                                                      {
+                                                          "name": "xs"
+                                                      }
+                                                  ],
+                                                  "activeFields": [
+                                                      {
+                                                          "name": "outline-width",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "outline-offset",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "outline-color",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "outline-style",
+                                                          "active": true
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ],
+                          "form": null,
+                          "selectorType": "pseudo",
+                          "uuid": "6b06c1cf-86a3-47f3-8362-6bbed74fa653",
+                          "allowedTypes": [
+                              "child",
+                              "pseudo"
+                          ],
+                          "formDefinition": [
+                              {
+                                  "formKey": "layout",
+                                  "children": [
+                                      {
+                                          "formKey": "box-shadow",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xs"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "box-shadow",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "boxshadowType",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "boxshadowHorizontal",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "boxshadowVertical",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "boxshadowBlur",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "boxshadowSpread",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "boxshadowColor",
+                                                  "active": true
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "form": null,
+                  "selectorType": "child",
+                  "model": ".card-link",
+                  "uuid": "b04b1b9c-a814-4e9c-8195-a4a1363d9718",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo",
+                      "modifier"
+                  ],
+                  "formDefinition": []
+              },
+              {
+                  "title": "a[role=\"link\"]",
+                  "type": "container",
+                  "items": [],
+                  "form": null,
+                  "selectorType": "child",
+                  "model": "a[role=\"link\"]",
+                  "uuid": "5ae7a3db-c2c7-4c58-a4c7-84ac888c90e2",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo",
+                      "modifier"
+                  ],
+                  "formDefinition": [
+                      {
+                          "formKey": "layout",
+                          "children": [
+                              {
+                                  "formKey": "display",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xs"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "display",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "visibility",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "overflow",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "overflow-x",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "overflow-y",
+                                          "active": false
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              },
+              {
+                  "title": "button,input[type=\"submit\"]",
+                  "type": "container",
+                  "items": [
+                      {
+                          "title": ":focus",
+                          "type": "container",
+                          "items": [],
+                          "form": null,
+                          "selectorType": "pseudo",
+                          "uuid": "83e43414-633c-4d28-96aa-b2f918e6b9d3",
+                          "allowedTypes": [
+                              "child",
+                              "pseudo"
+                          ],
+                          "formDefinition": [
+                              {
+                                  "formKey": "custom-css",
+                                  "children": [
+                                      {
+                                          "formKey": "css-property-and-css-value",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xs"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "custom-css",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "customCssProperty",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "customCss",
+                                                  "active": true
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "border-and-outline",
+                                  "children": [
+                                      {
+                                          "formKey": "outline-width-style-and-color",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xs"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "outline-width",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-offset",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-color",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-style",
+                                                  "active": true
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "form": null,
+                  "selectorType": "child",
+                  "model": "button,input[type=\"submit\"]",
+                  "uuid": "0dd8c10a-a410-45c6-98af-a3a6cf3a1561",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo",
+                      "modifier"
+                  ],
+                  "formDefinition": []
+              },
+              {
+                  "title": "a.button",
+                  "type": "container",
+                  "items": [
+                      {
+                          "title": ":focus",
+                          "type": "container",
+                          "items": [],
+                          "form": null,
+                          "selectorType": "pseudo",
+                          "uuid": "6e9a07a3-51bf-43dc-973e-62005579fc87",
+                          "allowedTypes": [
+                              "child",
+                              "pseudo"
+                          ],
+                          "formDefinition": [
+                              {
+                                  "formKey": "custom-css",
+                                  "children": [
+                                      {
+                                          "formKey": "css-property-and-css-value",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xs"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "custom-css",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "customCssProperty",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "customCss",
+                                                  "active": true
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "border-and-outline",
+                                  "children": [
+                                      {
+                                          "formKey": "outline-width-style-and-color",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xs"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "outline-width",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-offset",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-color",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-style",
+                                                  "active": true
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "form": null,
+                  "selectorType": "child",
+                  "model": "a.button",
+                  "uuid": "94b1bc5c-146c-4d89-9839-0ba19c3c6ed1",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo",
+                      "modifier"
+                  ],
+                  "formDefinition": []
+              },
+              {
+                  "title": "a",
+                  "type": "container",
+                  "items": [
+                      {
+                          "title": ":focus",
+                          "type": "container",
+                          "items": [],
+                          "form": null,
+                          "selectorType": "pseudo",
+                          "uuid": "6cb59a53-16bf-4116-9ca2-a286114fb863",
+                          "allowedTypes": [
+                              "child",
+                              "pseudo"
+                          ],
+                          "formDefinition": [
+                              {
+                                  "formKey": "border-and-outline",
+                                  "children": [
+                                      {
+                                          "formKey": "outline-width-style-and-color",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xs"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "outline-width",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-offset",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-color",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "outline-style",
+                                                  "active": true
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "form": null,
+                  "selectorType": "child",
+                  "model": "a",
+                  "uuid": "07304d0a-b1a5-4cf3-9762-956c53554161",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo",
+                      "modifier"
+                  ],
+                  "formDefinition": []
+              }
+          ],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-focusable-content
+custom_style_type: generic
+available_in_wysiwyg: false
+parent: null
+weight: 26

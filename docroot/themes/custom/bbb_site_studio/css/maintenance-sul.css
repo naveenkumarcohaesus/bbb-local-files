@@ -1,0 +1,115 @@
+body {
+  font-family: 'BRHendrix 300','Helvetica Neue',Helvetica,Arial,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  color: #152328;
+}
+
+.maintenance-page {
+  padding: 1rem;
+  margin: 0;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+main {
+  float: none;
+  width: 100%;
+  padding: 0;
+}
+
+h1,
+h2 {
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-family: 'BRHendrix 600','Helvetica Neue',Helvetica,Arial,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.375rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-family: 'BRHendrix 300','Helvetica Neue',Helvetica,Arial,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: normal;
+}
+
+a {
+  color: #0054ba;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #00295c;
+}
+
+a:focus {
+  outline-width: 0.125rem;
+  outline-offset: 0;
+  outline-style: solid;
+  outline-color: #3188f2;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: normal;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .maintenance-page {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: normal;
+  }
+}

@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: component_content
+  uuid: 85322431-ff92-47d7-a9fa-791ab53b7055
+  default_langcode: en
+  depends:
+    4e20d640-6f86-44e1-b80c-0165f06efc21: cohesion_layout
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'BPC White Logo'
+  uid:
+    -
+      target_id: 1
+  created:
+    -
+      value: 1663299826
+  layout_canvas:
+    -
+      entity: 4e20d640-6f86-44e1-b80c-0165f06efc21
+  component:
+    -
+      target_id: cpt_logo_card
+  revision_translation_affected:
+    -
+      value: true

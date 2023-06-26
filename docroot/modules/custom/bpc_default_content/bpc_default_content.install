@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+/**
+ * Implements hook_update_N().
+ *
+ * Making a default content service call to import all default content.
+ */
+function bpc_default_content_update_8001() {
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bpc_default_content");
+}

@@ -1,0 +1,271 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\Core\Config\FileStorage;
+use Drupal\Core\Entity\Entity\EntityViewMode;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\taxonomy\Entity\Vocabulary;
+
+/**
+ * Update help text for product node title.
+ */
+function bbb_product_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_product', 'bbb_product_update_8001');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Added card view mode.
+ */
+function bbb_product_update_8002() {
+  // Manually import editor config from install folder.
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_product') . '/config/install';
+
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+
+  $config_storage->write('core.entity_view_display.node.product.card', $source->read('core.entity_view_display.node.product.card'));
+}
+
+/**
+ * Remove body field and update content owner field to user reference.
+ */
+function bbb_product_update_8003() {
+  // Remove field_product_taxonomy field.
+  FieldConfig::loadByName('node', 'product', 'field_product_taxonomy')->delete();
+
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_product') . '/config/install';
+  $source = new FileStorage($config_path);
+  // Manually import editor config from install folder.
+  $config_storage = \Drupal::service('config.storage');
+  $config_storage->write('field.field.node.product.field_content_owner', $source->read('field.field.node.product.field_content_owner'));
+  // Meta tag for product.
+  $config_storage->write('field.field.node.product.field_metatags', $source->read('field.field.node.product.field_metatags'));
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_product', 'bbb_product_update_8003');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Remove Product taxonomy vocabulary and update teaser text field description.
+ */
+function bbb_product_update_8004() {
+  // Get all terms of product taxonomy.
+  $tids = Drupal::entityQuery('taxonomy_term')
+    ->condition('vid', 'product')
+    ->execute();
+
+  if (!empty($tids)) {
+    // Delete all taxonomy terms of product vocabulary.
+    $term_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+    $entities = $term_storage->loadMultiple($tids);
+    $term_storage->delete($entities);
+  }
+  // Delete product vocabulary.
+  $vocab = Vocabulary::load('product');
+  if ($vocab) {
+    $vocab->delete();
+  }
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_product', 'bbb_product_update_8004');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Add Hero Background Pattern field for existing sites.
+ */
+function bbb_product_update_8005() {
+  // Include Hero Background Pattern field on Product CT.
+  _acquia_cms_common_rewrite_configuration('field.field.node.product.field_hero_background_pattern', 'bbb_product');
+  // Update Product CT Entity Form display.
+  _acquia_cms_common_rewrite_configuration('core.entity_form_display.node.product.default', 'bbb_product');
+}
+
+/**
+ * Removed bbb_product_update_8006.
+ *
+ * Remove Layout canvas lable.
+ */
+function bbb_product_update_8007() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_product', 'bbb_product_update_8007');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Removed bbb_product_update_8008.
+ *
+ * Add no image card view mode for product content type.
+ */
+function bbb_product_update_8009() {
+  $view_mode = 'node.card_without_image';
+  // Create the view mode notes_to_editor if not exists.
+  if (!EntityViewMode::load($view_mode)) {
+    _bbb_article_rewrite_configuration('core.entity_view_mode.node.card_without_image', 'bbb_product', 'install');
+  }
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.product.card_without_image', 'bbb_product', 'install');
+}
+
+/**
+ * Updated view modes for Peoduct.
+ */
+function bbb_product_update_8010() {
+  $configs = [
+    'core.entity_view_display.node.product.card_h2',
+    'core.entity_view_display.node.product.card_h4',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_product', 'install');
+  }
+}
+
+/**
+ * Allowed end date to be optional.
+ */
+function bbb_product_update_8011() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_product', 'bbb_product_update_8011');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Add no image card h3/h4 view modes for product content type.
+ */
+function bbb_product_update_8012() {
+  $view_modes = [
+    'node.card_without_image_h3',
+    'node.card_without_image_h4',
+  ];
+
+  // Create the view modes if not exists.
+  foreach ($view_modes as $view_mode) {
+    if (!EntityViewMode::load($view_mode)) {
+      _bbb_article_rewrite_configuration('core.entity_view_mode.' . $view_mode, 'bbb_product', 'install');
+    }
+  }
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.product.card_without_image_h3', 'bbb_product', 'install');
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.product.card_without_image_h4', 'bbb_product', 'install');
+}
+
+/**
+ * Delete existing and recreate programme date fields in programme taxonomy.
+ */
+function bbb_product_update_8013() {
+
+  $fields = [
+    'field_finance_type',
+    'field_partner',
+    'field_programme_application_date',
+    'field_programme_date',
+    'field_programme_overview',
+    'field_programme_status',
+  ];
+  // Deleting fields from product content type.
+  foreach ($fields as $field) {
+    if ($field_instance = FieldConfig::loadByName('node', 'product', $field)) {
+      $field_instance->delete();
+    }
+  }
+
+  $field_storages = [
+    'field_programme_application_date',
+    'field_programme_date',
+    'field_programme_overview',
+    'field_programme_status',
+  ];
+  // Deleting field storage from product content type.
+  foreach ($field_storages as $field_storage) {
+    if ($field = FieldStorageConfig::loadByName('node', $field_storage)) {
+      $field->delete();
+    }
+  }
+
+  // Import updated configs.
+  $configs = [
+    'core.entity_view_display.node.product.card_h2',
+    'core.entity_view_display.node.product.card_h4',
+    'core.entity_view_display.node.product.card_without_image_h3',
+    'core.entity_view_display.node.product.card_without_image_h4',
+    'core.entity_view_display.node.product.card',
+    'core.entity_view_display.node.product.default',
+    'core.entity_form_display.taxonomy_term.programme.default',
+    'core.entity_view_display.taxonomy_term.programme.default',
+    'field.field.taxonomy_term.programme.field_programme_application_date',
+    'field.field.taxonomy_term.programme.field_programme_date',
+    'field.field.taxonomy_term.programme.field_programme_overview',
+    'field.field.taxonomy_term.programme.field_programme_status',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_product', 'install');
+  }
+
+  $configs = [
+    'field.storage.taxonomy_term.field_programme_application_date',
+    'field.storage.taxonomy_term.field_programme_date',
+    'field.storage.taxonomy_term.field_programme_overview',
+    'field.storage.taxonomy_term.field_programme_status',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_create_field_storage($config, 'bbb_product', 'install');
+  }
+
+  _bbb_article_rewrite_configuration('core.entity_form_display.node.product.default', 'bbb_product', 'optional');
+}
+
+/**
+ * Update programme taxonomy form display.
+ */
+function bbb_product_update_8014() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_product', 'bbb_product_update_8014');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Hide teaser text field label.
+ */
+function bbb_product_update_8015() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_product', 'bbb_product_update_8015');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

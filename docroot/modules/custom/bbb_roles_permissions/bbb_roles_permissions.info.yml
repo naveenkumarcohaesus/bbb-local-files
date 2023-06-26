@@ -1,0 +1,15 @@
+name: BBB roles permissions
+description: 'User role and permissions related configurations'
+type: module
+core_version_requirement: '^9 || ^10'
+package: BBB
+dependencies:
+  - drupal:filter
+  - drupal:media
+  - bbb_article:bbb_article
+  - bbb_case_study:bbb_case_study
+  - bbb_landing_page:bbb_landing_page
+  - bbb_news:bbb_news
+  - bbb_team_member:bbb_team_member
+  - bbb_event:bbb_event
+  - bbb_product:bbb_product

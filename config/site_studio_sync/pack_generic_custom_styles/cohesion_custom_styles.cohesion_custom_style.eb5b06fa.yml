@@ -1,0 +1,129 @@
+uuid: 8f64358f-cddf-48ab-9957-9b243555237d
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.spacing
+label: 'Spacing 8 Top'
+id: eb5b06fa
+json_values: |
+  {
+      "preview": {
+          "text": "<div class=\"coh-preview\">Default content for 'Generic'.<\/div>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "div",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "styles": {
+              "xs": {
+                  "margin": {
+                      "margin-top": {
+                          "value": "[style-guide:spacing:spacing-8-small-size]"
+                      }
+                  }
+              },
+              "sm": {
+                  "margin": {
+                      "margin-top": {
+                          "value": "[style-guide:spacing:spacing-8-medium-size]"
+                      }
+                  }
+              },
+              "xl": {
+                  "margin": {
+                      "margin-top": {
+                          "value": "[style-guide:spacing:spacing-8-large-size]"
+                      }
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": [
+          "styles.styles.xs.margin.margin-top.value",
+          "styles.styles.sm.margin.margin-top.value",
+          "styles.styles.xl.margin.margin-top.value"
+      ]
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Layout",
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "layout",
+                  "children": [
+                      {
+                          "formKey": "margin",
+                          "breakpoints": [
+                              {
+                                  "name": "xs"
+                              },
+                              {
+                                  "name": "sm"
+                              },
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "margin-equal",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-top",
+                                  "active": true
+                              },
+                              {
+                                  "name": "margin-bottom",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-left",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-right",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-block-start",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-block-end",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-inline-start",
+                                  "active": false
+                              },
+                              {
+                                  "name": "margin-inline-end",
+                                  "active": false
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-spacing-8-top
+custom_style_type: generic
+available_in_wysiwyg: true
+parent: null
+weight: 399

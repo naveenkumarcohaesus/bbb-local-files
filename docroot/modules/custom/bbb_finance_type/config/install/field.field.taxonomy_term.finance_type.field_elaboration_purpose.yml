@@ -1,0 +1,19 @@
+uuid: 6f18dbac-49b8-459b-88e0-3f4427143ddf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_elaboration_purpose
+    - taxonomy.vocabulary.finance_type
+id: taxonomy_term.finance_type.field_elaboration_purpose
+field_name: field_elaboration_purpose
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'Purpose of finance elaboration'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

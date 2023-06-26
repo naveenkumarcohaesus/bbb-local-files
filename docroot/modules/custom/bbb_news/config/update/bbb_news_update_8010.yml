@@ -1,0 +1,209 @@
+views.view.news:
+  expected_config: {  }
+  update_actions:
+    add:
+      display:
+        news_list:
+          display_options:
+            defaults:
+              empty: false
+            empty:
+              area:
+                admin_label: ''
+                content:
+                  format: full_html
+                  value: "<div class=\"no-results-text\">No results found</div>\r\n<div class=\"no-results-desc\">Try adjusting your filters to find what you are looking for.</div>\r\n"
+                empty: true
+                field: area
+                group_type: group
+                id: area
+                plugin_id: text
+                relationship: none
+                table: views
+                tokenize: false
+            filters:
+              status:
+                id: status
+                table: node_field_data
+                field: status
+                entity_type: node
+                entity_field: status
+                plugin_id: boolean
+                value: '1'
+                group: 1
+                expose:
+                  operator: ''
+                  operator_limit_selection: false
+                  operator_list: { }
+              type:
+                id: type
+                table: node_field_data
+                field: type
+                entity_type: node
+                entity_field: type
+                plugin_id: bundle
+                value:
+                  news: news
+                group: 1
+                expose:
+                  operator_limit_selection: false
+                  operator_list: { }
+              nodes_year:
+                id: nodes_year
+                table: node_field_data
+                field: nodes_year
+                relationship: none
+                group_type: group
+                admin_label: ''
+                entity_type: node
+                plugin_id: year_date_filter
+                operator: '='
+                value: ''
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: ''
+                  label: Year
+                  description: ''
+                  use_operator: false
+                  operator: nodes_year_op
+                  operator_limit_selection: false
+                  operator_list: { }
+                  identifier: year
+                  required: false
+                  remember: false
+                  multiple: true
+                  remember_roles:
+                    administrator: '0'
+                    anonymous: '0'
+                    authenticated: authenticated
+                    bankers: '0'
+                    content_administrator: '0'
+                    content_author: '0'
+                    content_editor: '0'
+                    content_factory: '0'
+                    developer: '0'
+                    site_builder: '0'
+                    user_administrator: '0'
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: { }
+                  group_items: { }
+                field_name: created
+                node_year: ''
+                year_from: '2012'
+                year_until: '2022'
+              nodes_month:
+                id: nodes_month
+                table: node_field_data
+                field: nodes_month
+                relationship: none
+                group_type: group
+                admin_label: ''
+                entity_type: node
+                plugin_id: month_date_filter
+                operator: '='
+                value: ''
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: ''
+                  label: Month
+                  description: ''
+                  use_operator: false
+                  operator: nodes_month_op
+                  operator_limit_selection: false
+                  operator_list: { }
+                  identifier: month
+                  required: false
+                  remember: false
+                  multiple: true
+                  remember_roles:
+                    administrator: '0'
+                    anonymous: '0'
+                    authenticated: authenticated
+                    bankers: '0'
+                    content_administrator: '0'
+                    content_author: '0'
+                    content_editor: '0'
+                    content_factory: '0'
+                    developer: '0'
+                    site_builder: '0'
+                    user_administrator: '0'
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: { }
+                  group_items: { }
+                field_name: created
+                node_month: ''
+              field_region_target_id:
+                id: field_region_target_id
+                table: node__field_region
+                field: field_region_target_id
+                relationship: none
+                group_type: group
+                admin_label: ''
+                plugin_id: taxonomy_index_tid
+                operator: or
+                value: { }
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: field_region_target_id_op
+                  label: Region
+                  description: ''
+                  use_operator: false
+                  operator: field_region_target_id_op
+                  operator_limit_selection: false
+                  operator_list: { }
+                  identifier: region
+                  required: false
+                  remember: false
+                  multiple: true
+                  remember_roles:
+                    administrator: '0'
+                    anonymous: '0'
+                    authenticated: authenticated
+                    bankers: '0'
+                    content_administrator: '0'
+                    content_author: '0'
+                    content_editor: '0'
+                    content_factory: '0'
+                    developer: '0'
+                    site_builder: '0'
+                    user_administrator: '0'
+                  reduce: false
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: { }
+                  group_items: { }
+                reduce_duplicates: false
+                vid: region
+                type: select
+                hierarchy: false
+                limit: true
+                error_message: true

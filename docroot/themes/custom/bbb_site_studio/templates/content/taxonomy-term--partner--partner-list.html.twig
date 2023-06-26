@@ -1,0 +1,166 @@
+{#
+/**
+* @file
+* Theme override to display a taxonomy term.
+*
+* Available variables:
+* - url: URL of the current term.
+* - name: (optional) Name of the current term.
+* - content: Items for the content of the term (fields and description).
+*   Use 'content' to print them all, or print a subset such as
+*   'content.description'. Use the following code to exclude the
+*   printing of a given child element:
+*   @code
+*   {{ content|without('description') }}
+*   @endcode
+* - attributes: HTML attributes for the wrapper.
+* - page: Flag for the full page state.
+* - term: The taxonomy term entity, including:
+*   - id: The ID of the taxonomy term.
+*   - bundle: Machine name of the current vocabulary.
+* - view_mode: View mode, e.g. 'full', 'teaser', etc.
+*
+* @see template_preprocess_taxonomy_term()
+*/
+#}
+{%
+set classes = [
+'taxonomy-term',
+'vocabulary-' ~ term.bundle|clean_class,
+'views-row'
+]
+%}
+{{ attach_library('bbb_core/logo_list') }}
+{% if content.field_website_link.0['#options'].attributes.target == '_blank' %}
+  {% set icon_class = 'external-window' %}
+{% elseif content.field_website_link.0['#options'].attributes.target == '_self' %}
+  {% set icon_class = 'same-window' %}
+{% else %}
+  {% set icon_class = 'no-target' %}
+{% endif %}
+
+{% if not_bbb == true %}
+  <li {{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
+  {% if content.field_logo|render|trim %}
+    <div tabindex="0" class="logo" aria-controls="{{ 'taxonomy-term-' ~ term.id ~ 'container'}}">
+      <div>{{ content.field_logo }}</div>
+      <span class="name coh-style-label-small {{ icon_class }}">
+        {{ term.label }}
+      </span>
+    </div>
+  {% else %}
+    <div tabindex="0" class="logo" aria-controls="{{ 'taxonomy-term-' ~ term.id ~ 'container'}}">
+      <div></div>
+      <span class="name coh-style-label-small {{ icon_class }}">
+        {{ term.label }}
+      </span>
+    </div>
+  {% endif %}
+  </li>
+  {% if bbi_core == true %}
+    <li class="views-row-overlay fullwidth is-hidden {{ icon_class }}" data-overlay-for="{{ 'taxonomy-term-' ~ term.id }}" id="{{ 'taxonomy-term-' ~ term.id ~ 'container'}}" aria-live="polite">
+      {% if content.field_website_link.0['#url'] is not empty %}
+        <a href="{{ content.field_website_link.0['#url'] }}" target="{{ content.field_website_link.0['#options'].attributes.target}}" name="{{content.field_website_link.0['#options'].attributes.name}}" rel="{{content.field_website_link.0['#options'].attributes.rel}}" class="name coh-style-headline-1">
+          {{ term.label }} {% if content.field_website_link.0['#options'].attributes.target == '_blank' %}<span class="visually-hidden">{{ content.field_website_link.0['#options'].attributes.name }} (opens in new window - external website)</span>{% endif %}
+        </a>
+      {% else %}
+        <div class="name coh-style-headline-1">{{ term.label }}</div>
+      {% endif %}
+      <div class="details-wrapper">
+        <div class="grid">
+          {{ content.field_investment_range }}
+          {{ content.field_partner_sector }}
+          {{ content.field_programme }}
+          {{ content.field_inv_manager }}
+        </div>
+        <div class="desc coh-style-body-medium">
+          {{ content.description }}
+        </div>
+        <div class="cta">
+          {% if content.field_website_link.0['#url'] is not empty %}
+            <a href="{{ content.field_website_link.0['#url']}}" target="{{ content.field_website_link.0['#options'].attributes.target}}" name="{{content.field_website_link.0['#options'].attributes.name}}" class="button coh-style-label-large btn-default btn-primary" rel="{{content.field_website_link.0['#options'].attributes.rel}}">
+              {{ content.field_website_link.0['#title'] }} {% if content.field_website_link.0['#options'].attributes.target == '_blank' %}<span class="visually-hidden">{{ content.field_website_link.0['#options'].attributes.name }} (opens in new window - external website)</span>{% endif %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <button tabindex="0" class="close-overlay">{{ 'Close'|t }}</button>
+    </li>
+  {% elseif bpc_core == true %}
+    <li class="views-row-overlay fullwidth is-hidden {{ icon_class }}" data-overlay-for="{{ 'taxonomy-term-' ~ term.id }}" id="{{ 'taxonomy-term-' ~ term.id ~ 'container'}}" aria-live="polite">
+      {% if content.field_website_link.0['#url'] is not empty %}
+        <a href="{{ content.field_website_link.0['#url'] }}" target="{{ content.field_website_link.0['#options'].attributes.target}}" name="{{content.field_website_link.0['#options'].attributes.name}}" rel="{{content.field_website_link.0['#options'].attributes.rel}}" class="name coh-style-headline-1">
+          {{ term.label }} {% if content.field_website_link.0['#options'].attributes.target == '_blank' %}<span class="visually-hidden">{{ content.field_website_link.0['#options'].attributes.name }} (opens in new window - external website)</span>{% endif %}
+        </a>
+      {% else %}
+        <div class="name coh-style-headline-1">{{ term.label }}</div>
+      {% endif %}
+      <div class="details-wrapper">
+        <div class="grid">
+          {{ content.field_partner_stages }}
+          {{ content.field_partner_sector }}
+        </div>
+        <div class="desc coh-style-body-medium">
+          {{ content.description }}
+        </div>
+        <div class="cta">
+          {% if content.field_website_link.0['#url'] is not empty %}
+            <a href="{{ content.field_website_link.0['#url']}}" target="{{ content.field_website_link.0['#options'].attributes.target}}" name="{{content.field_website_link.0['#options'].attributes.name}}" class="button coh-style-label-large btn-default btn-primary" rel="{{content.field_website_link.0['#options'].attributes.rel}}">
+              {{ content.field_website_link.0['#title'] }} {% if content.field_website_link.0['#options'].attributes.target == '_blank' %}<span class="visually-hidden">{{ content.field_website_link.0['#options'].attributes.name }} (opens in new window - external website)</span>{% endif %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <button tabindex="0" class="close-overlay">{{ 'Close'|t }}</button>
+    </li>
+  {% elseif sul_core == true %}
+    <li class="views-row-overlay fullwidth is-hidden {{ icon_class }}" data-overlay-for="{{ 'taxonomy-term-' ~ term.id }}" id="{{ 'taxonomy-term-' ~ term.id ~ 'container'}}" aria-live="polite">
+      {% if content.field_website_link.0['#url'] is not empty %}
+        <a href="{{ content.field_website_link.0['#url'] }}" target="{{ content.field_website_link.0['#options'].attributes.target}}" name="{{content.field_website_link.0['#options'].attributes.name}}" rel="{{content.field_website_link.0['#options'].attributes.rel}}" class="name coh-style-headline-1">
+          {{ term.label }} {% if content.field_website_link.0['#options'].attributes.target == '_blank' %}<span class="visually-hidden">{{ content.field_website_link.0['#options'].attributes.name }} (opens in new window - external website)</span>{% endif %}
+        </a>
+      {% else %}
+        <div class="name coh-style-headline-1">{{ term.label }}</div>
+      {% endif %}
+      <div class="details-wrapper">
+        <div class="grid">
+          {{ content.field_expertise }}
+          {{ content.field_region }}
+        </div>
+        <div class="desc coh-style-body-medium">
+          {{ content.description }}
+        </div>
+        <div class="cta">
+          {% if content.field_website_link.0['#url'] is not empty %}
+            <a href="{{ content.field_website_link.0['#url']}}" target="{{ content.field_website_link.0['#options'].attributes.target}}" name="{{content.field_website_link.0['#options'].attributes.name}}" class="button coh-style-label-large btn-default btn-primary" rel="{{content.field_website_link.0['#options'].attributes.rel}}">
+              {{ content.field_website_link.0['#title'] }} {% if content.field_website_link.0['#options'].attributes.target == '_blank' %}<span class="visually-hidden">{{ content.field_website_link.0['#options'].attributes.name }} (opens in new window - external website)</span>{% endif %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <button tabindex="0" class="close-overlay">{{ 'Close'|t }}</button>
+    </li>
+  {% endif %}
+{% else %}
+  {# On site where we dont have accordion #}
+  <li {{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes).addClass('no-accordion') }}>
+    <div class="logo">
+      {% if content.field_website_link.0['#url'] is not empty %}
+        <a href="{{ content.field_website_link.0['#url'] }}" target="{{ content.field_website_link.0['#options'].attributes.target}}" name="{{content.field_website_link.0['#options'].attributes.name}}" rel="{{content.field_website_link.0['#options'].attributes.rel}}">
+          {{ content.field_logo }}
+        </a>
+      {% else %}
+        {{ content.field_logo }}
+      {% endif %}
+    </div>
+    <div class="name coh-style-label-small {{ icon_class }}">
+      {% if content.field_website_link.0['#url'] is not empty %}
+        <a href="{{ content.field_website_link.0['#url'] }}" target="{{ content.field_website_link.0['#options'].attributes.target}}" name="{{content.field_website_link.0['#options'].attributes.name}}" rel="{{content.field_website_link.0['#options'].attributes.rel}}">
+          {{ term.label }}
+        </a>
+      {% else %}
+        {{ term.label }}
+      {% endif %}
+    </div>
+  </li>
+{% endif %}

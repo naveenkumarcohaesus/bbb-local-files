@@ -1,0 +1,414 @@
+uuid: a4aecfdf-adb2-4e50-875b-f64d4902d4b3
+langcode: en
+status: false
+dependencies: {  }
+label: 'Mini List (Node, Success Story)'
+id: node_case_study_mini_list
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "container",
+              "uid": "container",
+              "title": "Container",
+              "status": {
+                  "collapsed": false
+              },
+              "uuid": "f2b3682f-bcc2-47fd-a95b-96202d68c297",
+              "parentUid": "root",
+              "children": [
+                  {
+                      "type": "container",
+                      "uid": "link",
+                      "title": "Link",
+                      "status": {
+                          "collapsed": true
+                      },
+                      "uuid": "f1d475a7-9d5c-4ac2-ae2e-c6d1c28fee74",
+                      "parentUid": "container",
+                      "children": []
+                  },
+                  {
+                      "type": "container",
+                      "uid": "inline-element",
+                      "title": "Inline element",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "uuid": "55b2af43-2ac7-466b-8716-0b8ba61855a5",
+                      "parentUid": "container",
+                      "children": []
+                  }
+              ]
+          }
+      ],
+      "mapper": {
+          "f2b3682f-bcc2-47fd-a95b-96202d68c297": {},
+          "55b2af43-2ac7-466b-8716-0b8ba61855a5": {},
+          "f1d475a7-9d5c-4ac2-ae2e-c6d1c28fee74": {
+              "settings": {
+                  "formDefinition": [
+                      {
+                          "formKey": "link-settings",
+                          "children": [
+                              {
+                                  "formKey": "link-link",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "linkText",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "titleAttribute",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "type",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "linkToPage",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "url",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "anchor",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "scrollToSelector",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "scrollToDuration",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "scrollToOffsetType",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "scrollToOffsetPx",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "scrollToOffsetElement",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "target",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "helpText",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "triggerId",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "modalId",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "noFollow",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "noOpener",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "noReferrer",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "link-modifier",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "modifier",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "modifierType",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "interactionScope",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "interactionParent",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "interactionTarget",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "modifierName",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "link-animation",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xs"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "linkAnimation",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationType",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationScope",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationParent",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationTarget",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationScale",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDirection",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDirection",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDirection",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDistance",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationPieces",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationOrigin",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationFoldHeight",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationHorizontalFirst",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationIterations",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationEasing",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "animationDuration",
+                                          "active": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "link-style",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customStyle",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              },
+              "markup": {
+                  "formDefinition": [
+                      {
+                          "formKey": "tab-markup-classes-and-ids",
+                          "children": [
+                              {
+                                  "formKey": "tab-markup-add-classes",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "classes",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "tab-markup-attributes",
+                          "children": [
+                              {
+                                  "formKey": "tab-markup-add-attributes-values",
+                                  "breakpoints": [],
+                                  "activeFields": [
+                                      {
+                                          "name": "attributes",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "attribute",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": 0,
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "title": "Markup",
+                  "selectorType": "topLevel",
+                  "form": null,
+                  "items": []
+              }
+          }
+      },
+      "model": {
+          "f2b3682f-bcc2-47fd-a95b-96202d68c297": {
+              "settings": {
+                  "width": "fluid"
+              }
+          },
+          "f1d475a7-9d5c-4ac2-ae2e-c6d1c28fee74": {
+              "settings": {
+                  "title": "Link",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "type": "internal-page",
+                      "target": "_self",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "type": "internal-page",
+                  "target": "_self",
+                  "linkToPage": "[node:url]",
+                  "linkText": "[node:title]"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "link"
+                  }
+              },
+              "markup": {
+                  "attributes": [
+                      {
+                          "attribute": "rel",
+                          "value": "bookmark"
+                      }
+                  ]
+              }
+          },
+          "55b2af43-2ac7-466b-8716-0b8ba61855a5": {
+              "settings": {
+                  "title": "Inline element",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "htmlMarkup": "span",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "htmlMarkup": "span",
+                  "content": "[node:content-type]"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "inline-element"
+                  }
+              }
+          }
+      },
+      "previewModel": {
+          "55b2af43-2ac7-466b-8716-0b8ba61855a5": {},
+          "f1d475a7-9d5c-4ac2-ae2e-c6d1c28fee74": {}
+      },
+      "variableFields": {
+          "55b2af43-2ac7-466b-8716-0b8ba61855a5": [
+              "settings.content"
+          ],
+          "f1d475a7-9d5c-4ac2-ae2e-c6d1c28fee74": [
+              "settings.linkToPage",
+              "settings.linkText"
+          ]
+      },
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+modified: true
+selectable: false
+custom: false
+twig_template: node--cohesion--node-case-study-mini-list
+default: true
+entity_type: node
+bundle: case_study
+view_mode: mini_list
+master_template: ''

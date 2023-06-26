@@ -1,0 +1,139 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\block\Entity\Block;
+
+/**
+ * Research and publication field config.
+ */
+function bbb_research_publication_update_8001() {
+  _bbb_article_rewrite_configuration('field.field.node.research_and_publication.field_business_structure', 'bbb_research_publication', 'install');
+  _bbb_article_rewrite_configuration('field.field.node.research_and_publication.field_content_owner', 'bbb_research_publication', 'install');
+  _bbb_article_rewrite_configuration('field.field.node.research_and_publication.field_content_typology', 'bbb_research_publication', 'install');
+  _bbb_article_rewrite_configuration('field.field.node.research_and_publication.field_topic', 'bbb_research_publication', 'install');
+}
+
+/**
+ * Metadata field updated config.
+ */
+function bbb_research_publication_update_8002() {
+  _bbb_article_rewrite_configuration('field.field.node.research_and_publication.field_metatags', 'bbb_research_publication', 'install');
+  _bbb_article_rewrite_configuration('core.entity_form_display.node.research_and_publication.default', 'bbb_research_publication', 'install');
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.research_and_publication.default', 'bbb_research_publication', 'install');
+}
+
+/**
+ * Add Hero Background Pattern field.
+ */
+function bbb_research_publication_update_8003() {
+  _bbb_article_create_entity_field('node.research_and_publication.field_hero_background_pattern', 'field.field.node.research_and_publication.field_hero_background_pattern', 'bbb_research_publication', 'optional');
+  _bbb_article_rewrite_configuration('core.entity_form_display.node.research_and_publication.default', 'bbb_research_publication', 'install');
+}
+
+/**
+ * Configs for reseach and publication list.
+ */
+function bbb_research_publication_update_8004() {
+  _bbb_article_rewrite_configuration('views.view.research_and_publications', 'bbb_research_publication', 'install');
+  _bbb_article_rewrite_configuration('block.block.views_block__research_and_publication_rp_list', 'bbb_research_publication', 'install');
+  _bbb_article_rewrite_configuration('block.block.exposedformresearch_and_publicationsrp_list', 'bbb_research_publication', 'install');
+
+  // Place the view block in site studio hidden region.
+  $block = Block::load('views_block__research_and_publication_rp_list');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+
+  // Place the view block in site studio hidden region.
+  $block = Block::load('exposedformresearch_and_publicationsrp_list');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+}
+
+/**
+ * Update view for rp list.
+ */
+function bbb_research_publication_update_8005() {
+  _bbb_article_rewrite_configuration('views.view.research_and_publications', 'bbb_research_publication', 'install');
+}
+
+/**
+ * Update view for rp list.
+ */
+function bbb_research_publication_update_8006() {
+  _bbb_article_rewrite_configuration('views.view.research_and_publications', 'bbb_research_publication', 'install');
+}
+
+/**
+ * Update view for rp list.
+ */
+function bbb_research_publication_update_8007() {
+  _bbb_article_rewrite_configuration('views.view.research_and_publications', 'bbb_research_publication', 'install');
+}
+
+/**
+ * Update view for rp list.
+ */
+function bbb_research_publication_update_8008() {
+  _bbb_article_rewrite_configuration('views.view.research_and_publications', 'bbb_research_publication', 'install');
+}
+
+/**
+ * Updated View fields and changed some markup.
+ */
+function bbb_research_publication_update_8009() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_research_publication', 'bbb_research_publication_update_8009');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update field for no results.
+ */
+function bbb_research_publication_update_8010() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_research_publication', 'bbb_research_publication_update_8010');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update view and Research and publication list block added.
+ */
+function bbb_research_publication_update_8011() {
+  _bbb_article_rewrite_configuration('views.view.research_and_publications', 'bbb_research_publication', 'install');
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_research_publication', 'bbb_research_publication_update_8011');
+  // Install Card display mode.
+  _bbb_article_create_entity_field('node.research_and_publication.field_hero_background_pattern', 'field.field.node.research_and_publication.field_hero_background_pattern', 'bbb_research_publication', 'optional');
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.research_and_publication.card', 'bbb_research_publication', 'optional');
+  // Enable block and place it in region, to be available in components.
+  _bbb_article_rewrite_configuration('block.block.views_block__research_and_publication_list_block', 'bbb_research_publication', 'optional');
+  $block = Block::load('views_block__research_and_publication_list_block');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update default display mode for Research and publication content type.
+ */
+function bbb_research_publication_update_8012() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_research_publication', 'bbb_research_publication_update_8012');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: small_related_content_w171_h171
+label: 'Small Related Content W171 H171'
+effects:
+  46d7eb53-2ac8-45b0-bb77-15b8ac8b905a:
+    uuid: 46d7eb53-2ac8-45b0-bb77-15b8ac8b905a
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 171
+      height: 171
+      crop_type: focal_point

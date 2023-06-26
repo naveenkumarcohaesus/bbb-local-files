@@ -1,0 +1,135 @@
+# Application 'bbbwebsites', environment '01dev'.
+01dev:
+  root: /var/www/html/bbbwebsites.01dev/docroot
+  ac-site: bbbwebsites
+  ac-env: 01dev
+  ac-realm: enterprise-g1
+  uri: bbbwebsites01dev.enterprise-g1.acquia-sites.com
+  01dev.livedev:
+    parent: '@bbbwebsites.01dev'
+    root: /mnt/gfs/bbbwebsites.01dev/livedev/docroot
+  host: bbbwebsites01dev.ssh.enterprise-g1.acquia-sites.com
+  user: bbbwebsites.01dev
+
+
+
+# Application 'bbbwebsites', environment '01devup'.
+01devup:
+  root: /var/www/html/bbbwebsites.01devup/docroot
+  ac-site: bbbwebsites
+  ac-env: 01devup
+  ac-realm: enterprise-g1
+  uri: bbbwebsites01devup.enterprise-g1.acquia-sites.com
+  01devup.livedev:
+    parent: '@bbbwebsites.01devup'
+    root: /mnt/gfs/bbbwebsites.01devup/livedev/docroot
+  host: bbbwebsites01devup.ssh.enterprise-g1.acquia-sites.com
+  user: bbbwebsites.01devup
+
+
+
+# Application 'bbbwebsites', environment '01live'.
+01live:
+  root: /var/www/html/bbbwebsites.01live/docroot
+  ac-site: bbbwebsites
+  ac-env: 01live
+  ac-realm: enterprise-g1
+  uri: bbbwebsites01live.enterprise-g1.acquia-sites.com
+  01live.livedev:
+    parent: '@bbbwebsites.01live'
+    root: /mnt/gfs/bbbwebsites.01live/livedev/docroot
+  host: bbbwebsites01live.ssh.enterprise-g1.acquia-sites.com
+  user: bbbwebsites.01live
+
+
+
+# Application 'bbbwebsites', environment '01test'.
+01test:
+  root: /var/www/html/bbbwebsites.01test/docroot
+  ac-site: bbbwebsites
+  ac-env: 01test
+  ac-realm: enterprise-g1
+  uri: bbbwebsites01test.enterprise-g1.acquia-sites.com
+  01test.livedev:
+    parent: '@bbbwebsites.01test'
+    root: /mnt/gfs/bbbwebsites.01test/livedev/docroot
+  host: bbbwebsites01test.ssh.enterprise-g1.acquia-sites.com
+  user: bbbwebsites.01test
+
+
+
+# Application 'bbbwebsites', environment '01testup'.
+01testup:
+  root: /var/www/html/bbbwebsites.01testup/docroot
+  ac-site: bbbwebsites
+  ac-env: 01testup
+  ac-realm: enterprise-g1
+  uri: bbbwebsites01testup.enterprise-g1.acquia-sites.com
+  01testup.livedev:
+    parent: '@bbbwebsites.01testup'
+    root: /mnt/gfs/bbbwebsites.01testup/livedev/docroot
+  host: bbbwebsites01testup.ssh.enterprise-g1.acquia-sites.com
+  user: bbbwebsites.01testup
+
+
+
+# Application 'bbbwebsites', environment '01update'.
+01update:
+  root: /var/www/html/bbbwebsites.01update/docroot
+  ac-site: bbbwebsites
+  ac-env: 01update
+  ac-realm: enterprise-g1
+  uri: bbbwebsites01update.enterprise-g1.acquia-sites.com
+  01update.livedev:
+    parent: '@bbbwebsites.01update'
+    root: /mnt/gfs/bbbwebsites.01update/livedev/docroot
+  host: bbbwebsites01update.ssh.enterprise-g1.acquia-sites.com
+  user: bbbwebsites.01update
+
+
+
+# Application 'bbbwebsites', environment 'dev'.
+dev:
+  root: /var/www/html/bbbwebsites.dev/docroot
+  ac-site: bbbwebsites
+  ac-env: dev
+  ac-realm: enterprise-g1
+  uri: bbbwebsitesdev.enterprise-g1.acquia-sites.com
+  dev.livedev:
+    parent: '@bbbwebsites.dev'
+    root: /mnt/gfs/bbbwebsites.dev/livedev/docroot
+  host: null
+  user: null
+
+
+
+# Application 'bbbwebsites', environment 'prod'.
+prod:
+  root: /var/www/html/bbbwebsites.prod/docroot
+  ac-site: bbbwebsites
+  ac-env: prod
+  ac-realm: enterprise-g1
+  uri: bbbwebsitesprod.enterprise-g1.acquia-sites.com
+  prod.livedev:
+    parent: '@bbbwebsites.prod'
+    root: /mnt/gfs/bbbwebsites.prod/livedev/docroot
+  host: null
+  user: null
+
+
+
+# Application 'bbbwebsites', environment 'test'.
+test:
+  root: /var/www/html/bbbwebsites.test/docroot
+  ac-site: bbbwebsites
+  ac-env: test
+  ac-realm: enterprise-g1
+  uri: bbbwebsitestest.enterprise-g1.acquia-sites.com
+  test.livedev:
+    parent: '@bbbwebsites.test'
+    root: /mnt/gfs/bbbwebsites.test/livedev/docroot
+  host: null
+  user: null
+
+
+

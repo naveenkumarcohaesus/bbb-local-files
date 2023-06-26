@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: x_large_header_w336_h224
+label: 'X Large Header W336 H224'
+effects:
+  34744ac9-4d9b-465a-b410-f2af26bfcfce:
+    uuid: 34744ac9-4d9b-465a-b410-f2af26bfcfce
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 336
+      height: 244
+      crop_type: focal_point

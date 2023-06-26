@@ -1,0 +1,172 @@
+uuid: 1c459590-a25b-489b-833f-68d5f6504caf
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.aurora_foundations
+label: 'Headline 2'
+id: 5425e1af
+json_values: |
+  {
+      "preview": {
+          "text": "<h1 class=\"coh-preview\">Default content for 'Heading'.<\/h1>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "h1",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "styles": {
+              "xs": {
+                  "font-size": {
+                      "value": "[style-guide:aurora_foundations:headline-2-small]"
+                  },
+                  "line-height": {
+                      "value": "[style-guide:aurora_foundations:headline-2-small-line-height]"
+                  },
+                  "letter-spacing": {
+                      "value": "[style-guide:aurora_foundations:headline-2-small-letter-spacing]"
+                  },
+                  "font-family": {
+                      "value": "[style-guide:aurora_foundations:headline-2]"
+                  }
+              },
+              "sm": {
+                  "font-size": {
+                      "value": "[style-guide:aurora_foundations:headline-2-medium]"
+                  },
+                  "line-height": {
+                      "value": "[style-guide:aurora_foundations:headline-2-medium-line-height]"
+                  },
+                  "letter-spacing": {
+                      "value": "[style-guide:aurora_foundations:headline-2-medium-letter-spacing]"
+                  }
+              },
+              "xl": {
+                  "font-size": {
+                      "value": "[style-guide:aurora_foundations:headline-2-large]"
+                  },
+                  "line-height": {
+                      "value": "[style-guide:aurora_foundations:headline-2-large-line-height]"
+                  },
+                  "letter-spacing": {
+                      "value": "[style-guide:aurora_foundations:headline-2-large-letter-spacing]"
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "previewModel": {
+          "styles": {
+              "styles": {
+                  "xs": {
+                      "font-size": {
+                          "value": ""
+                      }
+                  }
+              }
+          }
+      },
+      "variableFields": [
+          "styles.styles.xs.font-family.value",
+          "styles.styles.xs.font-size.value",
+          "styles.styles.xs.line-height.value",
+          "styles.styles.xs.letter-spacing.value",
+          "styles.styles.sm.font-size.value",
+          "styles.styles.sm.line-height.value",
+          "styles.styles.sm.letter-spacing.value",
+          "styles.styles.xl.font-size.value",
+          "styles.styles.xl.line-height.value",
+          "styles.styles.xl.letter-spacing.value"
+      ]
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Heading",
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "font",
+                  "children": [
+                      {
+                          "formKey": "font-sizing-and-alignment",
+                          "breakpoints": [
+                              {
+                                  "name": "xs"
+                              },
+                              {
+                                  "name": "sm"
+                              },
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "font-size",
+                                  "active": true
+                              },
+                              {
+                                  "name": "line-height",
+                                  "active": true
+                              },
+                              {
+                                  "name": "text-align",
+                                  "active": false
+                              },
+                              {
+                                  "name": "letter-spacing",
+                                  "active": true
+                              },
+                              {
+                                  "name": "word-spacing",
+                                  "active": false
+                              },
+                              {
+                                  "name": "text-indent",
+                                  "active": false
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "font-and-color",
+                          "breakpoints": [
+                              {
+                                  "name": "xs"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "font-family",
+                                  "active": true
+                              },
+                              {
+                                  "name": "font-weight",
+                                  "active": false
+                              },
+                              {
+                                  "name": "color",
+                                  "active": false
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-headline-2
+custom_style_type: heading
+available_in_wysiwyg: true
+parent: null
+weight: 0

@@ -1,0 +1,395 @@
+uuid: d7122c13-fbb2-4e9e-af12-4df6fcabd881
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.partner.field_address
+    - field.field.taxonomy_term.partner.field_amount_of_finance_needed
+    - field.field.taxonomy_term.partner.field_bus_stages
+    - field.field.taxonomy_term.partner.field_case_study_url
+    - field.field.taxonomy_term.partner.field_content_areas
+    - field.field.taxonomy_term.partner.field_email
+    - field.field.taxonomy_term.partner.field_exclude_from_support_finde
+    - field.field.taxonomy_term.partner.field_exclude_region
+    - field.field.taxonomy_term.partner.field_expertise
+    - field.field.taxonomy_term.partner.field_finance_type
+    - field.field.taxonomy_term.partner.field_geofield
+    - field.field.taxonomy_term.partner.field_include_quote_section
+    - field.field.taxonomy_term.partner.field_inv_manager
+    - field.field.taxonomy_term.partner.field_inv_types
+    - field.field.taxonomy_term.partner.field_investment_range
+    - field.field.taxonomy_term.partner.field_lend_schemes
+    - field.field.taxonomy_term.partner.field_logo
+    - field.field.taxonomy_term.partner.field_partner_sector
+    - field.field.taxonomy_term.partner.field_partner_stages
+    - field.field.taxonomy_term.partner.field_phone
+    - field.field.taxonomy_term.partner.field_programme
+    - field.field.taxonomy_term.partner.field_ptnr_types
+    - field.field.taxonomy_term.partner.field_quote_credit
+    - field.field.taxonomy_term.partner.field_quote_pic
+    - field.field.taxonomy_term.partner.field_quote_text
+    - field.field.taxonomy_term.partner.field_region
+    - field.field.taxonomy_term.partner.field_segment_ent
+    - field.field.taxonomy_term.partner.field_show_at_portfolio_module
+    - field.field.taxonomy_term.partner.field_show_on_regional_support
+    - field.field.taxonomy_term.partner.field_show_on_website
+    - field.field.taxonomy_term.partner.field_supporting_business
+    - field.field.taxonomy_term.partner.field_type_funding
+    - field.field.taxonomy_term.partner.field_website_link
+    - field.field.taxonomy_term.partner.field_website_link_bbls
+    - field.field.taxonomy_term.partner.field_website_link_cbils
+    - field.field.taxonomy_term.partner.field_website_link_clbils
+    - field.field.taxonomy_term.partner.field_website_link_rls
+    - taxonomy.vocabulary.partner
+  module:
+    - address
+    - link
+    - telephone
+    - text
+  enforced:
+    module:
+      - bbb_partner
+id: taxonomy_term.partner.default
+targetEntityType: taxonomy_term
+bundle: partner
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_amount_of_finance_needed:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_bus_stages:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_case_study_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_content_areas:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_exclude_from_support_finde:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_exclude_region:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_expertise:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_finance_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_include_quote_section:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_inv_manager:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_inv_types:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_investment_range:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_lend_schemes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_logo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_partner_sector:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_partner_stages:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_phone:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_programme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_ptnr_types:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_quote_credit:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_quote_pic:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_quote_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_region:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_segment_ent:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_show_at_portfolio_module:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_show_on_regional_support:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_show_on_website:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_supporting_business:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_type_funding:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_website_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_website_link_bbls:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_website_link_cbils:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_website_link_clbils:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_website_link_rls:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_business_stages: true
+  field_geofield: true
+  field_hide_on_map: true
+  field_hide_on_map_listing: true
+  field_investment_manager: true
+  field_investment_types: true
+  field_lender_schemes: true
+  field_partner_types: true
+  field_segment: true
+  field_stages: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: c22dd570-6bd6-4777-a620-ca141bc0ee02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_typology
+    - node.type.research_and_publication
+    - taxonomy.vocabulary.content_topology
+id: node.research_and_publication.field_content_typology
+field_name: field_content_typology
+entity_type: node
+bundle: research_and_publication
+label: 'Content Typology'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_topology: content_topology
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

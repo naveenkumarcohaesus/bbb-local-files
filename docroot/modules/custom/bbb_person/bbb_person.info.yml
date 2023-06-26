@@ -1,0 +1,11 @@
+name: BBB Person
+description: 'Provides Person content type and related configuration. '
+type: module
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:cohesion_templates
+  - drupal:field
+  - drupal:node
+  - drupal:simple_sitemap
+  - drupal:telephone
+package: BBB

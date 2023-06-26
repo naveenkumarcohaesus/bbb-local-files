@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: component_content
+  uuid: 20b0ac63-66a8-4a0e-be50-a7bbfd90da39
+  default_langcode: en
+  depends:
+    3a574968-36d3-46d3-be85-e9522d4b2c7b: cohesion_layout
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'BBI Color Logo'
+  uid:
+    -
+      target_id: 1
+  created:
+    -
+      value: 1663299826
+  layout_canvas:
+    -
+      entity: 3a574968-36d3-46d3-be85-e9522d4b2c7b
+  component:
+    -
+      target_id: cpt_logo_card
+  revision_translation_affected:
+    -
+      value: true

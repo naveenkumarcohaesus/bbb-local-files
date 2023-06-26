@@ -1,0 +1,149 @@
+views.view.research_and_publications:
+  expected_config:
+    display:
+      default:
+        display_options:
+          fields:
+            created:
+              element_default_classes: true
+              exclude: false
+            field_image:
+              element_class: ''
+              element_default_classes: true
+              element_type: ''
+              settings:
+                view_mode: thumbnail
+              type: entity_reference_entity_view
+            field_media_document:
+              exclude: false
+            field_teaser_text:
+              exclude: false
+            title:
+              alter:
+                alter_text: true
+                text: '{{ title }} {{ created_1 }}'
+              element_class: ''
+              element_default_classes: true
+              element_type: ''
+              exclude: false
+              settings:
+                link_to_entity: true
+            view_node:
+              element_default_classes: true
+              exclude: false
+          pager:
+            type: mini
+  update_actions:
+    delete:
+      display:
+        default:
+          display_options:
+            fields:
+              field_image:
+                settings:
+                  view_mode: thumbnail
+    add:
+      display:
+        default:
+          display_options:
+            fields:
+              nothing:
+                admin_label: ''
+                alter:
+                  absolute: false
+                  alt: ''
+                  alter_text: true
+                  ellipsis: true
+                  external: false
+                  html: false
+                  link_class: ''
+                  make_link: false
+                  max_length: 0
+                  more_link: false
+                  more_link_path: ''
+                  more_link_text: ''
+                  nl2br: false
+                  path: ''
+                  path_case: none
+                  prefix: ''
+                  preserve_tags: ''
+                  rel: ''
+                  replace_spaces: false
+                  strip_tags: false
+                  suffix: ''
+                  target: ''
+                  text: '<h3 class="coh-style-headline-3">{{ title }}</h3><p class="coh-style-label-medium">{{ created }}</p> <p class="coh-style-body-small">{{ field_teaser_text }}</p> <ul class="button-list-wrapper"><li class="button-list-cta-link">{{ view_node }}</li><li class="button-list-document-link"> {{ field_media_document }}</li></ul>'
+                  trim: false
+                  trim_whitespace: false
+                  word_boundary: true
+                element_class: research-body-wrapper
+                element_default_classes: false
+                element_label_class: ''
+                element_label_colon: false
+                element_label_type: ''
+                element_type: div
+                element_wrapper_class: ''
+                element_wrapper_type: ''
+                empty: ''
+                empty_zero: false
+                exclude: false
+                field: nothing
+                group_type: group
+                hide_alter_empty: false
+                hide_empty: false
+                id: nothing
+                label: ''
+                plugin_id: custom
+                relationship: none
+                table: views
+            pager:
+              options:
+                quantity: 9
+                tags:
+                  first: '« First'
+                  last: 'Last »'
+            row:
+              options:
+                default_field_elements: false
+                hide_empty: false
+                inline:
+                  field_image: field_image
+                  nothing: nothing
+                separator: ''
+    change:
+      display:
+        default:
+          display_options:
+            fields:
+              created:
+                element_default_classes: false
+                exclude: true
+              field_image:
+                element_class: research-image-wrapper
+                element_default_classes: false
+                element_type: div
+                settings:
+                  image_link: ''
+                  image_loading:
+                    attribute: lazy
+                  image_style: ''
+                type: media_thumbnail
+              field_media_document:
+                exclude: true
+              field_teaser_text:
+                exclude: true
+              title:
+                alter:
+                  alter_text: false
+                  text: ''
+                element_class: coh-style-headline-3
+                element_default_classes: false
+                element_type: h3
+                exclude: true
+                settings:
+                  link_to_entity: false
+              view_node:
+                element_default_classes: false
+                exclude: true
+            pager:
+              type: full

@@ -1,0 +1,55 @@
+uuid: 804cc0cf-8ae1-43d3-9bc9-2da889d3bbfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_h2
+    - field.field.node.team_member.field_designation
+    - field.field.node.team_member.field_image
+    - field.field.node.team_member.field_layout_canvas
+    - field.field.node.team_member.field_metatags
+    - field.field.node.team_member.field_team_member_group
+    - field.field.node.team_member.field_teaser_text
+    - node.type.team_member
+  module:
+    - media
+    - user
+id: node.team_member.card_h2
+targetEntityType: node
+bundle: team_member
+mode: card_h2
+content:
+  field_designation:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_team_member_group:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_layout_canvas: true
+  field_metatags: true
+  field_teaser_text: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

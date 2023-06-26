@@ -1,0 +1,25 @@
+diff --git a/src/SchemaMetatagManager.php b/src/SchemaMetatagManager.php
+index 6456082..1b4ccfa 100644
+--- a/src/SchemaMetatagManager.php
++++ b/src/SchemaMetatagManager.php
+@@ -174,7 +174,7 @@
+    */
+   public static function explode($value) {
+     if (is_string($value)) {
+-      $value = explode(',', $value);
++      $value = str_getcsv($value);
+     }
+     if (is_array($value)) {
+       $value = array_map('trim', $value);
+diff --git a/src/Plugin/metatag/Tag/SchemaNameBase.php b/src/Plugin/metatag/Tag/SchemaNameBase.php
+index fec5014..a10db82 100644
+--- a/src/Plugin/metatag/Tag/SchemaNameBase.php
++++ b/src/Plugin/metatag/Tag/SchemaNameBase.php
+@@ -254,7 +254,6 @@
+    */
+   protected function neverExplode() {
+     return [
+-      'streetAddress',
+       'reviewBody',
+       'recipeInstructions',
+     ];

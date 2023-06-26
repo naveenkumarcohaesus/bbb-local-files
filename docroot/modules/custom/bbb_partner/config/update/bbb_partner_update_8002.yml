@@ -1,0 +1,15 @@
+field.storage.taxonomy_term.field_amount_of_finance_needed:
+  expected_config: {  }
+  update_actions:
+    change:
+      cardinality: -1
+field.field.taxonomy_term.partner.field_investment_manager:
+  expected_config: {  }
+  update_actions:
+    change:
+      required: true
+field.field.taxonomy_term.partner.field_investment_types:
+  expected_config: {  }
+  update_actions:
+    change:
+      description: 'This field is BPC specific.'

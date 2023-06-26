@@ -1,0 +1,44 @@
+views.view.case_study_listing:
+  expected_config: {  }
+  update_actions:
+    add:
+      display:
+        our_case_studies:
+          display_options:
+            arguments:
+              'null':
+                admin_label: ''
+                default_action: ignore
+                default_argument_options:
+                  argument: ''
+                default_argument_skip_url: true
+                default_argument_type: fixed
+                exception:
+                  title: All
+                  title_enable: false
+                  value: all
+                field: 'null'
+                group_type: group
+                id: 'null'
+                must_not_be: false
+                plugin_id: 'null'
+                relationship: none
+                specify_validation: false
+                summary:
+                  format: default_summary
+                  number_of_records: 0
+                  sort_order: asc
+                summary_options:
+                  base_path: ''
+                  count: true
+                  items_per_page: 25
+                  override: false
+                table: views
+                title: ''
+                title_enable: false
+                validate:
+                  fail: 'not found'
+                  type: none
+                validate_options: {  }
+            defaults:
+              arguments: false

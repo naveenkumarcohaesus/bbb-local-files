@@ -1,0 +1,46 @@
+uuid: b96c4911-92b1-4656-aca9-3d36a17e60c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.original
+    - field.field.media.image.field_categories
+    - field.field.media.image.field_image_type
+    - field.field.media.image.field_tags
+    - field.field.media.image.image
+    - media.type.image
+  module:
+    - svg_image
+  enforced:
+    module:
+      - acquia_cms_image
+id: media.image.original
+targetEntityType: media
+bundle: image
+mode: original
+content:
+  thumbnail:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  created: true
+  field_categories: true
+  field_image_type: true
+  field_tags: true
+  image: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true

@@ -1,0 +1,18 @@
+uuid: a2e46215-2797-46c3-9315-78bbd2e36345
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
+id: hero_video
+label: 'Hero Video'
+description: 'Video to be used on Hero Video component.'
+source: video_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_file
+field_map: {  }

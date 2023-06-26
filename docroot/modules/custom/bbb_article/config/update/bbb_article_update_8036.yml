@@ -1,0 +1,17 @@
+views.view.article:
+  expected_config: {  }
+  update_actions:
+    change:
+      display:
+        article_listing_block:
+          display_options:
+            exposed_form:
+              options:
+                bef:
+                  filter:
+                    field_programme_target_id:
+                      options_show_only_used: 1
+                      options_show_only_used_filtered: 1
+                    field_topic_target_id:
+                      options_show_only_used: 1
+                      options_show_only_used_filtered: 1

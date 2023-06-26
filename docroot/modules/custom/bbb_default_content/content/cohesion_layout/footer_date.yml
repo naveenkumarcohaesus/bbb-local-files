@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: cohesion_layout
+  uuid: 4618878f-a444-465d-8f7e-a488f25d8daa
+  default_langcode: en
+default:
+  json_values:
+    -
+      value: '{"canvas":[{"uid":"cpt_text","type":"component","title":"Text","enabled":true,"category":"category-4","componentId":"cpt_text","componentType":"wysiwyg","uuid":"ec765f2e-f4db-42f0-9dfa-e5e481ba6370","parentUid":"root","status":[],"model":{"settings":{"title":"Footer Date"}},"children":[]}],"mapper":[],"model":{"ec765f2e-f4db-42f0-9dfa-e5e481ba6370":{"settings":{"title":"Text"},"5fc743c3-6b31-4a40-bd05-24acfb4ca9ba":"[current-date:html_year]","21656d58-6784-4331-9370-2e7009487b4f":"coh-style-text-color-dark-background","f8e05754-678a-4864-9304-c742b959b852":"","5af21675-f8f5-48ce-816d-faedbed6b600":"","8bac75a1-19a5-42af-99fa-5877541c6590":"0","7f84a990-f95f-4bc3-98c9-2cd496b005ea":"","6dc6b921-8b08-4047-b4b5-2d838ccbd734":""}},"previewModel":{"ec765f2e-f4db-42f0-9dfa-e5e481ba6370":{"5fc743c3-6b31-4a40-bd05-24acfb4ca9ba":{"text":"","textFormat":"cohesion"}}},"variableFields":{"ec765f2e-f4db-42f0-9dfa-e5e481ba6370":["5fc743c3-6b31-4a40-bd05-24acfb4ca9ba"]},"meta":{"fieldHistory":[]}}'
+  styles:
+    -
+      value: '[]'
+  template:
+    -
+      value: '{"bbb_site_studio":"{\u0022metadata\u0022:{\u0022contexts\u0022:[]},\u0022twig\u0022:\u0022{{ attach_library(\u0027cohesion\\\/global_libraries.responsiveJs\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.matchHeight\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.cohMatchHeights\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.windowscroll\u0027) }} {{ attach_library(\u0027cohesion\\\/element_templates.link\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.parallax_scrolling\u0027) }} {% set component_variable_5fc743c3_6b31_4a40_bd05_24acfb4ca9ba %}{{ processtoken(\\\u0022[current-date:html_year]\\\u0022, {\\\u0022current-date\\\u0022: current_date}, _context, false) }}{% endset %} {% set component_variable_21656d58_6784_4331_9370_2e7009487b4f %}coh-style-text-color-dark-background{% endset %} {% set component_variable_f8e05754_678a_4864_9304_c742b959b852 %}{% endset %} {% set component_variable_5af21675_f8f5_48ce_816d_faedbed6b600 %}{% endset %} {% set component_variable_8bac75a1_19a5_42af_99fa_5877541c6590 = 0 %} {% set component_variable_7f84a990_f95f_4bc3_98c9_2cd496b005ea %}{% endset %} {% set component_variable_6dc6b921_8b08_4047_b4b5_2d838ccbd734 %}{% endset %} {{ renderComponent(\\\u0022cpt_text\\\u0022, false, _context, {\\\u00225fc743c3-6b31-4a40-bd05-24acfb4ca9ba\\\u0022:\\\u0022component_variable_5fc743c3_6b31_4a40_bd05_24acfb4ca9ba\\\u0022,\\\u002221656d58-6784-4331-9370-2e7009487b4f\\\u0022:\\\u0022component_variable_21656d58_6784_4331_9370_2e7009487b4f\\\u0022,\\\u0022f8e05754-678a-4864-9304-c742b959b852\\\u0022:\\\u0022component_variable_f8e05754_678a_4864_9304_c742b959b852\\\u0022,\\\u00225af21675-f8f5-48ce-816d-faedbed6b600\\\u0022:\\\u0022component_variable_5af21675_f8f5_48ce_816d_faedbed6b600\\\u0022,\\\u00228bac75a1-19a5-42af-99fa-5877541c6590\\\u0022:\\\u0022component_variable_8bac75a1_19a5_42af_99fa_5877541c6590\\\u0022,\\\u00227f84a990-f95f-4bc3-98c9-2cd496b005ea\\\u0022:\\\u0022component_variable_7f84a990_f95f_4bc3_98c9_2cd496b005ea\\\u0022,\\\u00226dc6b921-8b08-4047-b4b5-2d838ccbd734\\\u0022:\\\u0022component_variable_6dc6b921_8b08_4047_b4b5_2d838ccbd734\\\u0022}, \\\u0022ec765f2e-f4db-42f0-9dfa-e5e481ba6370\\\u0022, \\\u0022\\\u0022)  }} \\n{% if content is defined %}{% set catch_cache = content|render %}{% endif %}\u0022}"}'
+  last_entity_update:
+    -
+      value: entityupdate_0036
+  revision_translation_affected:
+    -
+      value: true

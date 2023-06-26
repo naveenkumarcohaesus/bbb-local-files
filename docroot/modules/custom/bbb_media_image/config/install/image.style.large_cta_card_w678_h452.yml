@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_cta_card_w678_h452
+label: 'Large CTA Card W678 H452'
+effects:
+  315c25c9-b877-45f9-88c9-bba2fcab22ec:
+    uuid: 315c25c9-b877-45f9-88c9-bba2fcab22ec
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 678
+      height: 452
+      crop_type: focal_point

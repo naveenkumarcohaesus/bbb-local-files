@@ -1,0 +1,22 @@
+views.view.solr_search:
+  expected_config: {  }
+  update_actions:
+    change:
+      display:
+        default:
+          display_options:
+            empty:
+              area_text_custom:
+                admin_label: ''
+                content: "<div class=\"no-results\">0 results found for:</div>\r\n<div class=\"no-results-text\">Try adjusting your search to find what you are searching for.</div>"
+                empty: true
+                field: area_text_custom
+                group_type: group
+                id: area_text_custom
+                plugin_id: text_custom
+                relationship: none
+                table: views
+                tokenize: false
+            filters:
+              search_api_fulltext:
+                parse_mode: phrase

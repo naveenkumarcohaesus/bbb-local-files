@@ -1,0 +1,41 @@
+openid_connect.settings:
+  expected_config:
+    user_login_display: hidden
+  update_actions:
+    change:
+      user_login_display: below
+openid_connect.settings.windows_aad:
+  expected_config:
+    enabled: false
+    settings:
+      authorization_endpoint_wa: 'https://example.com/oauth2/authorize'
+      client_id: null
+      client_secret: null
+      enable_single_sign_out: 0
+      group_mapping:
+        mappings: null
+      token_endpoint_wa: 'https://example.com/oauth2/token'
+      hide_email_address_warning: 0
+      map_ad_groups_to_roles: 1
+      redirect_url: ''
+      userinfo_graph_api_use_other_mails: 0
+      userinfo_graph_api_wa: '1'
+      userinfo_update_email: 1
+  update_actions:
+    change:
+      enabled: true
+      settings:
+        authorization_endpoint_wa: 'https://login.microsoftonline.com/common/oauth2/authorize'
+        client_id: ClientID
+        client_secret: ClientSecret
+        group_mapping:
+          mappings: bankers|1
+          method: '1'
+          strict: 0
+        token_endpoint_wa: 'https://login.microsoftonline.com/common/oauth2/token'
+        hide_email_address_warning: 0
+        map_ad_groups_to_roles: 1
+        redirect_url: ''
+        userinfo_graph_api_use_other_mails: 0
+        userinfo_graph_api_wa: '1'
+        userinfo_update_email: 1

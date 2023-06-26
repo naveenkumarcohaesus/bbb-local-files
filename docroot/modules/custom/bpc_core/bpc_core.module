@@ -1,0 +1,77 @@
+<?php
+
+/**
+ * @file
+ * Contains implementations for common, shared functionality.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_form_node_form_alter().
+ *
+ * Set correct settings for metatag field.
+ */
+function bpc_core_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Check for Hero Background Pattern & BPC Background Image.
+  if (isset($form['field_hero_background_pattern']) && isset($form['field_bpc_background_image'])) {
+    $form['field_bpc_background_image']['#states'] = [
+      'visible' => [
+        ':input[name="field_hero_background_pattern"]' => ['value' => 'bpc-image'],
+      ],
+    ];
+  }
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function bpc_core_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+  // If the type is the one that we want.
+  if ($type == 'aurora-tokens') {
+    $original = '[aurora-tokens:page-hero-branded-image]';
+    $node = \Drupal::routeMatch()->getParameter('node');
+    // Check for BPC background image.
+    if ($node instanceof NodeInterface && $node->hasField('field_bpc_background_image')) {
+      if ($node->hasField('field_hero_background_pattern')) {
+        if (!$node->get('field_hero_background_pattern')->isEmpty()) {
+          if (!$node->get('field_bpc_background_image')->isEmpty()) {
+            $uri = $node->get('field_bpc_background_image')->entity->get('image')->entity->uri->value;
+            // Get url for the image.
+            $file_url_generator = \Drupal::service('file_url_generator');
+            $replacements[$original] = $file_url_generator->generateAbsoluteString($uri);
+          }
+        }
+      }
+    }
+  }
+
+  // Return the result so that we can now use the token.
+  return $replacements;
+}
+
+/**
+ * Implements template_preprocess_input().
+ */
+function bpc_core_preprocess_input(&$variables) {
+  // Add data-fold-cards attribute to input buttons.
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('bpc_core')) {
+    if ($variables['element']['#type'] == 'submit') {
+      $variables['attributes']['data-card-folds'] = "off";
+    }
+  }
+}
+
+/**
+ * Implements form_alter().
+ */
+function bpc_core_form_alter(&$form, $form_id) {
+  if ($form_id == 'views_exposed_form') {
+    // Add data-fold-cards attribute to form.
+    $form['#attributes']['data-card-folds'] = "off";
+  }
+}

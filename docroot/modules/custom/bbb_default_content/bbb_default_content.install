@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+/**
+ * Implements hook_update_N().
+ *
+ * Making a default content service call to import all default content.
+ */
+function bbb_default_content_update_8001() {
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_default_content");
+}
+
+/**
+ * Add multi site search result component content.
+ */
+function bbb_default_content_update_8002() {
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_default_content");
+}
+
+/**
+ * Add Hero Team member block content.
+ */
+function bbb_default_content_update_8003() {
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_default_content");
+}
+
+/**
+ * Updating the default content for 8004.
+ */
+function bbb_default_content_update_8004() {
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_default_content");
+}
+
+/**
+ * Updating the default content for Alert Banner.
+ */
+function bbb_default_content_update_8005() {
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_default_content");
+}
+
+/**
+ * Removing the default content for Alert Banner.
+ */
+function bbb_default_content_update_8006() {
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_default_content");
+}

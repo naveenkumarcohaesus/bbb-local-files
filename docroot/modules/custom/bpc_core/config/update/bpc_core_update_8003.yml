@@ -1,0 +1,87 @@
+core.entity_form_display.node.product.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_bpc_background_image:
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          type: media_library_widget
+          weight: 3
+    change:
+      content:
+        created:
+          weight: 7
+        field_content_owner:
+          weight: 22
+        field_image:
+          weight: 4
+        field_layout_canvas:
+          weight: 21
+        field_metatags:
+          weight: 23
+        field_programme:
+          weight: 20
+        langcode:
+          weight: 5
+        moderation_state:
+          weight: 17
+        path:
+          weight: 11
+        promote:
+          weight: 9
+        publish_on:
+          weight: 12
+        publish_state:
+          weight: 14
+        simple_sitemap:
+          weight: 8
+        status:
+          weight: 18
+        sticky:
+          weight: 10
+        uid:
+          weight: 6
+        unpublish_on:
+          weight: 13
+        unpublish_state:
+          weight: 15
+        url_redirects:
+          weight: 16
+      third_party_settings:
+        field_group:
+          group_taxonomy:
+            weight: 19
+core.entity_form_display.node.research_and_publication.default:
+  expected_config: {  }
+  update_actions:
+    update_actions:
+    add:
+      content:
+        field_bpc_background_image:
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          type: media_library_widget
+          weight: 17
+        field_hero_background_pattern:
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          weight: 16
+    change:
+      content:
+        field_content_owner:
+          weight: 19
+        field_download_report_link:
+          weight: 21
+        field_image:
+          weight: 19
+        field_media_document:
+          weight: 18
+        field_topic:
+          weight: 20

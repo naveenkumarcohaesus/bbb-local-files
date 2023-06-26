@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: component_content
+  uuid: 06e52f51-a6cd-4a14-ba26-f3c392fe2c78
+  default_langcode: en
+  depends:
+    c27cb16e-ad5e-4983-87f4-4b334d66a802: cohesion_layout
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'BBB White Logo'
+  uid:
+    -
+      target_id: 1
+  created:
+    -
+      value: 1663299826
+  layout_canvas:
+    -
+      entity: c27cb16e-ad5e-4983-87f4-4b334d66a802
+  component:
+    -
+      target_id: cpt_logo_card
+  revision_translation_affected:
+    -
+      value: true

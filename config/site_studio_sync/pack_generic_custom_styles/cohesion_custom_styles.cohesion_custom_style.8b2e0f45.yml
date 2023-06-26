@@ -1,0 +1,55 @@
+uuid: d13c627d-a351-4ea2-8fb2-ca701ec437a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.aurora_foundations
+label: 'Triangular Bulleted List'
+id: 8b2e0f45
+json_values: |
+  {
+      "preview": {
+          "text": "<p><strong>Unordered list<\/strong><\/p>\n\n<ul class=\"coh-preview\">\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ul>\n\n<p>&nbsp;<\/p>\n\n<p><strong>Ordered list<\/strong><\/p>\n\n<ol class=\"coh-preview\">\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ol>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "ul,ol,dl",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "44b00461-41e8-46f1-b7ec-04977931b7cd": {
+              "styles": {
+                  "xs": {
+                      "border-left-color": {
+                          "value": "[style-guide:aurora_foundations:iconinteractivedefault]"
+                      }
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": [
+          "styles.44b00461-41e8-46f1-b7ec-04977931b7cd.styles.xs.border-left-color.value"
+      ]
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "List",
+          "selectorType": "topLevel",
+          "formDefinition": [],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-triangular-bulleted-list
+custom_style_type: list
+available_in_wysiwyg: true
+parent: null
+weight: 0

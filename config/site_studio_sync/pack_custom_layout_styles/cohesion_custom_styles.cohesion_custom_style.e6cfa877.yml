@@ -1,0 +1,123 @@
+uuid: 222a3ad0-c72b-4824-968d-e55f206f0bbc
+langcode: en
+status: true
+dependencies: {  }
+label: 'Success Story Full View Mode'
+id: e6cfa877
+json_values: |
+  {
+      "preview": {
+          "text": "<div class=\"coh-preview\">Default content for 'Layout'.<\/div>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "div",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "styles": {
+              "bddfc6fa-5bcd-4067-9966-78e4d868ec27": {
+                  "styles": {
+                      "xs": {
+                          "background-image-settings": [
+                              {
+                                  "backgroundLayerType": {
+                                      "value": "image"
+                                  },
+                                  "backgroundImageSize": {
+                                      "value": "auto"
+                                  },
+                                  "backgroundImageRepeat": {
+                                      "value": "no-repeat"
+                                  },
+                                  "backgroundImageAttachment": {
+                                      "value": "scroll"
+                                  },
+                                  "backgroundImagePositionX": {
+                                      "value": "left"
+                                  },
+                                  "backgroundImagePositionY": {
+                                      "value": "top"
+                                  },
+                                  "backgroundImageOrigin": {
+                                      "value": "border-box"
+                                  },
+                                  "backgroundImageClip": {
+                                      "value": "border-box"
+                                  }
+                              }
+                          ]
+                      }
+                  }
+              }
+          },
+          "8c0e8836-e22a-4a99-a079-eff89fe6dfd0": {
+              "styles": {
+                  "xs": {
+                      "font-family": {
+                          "value": "[style-guide:case_study_full_view:default-content-font]"
+                      },
+                      "color": {
+                          "value": "[style-guide:case_study_full_view:default-content-color]"
+                      }
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": [
+          "styles.bddfc6fa-5bcd-4067-9966-78e4d868ec27.styles.xs.background-image-settings.0.backgroundImage.value",
+          "styles.f0e468ef-6ac1-4b3d-8f1c-dd6ffad6798d.styles.xs.color.value",
+          "styles.8c0e8836-e22a-4a99-a079-eff89fe6dfd0.styles.xs.font-family.value",
+          "styles.8c0e8836-e22a-4a99-a079-eff89fe6dfd0.styles.xs.color.value",
+          "styles.94132257-24ac-43a8-a912-2c9e4a5dc330.styles.xs.color.value",
+          "styles.94132257-24ac-43a8-a912-2c9e4a5dc330.styles.xs.font-family.value"
+      ],
+      "previewModel": {
+          "styles": {
+              "bddfc6fa-5bcd-4067-9966-78e4d868ec27": {
+                  "styles": {
+                      "xs": {
+                          "background-image-settings": [
+                              {
+                                  "backgroundImage": {
+                                      "value": ""
+                                  }
+                              }
+                          ]
+                      }
+                  }
+              },
+              "f0e468ef-6ac1-4b3d-8f1c-dd6ffad6798d": {
+                  "styles": {
+                      "xs": {
+                          "color": {
+                              "value": {}
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Layout",
+          "selectorType": "topLevel",
+          "formDefinition": [],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-case-study-full-view-mode
+custom_style_type: layout
+available_in_wysiwyg: false
+parent: null
+weight: 0

@@ -1,0 +1,582 @@
+uuid: b0093808-57d3-4711-a102-100f0fcc1a4e
+langcode: en
+status: true
+dependencies: {  }
+label: 'Site specific design patterns'
+id: site_specific_design_patterns
+json_values: |
+  {
+      "styleGuideForm": [
+          {
+              "type": "form-container",
+              "uid": "form-tab-container",
+              "title": "Tab container",
+              "status": {
+                  "collapsed": false
+              },
+              "options": {
+                  "formBuilder": true
+              },
+              "children": [
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "children": [
+                          {
+                              "type": "form-field",
+                              "uid": "form-checkbox-toggle",
+                              "title": "Toggle",
+                              "translate": true,
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "df4a8364-51e9-488c-9390-b3df03bac308",
+                              "parentUid": "form-tab-item"
+                          },
+                          {
+                              "type": "form-help",
+                              "uid": "form-helptext",
+                              "title": "Help text",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "ab3eb3fe-58b6-4832-9cd9-97976c5f7903",
+                              "parentUid": "form-tab-item"
+                          }
+                      ],
+                      "uuid": "6c0fb9e8-7f83-456f-ab4f-bb98b0cd803b",
+                      "parentUid": "form-tab-container"
+                  },
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "children": [
+                          {
+                              "type": "form-field",
+                              "uid": "form-checkbox-toggle",
+                              "title": "Toggle",
+                              "translate": true,
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "5b7e6c44-3b67-4277-b68d-7b2ef5070cad",
+                              "parentUid": "form-tab-item"
+                          },
+                          {
+                              "type": "form-help",
+                              "uid": "form-helptext",
+                              "title": "Help text",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "ab069d04-c8eb-48d6-a63f-dbcf4c8d8704",
+                              "parentUid": "form-tab-item"
+                          }
+                      ],
+                      "iconColor": "formLayout",
+                      "uuid": "9fb38a91-7264-4c39-96eb-fc229b44b4c9",
+                      "parentUid": "form-tab-container"
+                  },
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "children": [
+                          {
+                              "type": "form-field",
+                              "uid": "form-input",
+                              "title": "Input",
+                              "translate": true,
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "8391aea5-7068-4a61-9398-23e8039e0cab",
+                              "parentUid": "form-tab-item"
+                          },
+                          {
+                              "type": "form-field",
+                              "uid": "form-input",
+                              "title": "Input",
+                              "translate": true,
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "5fe1aefb-ff6a-4ad9-be55-e4586b305178",
+                              "parentUid": "form-tab-item"
+                          }
+                      ],
+                      "uuid": "6fa3a4e6-f379-4818-9a63-617c51ad7eb3",
+                      "parentUid": "form-tab-container"
+                  },
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "children": [
+                          {
+                              "type": "form-field",
+                              "uid": "form-colorpicker",
+                              "title": "Color picker",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "5746c4c5-c61f-4871-a70f-52825ad53f95",
+                              "parentUid": "form-tab-item"
+                          }
+                      ],
+                      "uuid": "3f10281b-63f8-4c2f-a124-0384c68b52f2",
+                      "parentUid": "form-tab-container"
+                  },
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "children": [
+                          {
+                              "type": "form-field",
+                              "uid": "form-colorpicker",
+                              "title": "Color picker",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "iconColor": "formField",
+                              "uuid": "e90ac074-71d5-48f7-8867-9a07144351c7",
+                              "parentUid": "form-tab-item"
+                          }
+                      ],
+                      "iconColor": "formLayout",
+                      "uuid": "1621ec67-b990-45fa-870e-46bcefb62de7",
+                      "parentUid": "form-tab-container"
+                  },
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "children": [
+                          {
+                              "type": "form-field",
+                              "uid": "form-colorpicker",
+                              "title": "Color picker",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "iconColor": "formField",
+                              "uuid": "d6d2ef68-06c2-4c2a-9865-df622d3ad93c",
+                              "parentUid": "form-tab-item"
+                          }
+                      ],
+                      "iconColor": "formLayout",
+                      "uuid": "fb2e8310-661f-42bc-85ad-706a6783c37c",
+                      "parentUid": "form-tab-container"
+                  },
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "children": [
+                          {
+                              "type": "form-field",
+                              "uid": "form-colorpicker",
+                              "title": "Color picker",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "df8f91c3-fb7d-469d-ba64-e4464475f984",
+                              "parentUid": "form-tab-item"
+                          }
+                      ],
+                      "uuid": "86f44f17-5083-4945-87b5-768b0fc293e1",
+                      "parentUid": "form-tab-container"
+                  }
+              ],
+              "uuid": "c50b36b5-01aa-4ea2-8034-46cdc15c6267",
+              "parentUid": "root"
+          }
+      ],
+      "model": {
+          "6c0fb9e8-7f83-456f-ab4f-bb98b0cd803b": {
+              "settings": {
+                  "title": "Card Folds",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "c50b36b5-01aa-4ea2-8034-46cdc15c6267": {
+              "settings": {
+                  "type": "cohTabContainer",
+                  "title": "Tab container",
+                  "responsiveMode": true
+              }
+          },
+          "df4a8364-51e9-488c-9390-b3df03bac308": {
+              "settings": {
+                  "title": "Card Folds",
+                  "type": "checkboxToggle",
+                  "schema": {
+                      "type": "string"
+                  },
+                  "toggleType": "string",
+                  "machineName": "card-folds",
+                  "tooltipPlacement": "auto right",
+                  "trueValue": "on",
+                  "falseValue": "off"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": "{{trueValue}}"
+              }
+          },
+          "ab3eb3fe-58b6-4832-9cd9-97976c5f7903": {
+              "settings": {
+                  "title": "Help text",
+                  "type": "cohHelpText",
+                  "options": {
+                      "showClose": false,
+                      "helpType": "coh-help-text--help",
+                      "helpText": "This field adds a class depending on the value of the card folds toggle.\nUsing this value we can control if a site doesn't have card folds.\nON = Card folds\nOFF = Square cards \/ No folds"
+                  }
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "8391aea5-7068-4a61-9398-23e8039e0cab": {
+              "settings": {
+                  "title": "Secondary Button linear gradient",
+                  "schema": {
+                      "type": "string",
+                      "escape": true
+                  },
+                  "machineName": "secondary-button-linear-gradient",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "5fe1aefb-ff6a-4ad9-be55-e4586b305178": {
+              "settings": {
+                  "title": "Secondary Button linear gradient - inverted",
+                  "schema": {
+                      "type": "string",
+                      "escape": true
+                  },
+                  "machineName": "secondary-button-linear-gradient---inverted",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "6fa3a4e6-f379-4818-9a63-617c51ad7eb3": {
+              "settings": {
+                  "title": "Secondary button gradient",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "9fb38a91-7264-4c39-96eb-fc229b44b4c9": {
+              "settings": {
+                  "title": "Card Borders",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "5b7e6c44-3b67-4277-b68d-7b2ef5070cad": {
+              "settings": {
+                  "title": "Card Borders",
+                  "type": "checkboxToggle",
+                  "schema": {
+                      "type": "string"
+                  },
+                  "toggleType": "string",
+                  "machineName": "card-borders",
+                  "tooltipPlacement": "auto right",
+                  "trueValue": "on",
+                  "falseValue": "off"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": "{{falseValue}}"
+              }
+          },
+          "ab069d04-c8eb-48d6-a63f-dbcf4c8d8704": {
+              "settings": {
+                  "title": "Help text",
+                  "type": "cohHelpText",
+                  "options": {
+                      "showClose": false,
+                      "helpType": "coh-help-text--help",
+                      "helpText": "This field adds an attribute depending on the value of the card borders toggle.\nUsing this value we can control if a site doesn't have card borders.\nON = Card borders\nOFF = No borders"
+                  }
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "5746c4c5-c61f-4871-a70f-52825ad53f95": {
+              "settings": {
+                  "title": "News List BG Color",
+                  "type": "cohColourPickerOpener",
+                  "colourPickerOptions": {
+                      "flat": true,
+                      "showOnly": ""
+                  },
+                  "schema": {
+                      "type": "object"
+                  },
+                  "machineName": "news-list-bg-color",
+                  "restrictBy": "none",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "3f10281b-63f8-4c2f-a124-0384c68b52f2": {
+              "settings": {
+                  "title": "News List Background",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "1621ec67-b990-45fa-870e-46bcefb62de7": {
+              "settings": {
+                  "title": "Team Member Accent Colour",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "e90ac074-71d5-48f7-8867-9a07144351c7": {
+              "settings": {
+                  "title": "team member accent colour",
+                  "type": "cohColourPickerOpener",
+                  "colourPickerOptions": {
+                      "flat": true,
+                      "showOnly": ""
+                  },
+                  "schema": {
+                      "type": "object"
+                  },
+                  "machineName": "team-member-accent-colour",
+                  "restrictBy": "none",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "fb2e8310-661f-42bc-85ad-706a6783c37c": {
+              "settings": {
+                  "title": "Column Horizontal List",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "d6d2ef68-06c2-4c2a-9865-df622d3ad93c": {
+              "settings": {
+                  "title": "Column Horizontal List Title Color",
+                  "type": "cohColourPickerOpener",
+                  "colourPickerOptions": {
+                      "flat": true,
+                      "showOnly": ""
+                  },
+                  "schema": {
+                      "type": "object"
+                  },
+                  "machineName": "column-horizontal-list-title-color",
+                  "restrictBy": "none",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "86f44f17-5083-4945-87b5-768b0fc293e1": {
+              "settings": {
+                  "title": "Upcoming Events Background",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "df8f91c3-fb7d-469d-ba64-e4464475f984": {
+              "settings": {
+                  "title": "Upcoming Events Background Color",
+                  "type": "cohColourPickerOpener",
+                  "colourPickerOptions": {
+                      "flat": true,
+                      "showOnly": ""
+                  },
+                  "schema": {
+                      "type": "object"
+                  },
+                  "machineName": "upcoming-events-background-color",
+                  "restrictBy": "none",
+                  "tooltipPlacement": "auto right"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          }
+      },
+      "mapper": {},
+      "previewModel": {
+          "6c0fb9e8-7f83-456f-ab4f-bb98b0cd803b": {},
+          "df4a8364-51e9-488c-9390-b3df03bac308": {},
+          "ab3eb3fe-58b6-4832-9cd9-97976c5f7903": {},
+          "8391aea5-7068-4a61-9398-23e8039e0cab": {},
+          "5fe1aefb-ff6a-4ad9-be55-e4586b305178": {},
+          "6fa3a4e6-f379-4818-9a63-617c51ad7eb3": {},
+          "9fb38a91-7264-4c39-96eb-fc229b44b4c9": {},
+          "5b7e6c44-3b67-4277-b68d-7b2ef5070cad": {},
+          "ab069d04-c8eb-48d6-a63f-dbcf4c8d8704": {},
+          "3f10281b-63f8-4c2f-a124-0384c68b52f2": {},
+          "5746c4c5-c61f-4871-a70f-52825ad53f95": {},
+          "1621ec67-b990-45fa-870e-46bcefb62de7": {},
+          "e90ac074-71d5-48f7-8867-9a07144351c7": {},
+          "fb2e8310-661f-42bc-85ad-706a6783c37c": {},
+          "d6d2ef68-06c2-4c2a-9865-df622d3ad93c": {},
+          "86f44f17-5083-4945-87b5-768b0fc293e1": {},
+          "df8f91c3-fb7d-469d-ba64-e4464475f984": {}
+      },
+      "variableFields": {
+          "6c0fb9e8-7f83-456f-ab4f-bb98b0cd803b": [],
+          "df4a8364-51e9-488c-9390-b3df03bac308": [],
+          "ab3eb3fe-58b6-4832-9cd9-97976c5f7903": [],
+          "8391aea5-7068-4a61-9398-23e8039e0cab": [],
+          "5fe1aefb-ff6a-4ad9-be55-e4586b305178": [],
+          "6fa3a4e6-f379-4818-9a63-617c51ad7eb3": [],
+          "9fb38a91-7264-4c39-96eb-fc229b44b4c9": [],
+          "5b7e6c44-3b67-4277-b68d-7b2ef5070cad": [],
+          "ab069d04-c8eb-48d6-a63f-dbcf4c8d8704": [],
+          "3f10281b-63f8-4c2f-a124-0384c68b52f2": [],
+          "5746c4c5-c61f-4871-a70f-52825ad53f95": [],
+          "1621ec67-b990-45fa-870e-46bcefb62de7": [],
+          "e90ac074-71d5-48f7-8867-9a07144351c7": [],
+          "fb2e8310-661f-42bc-85ad-706a6783c37c": [],
+          "d6d2ef68-06c2-4c2a-9865-df622d3ad93c": [],
+          "86f44f17-5083-4945-87b5-768b0fc293e1": [],
+          "df8f91c3-fb7d-469d-ba64-e4464475f984": []
+      },
+      "meta": {
+          "fieldHistory": [
+              {
+                  "uuid": "df8f91c3-fb7d-469d-ba64-e4464475f984",
+                  "type": "form-colorpicker",
+                  "machineName": "upcoming-events-background-color"
+              },
+              {
+                  "uuid": "d6d2ef68-06c2-4c2a-9865-df622d3ad93c",
+                  "type": "form-colorpicker",
+                  "machineName": "column-horizontal-list-title-color"
+              },
+              {
+                  "uuid": "e90ac074-71d5-48f7-8867-9a07144351c7",
+                  "type": "form-colorpicker",
+                  "machineName": "team-member-accent-colour"
+              },
+              {
+                  "uuid": "5746c4c5-c61f-4871-a70f-52825ad53f95",
+                  "type": "form-colorpicker",
+                  "machineName": "news-list-bg-color"
+              },
+              {
+                  "uuid": "5b7e6c44-3b67-4277-b68d-7b2ef5070cad",
+                  "type": "form-checkbox-toggle",
+                  "machineName": "card-borders"
+              },
+              {
+                  "uuid": "5fe1aefb-ff6a-4ad9-be55-e4586b305178",
+                  "type": "form-input",
+                  "machineName": "secondary-button-linear-gradient---inverted"
+              },
+              {
+                  "uuid": "8391aea5-7068-4a61-9398-23e8039e0cab",
+                  "type": "form-input",
+                  "machineName": "secondary-button-linear-gradient"
+              },
+              {
+                  "uuid": "df4a8364-51e9-488c-9390-b3df03bac308",
+                  "type": "form-checkbox-toggle",
+                  "machineName": "card-folds"
+              }
+          ]
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+weight: null
+has_quick_edit: null
+twig_template: null

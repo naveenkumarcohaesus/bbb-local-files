@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: bb557604-5d71-497c-b7a0-2d6884b96c11
+  bundle: image
+  default_langcode: en
+  depends:
+    21a62341-85f0-4469-90d9-01f1465496af: taxonomy_term
+    8f985570-b50d-4004-aca9-fb684e164a06: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'BBI Color.png'
+  created:
+    -
+      value: 1665579581
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_image_type:
+    -
+      entity: 21a62341-85f0-4469-90d9-01f1465496af
+  image:
+    -
+      entity: 8f985570-b50d-4004-aca9-fb684e164a06
+      alt: 'This is alt'
+      title: ''
+      width: 814
+      height: 247

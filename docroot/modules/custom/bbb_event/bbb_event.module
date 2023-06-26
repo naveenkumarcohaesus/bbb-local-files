@@ -1,0 +1,110 @@
+<?php
+
+/**
+ * @file
+ * Contains implementations for common, shared functionality.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_node_form_alter().
+ */
+function bbb_event_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Check for Virtual event field.
+  $form_array = [
+    'node_event_form',
+    'node_event_edit_form',
+  ];
+  if (in_array($form_id, $form_array)) {
+    if (isset($form['field_virtual_event'])) {
+      // Reverse the order of options.
+      $form['field_virtual_event']['widget']['#options'] = array_reverse($form['field_virtual_event']['widget']['#options'], TRUE);
+      $fields = [
+        'field_event_place',
+        'field_event_address',
+        'field_postcode',
+        'field_geofield',
+      ];
+      // Show fields when event is live.
+      foreach ($fields as $field) {
+        $form[$field]['#states'] = [
+          'visible' => [
+            ':input[name="field_virtual_event"]' => ['value' => 0],
+          ],
+        ];
+        $form[$field]['widget']['0']['value']['#states'] = [
+          'required' => [
+            ':input[name="field_virtual_event"]' => ['value' => 0],
+          ],
+        ];
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_tokens_alter().
+ */
+function bbb_event_tokens_alter(array &$replacements, array $context) {
+
+  if ($context['type'] == 'node' && isset($context['data']['node'])) {
+    $node = $context['data']['node'];
+    if ($node->hasField('field_virtual_event')) {
+      if ($node->get('field_virtual_event')->getString() == 0) {
+        $replacements['[node:field_virtual_event:label]'] = t("Event");
+        $replacements['[node:field_virtual_event:online]'] = "";
+        $replacements['[node:field_virtual_event:offline]'] = 1;
+      }
+      else {
+        $replacements['[node:field_virtual_event:label]'] = t("Online event");
+        $replacements['[node:field_virtual_event:online]'] = 1;
+        $replacements['[node:field_virtual_event:offline]'] = "";
+      }
+    }
+    if ($node->hasField('field_event_date')) {
+      $end_date = $node->get('field_event_date')->end_value;
+      if (!empty($end_date)) {
+        if (isset($replacements['[node:field_event_date:end_date:custom:H]'])) {
+          $replacements['[node:field_event_date:end_date:custom:H]'] = '-' . $replacements['[node:field_event_date:end_date:custom:H]'];
+        }
+        if (isset($replacements['[node:field_event_date:end_date:custom:i]'])) {
+          $replacements['[node:field_event_date:end_date:custom:i]'] = ':' . $replacements['[node:field_event_date:end_date:custom:i]'];
+        }
+      }
+    }
+    if ($node->hasField('field_external_event_link')) {
+      if (!$node->get('field_external_event_link')->isEmpty()) {
+        $link = $node->get('field_external_event_link')->getValue();
+        // Set token for target window.
+        $replacements['[node:field_external_event_link:attributes:target]'] = '_self';
+        if (!empty($link[0]['uri'])) {
+          $replacements['[node:url]'] = $link[0]['uri'];
+        }
+        // Token for CTA text.
+        if (empty($link[0]['title'])) {
+          $replacements['[node:field_external_event_link:title]'] = t('Learn more');
+        }
+        if (isset($link[0]['options']['attributes']['target'])) {
+          $replacements['[node:field_external_event_link:attributes:target]'] = $link[0]['options']['attributes']['target'];
+          // Class for popup icon.
+          $replacements['[node:field_external_event_link:attributes:class]'] = '';
+          if ($link[0]['options']['attributes']['target'] == '_blank') {
+            $replacements['[node:field_external_event_link:attributes:class]'] = 'external';
+          }
+        }
+
+        if (isset($link[0]['options']['attributes']['name'])) {
+          $replacements['[node:field_external_event_link:attributes:name]'] = $link[0]['options']['attributes']['name'];
+        }
+      }
+      else {
+        // Set CTA text.
+        $replacements['[node:field_external_event_link:title]'] = t('Learn more');
+        // Token for assistive text default node title.
+        $replacements['[node:field_external_event_link:attributes:name]'] = t('about')->__toString() . ' ' . $node->getTitle();
+      }
+    }
+  }
+
+}

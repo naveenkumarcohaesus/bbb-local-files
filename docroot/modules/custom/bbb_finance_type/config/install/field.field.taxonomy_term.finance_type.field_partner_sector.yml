@@ -1,0 +1,29 @@
+uuid: a31f68cf-e972-44d6-85d1-556a070732ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_partner_sector
+    - taxonomy.vocabulary.finance_type
+    - taxonomy.vocabulary.sector
+id: taxonomy_term.finance_type.field_partner_sector
+field_name: field_partner_sector
+entity_type: taxonomy_term
+bundle: finance_type
+label: Sector
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sector: sector
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

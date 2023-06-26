@@ -1,0 +1,29 @@
+uuid: 63df4e23-3334-4582-b1f8-ece4c697b8cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_show_on_regional_support
+    - taxonomy.vocabulary.business_structure
+    - taxonomy.vocabulary.partner
+id: taxonomy_term.partner.field_show_on_regional_support
+field_name: field_show_on_regional_support
+entity_type: taxonomy_term
+bundle: partner
+label: 'Show on Regional Support Finder'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      business_structure: business_structure
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

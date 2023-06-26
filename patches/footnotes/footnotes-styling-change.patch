@@ -1,0 +1,12 @@
+diff --git a/assets/js/ckeditor/plugin.js b/assets/js/ckeditor/plugin.js
+index 8f15e3d..e369165 100644
+--- a/assets/js/ckeditor/plugin.js
++++ b/assets/js/ckeditor/plugin.js
+@@ -33,6 +33,7 @@ CKEDITOR.plugins.add("footnotes", {
+         `background - repeat: no - repeat;` +
+         `width: 16px;` +
+         `height: 16px;` +
++	      `display: inline-block;` +
+         `}`
+     );
+   },

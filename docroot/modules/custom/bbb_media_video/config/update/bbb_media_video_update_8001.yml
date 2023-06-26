@@ -1,0 +1,23 @@
+core.entity_view_display.media.video.default:
+  expected_config:
+    hidden:
+      field_media_oembed_video: true
+  update_actions:
+    delete:
+      hidden:
+        field_media_oembed_video: true
+    change:
+      content:
+        created:
+          weight: 1
+        field_media_oembed_video:
+          label: hidden
+          region: content
+          settings:
+            max_height: 0
+            max_width: 0
+          third_party_settings: {  }
+          type: oembed
+          weight: 3
+        thumbnail:
+          weight: 2

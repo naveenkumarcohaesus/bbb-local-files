@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: component_content
+  uuid: a46d4110-0ae1-4742-b338-d577cc37c886
+  default_langcode: en
+  depends:
+    b5b7ff1f-8f8b-497e-81d8-b2e457352979: cohesion_layout
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'BPC Color Logo'
+  uid:
+    -
+      target_id: 1
+  created:
+    -
+      value: 1663299826
+  layout_canvas:
+    -
+      entity: b5b7ff1f-8f8b-497e-81d8-b2e457352979
+  component:
+    -
+      target_id: cpt_logo_card
+  revision_translation_affected:
+    -
+      value: true

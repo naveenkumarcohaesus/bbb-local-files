@@ -1,0 +1,4 @@
+services:
+  bbb_on_this_page.heading_transform:
+    class: Drupal\bbb_on_this_page\HeadingTransform
+    arguments: ['@transliteration']

@@ -1,0 +1,27 @@
+name: bbbwebsites
+recipe: acquia
+config:
+  acli_version: latest
+  ah_application_uuid: d10f55ff-0c2e-433f-9dda-43a7aadb5d07
+  ah_site_group: bbbwebsites
+  php: '8.0'
+tooling:
+  blt:
+    service: appserver
+    cmd: ./vendor/acquia/blt/bin/blt
+proxy:
+  adminer:
+  - adminer.bbb.lndo.site
+services:
+  solr:
+    type: solr:7
+    core: drupal9
+    portforward: true
+    config:
+      dir: docroot/modules/contrib/search_api_solr/solr-conf-templates/7.x
+  adminer:
+    type: compose
+    services:
+      image: dehy/adminer
+      command: /bin/s6-svscan /etc/services.d
+    portforward: true

@@ -1,0 +1,379 @@
+<?php
+
+/**
+ * @file
+ * Contains implementations for common, shared functionality.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\Core\Render\Markup;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_form_node_form_alter().
+ *
+ * Set correct settings for metatag field.
+ */
+function bbb_core_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('metatag') && isset($form['field_metatags'])) {
+    $form['field_metatags']['widget'][0]['#open'] = TRUE;
+    $form['field_metatags']['widget'][0]['basic']['#open'] = TRUE;
+    $form['field_metatags']['widget'][0]['advanced']['#open'] = FALSE;
+    $form['field_metatags']['widget'][0]['basic']['description']['#required'] = TRUE;
+    $form['field_metatags']['widget'][0]['basic']['description']['#maxlength'] = 160;
+    $form['field_metatags']['widget'][0]['basic']['title']['#required'] = TRUE;
+    $form['field_metatags']['widget'][0]['open_graph']['og_title']['#required'] = TRUE;
+    $form['field_metatags']['widget'][0]['open_graph']['og_type']['#required'] = TRUE;
+    $form['field_metatags']['widget'][0]['open_graph']['og_image']['#required'] = TRUE;
+    $form['field_metatags']['widget'][0]['open_graph']['og_url']['#required'] = TRUE;
+  }
+  // Check for Hero Background Pattern.
+  if (isset($form['field_hero_background_pattern'])) {
+    // Unset options if not BBI site.
+    if (!$moduleHandler->moduleExists('bbi_core')) {
+      unset($form['field_hero_background_pattern']['widget']['#options']['bbi-light']);
+      unset($form['field_hero_background_pattern']['widget']['#options']['bbi-dark']);
+    }
+    else {
+      $options = [
+        '_none' => $form['field_hero_background_pattern']['widget']['#options']['_none'],
+        'bbi-light' => $form['field_hero_background_pattern']['widget']['#options']['bbi-light'],
+        'bbi-dark' => $form['field_hero_background_pattern']['widget']['#options']['bbi-dark'],
+      ];
+    }
+    // Unset options if not BPC site.
+    if (!$moduleHandler->moduleExists('bpc_core')) {
+      unset($form['field_hero_background_pattern']['widget']['#options']['bpc-image']);
+    }
+    else {
+      $options = [
+        '_none' => $form['field_hero_background_pattern']['widget']['#options']['_none'],
+        'bpc-image' => $form['field_hero_background_pattern']['widget']['#options']['bpc-image'],
+      ];
+    }
+    if (isset($options)) {
+      $form['field_hero_background_pattern']['widget']['#options'] = $options;
+    }
+  }
+}
+
+/**
+ * Implements hook_token_info().
+ */
+function bbb_core_token_info() {
+  $types['aurora-tokens'] = [
+    'name' => t('Aurora Tokens'),
+    'description' => t('Aurora tokens - Custom tokens for BBB sites.'),
+  ];
+
+  // Setup custom site wide token.
+  $custom['page-title-banner-pattern'] = [
+    'name' => t('Page title banner pattern'),
+    'description' => t('The field value for the hero branded banner from node.'),
+  ];
+
+  // Setup custom site wide token for Hero Image.
+  $custom['page-hero-image'] = [
+    'name' => t('Page Hero Image'),
+    'description' => t('The field value for the hero image from node.'),
+  ];
+
+  // Setup custom site wide token for team member hero image.
+  $custom['team-member-hero-image'] = [
+    'name' => t('Team Member Page Hero Image'),
+    'description' => t('The field value for the hero image from node.'),
+  ];
+
+  // Setup custom site wide token for member designation.
+  $custom['page-member-designation'] = [
+    'name' => t('Page member designation'),
+    'description' => t('The field value for the member designation from node.'),
+  ];
+
+  // Views extended custom tokens.
+  $types['views-tokens'] = [
+    'name' => t('Views custom tokens'),
+    'description' => t('Views extended custom tokens.'),
+  ];
+  // Setup custom site wide token.
+  $views_tokens['has-results'] = [
+    'name' => t('Views has results'),
+    'description' => t('Retuns empty for no results else true.'),
+  ];
+
+  // Setup custom menu token for footer.
+  $custom['footer-primary-menu'] = [
+    'name' => t('Footer Primary Menu'),
+    'description' => t('The field value for the Footer primary navigation.'),
+  ];
+
+  return [
+    'types' => $types,
+    'tokens' => [
+      'aurora-tokens' => $custom,
+      'views-tokens' => $views_tokens,
+    ],
+  ];
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function bbb_core_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+  // If the type is the one that we want.
+  if ($type == 'aurora-tokens') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    $pattern = '';
+    if ($node instanceof NodeInterface) {
+      foreach ($tokens as $name => $original) {
+        switch ($name) {
+          case 'page-title-banner-pattern':
+            if ($node->hasField('field_hero_background_pattern')) {
+              $pattern = $node->get('field_hero_background_pattern')->getString();
+            }
+            $replacements[$original] = $pattern;
+            break;
+
+          case 'page-hero-image':
+            if ($node->hasField('field_image')) {
+              if (!$node->get('field_image')->isEmpty()) {
+                $uri = $node->get('field_image')->entity->get('image')->entity->uri->value;
+                $style = ImageStyle::load('x_large_hero_image_w1248_h400');
+                $pattern = $style->buildUrl($uri);
+              }
+            }
+            $replacements[$original] = $pattern;
+            break;
+
+          case 'team-member-hero-image':
+            if ($node->hasField('field_image')) {
+              if (!$node->get('field_image')->isEmpty()) {
+                $uri = $node->get('field_image')->entity->get('image')->entity->uri->value;
+                $style = ImageStyle::load('team_member_hero_w384_h352');
+                $pattern = $style->buildUrl($uri);
+              }
+            }
+            $replacements[$original] = $pattern;
+            break;
+
+          case 'page-member-designation':
+            if ($node->hasField('field_designation')) {
+              if (!$node->get('field_designation')->isEmpty()) {
+                $pattern = $node->get('field_designation')->referencedEntities()[0]->label();
+                $replacements[$original] = $pattern;
+              }
+            }
+            break;
+        }
+      }
+    }
+    if (isset($tokens['footer-primary-menu'])) {
+      $menu_tree = \Drupal::menuTree();
+      $menu_name = 'footer';
+      // Build the typical default set of menu tree parameters.
+      $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
+      // Load the tree based on this set of parameters.
+      $tree = $menu_tree->load($menu_name, $parameters);
+      $links_array = [];
+      foreach ($tree as $data) {
+        if ($data->link->isEnabled()) {
+          $links_array[] = $data;
+        }
+      }
+      $value = 1;
+      if (empty($links_array)) {
+        $value = "";
+      }
+
+      $replacements[$tokens['footer-primary-menu']] = $value;
+    }
+  }
+  elseif ($type == 'current-page') {
+    // Override current-page:title token for product content type.
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface && $node->getType() == 'product') {
+      $field_programme = $node->get('field_programme')->referencedEntities();
+      if (!empty($field_programme)) {
+        $replacements['[current-page:title]'] = $field_programme[0]->name->value;
+      }
+    }
+  }
+  elseif ($type == 'views-tokens') {
+    // Find tokens for requested views.
+    $viewtokens = \Drupal::token()->findWithPrefix($tokens, 'has-results');
+    if (!empty($viewtokens)) {
+      foreach ($viewtokens as $key => $token) {
+        // Get the views name and display.
+        $array = explode('--', $key);
+        if (!empty($array[0]) && !empty($array[1])) {
+          // Get views results.
+          $view_result = views_get_view_result($array[0], $array[1]);
+          $replacements[$token] = 1;
+
+          if (empty($view_result)) {
+            if (isset($array[2]) && !empty($array[2])) {
+              $view_result = views_get_view_result($array[0], $array[2]);
+              if (empty($view_result)) {
+                // Set token value empty if no results found.
+                $replacements[$token] = "";
+              }
+            }
+            else {
+              // Set token value empty if no results found.
+              $replacements[$token] = "";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Return the result so that we can now use the token.
+  return $replacements;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function bbb_core_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add suport for svg logo.
+  $form['logo']['settings']['logo_upload']['#upload_validators'] = [
+    'file_validate_extensions' => [
+      'png gif jpg jpeg apng svg',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_metatag_tags_alter().
+ */
+function bbb_core_metatag_tags_alter(array &$definitions) {
+
+  // Update schema_organization_address plugin to support multiple address.
+  if (isset($definitions['schema_organization_address'])) {
+    $definitions['schema_organization_address']['multiple'] = TRUE;
+  }
+
+  // Update schema_organization_address plugin to support multiple phone value.
+  if (isset($definitions['schema_organization_telephone'])) {
+    $definitions['schema_organization_telephone']['multiple'] = TRUE;
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function bbb_core_page_attachments_alter(&$page) {
+
+  // Exit if its an admin page.
+  if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+    return;
+  }
+
+  // Get data_domain_script value from config.
+  $data_domain_script = \Drupal::config('bbb_core.onetrust.settings')->get('data_domain_script');
+
+  // Exit if data_domain_script is not set.
+  if (!$data_domain_script) {
+    return;
+  }
+
+  // Initialise JS.
+  $javascript_header = 'function OptanonWrapper() { }';
+
+  // Add onetruct cookie script to all the pages.
+  $page['#attached']['html_head'][] = [
+    [
+      // Add a <script> tag.
+      '#tag' => 'script',
+      '#attributes' => [
+        'src' => 'https://cdn-ukwest.onetrust.com/consent/' . $data_domain_script . '/OtAutoBlock.js',
+        'type' => 'text/javascript',
+      ],
+      // Give weight so it appears after meta tags, etc.
+      '#weight' => -1,
+    ],
+    'onetrust_cookie_script_autoblock',
+  ];
+  $page['#attached']['html_head'][] = [
+    [
+      // Add a <script> tag.
+      '#tag' => 'script',
+      '#attributes' => [
+        'src' => 'https://cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js',
+        'type' => 'text/javascript',
+        'charset' => 'UTF-8',
+        'data-domain-script' => $data_domain_script,
+      ],
+      // Give weight so it appears after meta tags, etc.
+      '#weight' => -1,
+    ],
+    'onetrust_cookie_script',
+  ];
+  $page['#attached']['html_head'][] = [
+    [
+      // Add a <script> tag.
+      '#tag' => 'script',
+      '#value' => Markup::create($javascript_header),
+      '#attributes' => [
+        'type' => 'text/javascript',
+      ],
+      // Give weight so it appears after meta tags, etc.
+      '#weight' => -1,
+    ],
+    'onetrust_cookie_script_wrapper',
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function bbb_core_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'menu_link_content_menu_link_content_form') {
+    // Remove the Link text field from Menu Add/Edit page.
+    $form['link']['widget'][0]['title']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_field_formatter_info_alter().
+ */
+function bbb_core_field_formatter_info_alter(array &$info) {
+  // Let the string field types use the text formatter.
+  $info['text_default']['field_types'][] = 'string';
+  $info['text_default']['field_types'][] = 'string_long';
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function bbb_core_preprocess_field(&$variables, $hook) {
+  if ($variables['field_name'] == 'field_teaser_text') {
+    $variables['items']['0']['content']['#format'] = 'full_html';
+  }
+}
+
+/**
+ * Get the site active module name.
+ */
+function _bbb_core_get_site_module_name() {
+  $moduleHandler = \Drupal::service('module_handler');
+  // Set variables for other sites.
+  if ($moduleHandler->moduleExists('bbi_core')) {
+    $module = 'bbi';
+  }
+  elseif ($moduleHandler->moduleExists('bpc_core')) {
+    $module = 'bpc';
+  }
+  elseif ($moduleHandler->moduleExists('bbb')) {
+    $module = 'bbb';
+  }
+  elseif ($moduleHandler->moduleExists('sul_core')) {
+    $module = 'sul';
+  }
+  return $module;
+}

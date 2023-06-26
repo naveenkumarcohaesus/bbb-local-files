@@ -1,0 +1,67 @@
+core.entity_form_display.media.video.default:
+  expected_config: {  }
+  update_actions:
+    delete:
+      hidden:
+        field_categories: true
+        field_media_oembed_video: true
+        field_tags: true
+    add:
+      third_party_settings:
+        field_group:
+          group_taxonomy:
+            children:
+              - field_categories
+              - field_tags
+            format_settings:
+              classes: ''
+              description: ''
+              id: ''
+              required_fields: true
+              show_empty_fields: false
+            format_type: fieldset
+            label: Taxonomy
+            parent_name: ''
+            region: content
+            weight: 3
+    change:
+      content:
+        created:
+          weight: 8
+        field_categories:
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          weight: 4
+        field_media_oembed_video:
+          region: content
+          settings:
+            placeholder: ''
+            size: 60
+          third_party_settings: {  }
+          type: string_textfield
+          weight: 1
+        field_tags:
+          region: content
+          settings:
+            match_limit: 10
+            match_operator: CONTAINS
+            placeholder: ''
+            size: 60
+          third_party_settings: {  }
+          type: entity_reference_autocomplete
+          weight: 5
+        field_video_caption:
+          weight: 2
+        langcode:
+          weight: 6
+        path:
+          weight: 10
+        status:
+          weight: 11
+        translation:
+          weight: 9
+        uid:
+          weight: 7
+      hidden: {  }

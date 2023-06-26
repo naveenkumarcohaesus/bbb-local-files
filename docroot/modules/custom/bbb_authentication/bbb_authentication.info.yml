@@ -1,0 +1,12 @@
+name: BBB Authentication
+type: module
+description: Provides config and functionality to allow logging in via SSO and TFA
+package: BBB
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:tfa
+  - drupal:ga_login
+  - drupal:encrypt
+  - drupal:key
+  - drupal:real_aes
+  - drupal:openid_connect_windows_aad

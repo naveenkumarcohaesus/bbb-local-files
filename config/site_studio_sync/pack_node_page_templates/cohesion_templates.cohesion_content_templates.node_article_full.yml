@@ -1,0 +1,131 @@
+uuid: 83734fba-676b-45c8-83b8-392b8931cb27
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_templates.cohesion_master_templates.master_template
+label: 'Full content (Node, Article)'
+id: node_article_full
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "container",
+              "uid": "container",
+              "title": "Container",
+              "status": {
+                  "collapsed": false
+              },
+              "iconColor": "layout",
+              "uuid": "6792e60b-86b3-48bb-a9d6-9de80ec4aa9b",
+              "parentUid": "root",
+              "children": [
+                  {
+                      "type": "container",
+                      "uid": "drupal-field",
+                      "title": "Field",
+                      "status": {
+                          "collapsed": true
+                      },
+                      "uuid": "1e2103b9-be6b-4744-9356-16a853a57824",
+                      "parentUid": "container",
+                      "children": []
+                  },
+                  {
+                      "type": "item",
+                      "uid": "drupal-block",
+                      "title": "Block",
+                      "status": {
+                          "collapsed": true
+                      },
+                      "uuid": "8bf95584-3aa5-4763-b842-6aba9efcaa1e",
+                      "parentUid": "container",
+                      "children": []
+                  }
+              ]
+          }
+      ],
+      "mapper": {
+          "6792e60b-86b3-48bb-a9d6-9de80ec4aa9b": {},
+          "1e2103b9-be6b-4744-9356-16a853a57824": {},
+          "8bf95584-3aa5-4763-b842-6aba9efcaa1e": {}
+      },
+      "model": {
+          "6792e60b-86b3-48bb-a9d6-9de80ec4aa9b": {
+              "settings": {
+                  "width": "fluid"
+              }
+          },
+          "1e2103b9-be6b-4744-9356-16a853a57824": {
+              "settings": {
+                  "title": "Field",
+                  "settings": {
+                      "drupalField": ""
+                  },
+                  "drupalField": "content.field_layout_canvas"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "drupal-field"
+                  }
+              }
+          },
+          "8bf95584-3aa5-4763-b842-6aba9efcaa1e": {
+              "settings": {
+                  "title": "Footnotes Block",
+                  "customStyle": [
+                      {
+                          "customStyle": ""
+                      }
+                  ],
+                  "settings": {
+                      "theme": "all",
+                      "customStyle": [
+                          {
+                              "customStyle": ""
+                          }
+                      ]
+                  },
+                  "theme": "all",
+                  "block": "footnotesgroup"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "block"
+                  }
+              }
+          }
+      },
+      "previewModel": {
+          "1e2103b9-be6b-4744-9356-16a853a57824": {},
+          "8bf95584-3aa5-4763-b842-6aba9efcaa1e": {}
+      },
+      "variableFields": {
+          "1e2103b9-be6b-4744-9356-16a853a57824": [],
+          "8bf95584-3aa5-4763-b842-6aba9efcaa1e": []
+      },
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+modified: true
+selectable: true
+custom: false
+twig_template: node--cohesion--node-article-full
+default: true
+entity_type: node
+bundle: article
+view_mode: full
+master_template: __none__

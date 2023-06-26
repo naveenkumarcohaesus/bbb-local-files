@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 9823f8ab-4701-49b4-a67b-c5b534bb10e6
+  bundle: image
+  default_langcode: en
+  depends:
+    92597122-9dfc-4838-93ff-7e432c7b8c7f: taxonomy_term
+    de401c9d-fa49-4443-a573-19df1d6715bb: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'BBB White.png'
+  created:
+    -
+      value: 1665756703
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_image_type:
+    -
+      entity: 92597122-9dfc-4838-93ff-7e432c7b8c7f
+  image:
+    -
+      entity: de401c9d-fa49-4443-a573-19df1d6715bb
+      alt: 'British Business Bank Logo'
+      title: ''
+      width: 129
+      height: 48

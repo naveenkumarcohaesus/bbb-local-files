@@ -1,0 +1,8 @@
+key.key.tfa_key:
+  expected_config:
+    key_provider_settings:
+      file_location: ../nobackup/tfa.key
+  update_actions:
+    change:
+      key_provider_settings:
+        file_location: ../acquia-files/nobackup/tfa.key

@@ -1,0 +1,487 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Config\FileStorage;
+use Drupal\Core\Entity\Entity\EntityViewMode;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Update the config for page content form display.
+ *
+ * @implements hook_install
+ */
+function bbb_article_install() {
+  // Update Layout canvas field Config.
+  bbb_article_update_8001();
+  bbb_article_update_8017();
+}
+
+/**
+ * Update the config for layout canvas field in page content type.
+ */
+function bbb_article_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8001');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update help text for article node title.
+ */
+function bbb_article_update_8002() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8002');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Add article card view mode.
+ */
+function bbb_article_update_8003() {
+  // Manually import editor config from install folder.
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_article') . '/config/install';
+
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+
+  $config_storage->write('core.entity_view_display.node.article.card', $source->read('core.entity_view_display.node.article.card'));
+}
+
+/**
+ * Add featured card view mode.
+ */
+function bbb_article_update_8004() {
+  // Manually import editor config from install folder.
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_article') . '/config/install';
+
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+
+  // Add new featured view mode.
+  $config_storage->write('core.entity_view_mode.node.featured', $source->read('core.entity_view_mode.node.featured'));
+}
+
+/**
+ * Remove body field and update content type title for page content type.
+ */
+function bbb_article_update_8005() {
+
+  // Deleting content owner text field.
+  FieldConfig::loadByName('node', 'article', 'field_content_owner')->delete();
+  FieldConfig::loadByName('node', 'case_study', 'field_content_owner')->delete();
+  FieldConfig::loadByName('node', 'event', 'field_content_owner')->delete();
+  FieldConfig::loadByName('node', 'product', 'field_content_owner')->delete();
+
+  // Delete body fields from all content types.
+  FieldConfig::loadByName('node', 'article', 'body')->delete();
+  FieldConfig::loadByName('node', 'team_member', 'body')->delete();
+  FieldConfig::loadByName('node', 'event', 'body')->delete();
+  FieldConfig::loadByName('node', 'product', 'body')->delete();
+  FieldConfig::loadByName('node', 'case_study', 'body')->delete();
+  FieldConfig::loadByName('node', 'place', 'body')->delete();
+  FieldConfig::loadByName('node', 'person', 'body')->delete();
+
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_article') . '/config/install';
+  $source = new FileStorage($config_path);
+  $config_record = $source->read('field.storage.node.field_content_owner');
+  $field = FieldStorageConfig::loadByName($config_record['entity_type'], $config_record['field_name']);
+  if ($field) {
+    // Deleting field storage.
+    FieldStorageConfig::loadByName('node', 'field_content_owner')->delete();
+  }
+  // Create content owner field.
+  FieldStorageConfig::create($config_record)->save();
+  // Manually import content owner config from install folder.
+  $config_storage = \Drupal::service('config.storage');
+  $config_storage->write('field.field.node.article.field_content_owner', $source->read('field.field.node.article.field_content_owner'));
+
+  // Create meta tags field.
+  $config_record = $source->read('field.storage.node.field_metatags');
+  FieldStorageConfig::create($config_record)->save();
+  $config_storage->write('field.field.node.article.field_metatags', $source->read('field.field.node.article.field_metatags'));
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8005');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Removed bbb_article_update_8006.
+ *
+ * Removed bbb_article_update_8007.
+ *
+ * Removed bbb_article_update_8008.
+ *
+ * Update teaser text field description.
+ */
+function bbb_article_update_8009() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8009');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update card view modes.
+ */
+function bbb_article_update_8010() {
+  // Manually import config from install folder.
+  $module_path = \Drupal::service('extension.list.module')->getPath('bbb_article');
+  $config_install_path = $module_path . '/config/install';
+
+  // Config Storage Service.
+  $config_storage = \Drupal::service('config.storage');
+
+  // Manually import config from install folder.
+  $source = new FileStorage($config_install_path);
+  $config_storage->write('core.entity_view_display.node.article.card', $source->read('core.entity_view_display.node.article.card'));
+}
+
+/**
+ * Removed bbb_article_update_8011.
+ *
+ * Add view for related articles.
+ */
+function bbb_article_update_8012() {
+
+  // Manually import config from install folder.
+  $module_path = \Drupal::service('extension.list.module')->getPath('bbb_article');
+  $config_path = $module_path . '/config/install';
+
+  // Config Storage Service.
+  $config_storage = \Drupal::service('config.storage');
+
+  // Manually import config from install folder.
+  $source = new FileStorage($config_path);
+  $view_mode = 'node.related_content';
+  // Create the view mode related_content if not exists.
+  if (!EntityViewMode::load($view_mode)) {
+    $config_storage->write('core.entity_view_mode.node.related_content', $source->read('core.entity_view_mode.node.related_content'));
+  }
+  $config_storage->write('core.entity_view_display.node.article.related_content', $source->read('core.entity_view_display.node.article.related_content'));
+  $config_storage->write('views.view.article', $source->read('views.view.article'));
+  // Manually import config from optional folder.
+  $config_path = $module_path . '/config/optional';
+  $source = new FileStorage($config_path);
+  // Create related content block.
+  $config_storage->write('block.block.views_block__article_related_articles', $source->read('block.block.views_block__article_related_articles'));
+}
+
+/**
+ * Install link attributes module.
+ */
+function bbb_article_update_8013() {
+  \Drupal::service('module_installer')->install(['link_attributes']);
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Update the quick links widget to link_attributes.
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8013');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Removed bbb_article_update_8014.
+ *
+ * Add Horizontal card view mode.
+ */
+function bbb_article_update_8015() {
+  // Manually import config from install folder.
+  $module_path = \Drupal::service('extension.list.module')->getPath('bbb_article');
+  $config_path = $module_path . '/config/install';
+
+  // Config Storage Service.
+  $config_storage = \Drupal::service('config.storage');
+
+  $source = new FileStorage($config_path);
+  $config_storage->write('core.entity_view_display.node.article.horizontal_card', $source->read('core.entity_view_display.node.article.horizontal_card'));
+}
+
+/**
+ * Add Full view mode.
+ */
+function bbb_article_update_8016() {
+  // Manually import config from install folder.
+  $module_path = \Drupal::service('extension.list.module')->getPath('bbb_article');
+  $config_path = $module_path . '/config/install';
+
+  // Config Storage Service.
+  $config_storage = \Drupal::service('config.storage');
+
+  $source = new FileStorage($config_path);
+  $config_storage->write('core.entity_view_display.node.article.full', $source->read('core.entity_view_display.node.article.full'));
+}
+
+/**
+ * Install bbb_previously_read_articles module.
+ */
+function bbb_article_update_8017() {
+  // Install bbb_previously_read_articles module.
+  $installer = \Drupal::service('module_installer');
+  $installer->install([
+    'bbb_previously_read_articles',
+  ]);
+}
+
+/**
+ * Change Topic to use multiple values.
+ */
+function bbb_article_update_8018() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8018');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Removed bbb_article_update_8019.
+ *
+ * Removed bbb_article_update_8020.
+ *
+ * Adds a custom block for Hero image and import it's default content.
+ */
+function bbb_article_update_8021() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8021');
+  // Add article listing views exposed form block.
+  _bbb_article_rewrite_configuration('block.block.exposedformarticlearticles_list', 'bbb_article', 'optional');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update article views to show no result message.
+ */
+function bbb_article_update_8022() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8022');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Adds a custom block for Hero image and import it's default content.
+ */
+function bbb_article_update_8023() {
+  // Import hero_image block's content.
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_article");
+  // Import hero_image block.
+  _bbb_article_rewrite_configuration('block.block.hero_image', 'bbb_article', 'optional');
+  // Place hero_image block to content region.
+  $block = Block::load('hero_image');
+  $block->setRegion('content');
+  $block->save();
+}
+
+/**
+ * Add Full view mode.
+ */
+function bbb_article_update_8024() {
+  // Update article displays.
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.article.full', 'bbb_article', 'install');
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.article.default', 'bbb_article', 'install');
+
+  // Delete template selector fields on below content types.
+  $content_types = ['article', 'case_study', 'landing_page'];
+  // Deleting template selector field.
+  foreach ($content_types as $content_type) {
+    if ($field_instance = FieldConfig::loadByName('node', $content_type, 'field_content_template_selector')) {
+      $field_instance->delete();
+    }
+  }
+
+  // Deleting field storage for template selector field.
+  if ($field = FieldStorageConfig::loadByName('node', 'field_content_template_selector')) {
+    $field->delete();
+  }
+}
+
+/**
+ * Update article view no results section style.
+ */
+function bbb_article_update_8029() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8029');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Install Advanced Link module.
+ */
+function bbb_article_update_8030() {
+  // Install Advanced Link module.
+  \Drupal::service('module_installer')->install(['editor_advanced_link']);
+}
+
+/**
+ * Update article view for empty behaviour.
+ */
+function bbb_article_update_8031() {
+  _bbb_article_rewrite_configuration('views.view.article', 'bbb_article', 'install');
+}
+
+/**
+ * Enabling h2,h4 view modes.
+ */
+function bbb_article_update_8032() {
+  $configs = [
+    'core.entity_view_mode.node.card_h2',
+    'core.entity_view_mode.node.card_h4',
+    'core.entity_view_mode.node.featured_h2',
+    'core.entity_view_mode.node.featured_h4',
+    'core.entity_view_mode.node.horizontal_card_h2',
+    'core.entity_view_mode.node.horizontal_card_h4',
+    'core.entity_view_display.node.article.card_h2',
+    'core.entity_view_display.node.article.card_h4',
+    'core.entity_view_display.node.article.horizontal_card_h2',
+    'core.entity_view_display.node.article.horizontal_card_h4',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_article', 'install');
+  }
+}
+
+/**
+ * Removed article listing views page.
+ *
+ * Update article view to remove business structure taxonomy.
+ */
+function bbb_article_update_8033() {
+  // Delete article_list_content block's content.
+  $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', '16757c43-0d46-4cc9-be67-50da0ec92744');
+  if ($block_content) {
+    $block_content->delete();
+  }
+
+  /** @var \Drupal\Core\Entity\EntityStorageInterface $block_storage */
+  $block_storage = \Drupal::service('entity_type.manager')->getStorage('block');
+  if ($block_storage) {
+    /** @var \Drupal\block\Entity\Block[] $blocks */
+    $blocks = $block_storage->loadByProperties(['uuid' => 'bb2e9ad0-5233-4ee8-bf62-212e7cafedc8']);
+    if ($blocks) {
+      foreach ($blocks as $block) {
+        $block->delete();
+      }
+    }
+  }
+
+  _bbb_article_rewrite_configuration('views.view.article', 'bbb_article', 'install');
+
+  \Drupal::service('module_installer')->install(['site_settings']);
+  _bbb_article_rewrite_configuration('site_settings.site_setting_entity_type.article', 'bbb_article', 'install');
+  _bbb_article_create_field_storage('field.storage.site_setting_entity.field_url_alias', 'bbb_article', 'install');
+  _bbb_article_rewrite_configuration('core.entity_form_display.site_setting_entity.article.default', 'bbb_article', 'install');
+  _bbb_article_rewrite_configuration('field.field.site_setting_entity.article.field_url_alias', 'bbb_article', 'install');
+  // Create a default Site setting.
+  $entity = \Drupal::entityTypeManager()->getStorage('site_setting_entity')->create([
+    'type'  => 'article',
+    'name' => 'Articles',
+    'field_url_alias' => [
+      'value' => 'articles',
+    ],
+  ]);
+  $entity->save();
+
+  _bbb_article_rewrite_configuration('block.block.exposedform_article_listing_block', 'bbb_article', 'optional');
+  _bbb_article_rewrite_configuration('block.block.views_block_article_listing_block', 'bbb_article', 'optional');
+  // Place article list exposed block to content region.
+  $block = Block::load('exposedform_article_listing_block');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+  // Place article list content block to content region.
+  $block = Block::load('views_block_article_listing_block');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+}
+
+/**
+ * Update Articles view fallback and hide on no results.
+ */
+function bbb_article_update_8034() {
+  _bbb_article_rewrite_configuration('views.view.article', 'bbb_article', 'install');
+}
+
+/**
+ * Update Articles view fallback and hide on no results.
+ */
+function bbb_article_update_8035() {
+  _bbb_article_rewrite_configuration('views.view.article', 'bbb_article', 'install');
+}
+
+/**
+ * Article list view update.
+ */
+function bbb_article_update_8036() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8036');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Article list view update.
+ */
+function bbb_article_update_8037() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8036');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update teaser text formatter.
+ */
+function bbb_article_update_8038() {
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.product.card_without_image', 'bbb_product', 'install');
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_article', 'bbb_article_update_8038');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

@@ -1,0 +1,26 @@
+diff --git a/js/ckeditor/dx8_stylescombo.js b/js/ckeditor/dx8_stylescombo.js
+index 86feaec..11c1677 100644
+--- a/js/ckeditor/dx8_stylescombo.js
++++ b/js/ckeditor/dx8_stylescombo.js
+@@ -74,2 +74,21 @@
+ 
++                    // The array needs to be ordered, to get the Element styles ordered alphabetically.
++                    stylesListDX8.sort((a, b) => {
++                        // Compare by element,as we need to keep the group order.
++                        if (a.element < b.element) {
++                            return -1;
++                        }
++                        if (a.element > b.element) {
++                            return 1;
++                        }
++
++                        if (a._name < b._name) {
++                            return -1;
++                        }
++                        if (a._name > b._name) {
++                            return 1;
++                        }
++                        return 0;
++                    });
++
+                     // Add all styles to the combo.

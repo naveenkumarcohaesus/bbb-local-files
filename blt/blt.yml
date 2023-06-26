@@ -1,0 +1,83 @@
+project:
+  human_name: 'British Business Bank'
+  machine_name: bbbwebsites
+  local:
+    hostname: '${project.machine_name}.lndo.site'
+    protocol: https
+    uri: '${project.local.protocol}://${project.local.hostname}'
+  prefix: BBB
+  profile:
+    name: bbb_platform
+drupal:
+  account.mail: no-reply@example.com
+  site.mail: '${drupal.account.mail}'
+  locale: en
+  local_settings_file: '${docroot}/sites/${site}/settings/local.settings.php'
+  settings_file: '${docroot}/sites/${site}/settings.php'
+  db:
+    database: acquia
+    username: acquia
+    password: acquia
+    host: database
+    port: 3306
+cm:
+  strategy: core-only
+  core:
+    path: ../config
+    dirs: { sync: { path: '${cm.core.path}/site_studio_sync' } }
+drush:
+  alias-dir: '${repo.root}/drush/sites'
+  aliases:
+    local: self
+    ci: self
+    remote: '${project.machine_name}.01dev'
+  ansi: true
+  bin: '${composer.bin}/drush'
+  default_alias: '${drush.aliases.local}'
+  dir: '${docroot}'
+  sanitize: true
+git:
+  default_branch: develop
+  remotes:
+    cloud: 'bbbwebsites@svn-6964.enterprise-g1.hosting.acquia.com:bbbwebsites.git'
+sync:
+  public-files: true
+  private-files: false
+  exclude-paths:
+    - styles
+    - css
+    - js
+  commands:
+    - 'source:build:composer'
+    - 'blt:init:settings'
+    - 'drupal:sync:db'
+    - 'drupal:update'
+site-studio:
+  cohesion-import: true
+  sync-import: false
+  package-import: true
+  package-multi-import: true
+  rebuild: true
+modules:
+  local:
+    enable: [field_ui, dblog, devel, seckit, views_ui]
+    uninstall: []
+  ci:
+    enable: {  }
+    uninstall: [acquia_connector, shield]
+  dev:
+    enable: [acquia_connector, dblog, shield]
+    uninstall: {  }
+  test:
+    enable: [acquia_connector, shield]
+    uninstall: [devel, views_ui]
+  prod:
+    enable: [acquia_connector]
+    uninstall: [devel, views_ui]
+validate:
+  twig:
+    functions:
+      - getComponentFieldValue
+      - cohesion_breadcrumb
+      - url_route_name
+

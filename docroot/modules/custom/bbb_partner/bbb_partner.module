@@ -1,0 +1,285 @@
+<?php
+
+/**
+ * @file
+ * Module file for hooks.
+ */
+
+use Drupal\Core\Database\Query\SelectInterface;
+use Drupal\Core\Entity\EntityForm;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
+use Symfony\Component\HttpFoundation\Request;
+
+/**
+ * Implements hook_query_TAG_alter().
+ */
+function bbb_partner_query_partner_list_alter(SelectInterface $query) {
+  $node = bbb_partner_get_node_on_request();
+  if ($node instanceof NodeInterface) {
+    // If current node is of product type and had programme field.
+    if ($node->bundle() == 'product' && $node->hasField('field_programme')) {
+      // Add condition to show only partners that
+      // are related to the current programme term.
+      $programme_target_id = $node->field_programme->target_id;
+      $query->addJoin("LEFT", 'taxonomy_term__field_programme', "tfp", "taxonomy_term_field_data.tid = tfp.entity_id");
+      $query->condition('tfp.field_programme_target_id', $programme_target_id, 'IN');
+
+      // Alter query for financial variant.
+      // If financial variant filter is selected.
+      $view = \Drupal::entityTypeManager()
+        ->getStorage('view')
+        ->load('partners')
+        ->getExecutable();
+
+      $filters_selected = $view->getExposedInput();
+      if (isset($filters_selected['tid'])) {
+        // Check if the selected financial variant
+        // is available on partner financial variant fields.
+        $query->addJoin("LEFT", 'taxonomy_term__field_financial_variants', "fv", "tfp.field_programme_target_id = fv.entity_id");
+
+        $or = $query->orConditionGroup()
+          ->condition('fv.field_financial_variants_target_id', array_values($filters_selected['tid']), 'IN');
+        $query->condition($or);
+      }
+    }
+  }
+
+  bbb_partner_filter_based_on_business($query);
+}
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function bbb_partner_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  if ($view->id() == 'partners') {
+    // Remove filters based on the site.
+    $moduleHandler = \Drupal::service('module_handler');
+    $node = bbb_partner_get_node_on_request();
+    // If page is of product content type & site is not bbb.
+    if ($node instanceof NodeInterface && $node->bundle() == 'product') {
+      if (($moduleHandler->moduleExists('bbi_core') || $moduleHandler->moduleExists('sul_core') || $moduleHandler->moduleExists('bpc_core'))) {
+        $view->removeHandler($view->current_display, 'filter', 'field_programme_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_finance_type_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_partner_stages_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_inv_types_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_region_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_partner_sector_target_id');
+      }
+      else {
+        $view->removeHandler($view->current_display, 'filter', 'field_programme_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_finance_type_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_partner_stages_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_inv_types_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_partner_sector_target_id');
+      }
+    }
+    else {
+      if ($moduleHandler->moduleExists('bpc_core')) {
+        $view->removeHandler($view->current_display, 'filter', 'field_programme_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_finance_type_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_region_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'tid');
+      }
+      elseif ($moduleHandler->moduleExists('sul_core')) {
+        $view->removeHandler($view->current_display, 'filter', 'field_programme_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_finance_type_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_partner_stages_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_inv_types_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'tid');
+        $view->removeHandler($view->current_display, 'filter', 'field_partner_sector_target_id');
+      }
+      elseif ($moduleHandler->moduleExists('bbb_core') && !$moduleHandler->moduleExists('bpc_core') && !$moduleHandler->moduleExists('sul_core') && !$moduleHandler->moduleExists('bbi_core')) {
+        $view->removeHandler($view->current_display, 'filter', 'field_partner_stages_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_inv_types_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_partner_sector_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'tid');
+      }
+      elseif ($moduleHandler->moduleExists('bbi_core')) {
+        $view->removeHandler($view->current_display, 'filter', 'field_programme_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_finance_type_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_partner_stages_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_inv_types_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'field_region_target_id');
+        $view->removeHandler($view->current_display, 'filter', 'tid');
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function bbb_partner_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() == 'partners' && $view->current_display == 'partner_list') {
+    // If financial variant filter is selected.
+    $filters_selected = $view->getExposedInput();
+    if (isset($filters_selected['tid'])) {
+      foreach ($query->where as $key => &$where) {
+        foreach ($where['conditions'] as $row => &$condition) {
+          if ($condition['field'] == "taxonomy_term_field_data.tid = :taxonomy_term_field_data_tid" || $condition['field'] == "taxonomy_term_field_data.tid IN(:taxonomy_term_field_data_tid[])") {
+            // Unset the tid filter from views.
+            unset($query->where[$key]['conditions'][$row]);
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Filter partner based on show on website field value.
+ *
+ * @param Drupal\Core\Database\Query\SelectInterface $query
+ *   The query that needs to be alter.
+ */
+function bbb_partner_filter_based_on_business(SelectInterface $query): void {
+  // Get show on website taxonomy term.
+  $term = _bbb_partner_get_business_site();
+  if (!empty($term)) {
+    $query->addJoin("LEFT", 'taxonomy_term__field_show_on_website', "tfpy", "taxonomy_term_field_data.tid = tfpy.entity_id");
+    $query->condition('tfpy.field_show_on_website_target_id', $term->id(), '=');
+  }
+}
+
+/**
+ * Get null or node object on ajax/current page request.
+ */
+function bbb_partner_get_node_on_request() {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $is_ajax = \Drupal::request()->isXmlHttpRequest();
+  // On ajax request get route_name of page.
+  if ($is_ajax) {
+    $previousUrl = \Drupal::request()->server->get('HTTP_REFERER');
+    $fake_request = Request::create($previousUrl);
+    $url_object = \Drupal::service('path.validator')->getUrlIfValid($fake_request->getRequestUri());
+    $param = $url_object->getRouteParameters();
+    if (isset($param['node'])) {
+      $node = \Drupal::entityTypeManager()->getStorage('node')->load($param['node']);
+    }
+  }
+  return $node;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function bbb_partner_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form_object = $form_state->getFormObject();
+  if ($form_object instanceof EntityForm) {
+    $entity = $form_state->getFormObject()->getEntity();
+    // Form alter to work only on node and taxonomy entity forms.
+    if (in_array($entity->getEntityTypeId(), ['node', 'taxonomy_term'])) {
+      if (isset($form['field_programme'])) {
+        // Filter out terms not matching to current site.
+        $terms = _bbb_partner_get_other_site_programmes();
+        if (!empty($terms)) {
+          $options = array_diff_key($form['field_programme']['widget']['#options'], $terms);
+          $form['field_programme']['widget']['#options'] = $options;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Get current site business term value.
+ */
+function _bbb_partner_get_business_site() {
+  // Add query to filter partner based on show on website taxonomy.
+  $current_site = _bbb_platform_get_current_site_name();
+  // Get show on website taxonomy term.
+  $term = \Drupal::entityTypeManager()
+    ->getStorage('taxonomy_term')
+    ->loadByProperties(['name' => $current_site, 'vid' => 'business_structure']);
+  if (!empty($term)) {
+    return reset($term);
+  }
+}
+
+/**
+ * Get other site business term value.
+ */
+function _bbb_partner_get_other_site_programmes() {
+  $term = _bbb_partner_get_business_site();
+  if (!empty($term)) {
+    // Find not matching terms to current site.
+    $query = \Drupal::database()->select('taxonomy_term__field_show_on_website', 'ttfsw');
+    $query->fields('ttfsw', ['entity_id']);
+    $query->condition('ttfsw.bundle', 'programme');
+    $query->condition('ttfsw.field_show_on_website_target_id', $term->id(), '!=');
+    $others = $query->execute()->fetchAllKeyed(0, 0);
+    // Find matching terms to current site.
+    $query = \Drupal::database()->select('taxonomy_term__field_show_on_website', 'ttfsw');
+    $query->fields('ttfsw', ['entity_id']);
+    $query->condition('ttfsw.bundle', 'programme');
+    $query->condition('ttfsw.field_show_on_website_target_id', $term->id(), '=');
+    $curent = $query->execute()->fetchAllKeyed(0, 0);
+
+    return array_diff_key($others, $curent);
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function bbb_partner_views_pre_render(ViewExecutable $view) {
+  if (($view->id() == 'partners' && $view->current_display == 'partner_list')) {
+    $results = $view->result;
+
+    // Apply your custom sorting logic to the result rows.
+    usort($results, '_bbb_partner_custom_order_taxonomy_terms_sort');
+
+    // We need to update the row index.
+    foreach ($results as $key => $result) {
+      $results[$key]->index = $key;
+    }
+
+    // Replace the view's result with the sorted result.
+    $view->result = array_values($results);
+  }
+}
+
+/**
+ * Sorting function for taxonomy term names: first lower case first.
+ */
+function _bbb_partner_custom_order_taxonomy_terms_sort($a, $b) {
+  $term_a = $a->taxonomy_term_field_data_name;
+  $term_b = $b->taxonomy_term_field_data_name;
+
+  // True if the first letter is lowercase.
+  $term_a_starts_lower = preg_match('/^[a-z]/', $term_a);
+  $term_b_starts_lower = preg_match('/^[a-z]/', $term_b);
+
+  if ($term_a_starts_lower || $term_b_starts_lower) {
+
+    // Extract the first letters of the terms.
+    $term_a_first_char = mb_substr($term_a, 0, 1);
+    $term_b_first_char = mb_substr($term_b, 0, 1);
+
+    // Check if the first letters are the same.
+    $first_letter_comparison = strcasecmp($term_a_first_char, $term_b_first_char);
+
+    if ($first_letter_comparison !== 0) {
+      // If the first letters are different return comparison.
+      return $first_letter_comparison;
+    }
+    else {
+      if ($term_a_starts_lower && $term_b_starts_lower) {
+        $term_a_lower = strtolower($term_a);
+        $term_b_lower = strtolower($term_b);
+        return strcmp($term_a_lower, $term_b_lower);
+      }
+      elseif ($term_a_starts_lower) {
+        // $term_a starts with lowercase, so it comes first.
+        return -1;
+      }
+      elseif ($term_b_starts_lower) {
+        // $term_b starts with lowercase, so it comes first.
+        return 1;
+      }
+    }
+  }
+}

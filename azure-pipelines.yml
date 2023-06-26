@@ -1,0 +1,74 @@
+# PHP
+# Test and package your PHP project.
+# Add steps that run tests, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/php
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  phpVersion: 8.0
+  scriptDir: $(Build.Repository.LocalPath)/scripts/azure
+  COMPOSER_CACHE_DIR: $(Pipeline.Workspace)/.composer
+  XDEBUG_MODE: off
+
+steps:
+  - task: InstallSSHKey@0
+    inputs:
+      knownHostsEntry: 'svn-6964.enterprise-g1.hosting.acquia.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCn3yoshslwdQkmy211Ez27WokZ9eThZKqAjsez+ENBMHfoPTziqiHSoWYKp05gpGQcVDZ+ee3DKC5klE+JjEq+j6635nIhPOLvAzjNh9o56Zs/TgNaGFG4Be7jHbjofb8bqmsKsakYGOx3vGFNEHSRT6xj6UWchKu7CQ/WnBEXygn4w01ymWFW/QuMmmtGuxc13SAHQodRY6kGgWg7HrJsreCKtxv5vIYGYkIPbD7FGkZvWhHze7L9AgGYKmra36WX0wv6oA/yTlKwSlnT6/JvLbXIwDxp8H7BCczge0ym11JqmlLSrbAfT2kHeh0lMRPfRQqawJC2ZDqX46E0qFHR'
+      sshPublicKey: $(public2)
+      sshKeySecureFile: 'private2'
+  - checkout: self
+    persistCredentials: true
+  - task: Bash@3
+    displayName: 'Setup PHP and MySQL'
+    inputs:
+      targetType: 'inline'
+      script: |
+        sudo update-alternatives --set php /usr/bin/php$(phpVersion)
+        sudo update-alternatives --set phar /usr/bin/phar$(phpVersion)
+        sudo update-alternatives --set phpdbg /usr/bin/phpdbg$(phpVersion)
+        sudo update-alternatives --set php-cgi /usr/bin/php-cgi$(phpVersion)
+        sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
+        sudo service mysql start
+  - task: NodeTool@0
+    displayName: 'Install Node JS'
+    inputs:
+      versionSpec: '14.x'
+  - task: Cache@2
+    inputs:
+      key: 'composer | "$(Agent.OS)" | composer.lock'
+      restoreKeys: |
+        composer | "$(Agent.OS)"
+        composer
+      path: $(COMPOSER_CACHE_DIR)
+    displayName: Cache composer
+  - task: Bash@3
+    displayName: 'Install Dependencies'
+    inputs:
+      targetType: 'inline'
+      script: |
+        composer validate --no-check-all --ansi
+        composer install
+        npm install npm@latest -g
+  - task: Bash@3
+    displayName: 'Validate'
+    inputs:
+      filePath: '$(scriptDir)/validate.sh'
+  - task: Bash@3
+    displayName: 'Setup Environment'
+    inputs:
+      filePath: '$(scriptDir)/setup_env.sh'
+  - task: Bash@3
+    displayName: 'Setup App'
+    inputs:
+      filePath: '$(scriptDir)/setup_app.sh'
+  - task: Bash@3
+    displayName: 'Run Tests'
+    inputs:
+      filePath: '$(scriptDir)/test.sh'
+  - task: Bash@3
+    displayName: 'Deploy'
+    condition: and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'))
+    inputs:
+      filePath: '$(scriptDir)/deploy_artifact.sh'

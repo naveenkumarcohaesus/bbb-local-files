@@ -1,0 +1,24 @@
+uuid: cd9ffb2c-17f1-4fd5-b6c0-2f488ddda7dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_geofield
+    - taxonomy.vocabulary.partner
+  module:
+    - geofield
+  enforced:
+    module:
+      - bbb_partner
+id: taxonomy_term.partner.field_geofield
+field_name: field_geofield
+entity_type: taxonomy_term
+bundle: partner
+label: Geofield
+description: 'This field is BBB FH specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

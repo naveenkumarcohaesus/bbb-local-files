@@ -1,0 +1,121 @@
+core.entity_form_display.node.page.default:
+  expected_config:
+    content:
+      created:
+        weight: 7
+      field_page_image:
+        weight: 3
+      field_tags:
+        weight: 4
+      moderation_state:
+        weight: 5
+      path:
+        weight: 8
+      publish_on:
+        weight: 30
+      publish_state:
+        weight: 30
+      scheduler_settings:
+        weight: 20
+      simple_sitemap:
+        weight: 10
+      translation:
+        weight: 10
+      uid:
+        weight: 6
+      unpublish_on:
+        weight: 30
+      unpublish_state:
+        weight: 30
+      url_redirects:
+        weight: 9
+    hidden:
+      field_layout_canvas: true
+    third_party_settings:
+      field_group:
+        group_taxonomy:
+          weight: 4
+  update_actions:
+    delete:
+      hidden:
+        field_layout_canvas: true
+    add:
+      content:
+        field_layout_canvas:
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+          type: cohesion_layout_builder_widget
+          weight: 3
+    change:
+      content:
+        created:
+          weight: 8
+        field_page_image:
+          weight: 4
+        field_tags:
+          weight: 5
+        moderation_state:
+          weight: 6
+        path:
+          weight: 9
+        publish_on:
+          weight: 14
+        publish_state:
+          weight: 16
+        scheduler_settings:
+          weight: 13
+        simple_sitemap:
+          weight: 11
+        translation:
+          weight: 12
+        uid:
+          weight: 7
+        unpublish_on:
+          weight: 15
+        unpublish_state:
+          weight: 17
+        url_redirects:
+          weight: 10
+      third_party_settings:
+        field_group:
+          group_taxonomy:
+            weight: 5
+core.entity_view_display.node.page.default:
+  expected_config:
+    hidden:
+      field_layout_canvas: true
+  update_actions:
+    delete:
+      hidden:
+        field_layout_canvas: true
+    add:
+      content:
+        field_layout_canvas:
+          label: hidden
+          region: content
+          settings:
+            link: false
+            view_mode: default
+          third_party_settings: {  }
+          type: cohesion_entity_reference_revisions_entity_view
+          weight: 2
+core.entity_view_display.node.page.horizontal_card:
+  expected_config:
+    hidden:
+      field_layout_canvas: true
+  update_actions:
+    delete:
+      hidden:
+        field_layout_canvas: true
+    add:
+      content:
+        field_layout_canvas:
+          label: above
+          region: content
+          settings:
+            link: false
+            view_mode: default
+          third_party_settings: {  }
+          type: cohesion_entity_reference_revisions_entity_view
+          weight: 2

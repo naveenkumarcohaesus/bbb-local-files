@@ -1,0 +1,17 @@
+name: BBB Menu Content
+type: module
+description: 'A custom element to show menu content reference field.'
+core_version_requirement: ^8.8.0 || ^9
+package: BBB
+dependencies:
+  - drupal:cohesion
+  - drupal:menu_item_extras
+  - drupal:bbb_partner
+  - drupal:bbb_research_publication
+  - drupal:bbb_event
+  - drupal:bbb_news
+  - drupal:bbb_product
+  - drupal:bbb_case_study
+  - drupal:bbb_article
+  - drupal:bbb_core
+  - drupal:admin_menu_levels

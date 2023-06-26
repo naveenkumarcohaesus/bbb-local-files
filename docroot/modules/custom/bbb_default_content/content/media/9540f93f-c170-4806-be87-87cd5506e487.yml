@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 9540f93f-c170-4806-be87-87cd5506e487
+  bundle: image
+  default_langcode: en
+  depends:
+    21a62341-85f0-4469-90d9-01f1465496af: taxonomy_term
+    e2d9e9d1-478a-40d2-822f-2664760c9dbf: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'BBI White.png'
+  created:
+    -
+      value: 1665572141
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_image_type:
+    -
+      entity: 21a62341-85f0-4469-90d9-01f1465496af
+  image:
+    -
+      entity: e2d9e9d1-478a-40d2-822f-2664760c9dbf
+      alt: 'This is alt'
+      title: ''
+      width: 505
+      height: 160

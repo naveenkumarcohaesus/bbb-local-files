@@ -1,0 +1,7 @@
+bbb_core_onetrust.settings:
+  path: '/admin/config/bbb/onetrust'
+  defaults:
+    _form: \Drupal\bbb_core\Form\OnetrustCookieSettings
+    _title: 'Onetrust Cookie Configuration'
+  requirements:
+    _permission: 'administer site configuration'

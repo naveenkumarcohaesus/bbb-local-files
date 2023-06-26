@@ -1,0 +1,25 @@
+core.entity_form_display.taxonomy_term.programme.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_show_on_website:
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+          type: options_buttons
+          weight: 2
+    change:
+      content:
+        langcode:
+          weight: 4
+        path:
+          weight: 6
+        simple_sitemap:
+          weight: 5
+        status:
+          weight: 7
+      third_party_settings:
+        field_group:
+          group_programme:
+            weight: 3

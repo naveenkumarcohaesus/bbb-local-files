@@ -1,0 +1,29 @@
+uuid: 556221c5-7363-4726-89bf-be8929cafa9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_finance_reason
+    - taxonomy.vocabulary.finance_reason_for_finance
+    - taxonomy.vocabulary.finance_type
+id: taxonomy_term.finance_type.field_finance_reason
+field_name: field_finance_reason
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'Reason for finance'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      finance_reason_for_finance: finance_reason_for_finance
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

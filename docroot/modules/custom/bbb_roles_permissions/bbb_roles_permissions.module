@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * User role and permissions related configurations.
+ */
+
+use Drupal\bbb_roles_permissions\Access\FieldAccess\GrantCreatedAccess;
+use Drupal\bbb_roles_permissions\Access\FieldAccess\GrantStickyAccess;
+
+/**
+ * Implements hook_entity_field_access_alter().
+ */
+function bbb_roles_permissions_entity_field_access_alter(array &$grants, array $context) {
+  $fieldAccessOverrides = [
+    GrantCreatedAccess::class,
+    GrantStickyAccess::class,
+  ];
+
+  foreach ($fieldAccessOverrides as $override) {
+    $override::access($grants, $context);
+  }
+}

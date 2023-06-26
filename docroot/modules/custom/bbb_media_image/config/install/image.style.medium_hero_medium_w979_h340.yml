@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: medium_hero_medium_w979_h340
+label: 'Medium Hero Medium W979 H340'
+effects:
+  f4145de0-d559-42b0-9410-8c14ae103338:
+    uuid: f4145de0-d559-42b0-9410-8c14ae103338
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 979
+      height: 340
+      crop_type: focal_point

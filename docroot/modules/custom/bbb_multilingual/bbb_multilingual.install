@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the BBB Authentication module.
+ */
+
+/**
+ * Modify source settings for translations.
+ */
+function bbb_multilingual_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_multilingual', 'bbb_multilingual_update_8001');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Change label for Kurdish language.
+ */
+function bbb_multilingual_update_8002() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_multilingual', 'bbb_multilingual_update_8002');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update the locale settings to disable auto interface translation.
+ */
+function bbb_multilingual_update_8003() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_multilingual', 'bbb_multilingual_update_8003');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

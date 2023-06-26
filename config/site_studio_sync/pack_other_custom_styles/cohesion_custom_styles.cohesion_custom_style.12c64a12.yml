@@ -1,0 +1,213 @@
+uuid: 6bda757e-18af-4343-ac81-d40d3b64c3cb
+langcode: en
+status: true
+dependencies: {  }
+label: 'CTA Position Link'
+id: 12c64a12
+json_values: |
+  {
+      "preview": {
+          "text": "<p><a class=\"coh-preview\" href=\"#\">Default content for 'Link'.<\/a><\/p>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "a",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "f11f5d71-1ad0-406d-9863-fd001590df49": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":hover"
+              },
+              "styles": {}
+          },
+          "2ca18112-0b88-4aa1-9a44-6700729696f8": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":after"
+              },
+              "styles": {
+                  "xs": {
+                      "custom-css": [
+                          {
+                              "customCssProperty": {
+                                  "value": "content"
+                              },
+                              "customCss": {
+                                  "value": "\" \""
+                              }
+                          }
+                      ],
+                      "position": {
+                          "value": "absolute"
+                      },
+                      "top": {
+                          "value": "0"
+                      },
+                      "bottom": {
+                          "value": "0"
+                      },
+                      "left": {
+                          "value": "0"
+                      },
+                      "right": {
+                          "value": "0"
+                      },
+                      "z-index": {
+                          "value": "1"
+                      }
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Link",
+          "selectorType": "topLevel",
+          "formDefinition": [],
+          "items": [
+              {
+                  "title": ":hover",
+                  "type": "container",
+                  "items": [],
+                  "selectorType": "pseudo",
+                  "formDefinition": [
+                      {
+                          "formKey": "font",
+                          "children": [
+                              {
+                                  "formKey": "font-and-color",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xs"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "font-family",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "font-weight",
+                                          "active": false
+                                      },
+                                      {
+                                          "name": "color",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "uuid": "f11f5d71-1ad0-406d-9863-fd001590df49",
+                  "form": null,
+                  "allowedTypes": [
+                      "child",
+                      "pseudo"
+                  ]
+              },
+              {
+                  "title": ":after",
+                  "type": "container",
+                  "items": [],
+                  "form": null,
+                  "selectorType": "pseudo",
+                  "uuid": "2ca18112-0b88-4aa1-9a44-6700729696f8",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo"
+                  ],
+                  "formDefinition": [
+                      {
+                          "formKey": "layout",
+                          "children": [
+                              {
+                                  "formKey": "position",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xs"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "position",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "top",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "bottom",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "left",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "right",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "z-index",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "custom-css",
+                          "children": [
+                              {
+                                  "formKey": "css-property-and-css-value",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xs"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "custom-css",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customCssProperty",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customCss",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-cta-position-link
+custom_style_type: link
+available_in_wysiwyg: false
+parent: null
+weight: 0

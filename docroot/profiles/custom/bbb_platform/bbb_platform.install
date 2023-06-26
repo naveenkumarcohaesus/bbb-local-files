@@ -1,0 +1,813 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the BBB Platform profile.
+ */
+
+use Acquia\Blt\Robo\Common\EnvironmentDetector;
+use Drupal\Core\Config\FileStorage;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Implements hook_install().
+ */
+function bbb_platform_install() {
+  // Install the BBB Frontend theme.
+  \Drupal::service('theme_installer')->install(['bbb_site_studio']);
+
+  // Enable and set default.
+  \Drupal::service('config.factory')->getEditable('system.theme')->set('default', 'bbb_site_studio')->save();
+}
+
+/**
+ * Install config modules and authentication module.
+ */
+function bbb_platform_update_8001() {
+  \Drupal::service('module_installer')->install(['config_update']);
+  \Drupal::service('module_installer')->install(['update_helper']);
+  \Drupal::service('module_installer')->install(['tfa']);
+  \Drupal::service('module_installer')->install(['bbb_authentication']);
+}
+
+/**
+ * Install module for multilingual features.
+ *
+ * Install Drupal Entity Generator(DEG) module.
+ */
+function bbb_platform_update_8002() {
+  \Drupal::service('module_installer')->install(['bbb_multilingual']);
+  \Drupal::service('module_installer')->install(['dst_entity_generate']);
+}
+
+/**
+ * Install BBB Taxonomy Vocabularies module to import all taxonomies.
+ */
+function bbb_platform_update_8003() {
+  \Drupal::service('module_installer')->install(['bbb_taxonomy']);
+}
+
+/**
+ * Set correct configurations for shield module.
+ */
+function bbb_platform_update_8004() {
+  // Install Shield module.
+  \Drupal::service('module_installer')->install(['shield']);
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_platform', 'bbb_platform_update_8004');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update cohesion full export settings.
+ */
+function bbb_platform_update_8005() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_platform', 'bbb_platform_update_8005');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Install module for document media type.
+ */
+function bbb_platform_update_8006() {
+  \Drupal::service('module_installer')->install(['acquia_cms_document']);
+}
+
+/**
+ * Install module for video media type.
+ */
+function bbb_platform_update_8007() {
+  \Drupal::service('module_installer')->install(['acquia_cms_video']);
+}
+
+/**
+ * Install Node Title Help Text module.
+ */
+function bbb_platform_update_8008() {
+  \Drupal::service('module_installer')->install(['node_title_help_text']);
+}
+
+/**
+ * Enable and configure SMTP module.
+ */
+function bbb_platform_update_8009() {
+  // Install SMTP module.
+  \Drupal::service('module_installer')->install(['smtp']);
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_platform', 'bbb_platform_update_8009');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Install BBB Site studio theme.
+ */
+function bbb_platform_update_8010() {
+  // Install the theme.
+  \Drupal::service('theme_installer')->install(['bbb_site_studio']);
+
+  // Enable and set default.
+  \Drupal::service('config.factory')->getEditable('system.theme')->set('default', 'bbb_site_studio')->save();
+}
+
+/**
+ * Install all content types with the fields from Drupal Spec Tool.
+ */
+function bbb_platform_update_8011() {
+
+  // Delete layout_canvas field storage config to fix conflict error with
+  // bbb_article config install.
+  FieldStorageConfig::loadByName('node', 'field_layout_canvas')->delete();
+
+  // Installs BBB article module, imports Article content type.
+  \Drupal::service('module_installer')->install(['bbb_article']);
+  // Installs BBB Success Story module, imports Success Story content type.
+  \Drupal::service('module_installer')->install(['bbb_case_study']);
+  // Installs BBB Landing Page module, imports Landing Page content type.
+  \Drupal::service('module_installer')->install(['bbb_landing_page']);
+  // Installs BBB Generic Page module, imports Generic Page content type.
+  \Drupal::service('module_installer')->install(['bbb_generic_page']);
+  // Installs BBB News module, imports News content type.
+  \Drupal::service('module_installer')->install(['bbb_news']);
+  // Installs BBB Partner module, imports Partner content type.
+  \Drupal::service('module_installer')->install(['bbb_partner']);
+  // Installs BBB Team member module, imports Team member content type.
+  \Drupal::service('module_installer')->install(['bbb_team_member']);
+  // Installs BBB Event module, imports Event content type.
+  \Drupal::service('module_installer')->install(['bbb_event']);
+  // Installs BBB Product module, imports Product content type.
+  \Drupal::service('module_installer')->install(['bbb_product']);
+  // Installs BBB Role Permissions module and its configurations.
+  \Drupal::service('module_installer')->install(['bbb_roles_permissions']);
+}
+
+/**
+ * Install BBB Path and Breadcrumbs module.
+ */
+function bbb_platform_update_8012() {
+  \Drupal::service('module_installer')->install(['bbb_breadcrumb']);
+}
+
+/**
+ * Remove path alias pattern settings for all content types created using DEG.
+ */
+function bbb_platform_update_8013() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_platform', 'bbb_platform_update_8013');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Added table plugin to site studio toolbar.
+ */
+function bbb_platform_update_8014() {
+  // Manually import editor config from install folder.
+  $config_path = \Drupal::service('extension.list.profile')->getPath('bbb_platform') . '/config/install';
+
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+
+  $config_storage->write('editor.editor.cohesion', $source->read('editor.editor.cohesion'));
+}
+
+/**
+ * Install SVG Image Module and ACMS Modules.
+ */
+function bbb_platform_update_8015() {
+  // Install SVG Module and ACMS Media Modules.
+  $installer = \Drupal::service('module_installer');
+  $installer->install([
+    'svg_image',
+    'acquia_cms_image',
+    'acquia_cms_person',
+  ]);
+}
+
+/**
+ * Update media image field.
+ */
+function bbb_platform_update_8016() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_platform', 'bbb_platform_update_8016');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Install BBB Media Video and ACMS Document,Video module.
+ */
+function bbb_platform_update_8017() {
+  // Install BBB Media Video and ACMS Document,Video module.
+  $installer = \Drupal::service('module_installer');
+  $installer->install([
+    'acquia_cms_video',
+    'acquia_cms_document',
+    'bbb_media_video',
+  ]);
+}
+
+/**
+ * Install BBB Site studio core module.
+ */
+function bbb_platform_update_8018() {
+  // Install Site studio core module.
+  $installer = \Drupal::service('module_installer');
+  $installer->install([
+    'bbb_sitestudio_core',
+  ]);
+}
+
+/**
+ * Install BBB Media Document module.
+ */
+function bbb_platform_update_8019() {
+  \Drupal::service('module_installer')->install(['bbb_media_document']);
+}
+
+/**
+ * Install BBB Media Image module.
+ */
+function bbb_platform_update_8020() {
+  // Install BBB Media Image module.
+  $installer = \Drupal::service('module_installer');
+  $installer->install(['bbb_media_image']);
+}
+
+/**
+ * Install BBB Site studio core module.
+ */
+function bbb_platform_update_8021() {
+  // Install BBB Site studio core module.
+  \Drupal::service('module_installer')->install(['bbb_sitestudio_core']);
+}
+
+/**
+ * Install Better exposed filter module.
+ */
+function bbb_platform_update_8022() {
+  // Install Better exposed filter module.
+  \Drupal::service('module_installer')->install(['better_exposed_filters']);
+}
+
+/**
+ * Install chosen and metatag module configuration.
+ */
+function bbb_platform_update_8023() {
+
+  // Install chosen module.
+  \Drupal::service('module_installer')->install(['chosen']);
+  // Uninstall bbb_partner module.
+  \Drupal::service('module_installer')->uninstall(['bbb_partner']);
+  // Uninstall bbb_generic_page module.
+  \Drupal::service('module_installer')->uninstall(['bbb_generic_page']);
+
+  // Manually import metatag module configuration.
+  $config_path = \Drupal::service('extension.list.profile')->getPath('bbb_platform') . '/config/install';
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+  $config_storage->write('metatag.settings', $source->read('metatag.settings'));
+  $config_storage->write('metatag.metatag_defaults.node', $source->read('metatag.metatag_defaults.node'));
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_platform', 'bbb_platform_update_8022');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Removed bbb_platform_update_8024.
+ *
+ * Removed bbb_platform_update_8025.
+ *
+ * Install Fakeobjects,Footnotes module.
+ */
+function bbb_platform_update_8026() {
+  // Install Fakeobjects,Footnotes module.
+  $installer = \Drupal::service('module_installer');
+  $installer->install([
+    'fakeobjects',
+    'footnotes',
+  ]);
+}
+
+/**
+ * Update Text formats to enable Footnotes filter.
+ */
+function bbb_platform_update_8027() {
+  // Manually import config from install folder.
+  $module_path = \Drupal::service('extension.list.module')->getPath('bbb_platform');
+  $config_install_path = $module_path . '/config/install';
+  // Config Storage Service.
+  $config_storage = \Drupal::service('config.storage');
+  $install_source = new FileStorage($config_install_path);
+  $config_storage->write('filter.format.cohesion', $install_source->read('filter.format.cohesion'));
+  $config_storage->write('filter.format.filtered_html', $install_source->read('filter.format.filtered_html'));
+  $config_storage->write('filter.format.full_html', $install_source->read('filter.format.full_html'));
+}
+
+/**
+ * Install bbb_person module.
+ */
+function bbb_platform_update_8028() {
+  // Install bbb_person module.
+  $installer = \Drupal::service('module_installer');
+  $installer->install([
+    'bbb_person',
+  ]);
+}
+
+/**
+ * Update Text formats to enable Footnotes icon to active toolbar section.
+ */
+function bbb_platform_update_8029() {
+  // Manually import config from install folder.
+  $module_path = \Drupal::service('extension.list.module')->getPath('bbb_platform');
+  $config_install_path = $module_path . '/config/install';
+  // Config Storage Service.
+  $config_storage = \Drupal::service('config.storage');
+  $install_source = new FileStorage($config_install_path);
+  $config_storage->write('filter.format.cohesion', $install_source->read('filter.format.cohesion'));
+  $config_storage->write('filter.format.filtered_html', $install_source->read('filter.format.filtered_html'));
+  $config_storage->write('filter.format.full_html', $install_source->read('filter.format.full_html'));
+  $config_storage->write('editor.editor.cohesion', $install_source->read('editor.editor.cohesion'));
+  $config_storage->write('editor.editor.filtered_html', $install_source->read('editor.editor.filtered_html'));
+  $config_storage->write('editor.editor.full_html', $install_source->read('editor.editor.full_html'));
+}
+
+/**
+ * Install bbb_page module.
+ */
+function bbb_platform_update_8030() {
+  // Install bbb_page module.
+  $installer = \Drupal::service('module_installer');
+  $installer->install([
+    'bbb_page',
+  ]);
+}
+
+/**
+ * Reload filter configurations.
+ */
+function bbb_platform_update_8031() {
+  // Manually import config from install folder.
+  $module_path = \Drupal::service('extension.list.module')->getPath('bbb_platform');
+  $config_install_path = $module_path . '/config/install';
+  // Config Storage Service.
+  $config_storage = \Drupal::service('config.storage');
+  $install_source = new FileStorage($config_install_path);
+  $config_storage->write('filter.format.cohesion', $install_source->read('filter.format.cohesion'));
+  $config_storage->write('filter.format.full_html', $install_source->read('filter.format.full_html'));
+}
+
+/**
+ * Include Topic field in the chosen configuration.
+ */
+function bbb_platform_update_8032() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_platform', 'bbb_platform_update_8032');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Text Editors configurations.
+ */
+function bbb_platform_update_8033() {
+  _bbb_article_rewrite_configuration('editor.editor.cohesion', 'bbb_platform', 'rewrite');
+  _bbb_article_rewrite_configuration('editor.editor.full_html', 'bbb_platform', 'rewrite');
+  _bbb_article_rewrite_configuration('editor.editor.filtered_html', 'bbb_platform', 'rewrite');
+}
+
+/**
+ * Enable bbb_core module.
+ */
+function bbb_platform_update_8034() {
+  // Install bbb_page module.
+  $installer = \Drupal::service('module_installer');
+  $installer->install([
+    'bbb_core',
+  ]);
+}
+
+/**
+ * Add new heading fields to related tags and casestudies components.
+ */
+function bbb_platform_update_8035() {
+  $componentHelper = \Drupal::service('bbb_platform.component_upgrader');
+  // Related tags component update.
+  $componentHelper->addNewFieldToInstances('cpt_related_tags', 'd8f8ce1e-f4bb-4b49-b4d6-ffcdba15b30f', 'h2');
+
+  // Related success stories component update.
+  $componentHelper->addNewFieldToInstances('cpt_related_case_studies', '6615bbec-37fd-4f6b-8b92-480b7ed30750', 'h3');
+
+  // Key takeaways component update.
+  $componentHelper->addNewFieldToInstances('cpt_key_takeways', 'f9c53917-4099-4ab9-8708-97cd3e2641f1', 'h3');
+
+  // Add new heading fields to related articles component.
+  $componentHelper->addNewFieldToInstances('cpt_related_articles', '9ea8aa0e-c590-4749-8780-b87e74f2cc25', 'h3');
+}
+
+/**
+ * Enable site_studio_webform, webform_ui and Sprint 5 module.
+ */
+function bbb_platform_update_8036() {
+  // Install modules.
+  $installer = \Drupal::service('module_installer');
+  $installer->install([
+    'site_studio_webform',
+    'webform_ui',
+    'metatag_views',
+    'theme_tokens',
+    'bbb_partner',
+    'ckeditor_indentblock',
+    'inline_form_errors',
+    'recaptcha_v3',
+    'bbb_search',
+  ]);
+}
+
+/**
+ * Reload filter configurations.
+ */
+function bbb_platform_update_8037() {
+  _bbb_article_rewrite_configuration('editor.editor.cohesion', 'bbb_platform', 'rewrite');
+  _bbb_article_rewrite_configuration('editor.editor.full_html', 'bbb_platform', 'rewrite');
+  _bbb_article_rewrite_configuration('editor.editor.filtered_html', 'bbb_platform', 'rewrite');
+  _bbb_article_rewrite_configuration('filter.format.full_html', 'bbb_platform', 'install');
+  _bbb_article_rewrite_configuration('filter.format.filtered_html', 'bbb_platform', 'install');
+}
+
+/**
+ * Implements hook_update_dependencies().
+ */
+function bbb_platform_update_dependencies() {
+  // Adding dependency to ensure the required configs are imported.
+  // before bbb_search module is enabled.
+  $dependencies['bbb_platform'][8036] = [
+    'bbb_product' => 8008,
+  ];
+  $dependencies['bbb_platform'][8060] = [
+    'bbb_taxonomy' => 8002,
+  ];
+  return $dependencies;
+}
+
+/**
+ * Updated default media view mode.
+ */
+function bbb_platform_update_8038() {
+  _bbb_article_rewrite_configuration('filter.format.cohesion', 'bbb_platform', 'install');
+}
+
+/**
+ * Update Previously Read Articles Component to apply link changes.
+ */
+function bbb_platform_update_8039() {
+  $componentHelper = \Drupal::service('bbb_platform.component_upgrader');
+  // Previously Read Articles Component update.
+  $componentHelper->addNewFieldToInstances('cpt_previously_read_articles_com', 'd9fcf584-e6cf-4479-8914-d08d4bbf1bdf', '_self');
+
+}
+
+/**
+ * Update default menu_link_content attributes.
+ */
+function bbb_platform_update_8040() {
+  _bbb_article_rewrite_configuration('core.base_field_override.menu_link_content.menu_link_content.link', 'bbb_platform', 'install');
+}
+
+/**
+ * Enable bbb_research_publication module.
+ */
+function bbb_platform_update_8041() {
+  // Install bbb_research_publication module.
+  $installer = \Drupal::service('module_installer');
+  $installer->install([
+    'bbb_research_publication',
+  ]);
+}
+
+/**
+ * Enable bbb_media_hero_video module and config.
+ */
+function bbb_platform_update_8042() {
+
+  // Install bbb_media_hero_video module.
+  \Drupal::service('module_installer')->install([
+    'bbb_media_hero_video',
+  ]);
+}
+
+/**
+ * Enable bbb_regional_support module and config.
+ */
+function bbb_platform_update_8043() {
+
+  // Install bbb_regional_support module.
+  \Drupal::service('module_installer')->install([
+    'bbb_regional_support',
+  ]);
+}
+
+/**
+ * Removed outdent and indent plugin from active toolbar.
+ */
+function bbb_platform_update_8044() {
+  // Manually import editor config from install folder.
+  $config_path = \Drupal::service('extension.list.profile')->getPath('bbb_platform') . '/config/install';
+
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+
+  $config_storage->write('editor.editor.cohesion', $source->read('editor.editor.cohesion'));
+  $config_storage->write('editor.editor.filtered_html', $source->read('editor.editor.filtered_html'));
+  $config_storage->write('editor.editor.full_html', $source->read('editor.editor.full_html'));
+}
+
+/**
+ * Enable autologout module and config.
+ */
+function bbb_platform_update_8045() {
+
+  // Install autologout module.
+  \Drupal::service('module_installer')->install([
+    'autologout',
+  ]);
+  _bbb_article_rewrite_configuration('autologout.settings', 'bbb_platform', 'install');
+}
+
+/**
+ * Update autologout config.
+ */
+function bbb_platform_update_8046() {
+  _bbb_article_rewrite_configuration('autologout.settings', 'bbb_platform', 'install');
+  _bbb_article_rewrite_configuration('autologout.role.administrator', 'bbb_platform', 'install');
+}
+
+/**
+ * Add new heading fields to on this page and set spacing bottom value.
+ */
+function bbb_platform_update_8047() {
+  $componentHelper = \Drupal::service('bbb_platform.component_upgrader');
+
+  // On this page component update.
+  $componentHelper->addNewFieldToInstances('cpt_on_this_page', 'bfdb2fcf-d6a7-4ca5-8d94-d5723164fb4c', 'h2');
+  $componentHelper->addNewFieldToInstances('cpt_on_this_page', '3eb7c389-b3c0-453c-a776-9e360fa5e732', 'coh-style-spacing-6-bottom');
+}
+
+/**
+ * Install faq_category and faq taxonomy vocabulary.
+ */
+function bbb_platform_update_8048() {
+
+  // Install bbb_faq module.
+  \Drupal::service('module_installer')->install([
+    'bbb_faq',
+  ]);
+}
+
+/**
+ * Install selective_better_exposed_filters module.
+ */
+function bbb_platform_update_8049() {
+  // Install selective_better_exposed_filters module.
+  \Drupal::service('module_installer')->install([
+    'selective_better_exposed_filters',
+  ]);
+}
+
+/**
+ * Install robotstxt module.
+ */
+function bbb_platform_update_8050() {
+  // Install robotstxt module.
+  \Drupal::service('module_installer')->install([
+    'robotstxt',
+  ]);
+}
+
+/**
+ * Install bbb_menu_content module.
+ */
+function bbb_platform_update_8051() {
+  // Install menu_item_extras and bbb_menu module.
+  \Drupal::service('module_installer')->install([
+    'bbb_menu_content',
+  ]);
+}
+
+/**
+ * Set default value for columns components.
+ */
+function bbb_platform_update_8052() {
+  $componentHelper = \Drupal::service('bbb_platform.component_upgrader');
+
+  // Set default value for columns components.
+  $componentHelper->addNewFieldToInstances('cpt_1_column_layout', '1b71f08e-2e21-471e-b76b-3ee6c7aa2b49', 'div');
+  $componentHelper->addNewFieldToInstances('cpt_2_column_layout', '812ed0a9-38c4-4fe1-a9b4-710af8fa691a', 'div');
+  $componentHelper->addNewFieldToInstances('cpt_3_column_layout', 'e0014880-c32c-4709-a0e1-030084a3657d', 'div');
+  $componentHelper->addNewFieldToInstances('cpt_4_column_layout', '3b9d8ca2-d592-46c2-ba9f-5ce5705bfdea', 'div');
+  // Blockquote component update.
+  $componentHelper->addNewFieldToInstances('cpt_blockquote', '67063d4b-4540-4d0f-850a-a716e22c5332', 'coh-style-spacing-6-bottom');
+}
+
+/**
+ * Update site studio text format config.
+ */
+function bbb_platform_update_8053() {
+  _bbb_article_rewrite_configuration('filter.format.cohesion', 'bbb_platform', 'install');
+}
+
+/**
+ * Set default spacing value for text components.
+ */
+function bbb_platform_update_8054() {
+  $componentHelper = \Drupal::service('bbb_platform.component_upgrader');
+
+  // Set default value for text components.
+  $componentHelper->addNewFieldToInstances('cpt_text', 'a632cb95-af7a-4c19-8ecf-ca55ff17902d', 'coh-style-spacing-6-bottom');
+}
+
+/**
+ * Update site studio text format config.
+ */
+function bbb_platform_update_8055() {
+  _bbb_article_rewrite_configuration('filter.format.filtered_html', 'bbb_platform', 'install');
+  _bbb_article_rewrite_configuration('filter.format.full_html', 'bbb_platform', 'install');
+}
+
+/**
+ * Set equal heights to older contents and set default spacing bottom.
+ */
+function bbb_platform_update_8056() {
+  $componentHelper = \Drupal::service('bbb_platform.component_upgrader');
+  // Linked Feature Card component update.
+  $componentHelper->addNewFieldToInstances('cpt_linked_feature_card', '422fe682-01fd-4578-acb2-a4e06797de13', 'equal-height-on');
+  $componentHelper->addNewFieldToInstances('cpt_linked_feature_card', '687d65b0-d82c-482e-85de-7b18295c8bfd', 'coh-style-spacing-6-bottom');
+}
+
+/**
+ * Make site studio default editor and update existing.
+ */
+function bbb_platform_update_8057() {
+  // Make site studio default editor.
+  _bbb_article_rewrite_configuration('filter.format.cohesion', 'bbb_platform', 'install');
+
+  // To be executed only on BBB site.
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('bbb')) {
+    // Update the text format for existing partner content.
+    $partners = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+      ->loadByProperties(['vid' => 'partner']);
+    foreach ($partners as $partner) {
+      $partner->description->format = 'cohesion';
+      $partner->save();
+    }
+  }
+}
+
+/**
+ * Install form_options_attributes vocabulary.
+ */
+function bbb_platform_update_8058() {
+  // Install form_options_attributes module.
+  \Drupal::service('module_installer')->install([
+    'form_options_attributes',
+  ]);
+}
+
+/**
+ * Install memcache module.
+ */
+function bbb_platform_update_8059() {
+  // Install memcache module.
+  \Drupal::service('module_installer')->install([
+    'memcache',
+  ]);
+}
+
+/**
+ * Install BBB Finance type module.
+ */
+function bbb_platform_update_8060() {
+  \Drupal::service('module_installer')->install(['bbb_finance_type']);
+}
+
+/**
+ * Enable multiple select module.
+ */
+function bbb_platform_update_8061() {
+  \Drupal::service('module_installer')->install(['multiple_select']);
+  _bbb_article_rewrite_configuration('multiple_select.settings', 'bbb_taxonomy', 'optional');
+}
+
+/**
+ * Enable google tag manager module.
+ */
+function bbb_platform_update_8062() {
+  \Drupal::service('module_installer')->install(['google_tag']);
+  _bbb_article_rewrite_configuration('google_tag.container.bbb_gtm', 'bbb_platform', 'install');
+  _bbb_article_rewrite_configuration('google_tag.settings', 'bbb_platform', 'rewrite');
+
+  // Update env and env_token configs on test and prod environments.
+  $env = getenv('AH_SITE_ENVIRONMENT');
+  $config = \Drupal::configFactory()->getEditable('google_tag.container.bbb_gtm');
+
+  if ($env == '01test') {
+    $config->set('environment_id', 'env-3');
+    $config->set('environment_token', 'Ru0DAoKBokWl5VvTqp3k3A');
+    $config->save(TRUE);
+  }
+  elseif ($env == '01live') {
+    $config->set('environment_id', 'env-4');
+    $config->set('environment_token', 'ad3nUYKhD8ZBvtBjjo37Iw');
+    $config->save(TRUE);
+  }
+}
+
+/**
+ * Update Seckit settings and Enable remove_http_headers module.
+ */
+function bbb_platform_update_8063() {
+  // BBB-951 Update Seckit settings.
+  _bbb_article_rewrite_configuration('seckit.settings', 'bbb_platform', 'install');
+
+  // Enable Remove HTTP Headers module.
+  \Drupal::service('module_installer')->install(['remove_http_headers']);
+}
+
+/**
+ * BBB-949: Enable and Configure Password Policy.
+ *
+ * BBB-948: Enable Antivirus Inspection Against Uploaded Media and Mysql module.
+ */
+function bbb_platform_update_8064() {
+  // BBB-949 Enable Password Policy Related modules and Mysql module.
+  \Drupal::service('module_installer')->install([
+    'password_policy_blacklist',
+    'password_policy_characters',
+    'password_policy_consecutive',
+    'password_policy_history',
+    'mysql',
+  ]);
+
+  // BBB-949 Update Password Policy configurations.
+  _bbb_article_rewrite_configuration('password_policy.password_policy.acquia_cms', 'bbb_platform', 'rewrite');
+
+  // BBB-948 Enable clamav module only on ACSF.
+  if (EnvironmentDetector::isAcsfEnv()) {
+    // Enable clamav module.
+    \Drupal::service('module_installer')->install(['clamav']);
+    // Configure clamav module.
+    _bbb_article_rewrite_configuration('clamav.settings', 'bbb_platform', 'optional');
+  }
+}
+
+/**
+ * Previously Read Articles Component update bottom spacing.
+ */
+function bbb_platform_update_8065() {
+  $componentHelper = \Drupal::service('bbb_platform.component_upgrader');
+  // Previously Read Articles Component update.
+  $componentHelper->addNewFieldToInstances('cpt_previously_read_articles_com', 'cbecc6e0-468c-4c22-a482-20d257cb2d44', 'coh-style-spacing-6-bottom');
+}
+
+/**
+ * Installs module containing Document and link custom element.
+ */
+function bbb_platform_update_8066() {
+  // Enable BBB Download Report CTA module.
+  \Drupal::service('module_installer')->install(['bbb_download_report_cta']);
+}

@@ -1,0 +1,17 @@
+core.entity_form_display.node.finance_type.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_metatags:
+          region: content
+          settings:
+            sidebar: true
+            use_details: true
+          third_party_settings: {  }
+          type: metatag_firehose
+          weight: 18
+    change:
+      content:
+        status:
+          weight: 19

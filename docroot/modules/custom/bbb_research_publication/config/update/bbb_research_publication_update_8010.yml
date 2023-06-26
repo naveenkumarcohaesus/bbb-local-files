@@ -1,0 +1,36 @@
+views.view.research_and_publications:
+  expected_config:
+    display:
+      default:
+        display_options:
+          empty:
+            area:
+              content:
+                format: filtered_html
+          fields:
+            field_image:
+              hide_empty: false
+            nothing:
+              alter:
+                text: '<h3 class="coh-style-headline-3">{{ title }}</h3><p class="coh-style-label-medium">{{ created }}</p> <p class="coh-style-body-small">{{ field_teaser_text }}</p> <ul class="button-list-wrapper"><li class="button-list-cta-link">{{ view_node }}</li><li class="button-list-document-link"> {{ field_media_document }}</li></ul>'
+              hide_empty: false
+            view_node:
+              output_url_as_text: false
+  update_actions:
+    change:
+      display:
+        default:
+          display_options:
+            empty:
+              area:
+                content:
+                  format: cohesion
+            fields:
+              field_image:
+                hide_empty: true
+              nothing:
+                alter:
+                  text: '<h3 class="coh-style-headline-3">{{ title }}</h3><p class="coh-style-label-medium">{{ created }}</p> <p class="coh-style-body-small">{{ field_teaser_text }}</p> <ul class="button-list-wrapper"><li class="button-list-cta-link"><a href="{{ view_node }}">{{ ''Learn more'' |t }}<span class="visually-hidden">{{ title }}</span></a></li><li class="button-list-document-link"> {{ field_media_document }}</li></ul>'
+                hide_empty: true
+              view_node:
+                output_url_as_text: true

@@ -1,0 +1,20 @@
+uuid: ffeda27c-c7c3-43f0-9233-8986fa47c421
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - cohesion_elements
+id: block_content.field_layout_canvas
+field_name: field_layout_canvas
+entity_type: block_content
+type: cohesion_entity_reference_revisions
+settings:
+  target_type: cohesion_layout
+module: cohesion_elements
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

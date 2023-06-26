@@ -1,0 +1,22 @@
+uuid: c0b6fabe-2e28-46cf-9d22-b9e63b8f89f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - taxonomy
+id: taxonomy_term.field_programme_date
+field_name: field_programme_date
+entity_type: taxonomy_term
+type: daterange
+settings:
+  datetime_type: date
+  optional_start_date: false
+  optional_end_date: true
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

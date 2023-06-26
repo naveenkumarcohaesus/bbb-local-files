@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Create Site Studio Custom Element twig template.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function bbb_on_this_page_theme($existing, $type, $theme, $path) {
+  return [
+    'on_this_page' => [
+      'template' => 'on-this-page',
+      'variables' => [
+        'headings' => [],
+        'settings' => [],
+        'flag' => NULL,
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

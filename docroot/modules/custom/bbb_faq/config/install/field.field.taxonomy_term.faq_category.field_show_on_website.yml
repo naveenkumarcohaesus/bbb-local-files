@@ -1,0 +1,29 @@
+uuid: ea93fc7b-1528-4221-8a4b-e41f3a3d31c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_show_on_website
+    - taxonomy.vocabulary.business_structure
+    - taxonomy.vocabulary.faq_category
+id: taxonomy_term.faq_category.field_show_on_website
+field_name: field_show_on_website
+entity_type: taxonomy_term
+bundle: faq_category
+label: 'Show on website'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      business_structure: business_structure
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

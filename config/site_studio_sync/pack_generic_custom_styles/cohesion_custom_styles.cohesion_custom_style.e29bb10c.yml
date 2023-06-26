@@ -1,0 +1,172 @@
+uuid: 9fe6508d-7c44-4027-86f3-4c24d3b6a82c
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.aurora_foundations
+label: 'Body Large'
+id: e29bb10c
+json_values: |
+  {
+      "preview": {
+          "text": "<div class=\"coh-preview\">Default content for 'Generic'.<\/div>\n",
+          "textFormat": "cohesion"
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "styles": {
+          "settings": {
+              "element": "div",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "styles": {
+              "xs": {
+                  "font-size": {
+                      "value": "[style-guide:aurora_foundations:body-large-small]"
+                  },
+                  "line-height": {
+                      "value": "[style-guide:aurora_foundations:body-large-small-line-height]"
+                  },
+                  "letter-spacing": {
+                      "value": "[style-guide:aurora_foundations:body-large-small-letter-spacing]"
+                  },
+                  "font-family": {
+                      "value": "[style-guide:aurora_foundations:body-large]"
+                  }
+              },
+              "sm": {
+                  "font-size": {
+                      "value": "[style-guide:aurora_foundations:body-large-medium]"
+                  },
+                  "line-height": {
+                      "value": "[style-guide:aurora_foundations:body-large-medium-line-height]"
+                  },
+                  "letter-spacing": {
+                      "value": "[style-guide:aurora_foundations:body-large-medium-letter-spacing]"
+                  }
+              },
+              "xl": {
+                  "font-size": {
+                      "value": "[style-guide:aurora_foundations:body-large-large]"
+                  },
+                  "line-height": {
+                      "value": "[style-guide:aurora_foundations:body-large-large-line-height]"
+                  },
+                  "letter-spacing": {
+                      "value": "[style-guide:aurora_foundations:body-large-large-letter-spacing]"
+                  }
+              }
+          }
+      },
+      "previewModel": {
+          "styles": {
+              "styles": {
+                  "xs": {
+                      "font-size": {
+                          "value": ""
+                      }
+                  }
+              }
+          }
+      },
+      "variableFields": [
+          "styles.styles.xs.font-family.value",
+          "styles.styles.xs.font-size.value",
+          "styles.styles.xs.line-height.value",
+          "styles.styles.xs.letter-spacing.value",
+          "styles.styles.sm.font-size.value",
+          "styles.styles.sm.line-height.value",
+          "styles.styles.sm.letter-spacing.value",
+          "styles.styles.xl.font-size.value",
+          "styles.styles.xl.line-height.value",
+          "styles.styles.xl.letter-spacing.value"
+      ]
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Heading",
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "font",
+                  "children": [
+                      {
+                          "formKey": "font-sizing-and-alignment",
+                          "breakpoints": [
+                              {
+                                  "name": "xs"
+                              },
+                              {
+                                  "name": "sm"
+                              },
+                              {
+                                  "name": "xl"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "font-size",
+                                  "active": true
+                              },
+                              {
+                                  "name": "line-height",
+                                  "active": true
+                              },
+                              {
+                                  "name": "text-align",
+                                  "active": false
+                              },
+                              {
+                                  "name": "letter-spacing",
+                                  "active": true
+                              },
+                              {
+                                  "name": "word-spacing",
+                                  "active": false
+                              },
+                              {
+                                  "name": "text-indent",
+                                  "active": false
+                              }
+                          ]
+                      },
+                      {
+                          "formKey": "font-and-color",
+                          "breakpoints": [
+                              {
+                                  "name": "xs"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "font-family",
+                                  "active": true
+                              },
+                              {
+                                  "name": "font-weight",
+                                  "active": false
+                              },
+                              {
+                                  "name": "color",
+                                  "active": false
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-body-large
+custom_style_type: generic
+available_in_wysiwyg: true
+parent: null
+weight: 30

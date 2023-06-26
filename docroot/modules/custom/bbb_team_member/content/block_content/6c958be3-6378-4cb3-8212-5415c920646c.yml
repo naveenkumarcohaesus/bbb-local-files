@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 6c958be3-6378-4cb3-8212-5415c920646c
+  bundle: custom_layout_canvas_block
+  default_langcode: en
+  depends:
+    6a67b9fe-7cb2-482a-a938-e078a6a59cf4: cohesion_layout
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Hero Team Member'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_layout_canvas:
+    -
+      entity: 6a67b9fe-7cb2-482a-a938-e078a6a59cf4

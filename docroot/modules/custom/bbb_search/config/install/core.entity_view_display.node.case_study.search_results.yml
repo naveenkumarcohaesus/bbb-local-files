@@ -1,0 +1,59 @@
+uuid: 3f1c3c7e-d72c-4ec0-8dbc-18893118b978
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_results
+    - field.field.node.case_study.field_audience
+    - field.field.node.case_study.field_business_structure
+    - field.field.node.case_study.field_content_owner
+    - field.field.node.case_study.field_content_typology
+    - field.field.node.case_study.field_finance_type
+    - field.field.node.case_study.field_image
+    - field.field.node.case_study.field_layout_canvas
+    - field.field.node.case_study.field_metatags
+    - field.field.node.case_study.field_partner
+    - field.field.node.case_study.field_programme
+    - field.field.node.case_study.field_quick_links
+    - field.field.node.case_study.field_region
+    - field.field.node.case_study.field_sector
+    - field.field.node.case_study.field_teaser_text
+    - node.type.case_study
+  module:
+    - user
+id: node.case_study.search_results
+targetEntityType: node
+bundle: case_study
+mode: search_results
+content:
+  field_content_typology:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_audience: true
+  field_bpc_background_image: true
+  field_business_structure: true
+  field_content_owner: true
+  field_finance_type: true
+  field_hero_background_pattern: true
+  field_image: true
+  field_layout_canvas: true
+  field_metatags: true
+  field_partner: true
+  field_programme: true
+  field_quick_links: true
+  field_region: true
+  field_sector: true
+  field_teaser_text: true
+  langcode: true
+  links: true

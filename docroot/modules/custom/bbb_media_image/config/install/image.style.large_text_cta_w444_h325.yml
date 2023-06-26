@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_text_cta_w444_h325
+label: 'Large Text CTA W444 H325'
+effects:
+  7da1afae-6abd-4c5d-bea2-e1738ee332ed:
+    uuid: 7da1afae-6abd-4c5d-bea2-e1738ee332ed
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 444
+      height: 325
+      crop_type: focal_point

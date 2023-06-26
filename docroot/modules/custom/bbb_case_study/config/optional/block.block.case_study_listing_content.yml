@@ -1,0 +1,38 @@
+uuid: 078f95dc-0a92-44ee-ac2c-81aa2c7976c3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:custom_layout_canvas_block:ee27d36d-bcaa-4eb6-b7a0-36c74bbd20fe'
+  module:
+    - block_content
+    - cohesion
+    - collapsiblock
+  theme:
+    - bbb_site_studio
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: case_study_listing_content
+theme: bbb_site_studio
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:ee27d36d-bcaa-4eb6-b7a0-36c74bbd20fe'
+settings:
+  id: 'block_content:ee27d36d-bcaa-4eb6-b7a0-36c74bbd20fe'
+  label: 'Success Story list page (Top section)'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0
+  request_path:
+    id: request_path
+    negate: false
+    pages: /our-case-studies

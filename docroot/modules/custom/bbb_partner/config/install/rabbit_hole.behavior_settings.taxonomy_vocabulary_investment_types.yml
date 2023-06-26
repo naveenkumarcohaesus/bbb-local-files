@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.investment_types
+id: taxonomy_vocabulary_investment_types
+entity_type_id: taxonomy_vocabulary
+entity_id: investment_types
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

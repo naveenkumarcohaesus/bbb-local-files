@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 9add60a6-e181-4936-85df-2ff648ee058a
+  bundle: image
+  default_langcode: en
+  depends:
+    97c2f9ba-caf5-453b-b4ba-5f2d9bb40ba0: taxonomy_term
+    bce4f9b4-9f7c-43da-b293-bd9901bff1dc: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'BBB White.png'
+  created:
+    -
+      value: 1666006568
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_image_type:
+    -
+      entity: 97c2f9ba-caf5-453b-b4ba-5f2d9bb40ba0
+  image:
+    -
+      entity: bce4f9b4-9f7c-43da-b293-bd9901bff1dc
+      alt: 'BBB White Logo'
+      title: ''
+      width: 129
+      height: 48

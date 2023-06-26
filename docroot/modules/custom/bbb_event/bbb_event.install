@@ -1,0 +1,186 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Config\FileStorage;
+use Drupal\field\Entity\FieldConfig;
+
+/**
+ * Add validation for required fields.
+ */
+function bbb_event_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_event', 'bbb_event_update_8001');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update help text for event node title.
+ */
+function bbb_event_update_8002() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_event', 'bbb_event_update_8002');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Remove body field and update content owner field to user reference.
+ */
+function bbb_event_update_8003() {
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_event') . '/config/install';
+  $source = new FileStorage($config_path);
+  // Manually import editor config from install folder.
+  $config_storage = \Drupal::service('config.storage');
+  $config_storage->write('field.field.node.event.field_content_owner', $source->read('field.field.node.event.field_content_owner'));
+  // Meta tag for event.
+  $config_storage->write('field.field.node.event.field_metatags', $source->read('field.field.node.event.field_metatags'));
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_event', 'bbb_event_update_8003');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update teaser text field description.
+ */
+function bbb_event_update_8004() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_event', 'bbb_event_update_8004');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Updated view modes for Event.
+ */
+function bbb_event_update_8005() {
+  $configs = [
+    'core.entity_view_display.node.event.card_h2',
+    'core.entity_view_display.node.event.card_h4',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_event', 'install');
+  }
+}
+
+/**
+ * Update event content type.
+ */
+function bbb_event_update_8006() {
+  // Enable calendar_link module.
+  \Drupal::service('module_installer')->install(['calendar_link']);
+
+  // Remove Start date field, Event date field of daterange is added.
+  FieldConfig::loadByName('node', 'event', 'field_event_end')->delete();
+  // Remove end date field.
+  FieldConfig::loadByName('node', 'event', 'field_event_start')->delete();
+
+  // Field storage.
+  $configs = [
+    'field.storage.node.field_geofield',
+    'field.storage.node.field_virtual_event',
+    'field.storage.node.field_logo',
+    'field.storage.node.field_link',
+    'field.storage.node.field_event_date',
+    'field.storage.node.field_event_address',
+    'field.storage.node.field_postcode',
+    'field.storage.node.field_registration_link',
+    'field.storage.node.field_virtual_event',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_create_field_storage($config, 'bbb_event', 'install');
+  }
+
+  // Import Fields for events.
+  $configs = [
+    'node.event.field_geofield' => 'field.field.node.event.field_geofield',
+    'node.event.field_sector' => 'field.field.node.event.field_sector',
+    'node.event.field_logo' => 'field.field.node.event.field_logo',
+    'node.event.field_link' => 'field.field.node.event.field_link',
+    'node.event.field_finance_type' => 'field.field.node.event.field_finance_type',
+    'node.event.field_event_date' => 'field.field.node.event.field_event_date',
+    'node.event.field_event_address' => 'field.field.node.event.field_event_address',
+    'node.event.field_postcode' => 'field.field.node.event.field_postcode',
+    'node.event.field_registration_link' => 'field.field.node.event.field_registration_link',
+    'node.event.field_virtual_event' => 'field.field.node.event.field_virtual_event',
+  ];
+
+  foreach ($configs as $key => $config) {
+    _bbb_article_create_entity_field($key, $config, 'bbb_event', 'install');
+  }
+
+  // Update configs.
+  $configs = [
+    'core.base_field_override.node.event.title',
+    'field.field.node.event.field_event_place',
+    'core.entity_form_display.node.event.default',
+    'core.entity_view_display.node.event.default',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_event', 'install');
+  }
+
+}
+
+/**
+ * Updated view modes and view for upcoming events.
+ */
+function bbb_event_update_8007() {
+  // Update card view modes.
+  bbb_event_update_8005();
+  // Import events views.
+  _bbb_article_rewrite_configuration('views.view.events', 'bbb_event', 'install');
+  _bbb_article_rewrite_configuration('block.block.views_block__events_upcoming_events', 'bbb_event', 'install');
+  $block = Block::load('views_block__events_upcoming_events');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+}
+
+/**
+ * Add new field External event link.
+ */
+function bbb_event_update_8008() {
+  // Create external link field.
+  _bbb_article_create_field_storage('field.storage.node.field_external_event_link', 'bbb_event', 'install');
+  _bbb_article_create_entity_field('node.event.field_external_event_link', 'field.field.node.event.field_external_event_link', 'bbb_event', 'install');
+  // Update card entity form display.
+  _bbb_article_rewrite_configuration('core.entity_form_display.node.event.default', 'bbb_event', 'install');
+}
+
+/**
+ * Update the upcoming event markup title to h3.
+ */
+function bbb_event_update_8009() {
+  // Add card entity view display.
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.event.card', 'bbb_event', 'install');
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_event', 'bbb_event_update_8009');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

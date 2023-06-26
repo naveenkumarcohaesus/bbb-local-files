@@ -1,0 +1,29 @@
+uuid: 4059a26a-d76b-45a2-949b-f15ebbdacc2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_financial_variants
+    - taxonomy.vocabulary.financial_variant
+    - taxonomy.vocabulary.programme
+id: taxonomy_term.programme.field_financial_variants
+field_name: field_financial_variants
+entity_type: taxonomy_term
+bundle: programme
+label: 'Financial Variants'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      financial_variant: financial_variant
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

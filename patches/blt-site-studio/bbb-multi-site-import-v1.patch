@@ -1,0 +1,54 @@
+diff --git a/src/Blt/Plugin/Commands/CohesionCommands.php b/src/Blt/Plugin/Commands/CohesionCommands.php
+index 58c878a..f9bb891 100644
+--- a/src/Blt/Plugin/Commands/CohesionCommands.php
++++ b/src/Blt/Plugin/Commands/CohesionCommands.php
+@@ -138,6 +138,49 @@ class CohesionCommands extends BltTasks {
+         if (!$result->wasSuccessful()) {
+           throw new BltException("Failed to execute sitestudio:package:multi-import!");
+         }
++        // Find if site is bpc.
++        $bpc_site_enabled = $this->taskDrush()
++          ->stopOnFail()
++          ->drush("pml --field=Status --type=module --filter='name=bpc_core'")
++          ->run();
++        if (trim($bpc_site_enabled->getMessage()) === 'Enabled') {
++          // Import Multiple Site Studio packages.
++          $sitestudio_package_file = $this->getConfigValue('repo.root') . "/config/site_studio_sync_bpc/site_studio.packages.yml";
++          $specific_site_studio_import = $this->taskDrush()
++            ->stopOnFail()
++            ->drush("sitestudio:package:multi-import --path=$sitestudio_package_file")
++            ->run();
++          if (!$specific_site_studio_import->wasSuccessful()) {
++            throw new BltException("Failed to execute sitestudio:package:multi-import! for the $site_name");
++          }
++          if (!$result->wasSuccessful()) {
++            throw new BltException("Failed to take the site out of maintenance mode!");
++          }
++        }
++        // Find if site is bbb or sul.
++        $bbb_site_enabled = $this->taskDrush()
++          ->stopOnFail()
++          ->drush("pml --field=Status --type=module --filter='name=bbb'")
++          ->run();
++        $sul_site_enabled = $this->taskDrush()
++          ->stopOnFail()
++          ->drush("pml --field=Status --type=module --filter='name=sul_core'")
++          ->run();
++        if (trim($bbb_site_enabled->getMessage()) === 'Enabled' ||
++            trim($sul_site_enabled->getMessage()) === 'Enabled') {
++          // Import Multiple Site Studio packages.
++          $sitestudio_package_file = $this->getConfigValue('repo.root') . "/config/site_studio_sync_bbb/site_studio.packages.yml";
++          $specific_site_studio_import = $this->taskDrush()
++            ->stopOnFail()
++            ->drush("sitestudio:package:multi-import --path=$sitestudio_package_file")
++            ->run();
++          if (!$specific_site_studio_import->wasSuccessful()) {
++            throw new BltException("Failed to execute sitestudio:package:multi-import! for the $site_name");
++          }
++          if (!$result->wasSuccessful()) {
++            throw new BltException("Failed to take the site out of maintenance mode!");
++          }
++        }
+       }
+       else {
+         $this->say("Site Studio Package Import disabled via blt.yml, skipping.");

@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\block\Entity\Block;
+
+/**
+ * Place regional support block.
+ */
+function bbb_regional_support_update_8001() {
+  _bbb_article_rewrite_configuration('block.block.regionalsupportblock', 'bbb_regional_support', 'optional');
+  _bbb_article_rewrite_configuration('views.view.regional_support_map', 'bbb_regional_support', 'optional');
+
+  // Place the regional support in site studio hidden region.
+  $block = Block::load('regionalsupportblock');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+}

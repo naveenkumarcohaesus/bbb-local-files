@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+/**
+ * Create colour field for finance category.
+ */
+function bbb_finance_type_update_9001() {
+  // Create external link field.
+  _bbb_article_create_field_storage('field.storage.taxonomy_term.field_colour', 'bbb_finance_type', 'install');
+  _bbb_article_create_entity_field('taxonomy_term.finance_category.field_colour', 'field.field.taxonomy_term.finance_category.field_colour', 'bbb_finance_type', 'install');
+  _bbb_article_rewrite_configuration('core.entity_form_display.taxonomy_term.finance_category.default', 'bbb_finance_type', 'install');
+}
+
+/**
+ * Update default view mode.
+ */
+function bbb_finance_type_update_9002() {
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.finance_type.default', 'bbb_finance_type', 'install');
+}
+
+/**
+ * Add metatags field.
+ */
+function bbb_finance_type_update_9003() {
+  _bbb_article_rewrite_configuration('field.field.node.finance_type.field_metatags', 'bbb_finance_type', 'install');
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_finance_type', 'bbb_finance_type_update_9003');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

@@ -1,0 +1,6 @@
+services:
+  bbb_core.twig_extension:
+    arguments: ['@renderer']
+    class: Drupal\bbb_core\TwigExtension\BbbCoreTwigExtension
+    tags:
+      - { name: twig.extension }

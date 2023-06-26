@@ -1,0 +1,23 @@
+views.view.case_study_listing:
+  expected_config: {  }
+  update_actions:
+    add:
+      display:
+        our_case_studies:
+          display_options:
+            defaults:
+              empty: false
+            empty:
+              area:
+                admin_label: ''
+                content:
+                  format: filtered_html
+                  value: 'No results found'
+                empty: true
+                field: area
+                group_type: group
+                id: area
+                plugin_id: text
+                relationship: none
+                table: views
+                tokenize: false

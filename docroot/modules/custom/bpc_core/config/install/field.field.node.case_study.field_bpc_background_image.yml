@@ -1,0 +1,28 @@
+uuid: 9d4895a7-051f-4abe-89a3-1019929d3a96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bpc_background_image
+    - node.type.case_study
+id: node.case_study.field_bpc_background_image
+field_name: field_bpc_background_image
+entity_type: node
+bundle: case_study
+label: 'BPC Background Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,113 @@
+<?php
+
+/**
+ * @file
+ * Contains implementations for common, shared functionality.
+ */
+
+use Drupal\taxonomy\Entity\Term;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ResultRow;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function bbb_faq_views_pre_render(ViewExecutable $view) {
+  if ($view->id() == 'faq_question_list' && $view->current_display == 'block_1') {
+    $results = $view->result;
+
+    $firstTag = $view->args[1];
+    $headingTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+    $headingClasses = ['coh-style-headline-1', 'coh-style-headline-2'];
+    $currentIndex = array_search($firstTag, $headingTags);
+    // Set up the tag for the parent result.
+    $results[0]->tag = $firstTag;
+    $results[0]->class = $headingClasses[0];
+
+    if (isset($results) && count($results) == 1) {
+      foreach ($results as $result) {
+        // Extract the taxonomy term ID from the result.
+        $tid = $result->tid;
+
+        // Load the taxonomy term entity using the tid.
+        $term = Term::load($tid);
+        // Get the taxonomy term storage service.
+        $termStorage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+
+        $taxonomy_tree = $termStorage->loadTree($term->bundle(), $tid, NULL, TRUE);
+
+        foreach ($taxonomy_tree as $term_res) {
+
+          $term_result = new ResultRow();
+
+          // Set the required field values.
+          $term_result->_entity = $term_res;
+          $term_result->_entity->_loaded = TRUE;
+          $term_result->index = count($results);
+          $term_result->taxonomy_term_field_data_langcode = $term_res->language()->getId();
+          $term_result->tid = $term_res->tid;
+          $term_result->depth = $term_res->depth;
+          // The tag will depend on the depth.
+          $term_result->tag = $headingTags[$currentIndex + $term_res->depth + 1];
+          if ($term_res->depth === 0) {
+            $term_result->class = $headingClasses[1];
+          }
+
+          $results[] = $term_result;
+        }
+      }
+      $view->result = $results;
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function bbb_faq_theme($existing, $type, $theme, $path) {
+  return [
+    'bbb_faq_template' => [
+      'variables' => [
+        'elementSettings' => NULL,
+        'elementMarkup' => NULL,
+        'elementContext' => NULL,
+        'elementClass' => NULL,
+        'filteredData' => NULL,
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function bbb_faq_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() == 'faq' && $view->current_display == 'faq_categories') {
+    $site = _bbb_platform_get_current_site_name();
+    if ($site) {
+      $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(
+        [
+          'vid' => 'business_structure',
+          'name' => $site,
+        ]);
+      foreach ($terms as $term) {
+        $term_id = $term->id();
+      }
+    }
+    foreach ($query->where as &$condition_group) {
+      foreach ($condition_group['conditions'] as $key => &$condition) {
+        if ($condition['field'] == 'taxonomy_term__field_show_on_website.field_show_on_website_target_id') {
+          if (empty($term_id)) {
+            unset($condition_group['conditions'][$key]);
+          }
+          else {
+            $condition['operator'] = 'IN';
+            $condition['value'] = $term_id;
+          }
+        }
+      }
+    }
+  }
+}

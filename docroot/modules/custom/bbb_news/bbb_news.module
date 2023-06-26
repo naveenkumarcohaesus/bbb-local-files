@@ -1,0 +1,202 @@
+<?php
+
+/**
+ * @file
+ * Contains implementations for common, shared functionality.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function bbb_news_views_data_alter(array &$data) {
+
+  $data['node_field_data']['nodes_year'] = [
+    'group' => 'Custom View Filters',
+    'title' => t('Node year created date filter'),
+    'filter' => [
+      'title' => t('Year'),
+      'help' => t('Node year created date filter.'),
+      'field' => 'title',
+      'id' => 'year_date_filter',
+    ],
+  ];
+
+  $data['node_field_data']['nodes_month'] = [
+    'group' => 'Custom View Filters',
+    'title' => t('Node month created date filter'),
+    'filter' => [
+      'title' => t('Month'),
+      'help' => t('Node month created date filter.'),
+      'field' => 'title',
+      'id' => 'month_date_filter',
+    ],
+  ];
+
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function bbb_news_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() == 'news' && $view->current_display == 'news_list_block') {
+    foreach ($query->where as &$condition_group) {
+      foreach ($condition_group['conditions'] as &$condition) {
+
+        if ($condition['field'] == 'node_field_data.created >= ***CURRENT_TIME***-157766400') {
+          $year = date('Y') - 5;
+          $timestamp = strtotime($year . "-12-31");
+          $condition['field'] = 'node_field_data.created >= ' . $timestamp;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function bbb_news_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $view = $form_state->getStorage('view');
+  $view = $view['view'];
+  if ($view->id() == 'news' && $view->current_display == 'news_list_block') {
+    // Create the year and month arrays.
+    $years = [];
+    $months = [];
+    $regions = [];
+
+    $filters_selected = $view->getExposedInput();
+
+    // If Region filter is set.
+    if (isset($filters_selected['region'])) {
+      $news_nodes = \Drupal::entityTypeManager()->getStorage('node')
+        ->loadByProperties([
+          'type' => 'news',
+          'status' => 1,
+          'field_region' => $filters_selected['region'],
+        ]);
+    }
+    else {
+      $news_nodes = \Drupal::entityTypeManager()->getStorage('node')
+        ->loadByProperties([
+          'type' => 'news',
+          'status' => 1,
+        ]);
+    }
+
+    foreach ($news_nodes as $node) {
+      $date = $node->created->value;
+      $year = \Drupal::service('date.formatter')->format($date, 'custom', 'Y');
+      $month = \Drupal::service('date.formatter')->format($date, 'custom', 'F');
+      if (isset($filters_selected['year'])) {
+        if (in_array($year, $filters_selected['year'])) {
+          $regions[] = $node->field_region->target_id;
+          $months[] = $month;
+          $years[] = $year;
+        }
+      }
+      elseif (isset($filters_selected['month'])) {
+        $month_num = \Drupal::service('date.formatter')->format($date, 'custom', 'n');
+        if (in_array($month_num, $filters_selected['month'])) {
+          $regions[] = $node->field_region->target_id;
+          $years[] = $year;
+          $months[] = $month;
+        }
+      }
+      else {
+        $years[] = $year;
+        $months[] = $month;
+        $regions[] = $node->field_region->target_id;
+      }
+    }
+    $years = array_unique($years);
+    $months = array_unique($months);
+    $regions = array_unique($regions);
+
+    // Check if filter value matches in the available nodes.
+    if (isset($form['year']) || isset($form['month']) || isset($form['region'])) {
+      $year_filter = $form['year']['#options'];
+      $month_filter = $form['month']['#options'];
+      $region_filter = $form['region']['#options'];
+
+      foreach ($year_filter as $year) {
+        // Remove filter value if not found.
+        if (!in_array($year, $years)) {
+          $form['year'][$year]['#disabled'] = TRUE;
+        }
+      }
+
+      foreach ($month_filter as $key => $month) {
+        // Remove filter value if not found.
+        if (!in_array($month->__toString(), $months)) {
+          $form['month'][$key]['#disabled'] = TRUE;
+        }
+      }
+
+      foreach ($region_filter as $key => $region) {
+        // Remove filter value if not found.
+        if (!in_array($key, $regions)) {
+          $form['region'][$key]['#disabled'] = TRUE;
+        }
+      }
+    }
+  }
+  elseif ($view->id() == 'research_and_publications' && $view->current_display == 'rp_list') {
+    $years = [];
+    $filters_selected = $view->getExposedInput();
+
+    // If topic filter is set.
+    if (isset($filters_selected['field_topic_target_id'])) {
+      $rp_nodes = \Drupal::entityTypeManager()->getStorage('node')
+        ->loadByProperties([
+          'type' => 'research_and_publication',
+          'status' => 1,
+          'field_topic' => $filters_selected['field_topic_target_id'],
+        ]);
+    }
+    else {
+      $rp_nodes = \Drupal::entityTypeManager()->getStorage('node')
+        ->loadByProperties([
+          'type' => 'research_and_publication',
+          'status' => 1,
+        ]);
+    }
+
+    foreach ($rp_nodes as $node) {
+      $date = $node->created->value;
+      $year = \Drupal::service('date.formatter')->format($date, 'custom', 'Y');
+
+      if (isset($filters_selected['nodes_year'])) {
+        if (in_array($year, $filters_selected['nodes_year'])) {
+          $years[] = $year;
+        }
+      }
+      else {
+        $years[] = $year;
+      }
+    }
+
+    // Check if filter value matches in the available nodes.
+    if (isset($form['nodes_year'])) {
+      $year_filter = $form['nodes_year']['#options'];
+
+      foreach ($year_filter as $year) {
+        // Remove filter value if not found.
+        if (!in_array($year, $years)) {
+          $form['nodes_year'][$year]['#disabled'] = TRUE;
+        }
+      }
+    }
+  }
+  // If programme filter is present.
+  if (isset($form['field_programme'])) {
+    $other_terms = _bbb_partner_get_other_site_programmes();
+    // Remove the options that are not for the current site.
+    foreach ($other_terms as $key => $value) {
+      unset($form['field_programme']['#options'][$key]);
+    }
+  }
+}

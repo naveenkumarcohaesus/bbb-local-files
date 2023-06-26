@@ -1,0 +1,33 @@
+uuid: 2b920df8-fdfb-42e2-a63b-436f049c2aea
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.case_study_listing
+  module:
+    - cohesion
+    - collapsiblock
+    - views
+  theme:
+    - bbb_site_studio
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: views_block__case_study_listing_success_story_list
+theme: bbb_site_studio
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'views_block:case_study_listing-success_story_list'
+settings:
+  id: 'views_block:case_study_listing-success_story_list'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0

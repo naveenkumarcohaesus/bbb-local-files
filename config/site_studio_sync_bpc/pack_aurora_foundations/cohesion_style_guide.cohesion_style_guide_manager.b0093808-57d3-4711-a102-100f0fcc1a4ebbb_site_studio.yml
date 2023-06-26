@@ -1,0 +1,83 @@
+uuid: a56bfb07-5942-4d50-b7e8-2e8b021886bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.site_specific_design_patterns
+    - cohesion_website_settings.cohesion_color.backgroundaccent1tintmedium
+    - cohesion_website_settings.cohesion_color.backgroundaccent2tintmedium
+    - cohesion_website_settings.cohesion_color.bbb-backgroundaccent2
+label: 'Site specific design patterns BBB Site Studio'
+id: b0093808-57d3-4711-a102-100f0fcc1a4ebbb_site_studio
+json_values: |
+  {
+      "model": {
+          "b0093808-57d3-4711-a102-100f0fcc1a4e": {
+              "df4a8364-51e9-488c-9390-b3df03bac308": false,
+              "f6f32987-0eca-41bd-8cbb-0a2487506e06": "linear-gradient(to bottom right,#005050 28%,#0000 28%) top left, linear-gradient(to top left,#005050 28%,#0000 28%) bottom right",
+              "befd072d-9afe-47dd-9ef5-df44e9ad910f": "linear-gradient(to bottom right,#FFFFFF 28%,#0000 28%) top left, linear-gradient(to top left,#FFFFFF 28%,#0000 28%) bottom right",
+              "5b7e6c44-3b67-4277-b68d-7b2ef5070cad": true,
+              "3acf8a76-431d-4024-a72d-f3f50e5552c0": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ffecf0",
+                      "rgba": "rgba(255, 236, 240, 1)"
+                  },
+                  "name": "background\/accent1\/tint\/medium",
+                  "uid": "backgroundaccent1tintmedium",
+                  "class": ".coh-color-backgroundaccent1tintmedium",
+                  "variable": "$coh-color-backgroundaccent1tintmedium",
+                  "tags": [
+                      "Accent"
+                  ]
+              },
+              "9d78f673-9b0a-4491-b128-e330a5316255": {
+                  "link": true,
+                  "value": {
+                      "hex": "#50c5a7",
+                      "rgba": "rgba(80, 197, 167, 1)"
+                  },
+                  "name": "BBB Background\/accent\/2",
+                  "uid": "bbb-backgroundaccent2",
+                  "class": ".coh-color-bbb-backgroundaccent2",
+                  "variable": "$coh-color-bbb-backgroundaccent2",
+                  "wysiwyg": false,
+                  "inuse": true
+              },
+              "6ecd5262-9cec-4120-a425-26dd41f3d288": {
+                  "value": {
+                      "hex": "#002e2e",
+                      "rgba": "rgba(0, 46, 46, 1)"
+                  }
+              },
+              "8585e112-05b9-406b-a59a-f4ed668adfe3": {
+                  "link": true,
+                  "value": {
+                      "hex": "#ecf9f5",
+                      "rgba": "rgba(236, 249, 245, 1)"
+                  },
+                  "name": "background\/accent2\/tint\/medium",
+                  "uid": "backgroundaccent2tintmedium",
+                  "class": ".coh-color-backgroundaccent2tintmedium",
+                  "variable": "$coh-color-backgroundaccent2tintmedium"
+              }
+          }
+      },
+      "changedFields": [
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.df4a8364-51e9-488c-9390-b3df03bac308",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.f6f32987-0eca-41bd-8cbb-0a2487506e06",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.befd072d-9afe-47dd-9ef5-df44e9ad910f",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.5b7e6c44-3b67-4277-b68d-7b2ef5070cad",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.3acf8a76-431d-4024-a72d-f3f50e5552c0",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.9d78f673-9b0a-4491-b128-e330a5316255",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.6ecd5262-9cec-4120-a425-26dd41f3d288",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.8585e112-05b9-406b-a59a-f4ed668adfe3"
+      ]
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: false
+selectable: true
+theme: bbb_site_studio
+style_guide_uuid: b0093808-57d3-4711-a102-100f0fcc1a4e

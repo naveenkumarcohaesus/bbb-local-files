@@ -1,0 +1,4 @@
+services:
+  bbb_platform.component_upgrader:
+    class: Drupal\bbb_platform\ComponentUpgrader
+    arguments: ['@entity_type.manager']

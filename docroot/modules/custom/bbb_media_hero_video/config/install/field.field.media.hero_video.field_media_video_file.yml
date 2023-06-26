@@ -1,0 +1,27 @@
+uuid: f77c23e8-3767-44d5-bda9-cf4591bfda8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_video_file
+    - media.type.hero_video
+  module:
+    - file
+id: media.hero_video.field_media_video_file
+field_name: field_media_video_file
+entity_type: media
+bundle: hero_video
+label: 'Desktop Video'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp4 webm ogg'
+  max_filesize: ''
+  description_field: false
+field_type: file

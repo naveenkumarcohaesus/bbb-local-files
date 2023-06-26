@@ -1,0 +1,10 @@
+views.view.case_study_listing:
+  expected_config: {  }
+  update_actions:
+    change:
+      display:
+        related_case_studies:
+          display_options:
+            row:
+              options:
+                view_mode: card

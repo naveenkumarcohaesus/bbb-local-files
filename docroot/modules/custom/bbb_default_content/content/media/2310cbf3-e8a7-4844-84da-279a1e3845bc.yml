@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 2310cbf3-e8a7-4844-84da-279a1e3845bc
+  bundle: image
+  default_langcode: en
+  depends:
+    21a62341-85f0-4469-90d9-01f1465496af: taxonomy_term
+    296a630f-b95e-4aca-9b78-89801152b47c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'BBI Half Color.png'
+  created:
+    -
+      value: 1665582141
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_image_type:
+    -
+      entity: 21a62341-85f0-4469-90d9-01f1465496af
+  image:
+    -
+      entity: 296a630f-b95e-4aca-9b78-89801152b47c
+      alt: 'This is alt'
+      title: ''
+      width: 129
+      height: 48

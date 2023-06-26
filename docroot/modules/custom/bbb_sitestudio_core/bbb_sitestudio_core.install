@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * @file
+ * Site Studio Specific Install/Update hooks.
+ */
+
+/**
+ * Implements hook_update_N().
+ *
+ * Enable Custom Element via bbb_on_this_page module.
+ */
+function bbb_sitestudio_core_update_8001() {
+  // Install bbb_on_this_page module.
+  $installer = \Drupal::service('module_installer');
+  $installer->install([
+    'bbb_on_this_page',
+  ]);
+}
+
+/**
+ * Implements hook_update_N().
+ *
+ * Delete all the style guides except Aurora Foundations and Spacing.
+ */
+function bbb_sitestudio_core_update_8002() {
+  // Upon delete of style guide also delete all style guide instances
+  // referencing this style guide entity.
+  $style_guide_storage = \Drupal::entityTypeManager()
+    ->getStorage('cohesion_style_guide');
+  // Delete all style guides except Aurora foundations and Spacing.
+  $style_guide_ids = $style_guide_storage->getQuery()
+    ->condition('id', ['aurora_foundations', 'spacing'], 'NOT IN')->execute();
+  if ($style_guides = $style_guide_storage->loadMultiple($style_guide_ids)) {
+    foreach ($style_guides as $style_guide) {
+      $style_guide->delete();
+    }
+  }
+  token_clear_cache();
+}
+
+/**
+ * Implements hook_update_N().
+ *
+ * Delete cpt_on_this_page_js component.
+ */
+function bbb_sitestudio_core_update_8003() {
+  // Get cohesion_component.
+  $component_storage = \Drupal::entityTypeManager()
+    ->getStorage('cohesion_component');
+  // Delete cpt_on_this_page_js component.
+  $component_ids = $component_storage->getQuery()
+    ->condition('id', ['cpt_on_this_page_js'], 'IN')->execute();
+  if ($components = $component_storage->loadMultiple($component_ids)) {
+    foreach ($components as $component) {
+      $component->delete();
+    }
+  }
+  token_clear_cache();
+}
+
+/**
+ * Implements hook_update_N().
+ *
+ * Delete Full Fluid Content Templates.
+ */
+function bbb_sitestudio_core_update_8004() {
+  // Get content_templates.
+  $template_storage = \Drupal::entityTypeManager()
+    ->getStorage('cohesion_content_templates');
+  $full_fluid_templates = [
+    'ctn_tpl_fullfluid_layout_article',
+    'ctn_tpl_full_fluid_layout_cs',
+    'ctn_tpl_full_fluid_layout',
+  ];
+  // Delete full_fluid_templates.
+  $content_template_ids = $template_storage->getQuery()->condition('id', $full_fluid_templates, 'IN')->execute();
+  if ($content_templates = $template_storage->loadMultiple($content_template_ids)) {
+    foreach ($content_templates as $content_template) {
+      $content_template->delete();
+    }
+  }
+  token_clear_cache();
+}

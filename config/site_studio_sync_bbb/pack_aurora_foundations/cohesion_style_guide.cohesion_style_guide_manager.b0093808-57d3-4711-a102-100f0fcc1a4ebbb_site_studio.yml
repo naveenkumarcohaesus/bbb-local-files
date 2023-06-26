@@ -1,0 +1,96 @@
+uuid: a56bfb07-5942-4d50-b7e8-2e8b021886bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.site_specific_design_patterns
+    - cohesion_website_settings.cohesion_color.base-bbbsecondary50
+    - cohesion_website_settings.cohesion_color.gray-12
+label: 'Site specific design patterns BBB Site Studio'
+id: b0093808-57d3-4711-a102-100f0fcc1a4ebbb_site_studio
+json_values: |
+  {
+      "model": {
+          "b0093808-57d3-4711-a102-100f0fcc1a4e": {
+              "df4a8364-51e9-488c-9390-b3df03bac308": true,
+              "02be1de4-9855-4155-a62e-7fab2a220a2f": "linear-gradient(to bottom right,#0054BA 28%,#0000 28%) top left, linear-gradient(to top left,#0054BA 28%,#0000 28%) bottom right",
+              "fb43875f-020b-4f61-874e-7cc3c85821f1": "linear-gradient(to bottom right,#FFFFFF 28%,#0000 28%) top left, linear-gradient(to top left,#FFFFFF 28%,#0000 28%) bottom right",
+              "5b7e6c44-3b67-4277-b68d-7b2ef5070cad": false,
+              "5746c4c5-c61f-4871-a70f-52825ad53f95": {
+                  "link": true,
+                  "value": {
+                      "hex": "#eff4f6",
+                      "rgba": "rgba(239, 244, 246, 1)"
+                  },
+                  "name": "Gray 12",
+                  "uid": "gray-12",
+                  "class": ".coh-color-gray-12",
+                  "variable": "$coh-color-gray-12",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Light"
+                  ],
+                  "inuse": true
+              },
+              "e90ac074-71d5-48f7-8867-9a07144351c7": {
+                  "value": {
+                      "hex": "#ffa0b4",
+                      "rgba": "rgba(255, 160, 180, 1)"
+                  }
+              },
+              "d6d2ef68-06c2-4c2a-9865-df622d3ad93c": {
+                  "link": true,
+                  "value": {
+                      "hex": "#142855",
+                      "rgba": "rgba(20, 40, 85, 1)"
+                  },
+                  "name": "Base BBB\/Secondary\/50",
+                  "uid": "base-bbbsecondary50",
+                  "class": ".coh-color-base-bbbsecondary50",
+                  "variable": "$coh-color-base-bbbsecondary50",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Base BBB Secondary"
+                  ],
+                  "inuse": true
+              },
+              "8391aea5-7068-4a61-9398-23e8039e0cab": "linear-gradient(to bottom right,#0054BA 28%,#0000 28%) top left, linear-gradient(to top left,#0054BA 28%,#0000 28%) bottom right",
+              "5fe1aefb-ff6a-4ad9-be55-e4586b305178": "linear-gradient(to bottom right,#FFFFFF 28%,#0000 28%) top left, linear-gradient(to top left,#FFFFFF 28%,#0000 28%) bottom right",
+              "df8f91c3-fb7d-469d-ba64-e4464475f984": {
+                  "link": true,
+                  "value": {
+                      "hex": "#eff4f6",
+                      "rgba": "rgba(239, 244, 246, 1)"
+                  },
+                  "name": "Gray 12",
+                  "uid": "gray-12",
+                  "class": ".coh-color-gray-12",
+                  "variable": "$coh-color-gray-12",
+                  "wysiwyg": false,
+                  "tags": [
+                      "Light"
+                  ],
+                  "inuse": true
+              }
+          }
+      },
+      "changedFields": [
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.df4a8364-51e9-488c-9390-b3df03bac308",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.02be1de4-9855-4155-a62e-7fab2a220a2f",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.fb43875f-020b-4f61-874e-7cc3c85821f1",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.5b7e6c44-3b67-4277-b68d-7b2ef5070cad",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.5746c4c5-c61f-4871-a70f-52825ad53f95",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.e90ac074-71d5-48f7-8867-9a07144351c7",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.d6d2ef68-06c2-4c2a-9865-df622d3ad93c",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.8391aea5-7068-4a61-9398-23e8039e0cab",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.5fe1aefb-ff6a-4ad9-be55-e4586b305178",
+          "model.b0093808-57d3-4711-a102-100f0fcc1a4e.df8f91c3-fb7d-469d-ba64-e4464475f984"
+      ]
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: false
+selectable: true
+theme: bbb_site_studio
+style_guide_uuid: b0093808-57d3-4711-a102-100f0fcc1a4e

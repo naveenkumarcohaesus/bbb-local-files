@@ -1,0 +1,52 @@
+uuid: 254e0c28-1436-40db-bf26-a774eaa4b1d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.menu_content
+  module:
+    - user
+id: node.event.menu_content
+targetEntityType: node
+bundle: event
+mode: menu_content
+content:
+  field_image:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_audience: true
+  field_business_structure: true
+  field_content_owner: true
+  field_content_typology: true
+  field_event_address: true
+  field_event_date: true
+  field_event_duration: true
+  field_event_end: true
+  field_event_place: true
+  field_event_start: true
+  field_finance_type: true
+  field_geofield: true
+  field_layout_canvas: true
+  field_link: true
+  field_logo: true
+  field_metatags: true
+  field_postcode: true
+  field_region: true
+  field_registration_link: true
+  field_sector: true
+  field_teaser_text: true
+  field_topic: true
+  field_virtual_event: true
+  footnotes_group: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

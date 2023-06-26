@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+/**
+ * Entity/ field definitions need to be updated.
+ */
+function bbi_core_update_8001() {
+  $manager = \Drupal::entityDefinitionUpdateManager();
+  if ($field = $manager->getFieldStorageDefinition('field_type_of_funding', 'taxonomy_term')) {
+    $manager->uninstallFieldStorageDefinition($field);
+  }
+}

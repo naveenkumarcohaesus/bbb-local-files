@@ -1,0 +1,13 @@
+search_api.index.solr_index:
+  expected_config:  {  }
+  update_actions:
+    add:
+      field_settings:
+        title:
+          datasource_id: 'entity:node'
+          dependencies:
+            module:
+              - node
+          label: Title
+          property_path: title
+          type: solr_text_omit_norms

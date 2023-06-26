@@ -1,0 +1,250 @@
+uuid: 693118b8-b69f-4925-884f-50aad8895c5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component_category.cpt_cat_dynamic_components
+label: 'FAQ Question List'
+id: cpt_faq_question_list
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "container",
+              "uid": "container",
+              "title": "Container",
+              "status": {
+                  "collapsed": false
+              },
+              "uuid": "66870a97-0c36-4c9d-b484-4dc854b8d47b",
+              "parentUid": "root",
+              "children": [
+                  {
+                      "type": "item",
+                      "uid": "faq_question_list",
+                      "isCustom": true,
+                      "title": "FAQ question list",
+                      "selected": false,
+                      "status": {
+                          "collapsed": true
+                      },
+                      "uuid": "3fc52b44-7fb3-4293-841e-9a2782d44017",
+                      "parentUid": "container",
+                      "children": []
+                  }
+              ]
+          }
+      ],
+      "componentForm": [
+          {
+              "type": "form-container",
+              "uid": "form-tab-container",
+              "title": "Tab container",
+              "status": {
+                  "collapsed": false
+              },
+              "options": {
+                  "formBuilder": true
+              },
+              "uuid": "de2edf53-5f93-4eaa-a8ab-d00c84905793",
+              "parentUid": "root",
+              "children": [
+                  {
+                      "type": "form-container",
+                      "uid": "form-tab-item",
+                      "title": "Tab item",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "options": {
+                          "formBuilder": true
+                      },
+                      "uuid": "3bc2223e-574f-44b3-96fb-b5fdacd469f7",
+                      "parentUid": "form-tab-container",
+                      "children": [
+                          {
+                              "type": "form-field",
+                              "uid": "form-select",
+                              "title": "Select",
+                              "translate": false,
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "ed45db6b-e9ea-4bd6-b13a-8a97430ed595",
+                              "parentUid": "form-tab-item",
+                              "children": []
+                          },
+                          {
+                              "type": "form-field",
+                              "uid": "form-entity-browser",
+                              "title": "Entity browser",
+                              "status": {
+                                  "collapsed": false
+                              },
+                              "uuid": "f2a28dfb-098b-40a7-8130-1c639ba7a23e",
+                              "parentUid": "form-tab-item",
+                              "children": []
+                          }
+                      ]
+                  }
+              ]
+          }
+      ],
+      "mapper": {
+          "66870a97-0c36-4c9d-b484-4dc854b8d47b": {},
+          "3fc52b44-7fb3-4293-841e-9a2782d44017": {}
+      },
+      "model": {
+          "66870a97-0c36-4c9d-b484-4dc854b8d47b": {
+              "settings": {
+                  "width": "fluid"
+              }
+          },
+          "3fc52b44-7fb3-4293-841e-9a2782d44017": {
+              "settings": {
+                  "title": "FAQ question list",
+                  "headingTag": "[field.ed45db6b-e9ea-4bd6-b13a-8a97430ed595]",
+                  "termReference": "[field.f2a28dfb-098b-40a7-8130-1c639ba7a23e]"
+              },
+              "context-visibility": {
+                  "contextVisibility": {
+                      "condition": "ALL"
+                  }
+              },
+              "styles": {
+                  "settings": {
+                      "element": "faq_question_list"
+                  }
+              }
+          },
+          "de2edf53-5f93-4eaa-a8ab-d00c84905793": {
+              "settings": {
+                  "type": "cohTabContainer",
+                  "title": "Tab container",
+                  "responsiveMode": true
+              }
+          },
+          "3bc2223e-574f-44b3-96fb-b5fdacd469f7": {
+              "settings": {
+                  "title": "Content",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "ed45db6b-e9ea-4bd6-b13a-8a97430ed595": {
+              "settings": {
+                  "title": "Heading Element",
+                  "type": "cohSelect",
+                  "selectType": "existing",
+                  "schema": {
+                      "type": "string"
+                  },
+                  "machineName": "heading-element",
+                  "tooltipPlacement": "auto right",
+                  "selectModel": [
+                      "settings",
+                      "heading",
+                      "heading-element",
+                      "element"
+                  ]
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": "h2"
+              }
+          },
+          "f2a28dfb-098b-40a7-8130-1c639ba7a23e": {
+              "settings": {
+                  "title": "FAQ reference",
+                  "type": "cohEntityBrowser",
+                  "showConfig": false,
+                  "hideRowHeading": true,
+                  "schema": {
+                      "type": "object"
+                  },
+                  "machineName": "faq-reference",
+                  "options": {
+                      "entityBrowserTypeDisabled": true,
+                      "entityTypeDisabled": true,
+                      "entityBrowserBundlesDisabled": true,
+                      "entityBrowserType": "typeahead",
+                      "entityType": "taxonomy_term",
+                      "bundles": {
+                          "faq": true
+                      }
+                  },
+                  "entityBrowserTypeTooltipPlacement": "auto right",
+                  "entityTypeTooltipPlacement": "auto right",
+                  "entityBrowserTooltipPlacement": "auto right",
+                  "showCondition": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": {
+                      "entity": {
+                          "entityType": "taxonomy_term"
+                      }
+                  }
+              }
+          }
+      },
+      "previewModel": {
+          "3bc2223e-574f-44b3-96fb-b5fdacd469f7": {},
+          "ed45db6b-e9ea-4bd6-b13a-8a97430ed595": {},
+          "f2a28dfb-098b-40a7-8130-1c639ba7a23e": {},
+          "3fc52b44-7fb3-4293-841e-9a2782d44017": {
+              "settings": {
+                  "termReference": "[field.f2a28dfb-098b-40a7-8130-1c639ba7a23e]",
+                  "headingTag": "h2"
+              }
+          }
+      },
+      "variableFields": {
+          "3bc2223e-574f-44b3-96fb-b5fdacd469f7": [],
+          "ed45db6b-e9ea-4bd6-b13a-8a97430ed595": [],
+          "f2a28dfb-098b-40a7-8130-1c639ba7a23e": [],
+          "3fc52b44-7fb3-4293-841e-9a2782d44017": [
+              "settings.termReference",
+              "settings.headingTag"
+          ]
+      },
+      "disabledNodes": [],
+      "meta": {
+          "fieldHistory": [
+              {
+                  "uuid": "f2a28dfb-098b-40a7-8130-1c639ba7a23e",
+                  "type": "form-entity-browser",
+                  "machineName": "faq-reference"
+              },
+              {
+                  "uuid": "ed45db6b-e9ea-4bd6-b13a-8a97430ed595",
+                  "type": "form-select",
+                  "machineName": "heading-element"
+              },
+              {
+                  "uuid": "4e013d3a-7a2d-4607-b5f0-aa88a53ef817",
+                  "type": "form-entity-reference",
+                  "machineName": "faq-term"
+              }
+          ]
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_dynamic_components
+preview_image: ''
+has_quick_edit: null
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-faq-question-list
+weight: 0

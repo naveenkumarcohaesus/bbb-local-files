@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: medium_cta_card_w704_h469
+label: 'Medium CTA Card W704 H469'
+effects:
+  a6996d0f-345b-4b1c-ac9b-35f3840b4b2f:
+    uuid: a6996d0f-345b-4b1c-ac9b-35f3840b4b2f
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 704
+      height: 469
+      crop_type: focal_point

@@ -1,0 +1,216 @@
+views.view.case_study_listing:
+  expected_config: {  }
+  update_actions:
+    add:
+      display:
+        related_case_studies:
+          cache_metadata:
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - 'user.node_grants:view'
+              - user.permissions
+            max-age: -1
+            tags: {  }
+          display_options:
+            arguments:
+              nid:
+                admin_label: ''
+                break_phrase: false
+                default_action: default
+                default_argument_options: {  }
+                default_argument_skip_url: false
+                default_argument_type: node
+                entity_field: nid
+                entity_type: node
+                exception:
+                  title: All
+                  title_enable: false
+                  value: all
+                field: nid
+                group_type: group
+                id: nid
+                not: true
+                plugin_id: node_nid
+                relationship: none
+                specify_validation: false
+                summary:
+                  format: default_summary
+                  number_of_records: 0
+                  sort_order: asc
+                summary_options:
+                  base_path: ''
+                  count: true
+                  items_per_page: 25
+                  override: false
+                table: node_field_data
+                title: ''
+                title_enable: false
+                validate:
+                  fail: 'not found'
+                  type: none
+                validate_options: {  }
+              tid:
+                add_table: false
+                admin_label: ''
+                break_phrase: true
+                default_action: default
+                default_argument_options:
+                  anyall: +
+                  limit: true
+                  node: true
+                  term_page: '0'
+                  vids:
+                    business_structure: business_structure
+                    business_topic: business_topic
+                    finance_type: finance_type
+                    programme: programme
+                    region: region
+                    sector: sector
+                default_argument_skip_url: false
+                default_argument_type: taxonomy_tid
+                exception:
+                  title: All
+                  title_enable: false
+                  value: all
+                field: tid
+                group_type: group
+                id: tid
+                plugin_id: taxonomy_index_tid
+                reduce_duplicates: true
+                relationship: none
+                require_value: false
+                specify_validation: false
+                summary:
+                  format: default_summary
+                  number_of_records: 0
+                  sort_order: asc
+                summary_options:
+                  base_path: ''
+                  count: true
+                  items_per_page: 25
+                  override: false
+                table: taxonomy_index
+                title: ''
+                title_enable: false
+                validate:
+                  fail: 'not found'
+                  type: none
+                validate_options: {  }
+            defaults:
+              arguments: false
+              exposed_form: false
+              filter_groups: false
+              filters: false
+              header: false
+              pager: false
+              query: false
+              row: false
+              sorts: false
+              style: false
+              use_ajax: false
+            display_description: ''
+            display_extenders: {  }
+            exposed_form:
+              options:
+                expose_sort_order: true
+                exposed_sorts_label: 'Sort by'
+                reset_button: true
+                reset_button_label: 'Reset all filters'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+                submit_button: 'Apply filters'
+              type: basic
+            filter_groups:
+              groups:
+                1: AND
+              operator: AND
+            filters:
+              status:
+                entity_field: status
+                entity_type: node
+                expose:
+                  operator: ''
+                  operator_limit_selection: false
+                  operator_list: {  }
+                field: status
+                group: 1
+                id: status
+                plugin_id: boolean
+                table: node_field_data
+                value: '1'
+              type:
+                entity_field: type
+                entity_type: node
+                expose:
+                  operator_limit_selection: false
+                  operator_list: {  }
+                field: type
+                group: 1
+                id: type
+                plugin_id: bundle
+                table: node_field_data
+                value:
+                  case_study: case_study
+            header: {  }
+            pager:
+              options:
+                items_per_page: 3
+                offset: 0
+              type: some
+            query:
+              options:
+                disable_sql_rewrite: false
+                distinct: true
+                query_comment: ''
+                query_tags: {  }
+                replica: false
+              type: views_query
+            row:
+              options:
+                relationship: none
+                view_mode: related_content
+              type: 'entity:node'
+            sorts:
+              created:
+                admin_label: ''
+                entity_field: created
+                entity_type: node
+                expose:
+                  field_identifier: created
+                  label: 'Most Recent'
+                exposed: false
+                field: created
+                granularity: second
+                group_type: group
+                id: created
+                order: DESC
+                plugin_id: date
+                relationship: none
+                table: node_field_data
+              title:
+                admin_label: ''
+                entity_field: title
+                entity_type: node
+                expose:
+                  field_identifier: title
+                  label: Alphabetical
+                exposed: false
+                field: title
+                group_type: group
+                id: title
+                order: ASC
+                plugin_id: standard
+                relationship: none
+                table: node_field_data
+            style:
+              options:
+                master_template: master_template
+                views_template: related_case_studies
+              type: cohesion_layout
+            use_ajax: false
+          display_plugin: block
+          display_title: 'Related Success Stories'
+          id: related_case_studies
+          position: 2

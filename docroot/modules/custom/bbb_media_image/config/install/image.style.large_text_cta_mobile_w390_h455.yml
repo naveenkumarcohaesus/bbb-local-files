@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_text_cta_mobile_w390_h455
+label: 'Large Text CTA Mobile W390 H455'
+effects:
+  8eb92b52-ac88-45e3-bd81-1e1494e10194:
+    uuid: 8eb92b52-ac88-45e3-bd81-1e1494e10194
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 390
+      height: 455
+      crop_type: focal_point

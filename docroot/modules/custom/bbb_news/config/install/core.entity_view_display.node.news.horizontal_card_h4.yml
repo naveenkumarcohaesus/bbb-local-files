@@ -1,0 +1,47 @@
+uuid: 18e06a22-c27d-4990-bf1d-ff80996416c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.horizontal_card_h4
+    - field.field.node.news.field_content_typology
+    - field.field.node.news.field_image
+    - field.field.node.news.field_layout_canvas
+    - field.field.node.news.field_metatags
+    - field.field.node.news.field_quick_links
+    - field.field.node.news.field_region
+    - field.field.node.news.field_teaser_text
+    - node.type.news
+  module:
+    - text
+    - user
+id: node.news.horizontal_card_h4
+targetEntityType: node
+bundle: news
+mode: horizontal_card_h4
+content:
+  field_content_typology:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_teaser_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_image: true
+  field_layout_canvas: true
+  field_metatags: true
+  field_quick_links: true
+  field_region: true
+  footnotes_group: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

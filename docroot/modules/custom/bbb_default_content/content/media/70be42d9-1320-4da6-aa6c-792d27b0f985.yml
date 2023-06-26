@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 70be42d9-1320-4da6-aa6c-792d27b0f985
+  bundle: image
+  default_langcode: en
+  depends:
+    21a62341-85f0-4469-90d9-01f1465496af: taxonomy_term
+    e356ea36-7b9d-450b-8730-4b031efccf94: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'BBB Color.png'
+  created:
+    -
+      value: 1665580405
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_image_type:
+    -
+      entity: 21a62341-85f0-4469-90d9-01f1465496af
+  image:
+    -
+      entity: e356ea36-7b9d-450b-8730-4b031efccf94
+      alt: 'This is alt'
+      title: ''
+      width: 702
+      height: 262

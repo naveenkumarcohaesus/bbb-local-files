@@ -1,0 +1,77 @@
+uuid: 2fff1570-6e97-4e98-8ff6-1073a8468a6e
+langcode: en
+status: true
+dependencies: {  }
+label: 'Card Folds Off'
+id: base_card_folds_off
+json_values: |
+  {
+      "preview": {
+          "text": "<p>Add your preview HTML element here.<\/p>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "[data-card-folds=\"off\"]"
+          },
+          "styles": {
+              "xs": {
+                  "custom-css": [
+                      {
+                          "customCssProperty": {
+                              "value": "clip-path"
+                          },
+                          "customCss": {
+                              "value": "none !important"
+                          }
+                      }
+                  ]
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": null,
+          "selectorType": "topLevel",
+          "formDefinition": [
+              {
+                  "formKey": "custom-css",
+                  "children": [
+                      {
+                          "formKey": "css-property-and-css-value",
+                          "breakpoints": [
+                              {
+                                  "name": "xs"
+                              }
+                          ],
+                          "activeFields": [
+                              {
+                                  "name": "custom-css",
+                                  "active": true
+                              },
+                              {
+                                  "name": "customCssProperty",
+                                  "active": true
+                              },
+                              {
+                                  "name": "customCss",
+                                  "active": true
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "items": [],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+custom: null

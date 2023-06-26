@@ -1,0 +1,42 @@
+node.type.research_and_publication:
+  expected_config:
+    display_submitted: true
+  update_actions:
+    change:
+      display_submitted: false
+core.entity_view_display.node.research_and_publication.default:
+  expected_config:
+    content:  {  }
+    hidden:  {  }
+  update_actions:
+    delete:
+      content:
+        field_business_structure:  {  }
+        field_content_owner:  {  }
+        field_content_typology:  {  }
+        field_download_report_link:  {  }
+        field_image:  {  }
+        field_media_document:  {  }
+        field_metatags:  {  }
+        field_quick_links:  {  }
+        field_teaser_text:  {  }
+        field_topic:  {  }
+        links:  {  }
+    add:
+      hidden:
+        field_business_structure: true
+        field_content_owner: true
+        field_content_typology: true
+        field_download_report_link: true
+        field_hero_background_pattern: true
+        field_image: true
+        field_media_document: true
+        field_metatags: true
+        field_quick_links: true
+        field_teaser_text: true
+        field_topic: true
+        links: true
+    change:
+      content:
+        field_layout_canvas:
+          label: hidden

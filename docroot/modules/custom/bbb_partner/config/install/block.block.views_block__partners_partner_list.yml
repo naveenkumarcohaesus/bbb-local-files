@@ -1,0 +1,32 @@
+uuid: 89808490-4d73-4c45-afa5-fd9551f70043
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.partners
+  module:
+    - cohesion
+    - collapsiblock
+    - views
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: views_block__partners_partner_list
+theme: bbb_site_studio
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'views_block:partners-partner_list'
+settings:
+  id: 'views_block:partners-partner_list'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0

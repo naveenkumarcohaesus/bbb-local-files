@@ -1,0 +1,27 @@
+{% if flag == '1' %}
+  <div class="cpt-on-this-page coh-style-on-this-page-styles">
+    <nav class="coh-container" aria-labelledby="sidebar-header">
+      <{{ settings['headingTag'] }} class="coh-style-headline-4 heading" id="sidebar-header">{{ 'On this page'|t }}</{{ settings['headingTag'] }}>
+      <ul class="coh-list-container coh-unordered-list">
+        {% for heading in headings %}
+
+          {% if heading['name'] == settings['selectHeadingLink'] %}
+            {% set flag = '1' %}
+            <li class="coh-list-item">
+            <a href="#{{ heading['id'] }}" class="coh-style-label-large" target rel="bookmark">{{ heading['value'] }}</a>
+            {% if heading['children'] != [] %}
+              <ul>
+              {% for subheading in heading['children'] %}
+                <li class="coh-list-item subheading">
+                  <a href="#{{ subheading['id'] }}" class="coh-style-label-large" target rel="bookmark">{{ subheading['value'] }}</a>
+                </li>
+              {% endfor %}
+              </ul>
+            {% endif %}
+            </li>
+         {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+{% endif %}

@@ -1,0 +1,15 @@
+name: BBB Article
+description: 'Provides Article content type and related configuration. A Unstructured content type used for creating various types of articles.'
+type: module
+core_version_requirement: '^9 || ^10'
+package: BBB
+dependencies:
+  - drupal:datetime
+  - drupal:link
+  - drupal:media_library
+  - drupal:node
+  - drupal:text
+  - drupal:acquia_cms_page
+  - bbb_taxonomy:bbb_taxonomy
+  - drupal:link_attributes
+  - drupal:site_settings

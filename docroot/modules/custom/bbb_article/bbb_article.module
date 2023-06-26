@@ -1,0 +1,160 @@
+<?php
+
+/**
+ * @file
+ * Contains implementations for common, shared functionality.
+ */
+
+use Drupal\Core\Config\FileStorage;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\views\ViewExecutable;
+use Symfony\Component\Yaml\Yaml;
+
+/**
+ * Helper function to write configurations.
+ *
+ * @param string $config
+ *   The name of configuration.
+ * @param string $module
+ *   The name of module.
+ * @param string $folder
+ *   The name of folder to read config from.
+ */
+function _bbb_article_rewrite_configuration(string $config, string $module, string $folder) {
+  $module_path = \Drupal::service('extension.list.module')->getPath($module);
+  $module_path .= '/config/' . $folder . '/' . $config . '.yml';
+  $content = file_get_contents($module_path);
+  $parsed_yml = Yaml::parse($content);
+
+  $active_storage = \Drupal::service('config.storage');
+  $active_storage->write($config, $parsed_yml);
+}
+
+/**
+ * Helper function to create field storage.
+ *
+ * @param string $config
+ *   The name of configuration.
+ * @param string $module
+ *   The name of module.
+ * @param string $folder
+ *   The name of folder to read config from.
+ */
+function _bbb_article_create_field_storage(string $config, string $module, string $folder) {
+  $config_path = \Drupal::service('extension.list.module')->getPath($module) . '/config/' . $folder;
+  $source = new FileStorage($config_path);
+
+  $config_record = $source->read($config);
+  $field = FieldStorageConfig::loadByName($config_record['entity_type'], $config_record['field_name']);
+  if (!$field) {
+    // Check if the field type is List (text).
+    if ($config_record['type'] == 'list_string') {
+      // Update the allowed values array.
+      $allowed_values_link = [];
+      foreach ($config_record['settings']['allowed_values'] as $value) {
+        $allowed_values_link[$value['value']] = $value['label'];
+      }
+      $config_record['settings']['allowed_values'] = $allowed_values_link;
+    }
+    // Create field storage.
+    FieldStorageConfig::create($config_record)->save();
+  }
+}
+
+/**
+ * Helper function to create field for an entity.
+ *
+ * @param string $entity_config
+ *   The field configuration for the entity type.
+ * @param string $config
+ *   The name of configuration.
+ * @param string $module
+ *   The name of module.
+ * @param string $folder
+ *   The name of folder to read config from.
+ */
+function _bbb_article_create_entity_field(string $entity_config, string $config, string $module, string $folder) {
+  // Manually import config from optional folder.
+  $config_path = \Drupal::service('extension.list.module')->getPath($module) . '/config/' . $folder;
+  $source = new FileStorage($config_path);
+
+  /** @var \Drupal\Core\Config\ConfigManagerInterface $config_manager */
+  $config_manager = \Drupal::service('config.manager');
+
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $field_config = $entity_type_manager->getStorage('field_config');
+  if (!$field_config->load($entity_config)) {
+    $config_record = $source->read($config);
+    $entity_type = $config_manager->getEntityTypeIdByName($config);
+
+    /** @var \Drupal\Core\Config\Entity\ConfigEntityStorageInterface $storage */
+    $storage = $entity_type_manager->getStorage($entity_type);
+
+    // Create the config entity.
+    $storage->createFromStorageRecord($config_record)->save();
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function bbb_article_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() == 'article' && $view->current_display == 'related_articles') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface) {
+      // Check if fields are present.
+      if ($node->hasField('field_topic')) {
+        $fields[] = 'field_topic';
+      }
+      if ($node->hasField('field_programme')) {
+        $fields[] = 'field_programme';
+      }
+
+      if (!empty($fields)) {
+        $terms = _bbb_article_get_field_term_ids($node, $fields);
+      }
+    }
+
+    foreach ($query->where as &$condition_group) {
+      foreach ($condition_group['conditions'] as $key => &$condition) {
+        if ($condition['field'] == 'taxonomy_index.tid') {
+          if (empty($terms)) {
+            // Remove condition if no terms found in content.
+            unset($condition_group['conditions'][$key]);
+          }
+          else {
+            $condition['operator'] = 'IN';
+            $condition['value'] = $terms;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Helper function to create field for an entity.
+ *
+ * @param \Drupal\node\Entity\Node $node
+ *   Node object.
+ * @param array $fields
+ *   The array of field names.
+ */
+function _bbb_article_get_field_term_ids(Node $node, array $fields) {
+  $terms = [];
+  foreach ($fields as $field) {
+    if ($node->hasField($field)) {
+      if (!$node->get($field)->isEmpty()) {
+        $values = $node->{$field}->getValue();
+        $ids = array_map(function ($v) {
+          return $v['target_id'];
+        }, $values);
+        $terms = array_merge($terms, $ids);
+      }
+    }
+  }
+  return $terms;
+}

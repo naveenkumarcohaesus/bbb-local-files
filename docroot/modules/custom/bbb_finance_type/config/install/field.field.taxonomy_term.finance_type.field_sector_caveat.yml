@@ -1,0 +1,21 @@
+uuid: de4c8ca1-6c96-45cc-83ea-2f153b2b14e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_sector_caveat
+    - taxonomy.vocabulary.finance_type
+  module:
+    - text
+id: taxonomy_term.finance_type.field_sector_caveat
+field_name: field_sector_caveat
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'Sector Caveat'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

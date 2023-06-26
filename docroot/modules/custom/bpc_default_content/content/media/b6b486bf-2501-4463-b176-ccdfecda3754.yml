@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b6b486bf-2501-4463-b176-ccdfecda3754
+  bundle: image
+  default_langcode: en
+  depends:
+    92597122-9dfc-4838-93ff-7e432c7b8c7f: taxonomy_term
+    d8995682-e5ec-4ca1-a8b6-c35485f501d5: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'BBI White.png'
+  created:
+    -
+      value: 1665756936
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_image_type:
+    -
+      entity: 92597122-9dfc-4838-93ff-7e432c7b8c7f
+  image:
+    -
+      entity: d8995682-e5ec-4ca1-a8b6-c35485f501d5
+      alt: 'BBI White Logo'
+      title: ''
+      width: 505
+      height: 160

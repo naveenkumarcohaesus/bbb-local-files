@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: c6b71eeb-f22e-465b-bf42-c3762fc85fb2
+  bundle: custom_layout_canvas_block
+  default_langcode: en
+  depends:
+    1ecc1516-dc1d-41d6-8f8f-e3c0d221a46e: cohesion_layout
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Hero Image'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_layout_canvas:
+    -
+      entity: 1ecc1516-dc1d-41d6-8f8f-e3c0d221a46e

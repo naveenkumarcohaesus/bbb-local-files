@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_image_w600_h220
+label: 'Large Image W600 H220'
+effects:
+  792c9e79-3112-4aec-aa03-cc6d417fc76a:
+    uuid: 792c9e79-3112-4aec-aa03-cc6d417fc76a
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 600
+      height: 220
+      crop_type: focal_point

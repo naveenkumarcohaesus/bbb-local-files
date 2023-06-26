@@ -1,0 +1,16 @@
+views.view.case_study_listing:
+  expected_config:
+    display:
+      default:
+        display_options:
+          pager:
+            options:
+              quantity: 9
+  update_actions:
+    change:
+      display:
+        default:
+          display_options:
+            pager:
+              options:
+                quantity: 5

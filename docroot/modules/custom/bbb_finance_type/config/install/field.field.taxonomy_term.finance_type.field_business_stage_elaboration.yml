@@ -1,0 +1,19 @@
+uuid: d0c534d2-a101-4c13-95f8-e11bca7ca491
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_business_stage_elaboration
+    - taxonomy.vocabulary.finance_type
+id: taxonomy_term.finance_type.field_business_stage_elaboration
+field_name: field_business_stage_elaboration
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'Business stage elaboration'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

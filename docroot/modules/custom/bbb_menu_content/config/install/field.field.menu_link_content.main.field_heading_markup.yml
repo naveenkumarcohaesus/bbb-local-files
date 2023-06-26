@@ -1,0 +1,21 @@
+uuid: c68f361a-b4ab-4fe7-b89a-90a90df52d69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_heading_markup
+    - system.menu.main
+  module:
+    - options
+id: menu_link_content.main.field_heading_markup
+field_name: field_heading_markup
+entity_type: menu_link_content
+bundle: main
+label: 'Heading Markup'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

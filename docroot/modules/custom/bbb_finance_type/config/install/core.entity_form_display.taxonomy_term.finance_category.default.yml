@@ -1,0 +1,72 @@
+uuid: ead31341-2ea1-4e00-b3fc-f7b29768e5fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.finance_category.field_colour
+    - field.field.taxonomy_term.finance_category.field_strapline
+    - taxonomy.vocabulary.finance_category
+  module:
+    - path
+    - text
+id: taxonomy_term.finance_category.default
+targetEntityType: taxonomy_term
+bundle: finance_category
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_colour:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_strapline:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

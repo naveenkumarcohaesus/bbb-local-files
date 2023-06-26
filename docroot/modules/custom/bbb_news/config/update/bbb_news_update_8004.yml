@@ -1,0 +1,67 @@
+core.entity_form_display.node.news.default:
+  expected_config: {  }
+  update_actions:
+    change:
+      content:
+        field_image:
+          weight: 16
+        field_layout_canvas:
+          weight: 18
+        field_metatags:
+          region: content
+          settings:
+            sidebar: true
+            use_details: true
+          third_party_settings: {  }
+          type: metatag_firehose
+          weight: 20
+        field_quick_links:
+          weight: 19
+        field_teaser_text:
+          weight: 15
+core.entity_view_display.node.news.default:
+  expected_config: {  }
+  update_actions:
+    change:
+      hidden:
+        field_image: true
+        field_metatags: true
+field.field.node.news.field_content_typology:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.news.field_region:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+node.type.news:
+  expected_config:
+    description: ''
+    help: null
+  update_actions:
+    add:
+      third_party_settings:
+        menu_ui:
+          available_menus:
+            - main
+          parent: 'main:'
+        scheduler:
+          expand_fieldset: when_required
+          fields_display_mode: vertical_tab
+          publish_enable: false
+          publish_past_date: error
+          publish_past_date_created: false
+          publish_required: false
+          publish_revision: false
+          publish_touch: false
+          show_message_after_update: true
+          unpublish_enable: false
+          unpublish_required: false
+          unpublish_revision: false
+    change:
+      description: 'A Unstructured content type used for creating various types of news.'
+      help: ''

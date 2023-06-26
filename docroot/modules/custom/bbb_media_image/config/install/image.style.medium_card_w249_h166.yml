@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: medium_card_w249_h166
+label: 'Medium Card W249 H166'
+effects:
+  802723f8-1370-439a-a7e6-d98e4f7bac46:
+    uuid: 802723f8-1370-439a-a7e6-d98e4f7bac46
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 249
+      height: 166
+      crop_type: focal_point

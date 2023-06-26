@@ -1,0 +1,246 @@
+<?php
+
+/**
+ * @file
+ * Theme file.
+ */
+
+use Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_THEME_suggestions_input_alter().
+ */
+function bbb_site_studio_theme_suggestions_input_alter(&$suggestions, array $variables) {
+  $element = $variables['element'];
+
+  if (isset($element['#attributes']['data-twig-suggestion'])) {
+    $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-twig-suggestion'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_field().
+ */
+function bbb_site_studio_preprocess_views_view_field(&$variables) {
+  $view = $variables['view'];
+  if ($view->id() == 'solr_search') {
+    if ($variables['field']->field == 'field_content_typology') {
+      // Markup for content typology and date field.
+      $date = '<date class="coh-inline-element bulleted">' . $variables['view']->field['created']->last_render . '</date>';
+      $content_typology = $variables['field']->last_render;
+      if (!empty($content_typology)) {
+        $html = sprintf($content_typology, $date);
+        $variables['output'] = Markup::create($html);
+      }
+    }
+    elseif ($variables['field']->field == 'search_api_excerpt') {
+      $html = $variables['field']->last_render;
+      // Update the ellipses string.
+      $html = str_replace('…', '[…]', $html);
+      $variables['output'] = Markup::create($html);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function bbb_site_studio_preprocess_block(&$variables) {
+  if (isset($variables['attributes']['id']) && $variables['attributes']['id'] == 'block-exposedformsolr-searchsearch') {
+    // Update the form id to fix accessibility duplicate id error.
+    $variables['content']['#id'] = 'views-exposed-form-solr-search-page';
+  }
+  if (isset($variables['elements']['content']['#block_content'])) {
+    $variables['uuid'] = $variables['elements']['content']['#block_content']->uuid();
+  }
+  if ((isset($variables['attributes']['id']) && $variables['attributes']['id'] == 'block-views-block-case-study-listing-success-story-list') || (isset($variables['attributes']['id']) && $variables['attributes']['id'] == 'block-views-block-article-listing-block')) {
+    $variables['attributes']['id'] = 'filter-results';
+  }
+  if ($variables['elements']['#id'] == 'views_block_article_listing_block') {
+    $variables['#attached']['library'][] = 'bbb_site_studio/custom';
+  }
+  if ($variables['elements']['#plugin_id'] == 'footnotes_group') {
+    $variables['#cache']['max-age'] = 0;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_taxonomy_term_alter().
+ */
+function bbb_site_studio_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $variables) {
+  /** @var \Drupal\taxonomy\TermInterface $term */
+  $term = $variables['elements']['#taxonomy_term'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  // Add view mode theme suggestions.
+  $suggestions[] = 'taxonomy_term__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->id() . '__' . $sanitized_view_mode;
+}
+
+/**
+ * Implements hook_preprocess_taxonomy_term().
+ */
+function bbb_site_studio_preprocess_taxonomy_term(&$variables) {
+  // Check to see if the view mode is partner_list.
+  if ($variables['view_mode'] == 'partner_list') {
+    // Check if it is BBB site.
+    $moduleHandler = \Drupal::service('module_handler');
+    $variables['not_bbb'] = TRUE;
+    if ($moduleHandler->moduleExists('bbb_core') && !$moduleHandler->moduleExists('bpc_core') && !$moduleHandler->moduleExists('sul_core') && !$moduleHandler->moduleExists('bbi_core')) {
+      $variables['not_bbb'] = FALSE;
+    }
+    // Set variables for other sites.
+    if ($moduleHandler->moduleExists('bbi_core')) {
+      $variables['bbi_core'] = TRUE;
+    }
+    if ($moduleHandler->moduleExists('bpc_core')) {
+      $variables['bpc_core'] = TRUE;
+    }
+    if ($moduleHandler->moduleExists('sul_core')) {
+      $variables['sul_core'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_summary_unformatted().
+ */
+function bbb_site_studio_preprocess_views_view_summary_unformatted(&$variables) {
+  $view = $variables['view'];
+  if ($view->id() == 'partners' && $view->current_display == 'attachment_1') {
+    $rows = [];
+    foreach ($variables['rows'] as $row) {
+      $rows[strtoupper($row->name_truncated)] = $row;
+    }
+    $alphabetshowhide = 0;
+    if ($alphabetshowhide == 0) {
+    $alphabets = range('A', 'Z');
+    array_unshift($alphabets, '0-9');
+    foreach ($alphabets as $key => $element) {
+      // If result is available.
+      if (isset($rows[$element])) {
+        // Replacing with view row.
+        $alphabets[$key] = $rows[$element];
+      }
+    }
+
+    // In case of numeric title.
+    foreach ($rows as $key => $row) {
+      if (in_array($key, range(0, 9))) {
+        // Set the view for for last key.
+        $alphabets[0] = $rows[$key];
+      }
+    }
+
+    // Set the name and link as 0-9.
+    $numeric_title = current($alphabets);
+    if (isset($numeric_title->link) && is_numeric($numeric_title->link)) {
+      $numeric_title->name_truncated = '0-9';
+      $numeric_title->link = '0-9';
+    }
+  }
+
+    $variables['rows'] = $alphabets;
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function bbb_site_studio_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+  if ($view->id() == 'partners' && $view->current_display == 'partner_list') {
+    // Check if numeric value result title is present.
+    if (isset($variables['rows'][0]['#title']) && is_numeric($variables['rows'][0]['#title']->__toString())) {
+      // Set flag to add grouping wrapper for numeric title rows.
+      $variables['flag'] = '1';
+    }
+
+    // Set the title based on the site.
+    $moduleHandler = \Drupal::service('module_handler');
+    if ($moduleHandler->moduleExists('bpc_core')) {
+      $title = t('Filter portfolio');
+    }
+    elseif ($moduleHandler->moduleExists('bbi_core')) {
+      $title = t('Filter portfolio');
+    }
+    elseif ($moduleHandler->moduleExists('bbb_core') && !$moduleHandler->moduleExists('bpc_core') && !$moduleHandler->moduleExists('sul_core') && !$moduleHandler->moduleExists('bbi_core')) {
+      $title = t('Filter partners');
+    }
+    else {
+      $title = t('Filter partners');
+    }
+    $variables['filter_title'] = $title;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function bbb_site_studio_theme_suggestions_field_alter(&$suggestions, array $variables) {
+  $element = $variables['element'];
+  $suggestions[] = 'field__' . $element['#entity_type'] . '__' .
+    $element['#field_name'] . '__' . $element['#bundle'] . '__' .
+    $element['#view_mode'];
+}
+
+/**
+ * Implements hook_preprocess_maintainenance_page().
+ */
+function bbb_site_studio_preprocess_maintenance_page(array &$variables) {
+  $module = _bbb_core_get_site_module_name();
+  $variables['lib_path'] = sprintf("bbb_site_studio/maintenance_%s", $module);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function bbb_site_studio_theme_suggestions_page__system__404_alter(array &$suggestions) {
+  $error = 404;
+  if (isset($error)) {
+    $suggestions[] = 'page__error__' . $error;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function bbb_site_studio_theme_suggestions_page__system__403_alter(array &$suggestions) {
+  $error = 403;
+  if (isset($error)) {
+    $suggestions[] = 'page__error__' . $error;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function bbb_site_studio_theme_suggestions_page__system__401_alter(array &$suggestions) {
+  $error = 404;
+  if (isset($error)) {
+    $suggestions[] = 'page__error__' . $error;
+  }
+}
+
+/**
+ * Implements hook_preprocess_page() for error pages.
+ */
+function bbb_site_studio_preprocess_page(array &$variables) {
+  \Drupal::service('cache.render')->invalidateAll();
+  $variables['module_name'] = _bbb_core_get_site_module_name();
+}
+
+function bbb_site_studio_theme($existing, $type, $theme, $path) {
+  return [
+    'bbb_partner_template' => [
+      'variables' => [
+        'elementSettings' => NULL,
+        'elementMarkup' => NULL,
+        'elementContext' => NULL,
+        'elementClass' => NULL,
+        'filteredData' => NULL,
+      ],
+      'render element' => 'children',
+    ],
+  ];
+ }

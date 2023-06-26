@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_card_mobile_w296_h296
+label: 'Large Card Mobile W296 H296'
+effects:
+  82d2a53e-4087-43d0-870c-f150708ec817:
+    uuid: 82d2a53e-4087-43d0-870c-f150708ec817
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 296
+      height: 296
+      crop_type: focal_point

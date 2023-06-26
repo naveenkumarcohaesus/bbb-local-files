@@ -1,0 +1,44 @@
+core.entity_form_display.node.event.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_content_owner:
+          weight: 21
+          type: entity_reference_autocomplete_tags
+          settings:
+            match_operator: CONTAINS
+            match_limit: 10
+          third_party_settings: {  }
+        field_metatags:
+          region: content
+          settings:
+            sidebar: true
+            use_details: true
+          third_party_settings: {  }
+          type: metatag_firehose
+          weight: 30
+field.field.node.event.field_business_structure:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.event.field_content_typology:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.event.field_region:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.event.field_topic:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false

@@ -1,0 +1,63 @@
+views.view.faq:
+  expected_config: { }
+  update_actions:
+    add:
+      dependencies:
+        config:
+          - taxonomy.vocabulary.business_structure
+      display:
+        default:
+          display_options:
+            filters:
+              field_show_on_website_target_id:
+                id: field_show_on_website_target_id
+                table: taxonomy_term__field_show_on_website
+                field: field_show_on_website_target_id
+                relationship: none
+                group_type: group
+                admin_label: ''
+                plugin_id: taxonomy_index_tid
+                operator: empty
+                value: {  }
+                group: 1
+                exposed: false
+                expose:
+                  operator_id: ''
+                  label: ''
+                  description: ''
+                  use_operator: false
+                  operator: ''
+                  operator_limit_selection: false
+                  operator_list: {  }
+                  identifier: ''
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                  reduce: false
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                reduce_duplicates: false
+                vid: business_structure
+                type: textfield
+                hierarchy: false
+                limit: true
+                error_message: true
+          cache_metadata:
+            contexts:
+              - user            
+        faq_categories:
+          cache_metadata:      
+            contexts:
+              - user

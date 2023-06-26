@@ -1,0 +1,6 @@
+services:
+  bbb_partner.commands:
+    class: \Drupal\bbb_partner\Commands\FieldMigrationCommand
+    tags:
+      - { name: drush.command }
+    arguments: ['@entity_type.manager', '@logger.factory', '@entity_field.manager']

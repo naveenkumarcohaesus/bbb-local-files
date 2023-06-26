@@ -1,0 +1,26 @@
+uuid: 1802ffc6-6423-4fd9-bca7-34f89ca3ed3d
+langcode: en
+status: true
+dependencies: {  }
+id: pack_google_map_component
+label: 'Google Map Component'
+description: 'Contains Google Map Component package'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "80c4fe09-0ac0-4a45-8613-51285ba56ce8": {
+          "type": "cohesion_component",
+          "items": {
+              "80c4fe09-0ac0-4a45-8613-51285ba56ce8": {
+                  "type": "cohesion_component"
+              },
+              "97c24ca9-f8de-4718-932b-78943de61a75": {
+                  "type": "cohesion_component_category"
+              },
+              "81e8690f-807d-415d-b9a2-22cfd572306b": {
+                  "type": "file"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,110 @@
+uuid: 15a5513e-cdab-4688-abf9-08a0a2a6fe62
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.notes_to_editor
+    - field.field.taxonomy_term.partner.field_address
+    - field.field.taxonomy_term.partner.field_amount_of_finance_needed
+    - field.field.taxonomy_term.partner.field_bus_stages
+    - field.field.taxonomy_term.partner.field_case_study_url
+    - field.field.taxonomy_term.partner.field_content_areas
+    - field.field.taxonomy_term.partner.field_email
+    - field.field.taxonomy_term.partner.field_exclude_from_support_finde
+    - field.field.taxonomy_term.partner.field_exclude_region
+    - field.field.taxonomy_term.partner.field_expertise
+    - field.field.taxonomy_term.partner.field_finance_type
+    - field.field.taxonomy_term.partner.field_geofield
+    - field.field.taxonomy_term.partner.field_include_quote_section
+    - field.field.taxonomy_term.partner.field_inv_manager
+    - field.field.taxonomy_term.partner.field_inv_types
+    - field.field.taxonomy_term.partner.field_investment_range
+    - field.field.taxonomy_term.partner.field_lend_schemes
+    - field.field.taxonomy_term.partner.field_logo
+    - field.field.taxonomy_term.partner.field_partner_sector
+    - field.field.taxonomy_term.partner.field_partner_stages
+    - field.field.taxonomy_term.partner.field_phone
+    - field.field.taxonomy_term.partner.field_programme
+    - field.field.taxonomy_term.partner.field_ptnr_types
+    - field.field.taxonomy_term.partner.field_quote_credit
+    - field.field.taxonomy_term.partner.field_quote_pic
+    - field.field.taxonomy_term.partner.field_quote_text
+    - field.field.taxonomy_term.partner.field_region
+    - field.field.taxonomy_term.partner.field_segment_ent
+    - field.field.taxonomy_term.partner.field_show_at_portfolio_module
+    - field.field.taxonomy_term.partner.field_show_on_regional_support
+    - field.field.taxonomy_term.partner.field_show_on_website
+    - field.field.taxonomy_term.partner.field_supporting_business
+    - field.field.taxonomy_term.partner.field_type_funding
+    - field.field.taxonomy_term.partner.field_website_link
+    - field.field.taxonomy_term.partner.field_website_link_bbls
+    - field.field.taxonomy_term.partner.field_website_link_cbils
+    - field.field.taxonomy_term.partner.field_website_link_clbils
+    - field.field.taxonomy_term.partner.field_website_link_rls
+    - taxonomy.vocabulary.partner
+  module:
+    - text
+  enforced:
+    module:
+      - bbb_partner
+id: taxonomy_term.partner.notes_to_editor
+targetEntityType: taxonomy_term
+bundle: partner
+mode: notes_to_editor
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_address: true
+  field_amount_of_finance_needed: true
+  field_bus_stages: true
+  field_business_stages: true
+  field_case_study_url: true
+  field_content_areas: true
+  field_email: true
+  field_exclude_from_support_finde: true
+  field_exclude_region: true
+  field_expertise: true
+  field_finance_type: true
+  field_geofield: true
+  field_hide_on_map: true
+  field_hide_on_map_listing: true
+  field_include_quote_section: true
+  field_inv_manager: true
+  field_inv_types: true
+  field_investment_manager: true
+  field_investment_range: true
+  field_investment_types: true
+  field_lend_schemes: true
+  field_lender_schemes: true
+  field_logo: true
+  field_partner_sector: true
+  field_partner_stages: true
+  field_partner_types: true
+  field_phone: true
+  field_programme: true
+  field_ptnr_types: true
+  field_quote_credit: true
+  field_quote_pic: true
+  field_quote_text: true
+  field_region: true
+  field_segment: true
+  field_segment_ent: true
+  field_show_at_portfolio_module: true
+  field_show_on_regional_support: true
+  field_show_on_website: true
+  field_stages: true
+  field_supporting_business: true
+  field_type_funding: true
+  field_website_link: true
+  field_website_link_bbls: true
+  field_website_link_cbils: true
+  field_website_link_clbils: true
+  field_website_link_rls: true
+  langcode: true
+  search_api_excerpt: true

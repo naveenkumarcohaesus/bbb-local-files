@@ -1,0 +1,47 @@
+uuid: 5ea60c7b-56bf-47f3-960e-a618f6785b80
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:a0f31dca-dedf-4fbe-b23c-578a3def0484'
+    - 'file:file:a5c56c34-b0f7-4bd7-9844-de1aaf7ff6b0'
+    - 'file:file:c511b655-fcf3-4723-be0d-f9879ce4361e'
+    - 'file:file:f0bc17bd-1378-4a55-8002-e57c194652c7'
+label: Fontawesome
+id: icomoon
+json_values: |
+  {
+      "key": "uploadIcomoon",
+      "type": "upload",
+      "provider": "icomoon",
+      "fontFamilyName": "Icomoon",
+      "name": "Icomoon",
+      "fontFiles": {
+          "eot": {
+              "type": "file",
+              "uri": "public:\/\/cohesion\/bbbicons_6.eot",
+              "uuid": "a5c56c34-b0f7-4bd7-9844-de1aaf7ff6b0"
+          },
+          "ttf": {
+              "type": "file",
+              "uri": "public:\/\/cohesion\/bbbicons_6.ttf",
+              "uuid": "f0bc17bd-1378-4a55-8002-e57c194652c7"
+          },
+          "woff": {
+              "type": "file",
+              "uri": "public:\/\/cohesion\/bbbicons_6.woff",
+              "uuid": "a0f31dca-dedf-4fbe-b23c-578a3def0484"
+          },
+          "woff2": null
+      },
+      "iconJSON": {
+          "json": "public:\/\/cohesion\/selection_13.json"
+      },
+      "locked": true
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: true
+modified: false
+selectable: true
+source: null

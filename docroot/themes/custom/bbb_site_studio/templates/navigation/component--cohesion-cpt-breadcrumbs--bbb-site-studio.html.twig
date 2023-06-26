@@ -1,0 +1,32 @@
+{{ attach_library('cohesion/global_libraries.responsiveJs') }}
+{{ attach_library('cohesion/global_libraries.matchHeight') }}
+{{ attach_library('cohesion/global_libraries.cohMatchHeights') }}
+{{ attach_library('cohesion/global_libraries.windowscroll') }}
+{{ attach_library('cohesion/element_templates.link') }}
+{{ attach_library('cohesion/global_libraries.parallax_scrolling') }}
+<nav class="coh-container ssa-component coh-component ssa-component-instance-{{ componentUuid }} coh-component-instance-{{ componentUuid }} {{ getComponentFieldValue(" 6fa91362-7b59-4672-b530-bcec3852ca1c") | raw }} {{ getComponentFieldValue(" e4721d63-485a-4c3f-bde4-5fb3e52c2e5e") | raw }} coh-ce-cpt_breadcrumbs-b00f9d69" aria-label="Breadcrumb">
+  {% set breadcrumb = cohesion_breadcrumb() %}
+  {% if breadcrumb %}
+    <ol class="coh-breadcrumb coh-style-breadcrumbs" vocab="https://schema.org/" typeof="BreadcrumbList">
+      {% for key,item in breadcrumb %}
+      {% set content_index = key + 1 %}
+      <li property="itemListElement" typeof="ListItem">
+          {% if item.url %}
+            <a property="item" typeof="WebPage" href="{{ item.url }}">
+              {% if (breadcrumb|length)-1 == loop.index %}
+                <span class="back-to">{{ "Back to" | t }}</span>
+              {% endif %}
+            <span property="name">{{ item.text }}</span></a>
+            <meta property="position" content={{ content_index }}>
+          {% else %}
+            <span property="name">{{ item.text|length > 60 ? item.text|slice(0, 60)|raw ~ '...' : item.text|raw }}</span>
+            <meta property="position" content={{ content_index }}>
+          {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  {% endif %}
+</nav>
+{% if content is defined %}
+  {% set catch_cache = content|render %}
+{% endif %}

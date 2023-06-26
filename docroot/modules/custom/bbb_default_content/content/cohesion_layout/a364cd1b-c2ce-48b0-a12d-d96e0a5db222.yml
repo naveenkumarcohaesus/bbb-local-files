@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: cohesion_layout
+  uuid: a364cd1b-c2ce-48b0-a12d-d96e0a5db222
+  default_langcode: en
+default:
+  json_values:
+    -
+      value: '{"canvas":[{"title":"Alert Banner","type":"component","componentContentId":"cc_09847a90-a559-4bc3-86c5-b2e53a75bee2","uid":"cc_09847a90-a559-4bc3-86c5-b2e53a75bee2","componentId":"cpt_alert_banner","category":"category-10","componentType":"misc","url":"\/admin\/cohesion\/components\/component_contents\/98","uuid":"a4bb7898-99a4-4939-be08-42fc5a833b3a","parentUid":"root","status":{},"children":[]}],"mapper":{},"model":{"a4bb7898-99a4-4939-be08-42fc5a833b3a":{}},"previewModel":{},"variableFields":{},"meta":{"fieldHistory":[]}}'
+  styles:
+    -
+      value: '[]'
+  template:
+    -
+      value: '{"bbb_site_studio":"{\u0022metadata\u0022:{\u0022contexts\u0022:[]},\u0022twig\u0022:\u0022{{ attach_library(\u0027cohesion\\\/global_libraries.responsiveJs\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.matchHeight\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.cohMatchHeights\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.windowscroll\u0027) }} {{ attach_library(\u0027cohesion\\\/element_templates.link\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.parallax_scrolling\u0027) }} {{ renderComponent(\\\u0022cc_09847a90-a559-4bc3-86c5-b2e53a75bee2\\\u0022, false, _context, [], \\\u0022a4bb7898-99a4-4939-be08-42fc5a833b3a\\\u0022, \\\u002209847a90-a559-4bc3-86c5-b2e53a75bee2\\\u0022)  }} \\n{% if content is defined %}{% set catch_cache = content|render %}{% endif %}\u0022}"}'
+  last_entity_update:
+    -
+      value: entityupdate_0036
+  revision_translation_affected:
+    -
+      value: true

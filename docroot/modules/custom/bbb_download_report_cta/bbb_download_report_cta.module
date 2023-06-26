@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Create Site Studio Custom Element twig template.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function bbb_download_report_cta_theme($existing, $type, $theme, $path) {
+  return [
+    'download_report_cta' => [
+      'variables' => [
+        'settings' => NULL,
+        'markup' => NULL,
+        'context' => NULL,
+        'class' => NULL,
+        'link' => NULL,
+        'document' => NULL,
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

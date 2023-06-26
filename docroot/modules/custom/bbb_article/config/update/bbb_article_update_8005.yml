@@ -1,0 +1,117 @@
+field.field.node.article.field_business_structure:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.article.field_content_typology:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+core.entity_form_display.node.article.default:
+  expected_config:
+    content:  {  }
+  update_actions:
+    delete:
+      content:
+        body:
+          region: content
+          settings:
+            placeholder: ''
+            rows: 9
+            show_summary: false
+            summary_rows: 3
+          third_party_settings: {  }
+          type: text_textarea_with_summary
+          weight: 16
+        field_content_owner:
+          region: content
+          settings:
+            placeholder: ''
+            size: 60
+          third_party_settings: {  }
+          type: string_textfield
+          weight: 15
+    add:
+      content:
+        field_content_owner:
+          weight: 21
+          type: entity_reference_autocomplete_tags
+          settings:
+            match_operator: CONTAINS
+            match_limit: 10
+          third_party_settings: { }
+        field_metatags:
+          region: content
+          settings:
+            sidebar: true
+            use_details: true
+          third_party_settings: { }
+          type: metatag_firehose
+          weight: 22
+core.entity_view_display.node.article.default:
+  expected_config:
+    hidden:
+      body: true
+      field_content_owner: true
+  update_actions:
+    delete:
+      hidden:
+        body: true
+        field_content_owner: true
+field.field.node.page.body:
+  expected_config:
+    label: 'Search Description'
+  update_actions:
+    change:
+      label: 'Teaser text'
+node.type.page:
+  expected_config: {  }
+  update_actions:
+    delete:
+      third_party_settings:
+        node_title_help_text:
+          title_help: ''
+    change:
+      description: 'An unstructured content type that provides unique listing pages - e.g., Terms and Condition, Privacy Policy Page using this content type.'
+      name: 'Generic Page'
+field.field.node.place.field_geofield:
+  expected_config:
+    settings:
+      backend: geofield_backend_default
+  update_actions:
+    delete:
+      settings:
+        backend: geofield_backend_default
+    change:
+      settings: {  }
+field.field.node.place.field_place_address:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.place.field_place_image:
+  expected_config:
+    required: true
+  update_actions:
+    add:
+      settings:
+        handler_settings:
+          sort:
+            direction: ASC
+    change:
+      required: false
+field.field.node.person.field_person_image:
+  expected_config:
+    required: true
+  update_actions:
+    add:
+      settings:
+        handler_settings:
+          sort:
+            direction: ASC
+    change:
+      required: false

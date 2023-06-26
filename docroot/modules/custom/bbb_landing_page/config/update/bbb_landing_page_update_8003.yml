@@ -1,0 +1,50 @@
+core.entity_form_display.node.landing_page.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_metatags:
+          region: content
+          settings:
+            sidebar: true
+            use_details: true
+          third_party_settings: {  }
+          type: metatag_firehose
+          weight: 26
+core.entity_view_display.node.landing_page.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_metatags:
+          label: above
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+          type: metatag_empty_formatter
+          weight: 104
+node.type.landing_page:
+  expected_config: {  }
+  update_actions:
+    add:
+      third_party_settings:
+        menu_ui:
+          available_menus:
+            - main
+          parent: 'main:'
+        scheduler:
+          expand_fieldset: when_required
+          fields_display_mode: vertical_tab
+          publish_enable: false
+          publish_past_date: error
+          publish_past_date_created: false
+          publish_required: false
+          publish_revision: false
+          publish_touch: false
+          show_message_after_update: true
+          unpublish_enable: false
+          unpublish_required: false
+          unpublish_revision: false
+    change:
+      description: 'An unstructured content type that provides unique landing pages - e.g., a homepage, or marketing event landing page, News Listing , Partner Listing, Team Member Listing'
+      help: ''

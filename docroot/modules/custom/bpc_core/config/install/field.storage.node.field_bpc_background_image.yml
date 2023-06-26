@@ -1,0 +1,20 @@
+uuid: 409a72a7-81b2-4c4e-a099-46cd25e837c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_bpc_background_image
+field_name: field_bpc_background_image
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

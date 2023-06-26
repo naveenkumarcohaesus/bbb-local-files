@@ -1,0 +1,12 @@
+{% if link.url is not empty and link.title is not empty %}
+  <a href="{{ link.url }}" class="coh-style-link-button btn-default coh-style-label-large"
+    {% if link.target is not empty %}
+      target="{{ link.target }}"
+    {% endif %}
+     rel="bookmark" data-card-folds="on">
+    {{ link.title }}
+    {% if link.text is not empty %}
+      <span class="visually-hidden">{{ link.text }}</span>
+    {% endif %}
+  </a>
+{% endif %}

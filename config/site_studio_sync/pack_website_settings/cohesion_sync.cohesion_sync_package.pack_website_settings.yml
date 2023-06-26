@@ -1,0 +1,44 @@
+uuid: 760a25c9-87d7-4668-95ae-fdcdd6d7558f
+langcode: en
+status: true
+dependencies: {  }
+id: pack_website_settings
+label: 'Website Settings'
+description: 'Contains Website Settings'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "0e143b69-75f3-42de-b799-ebb0ed339c09": {
+          "type": "cohesion_website_settings",
+          "items": {
+              "0e143b69-75f3-42de-b799-ebb0ed339c09": {
+                  "type": "cohesion_website_settings"
+              }
+          },
+          "checked": true
+      },
+      "1e054a3c-7fb7-4a02-9870-d7a704555528": {
+          "type": "cohesion_website_settings",
+          "items": {
+              "7537520d-a261-4677-9d32-4360363091fa": {
+                  "type": "cohesion_color"
+              },
+              "3ef0e76c-447c-41cf-854a-6d926d97189d": {
+                  "type": "cohesion_font_stack"
+              },
+              "1e054a3c-7fb7-4a02-9870-d7a704555528": {
+                  "type": "cohesion_website_settings"
+              }
+          },
+          "checked": true
+      },
+      "62cffd71-aef5-44f2-b109-0c193da89b71": {
+          "type": "cohesion_website_settings",
+          "items": {
+              "62cffd71-aef5-44f2-b109-0c193da89b71": {
+                  "type": "cohesion_website_settings"
+              }
+          },
+          "checked": true
+      }
+  }

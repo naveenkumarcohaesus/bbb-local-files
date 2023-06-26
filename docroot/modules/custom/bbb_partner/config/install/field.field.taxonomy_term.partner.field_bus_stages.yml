@@ -1,0 +1,29 @@
+uuid: 424d95a0-9642-4146-a10b-9b9f98b4086e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_bus_stages
+    - taxonomy.vocabulary.business_stages
+    - taxonomy.vocabulary.partner
+id: taxonomy_term.partner.field_bus_stages
+field_name: field_bus_stages
+entity_type: taxonomy_term
+bundle: partner
+label: 'Business Stages'
+description: 'This field is BBB FH specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      business_stages: business_stages
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,61 @@
+uuid: 378749f7-64de-4831-a20e-2681689a8134
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_component.cpt_drupal_blocks
+    - cohesion_elements.cohesion_component_category.cpt_cat_dynamic_components
+label: 'Success story list block'
+id: cpt_success_story_list_block
+json_values: |
+  {
+      "canvas": [
+          {
+              "uid": "cpt_drupal_blocks",
+              "type": "component",
+              "title": "Drupal blocks",
+              "enabled": true,
+              "category": "category-3",
+              "componentId": "cpt_drupal_blocks",
+              "componentType": "container",
+              "uuid": "6754e868-9062-4bde-bcdd-1123aa380c39",
+              "parentUid": "root",
+              "status": {},
+              "children": []
+          }
+      ],
+      "componentForm": [],
+      "mapper": {},
+      "model": {
+          "6754e868-9062-4bde-bcdd-1123aa380c39": {
+              "settings": {
+                  "title": "Drupal blocks"
+              },
+              "33477453-ecf9-49b5-873b-67737b65fefe": "views_block__case_study_listing_success_story_list",
+              "dda7054d-09f6-4fdc-82f6-138404466a96": "dark-title",
+              "609b5301-04bf-45ce-82af-509436f29597": ""
+          }
+      },
+      "previewModel": {
+          "6754e868-9062-4bde-bcdd-1123aa380c39": {}
+      },
+      "variableFields": {
+          "6754e868-9062-4bde-bcdd-1123aa380c39": []
+      },
+      "disabledNodes": [],
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_dynamic_components
+preview_image: ''
+has_quick_edit: null
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-success-story-list-block
+weight: 0

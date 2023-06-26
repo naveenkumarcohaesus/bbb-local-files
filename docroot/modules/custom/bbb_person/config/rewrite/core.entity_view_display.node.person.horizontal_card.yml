@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.horizontal_card
+    - field.field.node.person.field_email
+    - field.field.node.person.field_job_title
+    - field.field.node.person.field_person_mobile
+    - field.field.node.person.field_person_telephone
+    - node.type.person
+  module:
+    - telephone
+    - user
+  enforced:
+    module:
+      - acquia_cms_person
+id: node.person.horizontal_card
+targetEntityType: node
+bundle: person
+mode: horizontal_card
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_job_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_person_telephone:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+hidden:
+  field_person_mobile: true
+  langcode: true
+  search_api_excerpt: true

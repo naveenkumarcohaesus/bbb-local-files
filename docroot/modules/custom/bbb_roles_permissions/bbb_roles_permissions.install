@@ -1,0 +1,87 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+/**
+ * Update the config for content editor user role on module install.
+ *
+ * @implements hook_install
+ */
+function bbb_roles_permissions_install() {
+  // Update the permissions for user role content editor.
+  _bbb_article_rewrite_configuration('user.role.content_editor', 'bbb_roles_permissions', 'optional');
+}
+
+/**
+ * Update permissions for content editor user role.
+ */
+function bbb_roles_permissions_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_roles_permissions', 'bbb_roles_permissions_update_8001');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update permissions for content editor user role.
+ */
+function bbb_roles_permissions_update_8002() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_roles_permissions', 'bbb_roles_permissions_update_8001');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update content editor permissions for sticky content.
+ */
+function bbb_roles_permissions_update_8003() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_roles_permissions', 'bbb_roles_permissions_update_8003');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update User permissions for administer themes.
+ */
+function bbb_roles_permissions_update_8004() {
+  // Update the permissions for user role content administrator.
+  _bbb_article_rewrite_configuration('user.role.content_administrator', 'bbb_roles_permissions', 'optional');
+  // Update the permissions for user role content editor.
+  _bbb_article_rewrite_configuration('user.role.content_editor', 'bbb_roles_permissions', 'optional');
+  // Update the permissions for user role site builder.
+  _bbb_article_rewrite_configuration('user.role.site_builder', 'bbb_roles_permissions', 'optional');
+  // Update the permissions for user role user_administrator.
+  _bbb_article_rewrite_configuration('user.role.user_administrator', 'bbb_roles_permissions', 'optional');
+}
+
+/**
+ * Provide Content Editor access to add components.
+ */
+function bbb_roles_permissions_update_8005() {
+  // Update the permissions for user role content editor.
+  _bbb_article_rewrite_configuration('user.role.content_editor', 'bbb_roles_permissions', 'optional');
+}
+
+/**
+ * Provide Content Editor/Anonymous user access to download media.
+ */
+function bbb_roles_permissions_update_8006() {
+  // Update the permissions for user role content editor.
+  _bbb_article_rewrite_configuration('user.role.content_editor', 'bbb_roles_permissions', 'optional');
+  _bbb_article_rewrite_configuration('user.role.anonymous', 'bbb_roles_permissions', 'optional');
+}

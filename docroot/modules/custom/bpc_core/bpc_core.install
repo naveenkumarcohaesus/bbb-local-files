@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function bpc_core_install() {
+  bpc_core_update_8001();
+}
+
+/**
+ * Add BPC Background Image.
+ */
+function bpc_core_update_8001() {
+  // Add BPC Background Image to content types.
+  _bbb_article_create_field_storage('field.storage.node.field_bpc_background_image', 'bpc_core', 'install');
+  _bbb_article_rewrite_configuration('field.field.node.page.field_bpc_background_image', 'bpc_core', 'install');
+  _bbb_article_rewrite_configuration('field.field.node.case_study.field_bpc_background_image', 'bpc_core', 'install');
+  _bbb_article_rewrite_configuration('field.field.node.product.field_bpc_background_image', 'bpc_core', 'install');
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bpc_core', 'bpc_core_update_8001');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Add Hero Background image field.
+ */
+function bpc_core_update_8002() {
+  _bbb_article_create_entity_field('node.research_and_publication.field_bpc_background_image', 'field.field.node.research_and_publication.field_bpc_background_image', 'bpc_core', 'install');
+}
+
+/**
+ * Make background image field visible on content add/edit form.
+ */
+function bpc_core_update_8003() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bpc_core', 'bpc_core_update_8003');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Entity/ field definitions need to be updated.
+ */
+function bpc_core_update_8004() {
+  $manager = \Drupal::entityDefinitionUpdateManager();
+  if ($field = $manager->getFieldStorageDefinition('field_type_of_funding', 'taxonomy_term')) {
+    $manager->uninstallFieldStorageDefinition($field);
+  }
+}
+
+/**
+ * Change label and field name.
+ */
+function bpc_core_update_8005() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bpc_core', 'bpc_core_update_8005');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

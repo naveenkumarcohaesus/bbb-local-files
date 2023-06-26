@@ -1,0 +1,63 @@
+diff --git a/src/RedirectHandler.php b/src/RedirectHandler.php
+index 8a75766..d52e658 100644
+--- a/src/RedirectHandler.php
++++ b/src/RedirectHandler.php
+@@ -100,32 +100,32 @@ final class RedirectHandler implements ContainerInjectionInterface {
+    *   The form state.
+    */
+   protected function handleRedirect(FormStateInterface $form_state) {
+-    // This is set by the user login form.
+-    // @see \Drupal\user\Form\UserLoginForm::validateAuthentication()
+-    $user = $this->userStorage->load($form_state->get('uid'));
+-    assert($user instanceof AccountInterface);
+-
+-    // If the user is about to be redirected to their user page, do our special
+-    // sauce redirect handling based on the role(s) the user has.
+-    if ($this->willRedirectToUserPage()) {
+-      // Remove the 'destination' query sting parameter, since it will cause our
+-      // redirect to be totally ignored due to a core quirk.
+-      // @todo Remove when https://www.drupal.org/project/drupal/issues/2950883
+-      // is fixed.
+-      $this->request->query->remove('destination');
+-
+-      if ($this->isContributor($user)) {
+-        // @todo Don't redirect if Moderation Dashboard is not enabled.
+-        $url = Url::fromUri('internal:/user/' . $user->id() . '/moderation/dashboard');
+-        $form_state->setRedirectUrl($url);
+-      }
+-      elseif ($this->isDeveloper($user) && $this->moduleHandler->moduleExists('cohesion')) {
+-        $form_state->setRedirect('cohesion.settings');
+-      }
+-      elseif ($this->isUserAdministrator($user)) {
+-        $form_state->setRedirect('entity.user.collection');
+-      }
+-    }
++  //   // This is set by the user login form.
++  //   // @see \Drupal\user\Form\UserLoginForm::validateAuthentication()
++  //   $user = $this->userStorage->load($form_state->get('uid'));
++  //   assert($user instanceof AccountInterface);
++
++  //   // If the user is about to be redirected to their user page, do our special
++  //   // sauce redirect handling based on the role(s) the user has.
++  //   if ($this->willRedirectToUserPage()) {
++  //     // Remove the 'destination' query sting parameter, since it will cause our
++  //     // redirect to be totally ignored due to a core quirk.
++  //     // @todo Remove when https://www.drupal.org/project/drupal/issues/2950883
++  //     // is fixed.
++  //     $this->request->query->remove('destination');
++
++  //     if ($this->isContributor($user)) {
++  //       // @todo Don't redirect if Moderation Dashboard is not enabled.
++  //       $url = Url::fromUri('internal:/user/' . $user->id() . '/moderation/dashboard');
++  //       $form_state->setRedirectUrl($url);
++  //     }
++  //     elseif ($this->isDeveloper($user) && $this->moduleHandler->moduleExists('cohesion')) {
++  //       $form_state->setRedirect('cohesion.settings');
++  //     }
++  //     elseif ($this->isUserAdministrator($user)) {
++  //       $form_state->setRedirect('entity.user.collection');
++  //     }
++  //   }
+   }
+ 
+   /**

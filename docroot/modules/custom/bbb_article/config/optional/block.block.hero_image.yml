@@ -1,0 +1,47 @@
+uuid: f3ae6f01-fb9f-4730-b7e7-ad80b69967c7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:custom_layout_canvas_block:c6b71eeb-f22e-465b-bf42-c3762fc85fb2'
+  module:
+    - block_content
+    - cohesion
+    - collapsiblock
+    - node
+    - system
+  theme:
+    - bbb_site_studio
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: hero_image
+theme: bbb_site_studio
+region: content
+weight: 2
+provider: null
+plugin: 'block_content:c6b71eeb-f22e-465b-bf42-c3762fc85fb2'
+settings:
+  id: 'block_content:c6b71eeb-f22e-465b-bf42-c3762fc85fb2'
+  label: 'Hero Image'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 1
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article

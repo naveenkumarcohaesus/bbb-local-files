@@ -1,0 +1,30 @@
+uuid: 1e054a3c-7fb7-4a02-9870-d7a704555528
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_website_settings.cohesion_color.black
+    - cohesion_website_settings.cohesion_font_stack.brhendrix-regular
+label: 'Default font settings'
+id: default_font_settings
+json_values: |
+  {
+      "defaultFontStack": "$coh-font-brhendrix-regular",
+      "color": {
+          "value": {
+              "hex": "#000000",
+              "rgba": "rgba(0, 0, 0, 1)"
+          },
+          "name": "Black",
+          "uid": "black",
+          "wysiwyg": true,
+          "class": ".coh-color-black",
+          "variable": "$coh-color-black",
+          "inuse": false
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true

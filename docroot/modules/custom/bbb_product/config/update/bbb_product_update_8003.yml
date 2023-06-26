@@ -1,0 +1,119 @@
+core.entity_form_display.node.product.default:
+  expected_config: {  }
+  update_actions:
+    change:
+      content:
+        field_image:
+          weight: 16
+        field_layout_canvas:
+          weight: 19
+        field_metatags:
+          region: content
+          settings:
+            sidebar: true
+            use_details: true
+          third_party_settings: {  }
+          type: metatag_firehose
+          weight: 21
+        field_teaser_text:
+          weight: 15
+      third_party_settings:
+        field_group:
+          group_programme:
+            weight: 18
+          group_taxonomy:
+            weight: 17
+    add:
+      content:
+        field_content_owner:
+          weight: 21
+          type: entity_reference_autocomplete_tags
+          settings:
+            match_operator: CONTAINS
+            match_limit: 10
+          third_party_settings: { }
+core.entity_view_display.node.product.default:
+  expected_config: {  }
+  update_actions:
+    delete:
+      hidden:
+        body: true
+        field_product_taxonomy: true
+    add:
+      content:
+        field_image:
+          settings:
+            view_mode: default
+      hidden:
+        field_metatags: true
+    change:
+      content:
+        field_image:
+          type: entity_reference_entity_view
+field.field.node.product.field_audience:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.product.field_content_typology:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.product.field_layout_canvas:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.product.field_partner:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.product.field_programme:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.product.field_programme_end_date:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.product.field_programme_overview:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+node.type.product:
+  expected_config: {  }
+  update_actions:
+    add:
+      third_party_settings:
+        menu_ui:
+          available_menus:
+            - main
+          parent: 'main:'
+        scheduler:
+          expand_fieldset: when_required
+          fields_display_mode: vertical_tab
+          publish_enable: false
+          publish_past_date: error
+          publish_past_date_created: false
+          publish_required: false
+          publish_revision: false
+          publish_touch: false
+          show_message_after_update: true
+          unpublish_enable: false
+          unpublish_required: false
+          unpublish_revision: false
+    change:
+      description: 'A Unstructured content type used for creating various types of products.'
+      help: ''

@@ -1,0 +1,79 @@
+core.entity_form_display.node.case_study.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_content_owner:
+          weight: 21
+          type: entity_reference_autocomplete_tags
+          settings:
+            match_operator: CONTAINS
+            match_limit: 10
+          third_party_settings: {  }
+        field_metatags:
+          region: content
+          settings:
+            sidebar: true
+            use_details: true
+          third_party_settings: {  }
+          type: metatag_firehose
+          weight: 22
+core.entity_view_display.node.case_study.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      hidden:
+        field_metatags: true
+field.field.node.case_study.field_business_structure:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.case_study.field_content_typology:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.case_study.field_finance_type:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.case_study.field_programme:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.case_study.field_partner:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.case_study.field_region:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.field.node.case_study.field_sector:
+  expected_config:
+    required: true
+  update_actions:
+    change:
+      required: false
+field.storage.node.field_partner:
+  expected_config:
+    cardinality: 1
+  update_actions:
+    change:
+      cardinality: -1
+node.type.case_study:
+  expected_config: {  }
+  update_actions:
+    change:
+      description: 'A Unstructured content type used for creating various types of Success Story.'

@@ -1,0 +1,24 @@
+views.view.case_study_listing:
+  expected_config:
+    display:
+      case_study_list_block:
+        display_options:
+          exposed_block: true
+      default:
+        display_options:
+          pager:
+            options:
+              quantity: 5
+  update_actions:
+    delete:
+      display:
+        case_study_list_block:
+          display_options:
+            exposed_block: true
+    change:
+      display:
+        default:
+          display_options:
+            pager:
+              options:
+                quantity: 9

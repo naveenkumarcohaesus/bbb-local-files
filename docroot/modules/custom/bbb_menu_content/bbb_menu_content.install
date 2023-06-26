@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+/**
+ * Update main meni entity form and view config.
+ */
+function bbb_menu_content_update_8001() {
+  _bbb_article_rewrite_configuration('core.entity_form_display.menu_link_content.main.default', 'bbb_menu_content', 'optional');
+  _bbb_article_rewrite_configuration('core.entity_view_display.menu_link_content.main.default', 'bbb_menu_content', 'optional');
+}
+
+/**
+ * Change image field config to thumbnail.
+ */
+function bbb_menu_content_update_8002() {
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.article.menu_content', 'bbb_menu_content', 'install');
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.research_and_publication.menu_content', 'bbb_menu_content', 'install');
+}
+
+/**
+ * Creating new menu menu fields and view mode update.
+ */
+function bbb_menu_content_update_8003() {
+  // Creating the menu fields.
+  _bbb_article_create_field_storage('field.storage.menu_link_content.field_content_tag', 'bbb_menu_content', 'install');
+  _bbb_article_rewrite_configuration('field.field.menu_link_content.main.field_content_tag', 'bbb_menu_content', 'install');
+
+  // Update view mode for event and product content type.
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.event.menu_content', 'bbb_menu_content', 'install');
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.product.menu_content', 'bbb_menu_content', 'install');
+}
+
+/**
+ * Enable 'admin_menu_levels' module.
+ */
+function bbb_menu_content_update_8004() {
+  \Drupal::service('module_installer')->install(['admin_menu_levels']);
+}

@@ -1,0 +1,105 @@
+{#
+/**
+ * @file
+ * Default theme implementation for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A CSS-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   JavaScript.
+ *
+ * @see template_preprocess_views_view()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+  <div class="coh-container view-mobile-filter-header">
+    <div class="coh-inline-element sm-filter-heading-label coh-style-headline-1" aria-label="open filters" tabindex="0" role="button" aria-pressed="false">
+      {{ 'Filter'|t }}
+      <span class="coh-inline-element close-filters" aria-label="Close filters">{{'Close filters'|t}}</span>
+    </div>
+    <div role="status" class="sm-results coh-style-label-large" id="mobile-results">
+      {% if header %}
+        {{ header }}
+      {% endif %}
+    </div>
+  </div>
+
+  
+
+    <div class="coh-container mobile-button-wrapper coh-container-boxed">
+      <div class="coh-inline-element sm-filter-heading mobile-filter-button coh-style-headline-4">{{ filter_title }}
+        <span class="coh-inline-element filter-icon"></span>
+      </div>
+    </div>
+
+    <div class="coh-container view-exposed-filters-wrapper coh-style-filters-block-styles coh-container-boxed">
+      <div class="coh-inline-element filter-heading coh-style-headline-3 {{ prodcut_filter_heading }}">{{ filter_title }}</div>
+        <div class="coh-container filter-list-wrapper">
+          <div class="coh-block filters-wrapper">
+            {{ exposed }}
+          </div>
+      </div>
+    </div>
+
+    {% if header %}
+      <div role="status" class="sr-text coh-style-label-large" id="results">
+          {{ header }}
+      </div>
+    {% endif %}
+
+  {% if rows -%}
+    {{ attachment_before }}
+    <ul class="content-wrapper">
+      {% if flag == '1' %}
+        <li class="coh-style-headline-1 hero-letter" id="{{ '0-9' }}">
+          <h2><span class="visually-hidden">Partners beginning with</span>{{ '0-9'|t }}</h2>
+        </li>
+      {% endif %}
+      {{ rows }}
+    </ul>
+  {% elseif empty -%}
+    {{ empty }}
+  {% endif %}
+  {{ pager }}
+
+  {{ attachment_after }}
+  {{ more }}
+
+  {% if footer %}
+    <footer>
+      {{ footer }}
+    </footer>
+  {% endif %}
+
+  {{ feed_icons }}
+</div>

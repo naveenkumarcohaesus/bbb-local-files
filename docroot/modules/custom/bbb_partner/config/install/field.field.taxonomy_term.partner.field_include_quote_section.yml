@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_include_quote_section
+    - taxonomy.vocabulary.partner
+  enforced:
+    module:
+      - bbb_partner
+id: taxonomy_term.partner.field_include_quote_section
+field_name: field_include_quote_section
+entity_type: taxonomy_term
+bundle: partner
+label: 'Include Quote Section?'
+description: 'This field is SUL specific.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

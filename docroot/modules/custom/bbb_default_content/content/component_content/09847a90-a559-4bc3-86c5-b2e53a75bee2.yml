@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: component_content
+  uuid: 09847a90-a559-4bc3-86c5-b2e53a75bee2
+  default_langcode: en
+  depends:
+    30031a02-cc91-4e2d-be65-4875179a463f: cohesion_layout
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'Alert Banner'
+  uid:
+    -
+      target_id: 1
+  created:
+    -
+      value: 1674231250
+  layout_canvas:
+    -
+      entity: 30031a02-cc91-4e2d-be65-4875179a463f
+  component:
+    -
+      target_id: cpt_alert_banner
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Delete body field from person content type.
+ */
+function bbb_person_update_8001() {
+
+  // Deleting body field from person content type.
+  if ($field_instance = FieldConfig::loadByName('node', 'person', 'body')) {
+    $field_instance->delete();
+  }
+
+  // Deleting field storage for body field.
+  if ($field = FieldStorageConfig::loadByName('node', 'body')) {
+    $field->delete();
+  }
+}
+
+/**
+ * Import image field in person content type.
+ */
+function bbb_person_update_8002() {
+  // Import image field in person content type.
+  _bbb_article_rewrite_configuration('field.field.node.person.field_person_image', 'bbb_person', 'rewrite');
+}
+
+/**
+ * Set `Preview before submitting` to `optional`.
+ */
+function bbb_person_update_8003() {
+  _bbb_article_rewrite_configuration('node.type.person', 'bbb_person', 'rewrite');
+}
+
+/**
+ * Update rabbit hole settings for nodes.
+ */
+function bbb_person_update_8004() {
+  $configs = [
+    'rabbit_hole.behavior_settings.node_type_person',
+    'rabbit_hole.behavior_settings.node_type_place',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_person_type',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_place_type',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_person', 'install');
+  }
+}
+
+/**
+ * Disable rabbit hole settings to override.
+ */
+function bbb_person_update_8005() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_person', 'bbb_person_update_8005');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

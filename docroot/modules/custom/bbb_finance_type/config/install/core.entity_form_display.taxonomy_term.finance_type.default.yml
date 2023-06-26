@@ -1,0 +1,221 @@
+uuid: 07c9ec5c-7657-46ea-a6a4-fbc2cd3df0cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.finance_type.field_amount_elaboration
+    - field.field.taxonomy_term.finance_type.field_annual_turnover
+    - field.field.taxonomy_term.finance_type.field_assets
+    - field.field.taxonomy_term.finance_type.field_business_stage
+    - field.field.taxonomy_term.finance_type.field_business_stage_elaboration
+    - field.field.taxonomy_term.finance_type.field_elaboration_purpose
+    - field.field.taxonomy_term.finance_type.field_finance_amount
+    - field.field.taxonomy_term.finance_type.field_finance_category
+    - field.field.taxonomy_term.finance_type.field_finance_cost
+    - field.field.taxonomy_term.finance_type.field_finance_duration
+    - field.field.taxonomy_term.finance_type.field_finance_reason
+    - field.field.taxonomy_term.finance_type.field_growth_rate
+    - field.field.taxonomy_term.finance_type.field_partner_sector
+    - field.field.taxonomy_term.finance_type.field_profits
+    - field.field.taxonomy_term.finance_type.field_profits_elaboration
+    - field.field.taxonomy_term.finance_type.field_quick_links
+    - field.field.taxonomy_term.finance_type.field_region
+    - field.field.taxonomy_term.finance_type.field_sector_caveat
+    - field.field.taxonomy_term.finance_type.field_time_to_finance
+    - taxonomy.vocabulary.finance_type
+  module:
+    - link_attributes
+    - path
+    - text
+id: taxonomy_term.finance_type.default
+targetEntityType: taxonomy_term
+bundle: finance_type
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_amount_elaboration:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_annual_turnover:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_assets:
+    type: options_buttons
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_business_stage:
+    type: options_buttons
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_business_stage_elaboration:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_elaboration_purpose:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_finance_amount:
+    type: options_buttons
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_finance_category:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_finance_cost:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_finance_duration:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_finance_reason:
+    type: options_buttons
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_growth_rate:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_partner_sector:
+    type: options_buttons
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_profits:
+    type: options_buttons
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_profits_elaboration:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_quick_links:
+    type: link_attributes
+    weight: 20
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        name: true
+        target: true
+        rel: true
+        id: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+    third_party_settings: {  }
+  field_region:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_sector_caveat:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_time_to_finance:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 21
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 24
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: x_large_related_content_w384_h256
+label: 'X Large Related Content W384 H256'
+effects:
+  372d6ea6-6268-441e-afca-9688b369c31b:
+    uuid: 372d6ea6-6268-441e-afca-9688b369c31b
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 384
+      height: 256
+      crop_type: focal_point

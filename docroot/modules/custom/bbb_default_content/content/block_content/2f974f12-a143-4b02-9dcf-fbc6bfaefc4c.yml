@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 2f974f12-a143-4b02-9dcf-fbc6bfaefc4c
+  bundle: custom_layout_canvas_block
+  default_langcode: en
+  depends:
+    36c65d3f-57a6-45ba-b173-40accd69a4a0: cohesion_layout
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Hero Branded'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_layout_canvas:
+    -
+      entity: 36c65d3f-57a6-45ba-b173-40accd69a4a0

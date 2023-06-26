@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_supporting_business
+    - taxonomy.vocabulary.partner
+  enforced:
+    module:
+      - bbb_partner
+id: taxonomy_term.partner.field_supporting_business
+field_name: field_supporting_business
+entity_type: taxonomy_term
+bundle: partner
+label: 'Supporting Business in…'
+description: 'This field is SUL specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

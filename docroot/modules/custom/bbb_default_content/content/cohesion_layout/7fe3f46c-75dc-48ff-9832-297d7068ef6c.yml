@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: cohesion_layout
+  uuid: 7fe3f46c-75dc-48ff-9832-297d7068ef6c
+  default_langcode: en
+default:
+  json_values:
+    -
+      value: '{"canvas":[{"uid":"cpt_search_multisite","type":"component","title":"Search results from other websites","enabled":true,"category":"category-3","componentId":"cpt_search_multisite","componentType":"misc","uuid":"9a1e55da-5dd0-4a4d-a8a9-a48a2cc3bbff","parentUid":"root","status":[],"model":{"settings":{"title":"Search results from other websites"}},"children":[]}],"mapper":[],"model":{"9a1e55da-5dd0-4a4d-a8a9-a48a2cc3bbff":{"settings":{"title":"Search results from other websites"},"0b1c2e13-8f69-4cd6-8909-9bfe48fd4d65":"[media-reference:media:73d67c22-0cae-4604-a801-28e32224b827]","289675e6-605e-461d-9d17-79ef7fc0638b":"British Business Investments","ebe14516-4805-45dd-a238-6d998caaab02":[{"54f50d4c-33ed-47bd-abb9-ed40cd793ed6":"","0b1c2e13-8f69-4cd6-8909-9bfe48fd4d65":""}],"33267036-ca78-4edb-baee-521b7fbbeac0":"h2","668c27df-0dc8-4487-85bb-62ccc35350a5":"See results from:"}},"previewModel":{"9a1e55da-5dd0-4a4d-a8a9-a48a2cc3bbff":[]},"variableFields":{"9a1e55da-5dd0-4a4d-a8a9-a48a2cc3bbff":[]},"meta":{"fieldHistory":[]}}'
+  styles:
+    -
+      value: '[]'
+  template:
+    -
+      value: '{"bbb_site_studio":"{\u0022metadata\u0022:{\u0022contexts\u0022:[]},\u0022twig\u0022:\u0022{{ attach_library(\u0027cohesion\\\/global_libraries.responsiveJs\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.matchHeight\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.cohMatchHeights\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.windowscroll\u0027) }} {{ attach_library(\u0027cohesion\\\/element_templates.link\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.parallax_scrolling\u0027) }} {% set component_variable_0b1c2e13_8f69_4cd6_8909_9bfe48fd4d65 %}{{ processtoken(\\\u0022[media-reference:media:73d67c22-0cae-4604-a801-28e32224b827]\\\u0022, {\\\u0022media-reference\\\u0022: media_reference}, _context, false) }}{% endset %} {% set component_variable_289675e6_605e_461d_9d17_79ef7fc0638b %}British Business Investments{% endset %} {% set component_variable_ebe14516_4805_45dd_a238_6d998caaab02_0_54f50d4c_33ed_47bd_abb9_ed40cd793ed6 %}{% endset %} {% set component_variable_ebe14516_4805_45dd_a238_6d998caaab02_0_0b1c2e13_8f69_4cd6_8909_9bfe48fd4d65 %}{% endset %} {% set component_variable_33267036_ca78_4edb_baee_521b7fbbeac0 %}h2{% endset %} {% set component_variable_668c27df_0dc8_4487_85bb_62ccc35350a5 %}See results from:{% endset %} {{ renderComponent(\\\u0022cpt_search_multisite\\\u0022, false, _context, {\\\u00220b1c2e13-8f69-4cd6-8909-9bfe48fd4d65\\\u0022:\\\u0022component_variable_0b1c2e13_8f69_4cd6_8909_9bfe48fd4d65\\\u0022,\\\u0022289675e6-605e-461d-9d17-79ef7fc0638b\\\u0022:\\\u0022component_variable_289675e6_605e_461d_9d17_79ef7fc0638b\\\u0022,\\\u0022ebe14516-4805-45dd-a238-6d998caaab02\\\u0022:[{\\\u002254f50d4c-33ed-47bd-abb9-ed40cd793ed6\\\u0022:\\\u0022component_variable_ebe14516_4805_45dd_a238_6d998caaab02_0_54f50d4c_33ed_47bd_abb9_ed40cd793ed6\\\u0022,\\\u00220b1c2e13-8f69-4cd6-8909-9bfe48fd4d65\\\u0022:\\\u0022component_variable_ebe14516_4805_45dd_a238_6d998caaab02_0_0b1c2e13_8f69_4cd6_8909_9bfe48fd4d65\\\u0022}],\\\u002233267036-ca78-4edb-baee-521b7fbbeac0\\\u0022:\\\u0022component_variable_33267036_ca78_4edb_baee_521b7fbbeac0\\\u0022,\\\u0022668c27df-0dc8-4487-85bb-62ccc35350a5\\\u0022:\\\u0022component_variable_668c27df_0dc8_4487_85bb_62ccc35350a5\\\u0022}, \\\u00229a1e55da-5dd0-4a4d-a8a9-a48a2cc3bbff\\\u0022, \\\u0022\\\u0022)  }} \\n{% if content is defined %}{% set catch_cache = content|render %}{% endif %}\u0022}"}'
+  last_entity_update:
+    -
+      value: entityupdate_0036
+  revision_translation_affected:
+    -
+      value: true

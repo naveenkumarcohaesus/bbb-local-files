@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the BBB Authentication module.
+ */
+
+/**
+ * Update TFA Key location.
+ */
+function bbb_authentication_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_authentication', 'bbb_authentication_update_8001');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Enable Open ID connect and configure settings for MS AD.
+ */
+function bbb_authentication_update_8002() {
+
+  \Drupal::service('module_installer')->install(['openid_connect_windows_aad']);
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'bbb_authentication');
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_authentication', 'bbb_authentication_update_8002');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

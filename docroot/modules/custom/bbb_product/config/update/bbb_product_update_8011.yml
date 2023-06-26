@@ -1,0 +1,16 @@
+field.storage.node.field_programme_application_date:
+  expected_config: {  }
+  update_actions:
+    change:
+      settings:
+        datetime_type: date
+        optional_end_date: true
+        optional_start_date: false
+field.storage.node.field_programme_date:
+  expected_config: {  }
+  update_actions:
+    change:
+      settings:
+        datetime_type: date
+        optional_end_date: true
+        optional_start_date: false

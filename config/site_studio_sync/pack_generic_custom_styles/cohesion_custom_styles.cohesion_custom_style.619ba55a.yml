@@ -1,0 +1,1259 @@
+uuid: f105c789-7e1d-449a-bad7-65b21dd72fb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.aurora_foundations
+label: 'WYSIWYG Ordered list'
+id: 619ba55a
+json_values: |
+  {
+      "preview": {
+          "text": "<p>Default content for 'Generic'.<\/p>\n",
+          "textFormat": "cohesion"
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "styles": {
+          "settings": {
+              "element": "div",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "0330852e-8487-4a7e-9de3-78f1ce93ee05": {
+              "settings": {
+                  "element": "",
+                  "class": ".coh-wysiwyg",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {}
+          },
+          "33e569c9-1004-49fa-ad4e-f425ab6a89d9": {
+              "settings": {
+                  "element": "ol",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xs": {
+                      "ordered-list": {
+                          "list-style-type": {
+                              "value": "none"
+                          }
+                      },
+                      "margin": {
+                          "margin-bottom": {
+                              "value": "20"
+                          }
+                      },
+                      "counters": {
+                          "counter-reset": {
+                              "value": "item"
+                          }
+                      },
+                      "padding": {
+                          "padding-left": {
+                              "value": "16"
+                          }
+                      }
+                  },
+                  "xl": {
+                      "margin": {
+                          "margin-bottom": {
+                              "value": "24"
+                          }
+                      }
+                  },
+                  "sm": {
+                      "padding": {
+                          "padding-left": {
+                              "value": "24"
+                          }
+                      },
+                      "margin": {
+                          "margin-bottom": {
+                              "value": "20"
+                          }
+                      }
+                  }
+              }
+          },
+          "463f3454-dbef-40ee-bab8-dbd9714c88b1": {
+              "settings": {
+                  "element": "li",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xs": {
+                      "ordered-list": {
+                          "list-style-type": {
+                              "value": "none"
+                          }
+                      },
+                      "counters": {
+                          "counter-increment": {
+                              "value": "item"
+                          }
+                      },
+                      "margin": {
+                          "margin-bottom": {
+                              "value": "8"
+                          }
+                      },
+                      "font-family": {
+                          "value": "[style-guide:aurora_foundations:body-medium]"
+                      },
+                      "font-size": {
+                          "value": "[style-guide:aurora_foundations:body-medium-small]"
+                      },
+                      "line-height": {
+                          "value": "[style-guide:aurora_foundations:body-medium-small-line-height]"
+                      },
+                      "letter-spacing": {
+                          "value": "[style-guide:aurora_foundations:body-medium-small-letter-spacing]"
+                      }
+                  },
+                  "sm": {
+                      "margin": {
+                          "margin-bottom": {
+                              "value": "12"
+                          }
+                      },
+                      "font-size": {
+                          "value": "[style-guide:aurora_foundations:body-medium-medium]"
+                      },
+                      "line-height": {
+                          "value": "[style-guide:aurora_foundations:body-medium-medium-line-height]"
+                      },
+                      "letter-spacing": {
+                          "value": "[style-guide:aurora_foundations:body-medium-medium-letter-spacing]"
+                      }
+                  },
+                  "xl": {
+                      "margin": {
+                          "margin-bottom": {
+                              "value": "16"
+                          }
+                      },
+                      "font-size": {
+                          "value": "[style-guide:aurora_foundations:body-medium-large]"
+                      },
+                      "line-height": {
+                          "value": "[style-guide:aurora_foundations:body-medium-large-line-height]"
+                      },
+                      "letter-spacing": {
+                          "value": "[style-guide:aurora_foundations:body-medium-large-letter-spacing]"
+                      }
+                  }
+              }
+          },
+          "bab1cf1c-2449-467c-9ddb-66c1b43f26af": {
+              "settings": {
+                  "element": "ol",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xs": {
+                      "margin": {
+                          "margin-top": {
+                              "value": "8"
+                          },
+                          "margin-bottom": {
+                              "value": "8"
+                          }
+                      }
+                  },
+                  "xl": {
+                      "margin": {
+                          "margin-top": {
+                              "value": "16"
+                          },
+                          "margin-bottom": {
+                              "value": "16"
+                          }
+                      }
+                  },
+                  "sm": {
+                      "margin": {
+                          "margin-top": {
+                              "value": "12"
+                          },
+                          "margin-bottom": {
+                              "value": "12"
+                          }
+                      }
+                  }
+              }
+          },
+          "ccccc790-1c02-4964-9e15-67a4c72668c4": {
+              "settings": {
+                  "element": "li",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              }
+          },
+          "9eacd011-4997-45bc-be8b-4284c0751f9f": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":before"
+              },
+              "styles": {
+                  "xs": {
+                      "custom-css": [
+                          {
+                              "customCssProperty": {
+                                  "value": "content"
+                              },
+                              "customCss": {
+                                  "value": "counters(item, \".\") \". \""
+                              }
+                          }
+                      ],
+                      "margin": {
+                          "margin-right": {
+                              "value": "10"
+                          }
+                      },
+                      "display": {
+                          "value": "inline-block"
+                      }
+                  }
+              }
+          },
+          "a315ccf0-9f84-4d6e-8f7e-3022d3352997": {
+              "settings": {
+                  "element": "ul",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xs": {
+                      "margin": {
+                          "margin-top": {
+                              "value": "8"
+                          },
+                          "margin-bottom": {
+                              "value": "8"
+                          }
+                      }
+                  },
+                  "sm": {
+                      "margin": {
+                          "margin-top": {
+                              "value": "12"
+                          },
+                          "margin-bottom": {
+                              "value": "12"
+                          }
+                      }
+                  },
+                  "xl": {
+                      "margin": {
+                          "margin-top": {
+                              "value": "16"
+                          },
+                          "margin-bottom": {
+                              "value": "16"
+                          }
+                      }
+                  }
+              }
+          },
+          "78c790f3-5ce2-453d-af7e-343ac99c048c": {
+              "settings": {
+                  "element": "li",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xs": {
+                      "counters": {
+                          "counter-increment": {
+                              "value": "none"
+                          }
+                      }
+                  }
+              }
+          },
+          "c81a290f-3e7b-462f-94e4-b002c682414e": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":before"
+              },
+              "styles": {
+                  "xs": {
+                      "content-string": {
+                          "contentType": {
+                              "value": "string"
+                          },
+                          "contentString": {
+                              "value": "\"\""
+                          }
+                      }
+                  }
+              }
+          },
+          "2e53921f-5fe9-4593-b8da-6425650af89a": {
+              "settings": {
+                  "element": "a",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xs": {
+                      "text-decoration": {
+                          "value": "underline"
+                      },
+                      "custom-css": [
+                          {
+                              "customCssProperty": {
+                                  "value": "text-underline-offset"
+                              },
+                              "customCss": {
+                                  "value": "4px"
+                              }
+                          }
+                      ]
+                  }
+              }
+          },
+          "b5e7eb70-06a4-41a4-9d16-f0a4e3b8986a": {
+              "settings": {
+                  "element": "",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ":before"
+              },
+              "styles": {
+                  "xs": {
+                      "custom-css": [
+                          {
+                              "customCss": {
+                                  "value": "counters(item, \".\") \" \""
+                              },
+                              "customCssProperty": {
+                                  "value": "content"
+                              }
+                          }
+                      ]
+                  }
+              }
+          }
+      },
+      "variableFields": [
+          "styles.463f3454-dbef-40ee-bab8-dbd9714c88b1.styles.xs.font-family.value",
+          "styles.463f3454-dbef-40ee-bab8-dbd9714c88b1.styles.xs.font-size.value",
+          "styles.463f3454-dbef-40ee-bab8-dbd9714c88b1.styles.xs.line-height.value",
+          "styles.463f3454-dbef-40ee-bab8-dbd9714c88b1.styles.xs.letter-spacing.value",
+          "styles.463f3454-dbef-40ee-bab8-dbd9714c88b1.styles.sm.font-size.value",
+          "styles.463f3454-dbef-40ee-bab8-dbd9714c88b1.styles.sm.line-height.value",
+          "styles.463f3454-dbef-40ee-bab8-dbd9714c88b1.styles.sm.letter-spacing.value",
+          "styles.463f3454-dbef-40ee-bab8-dbd9714c88b1.styles.xl.font-size.value",
+          "styles.463f3454-dbef-40ee-bab8-dbd9714c88b1.styles.xl.line-height.value",
+          "styles.463f3454-dbef-40ee-bab8-dbd9714c88b1.styles.xl.letter-spacing.value"
+      ]
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "Layout",
+          "selectorType": "topLevel",
+          "formDefinition": [],
+          "items": [
+              {
+                  "title": ".coh-wysiwyg",
+                  "type": "container",
+                  "items": [
+                      {
+                          "title": "ol",
+                          "type": "container",
+                          "items": [
+                              {
+                                  "title": "li",
+                                  "type": "container",
+                                  "items": [
+                                      {
+                                          "title": ":before",
+                                          "type": "container",
+                                          "items": [],
+                                          "form": null,
+                                          "selectorType": "pseudo",
+                                          "uuid": "9eacd011-4997-45bc-be8b-4284c0751f9f",
+                                          "allowedTypes": [
+                                              "child",
+                                              "pseudo"
+                                          ],
+                                          "formDefinition": [
+                                              {
+                                                  "formKey": "layout",
+                                                  "children": [
+                                                      {
+                                                          "formKey": "margin",
+                                                          "breakpoints": [
+                                                              {
+                                                                  "name": "xs"
+                                                              }
+                                                          ],
+                                                          "activeFields": [
+                                                              {
+                                                                  "name": "margin-equal",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-top",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-bottom",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-left",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-right",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "margin-block-start",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-block-end",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-inline-start",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-inline-end",
+                                                                  "active": false
+                                                              }
+                                                          ]
+                                                      },
+                                                      {
+                                                          "formKey": "display",
+                                                          "breakpoints": [
+                                                              {
+                                                                  "name": "xs"
+                                                              }
+                                                          ],
+                                                          "activeFields": [
+                                                              {
+                                                                  "name": "display",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "visibility",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "overflow",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "overflow-x",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "overflow-y",
+                                                                  "active": false
+                                                              }
+                                                          ]
+                                                      }
+                                                  ]
+                                              },
+                                              {
+                                                  "formKey": "custom-css",
+                                                  "children": [
+                                                      {
+                                                          "formKey": "css-property-and-css-value",
+                                                          "breakpoints": [
+                                                              {
+                                                                  "name": "xs"
+                                                              }
+                                                          ],
+                                                          "activeFields": [
+                                                              {
+                                                                  "name": "custom-css",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "customCssProperty",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "customCss",
+                                                                  "active": true
+                                                              }
+                                                          ]
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "title": "ol",
+                                          "type": "container",
+                                          "items": [
+                                              {
+                                                  "title": "li",
+                                                  "type": "container",
+                                                  "items": [
+                                                      {
+                                                          "title": ":before",
+                                                          "type": "container",
+                                                          "items": [],
+                                                          "form": null,
+                                                          "selectorType": "pseudo",
+                                                          "uuid": "b5e7eb70-06a4-41a4-9d16-f0a4e3b8986a",
+                                                          "allowedTypes": [
+                                                              "child",
+                                                              "pseudo"
+                                                          ],
+                                                          "formDefinition": [
+                                                              {
+                                                                  "formKey": "custom-css",
+                                                                  "children": [
+                                                                      {
+                                                                          "formKey": "css-property-and-css-value",
+                                                                          "breakpoints": [
+                                                                              {
+                                                                                  "name": "xs"
+                                                                              }
+                                                                          ],
+                                                                          "activeFields": [
+                                                                              {
+                                                                                  "name": "custom-css",
+                                                                                  "active": true
+                                                                              },
+                                                                              {
+                                                                                  "name": "customCssProperty",
+                                                                                  "active": true
+                                                                              },
+                                                                              {
+                                                                                  "name": "customCss",
+                                                                                  "active": true
+                                                                              }
+                                                                          ]
+                                                                      }
+                                                                  ]
+                                                              }
+                                                          ]
+                                                      }
+                                                  ],
+                                                  "form": null,
+                                                  "selectorType": "child",
+                                                  "model": "li",
+                                                  "uuid": "ccccc790-1c02-4964-9e15-67a4c72668c4",
+                                                  "allowedTypes": [
+                                                      "child",
+                                                      "pseudo",
+                                                      "modifier"
+                                                  ],
+                                                  "formDefinition": []
+                                              }
+                                          ],
+                                          "form": null,
+                                          "selectorType": "child",
+                                          "model": "ol",
+                                          "uuid": "bab1cf1c-2449-467c-9ddb-66c1b43f26af",
+                                          "allowedTypes": [
+                                              "child",
+                                              "pseudo",
+                                              "modifier"
+                                          ],
+                                          "formDefinition": [
+                                              {
+                                                  "formKey": "layout",
+                                                  "children": [
+                                                      {
+                                                          "formKey": "margin",
+                                                          "breakpoints": [
+                                                              {
+                                                                  "name": "xs"
+                                                              },
+                                                              {
+                                                                  "name": "sm"
+                                                              },
+                                                              {
+                                                                  "name": "xl"
+                                                              }
+                                                          ],
+                                                          "activeFields": [
+                                                              {
+                                                                  "name": "margin-equal",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-top",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "margin-bottom",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "margin-left",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-right",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-block-start",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-block-end",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-inline-start",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-inline-end",
+                                                                  "active": false
+                                                              }
+                                                          ]
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "title": "ul",
+                                          "type": "container",
+                                          "items": [
+                                              {
+                                                  "title": "li",
+                                                  "type": "container",
+                                                  "items": [
+                                                      {
+                                                          "title": ":before",
+                                                          "type": "container",
+                                                          "items": [],
+                                                          "form": null,
+                                                          "selectorType": "pseudo",
+                                                          "uuid": "c81a290f-3e7b-462f-94e4-b002c682414e",
+                                                          "allowedTypes": [
+                                                              "child",
+                                                              "pseudo"
+                                                          ],
+                                                          "formDefinition": [
+                                                              {
+                                                                  "formKey": "content",
+                                                                  "children": [
+                                                                      {
+                                                                          "formKey": "strings-counters-quotes-urls-and-attributes",
+                                                                          "breakpoints": [
+                                                                              {
+                                                                                  "name": "xs"
+                                                                              }
+                                                                          ],
+                                                                          "activeFields": [
+                                                                              {
+                                                                                  "name": "contentType",
+                                                                                  "active": true
+                                                                              },
+                                                                              {
+                                                                                  "name": "contentString",
+                                                                                  "active": true
+                                                                              },
+                                                                              {
+                                                                                  "name": "counterString",
+                                                                                  "active": true
+                                                                              },
+                                                                              {
+                                                                                  "name": "customString",
+                                                                                  "active": true
+                                                                              }
+                                                                          ]
+                                                                      }
+                                                                  ]
+                                                              }
+                                                          ]
+                                                      }
+                                                  ],
+                                                  "form": null,
+                                                  "selectorType": "child",
+                                                  "model": "li",
+                                                  "uuid": "78c790f3-5ce2-453d-af7e-343ac99c048c",
+                                                  "allowedTypes": [
+                                                      "child",
+                                                      "pseudo",
+                                                      "modifier"
+                                                  ],
+                                                  "formDefinition": [
+                                                      {
+                                                          "formKey": "content",
+                                                          "children": [
+                                                              {
+                                                                  "formKey": "counters",
+                                                                  "breakpoints": [
+                                                                      {
+                                                                          "name": "xs"
+                                                                      }
+                                                                  ],
+                                                                  "activeFields": [
+                                                                      {
+                                                                          "name": "counter-reset",
+                                                                          "active": false
+                                                                      },
+                                                                      {
+                                                                          "name": "counter-increment",
+                                                                          "active": true
+                                                                      }
+                                                                  ]
+                                                              }
+                                                          ]
+                                                      }
+                                                  ]
+                                              }
+                                          ],
+                                          "form": null,
+                                          "selectorType": "child",
+                                          "model": "ul",
+                                          "uuid": "a315ccf0-9f84-4d6e-8f7e-3022d3352997",
+                                          "allowedTypes": [
+                                              "child",
+                                              "pseudo",
+                                              "modifier"
+                                          ],
+                                          "formDefinition": [
+                                              {
+                                                  "formKey": "layout",
+                                                  "children": [
+                                                      {
+                                                          "formKey": "margin",
+                                                          "breakpoints": [
+                                                              {
+                                                                  "name": "xs"
+                                                              },
+                                                              {
+                                                                  "name": "sm"
+                                                              },
+                                                              {
+                                                                  "name": "xl"
+                                                              }
+                                                          ],
+                                                          "activeFields": [
+                                                              {
+                                                                  "name": "margin-equal",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-top",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "margin-bottom",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "margin-left",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-right",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-block-start",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-block-end",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-inline-start",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "margin-inline-end",
+                                                                  "active": false
+                                                              }
+                                                          ]
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "title": "a",
+                                          "type": "container",
+                                          "items": [],
+                                          "form": null,
+                                          "selectorType": "child",
+                                          "model": "a",
+                                          "uuid": "2e53921f-5fe9-4593-b8da-6425650af89a",
+                                          "allowedTypes": [
+                                              "child",
+                                              "pseudo",
+                                              "modifier"
+                                          ],
+                                          "formDefinition": [
+                                              {
+                                                  "formKey": "font",
+                                                  "children": [
+                                                      {
+                                                          "formKey": "font-style-and-wrapping",
+                                                          "breakpoints": [
+                                                              {
+                                                                  "name": "xs"
+                                                              }
+                                                          ],
+                                                          "activeFields": [
+                                                              {
+                                                                  "name": "font-style",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "text-transform",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "text-decoration",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "word-wrap",
+                                                                  "active": false
+                                                              },
+                                                              {
+                                                                  "name": "direction",
+                                                                  "active": false
+                                                              }
+                                                          ]
+                                                      }
+                                                  ]
+                                              },
+                                              {
+                                                  "formKey": "custom-css",
+                                                  "children": [
+                                                      {
+                                                          "formKey": "css-property-and-css-value",
+                                                          "breakpoints": [
+                                                              {
+                                                                  "name": "xs"
+                                                              }
+                                                          ],
+                                                          "activeFields": [
+                                                              {
+                                                                  "name": "custom-css",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "customCssProperty",
+                                                                  "active": true
+                                                              },
+                                                              {
+                                                                  "name": "customCss",
+                                                                  "active": true
+                                                              }
+                                                          ]
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      }
+                                  ],
+                                  "form": null,
+                                  "selectorType": "child",
+                                  "model": "li",
+                                  "uuid": "463f3454-dbef-40ee-bab8-dbd9714c88b1",
+                                  "allowedTypes": [
+                                      "child",
+                                      "pseudo",
+                                      "modifier"
+                                  ],
+                                  "formDefinition": [
+                                      {
+                                          "formKey": "layout",
+                                          "children": [
+                                              {
+                                                  "formKey": "margin",
+                                                  "breakpoints": [
+                                                      {
+                                                          "name": "xs"
+                                                      },
+                                                      {
+                                                          "name": "sm"
+                                                      },
+                                                      {
+                                                          "name": "xl"
+                                                      }
+                                                  ],
+                                                  "activeFields": [
+                                                      {
+                                                          "name": "margin-equal",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "margin-top",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "margin-bottom",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "margin-left",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "margin-right",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "margin-block-start",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "margin-block-end",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "margin-inline-start",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "margin-inline-end",
+                                                          "active": false
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "formKey": "content",
+                                          "children": [
+                                              {
+                                                  "formKey": "counters",
+                                                  "breakpoints": [
+                                                      {
+                                                          "name": "xs"
+                                                      }
+                                                  ],
+                                                  "activeFields": [
+                                                      {
+                                                          "name": "counter-reset",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "counter-increment",
+                                                          "active": true
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "formKey": "list-style",
+                                          "children": [
+                                              {
+                                                  "formKey": "ordered-list",
+                                                  "breakpoints": [
+                                                      {
+                                                          "name": "xs"
+                                                      }
+                                                  ],
+                                                  "activeFields": [
+                                                      {
+                                                          "name": "list-style-type",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "list-style-image",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "list-style-position",
+                                                          "active": false
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "formKey": "font",
+                                          "children": [
+                                              {
+                                                  "formKey": "font-and-color",
+                                                  "breakpoints": [
+                                                      {
+                                                          "name": "xs"
+                                                      }
+                                                  ],
+                                                  "activeFields": [
+                                                      {
+                                                          "name": "font-family",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "font-weight",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "color",
+                                                          "active": false
+                                                      }
+                                                  ]
+                                              },
+                                              {
+                                                  "formKey": "font-sizing-and-alignment",
+                                                  "breakpoints": [
+                                                      {
+                                                          "name": "xs"
+                                                      },
+                                                      {
+                                                          "name": "sm"
+                                                      },
+                                                      {
+                                                          "name": "xl"
+                                                      }
+                                                  ],
+                                                  "activeFields": [
+                                                      {
+                                                          "name": "font-size",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "line-height",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "text-align",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "letter-spacing",
+                                                          "active": true
+                                                      },
+                                                      {
+                                                          "name": "word-spacing",
+                                                          "active": false
+                                                      },
+                                                      {
+                                                          "name": "text-indent",
+                                                          "active": false
+                                                      }
+                                                  ]
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ],
+                          "form": null,
+                          "selectorType": "child",
+                          "model": "ol",
+                          "uuid": "33e569c9-1004-49fa-ad4e-f425ab6a89d9",
+                          "allowedTypes": [
+                              "child",
+                              "pseudo",
+                              "modifier"
+                          ],
+                          "formDefinition": [
+                              {
+                                  "formKey": "layout",
+                                  "children": [
+                                      {
+                                          "formKey": "margin",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xs"
+                                              },
+                                              {
+                                                  "name": "sm"
+                                              },
+                                              {
+                                                  "name": "xl"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "margin-equal",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "margin-top",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "margin-bottom",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "margin-left",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "margin-right",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "margin-block-start",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "margin-block-end",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "margin-inline-start",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "margin-inline-end",
+                                                  "active": false
+                                              }
+                                          ]
+                                      },
+                                      {
+                                          "formKey": "padding",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xs"
+                                              },
+                                              {
+                                                  "name": "sm"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "padding-equal",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "padding-top",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "padding-bottom",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "padding-left",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "padding-right",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "padding-block-start",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "padding-block-end",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "padding-inline-start",
+                                                  "active": false
+                                              },
+                                              {
+                                                  "name": "padding-inline-end",
+                                                  "active": false
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "content",
+                                  "children": [
+                                      {
+                                          "formKey": "counters",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xs"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "counter-reset",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "counter-increment",
+                                                  "active": false
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              },
+                              {
+                                  "formKey": "list-style",
+                                  "children": [
+                                      {
+                                          "formKey": "ordered-list",
+                                          "breakpoints": [
+                                              {
+                                                  "name": "xs"
+                                              }
+                                          ],
+                                          "activeFields": [
+                                              {
+                                                  "name": "list-style-type",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "list-style-image",
+                                                  "active": true
+                                              },
+                                              {
+                                                  "name": "list-style-position",
+                                                  "active": false
+                                              }
+                                          ]
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ],
+                  "form": null,
+                  "selectorType": "modifier",
+                  "model": ".coh-wysiwyg",
+                  "uuid": "0330852e-8487-4a7e-9de3-78f1ce93ee05",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo",
+                      "modifier"
+                  ],
+                  "formDefinition": []
+              }
+          ],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-wysiwyg-ordered-list
+custom_style_type: generic
+available_in_wysiwyg: true
+parent: null
+weight: 14

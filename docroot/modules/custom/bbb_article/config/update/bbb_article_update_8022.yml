@@ -1,0 +1,35 @@
+views.view.article:
+  expected_config:  {  }
+  update_actions:
+    add:
+      display:
+        articles_list:
+          display_options:
+            defaults:
+              empty: false
+              header: false
+            empty:
+              area:
+                admin_label: ''
+                content:
+                  format: filtered_html
+                  value: 'No results found'
+                empty: true
+                field: area
+                group_type: group
+                id: area
+                plugin_id: text
+                relationship: none
+                table: views
+                tokenize: false
+            header:
+              result:
+                admin_label: ''
+                content: 'Showing @start - @end of @total results'
+                empty: false
+                field: result
+                group_type: group
+                id: result
+                plugin_id: result
+                relationship: none
+                table: views

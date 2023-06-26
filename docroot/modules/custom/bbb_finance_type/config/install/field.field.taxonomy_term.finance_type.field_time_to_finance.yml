@@ -1,0 +1,19 @@
+uuid: 5666bb94-5a45-41d0-aa0c-8435bdc0d07a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_time_to_finance
+    - taxonomy.vocabulary.finance_type
+id: taxonomy_term.finance_type.field_time_to_finance
+field_name: field_time_to_finance
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'Time to finance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

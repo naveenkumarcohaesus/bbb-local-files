@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_card_w478_h478
+label: 'Large Card W478 H478'
+effects:
+  2915749a-477b-46a3-9c73-787b435660a4:
+    uuid: 2915749a-477b-46a3-9c73-787b435660a4
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 478
+      height: 478
+      crop_type: focal_point

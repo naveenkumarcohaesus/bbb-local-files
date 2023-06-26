@@ -1,0 +1,42 @@
+diff --git a/src/Plugin/better_exposed_filters/filter/SelectiveFilterBase.php b/src/Plugin/better_exposed_filters/filter/SelectiveFilterBase.php
+index 48792fa..eac148e 100644
+--- a/src/Plugin/better_exposed_filters/filter/SelectiveFilterBase.php
++++ b/src/Plugin/better_exposed_filters/filter/SelectiveFilterBase.php
+@@ -138,7 +138,7 @@ abstract class SelectiveFilterBase {
+               && $entity->hasTranslation($row->node_field_data_langcode)) {
+               $entity = $entity->getTranslation($row->node_field_data_langcode);
+             }
+-            if ($entity instanceof FieldableEntityInterface && $entity->hasField($field_id)) {
++            if ($entity instanceof FieldableEntityInterface && isset($field_id) && $entity->hasField($field_id)) {
+               $item_values = $entity->get($field_id)->getValue();
+
+               if (!empty($item_values)) {
+@@ -173,7 +173,7 @@ abstract class SelectiveFilterBase {
+                 $target_id = reset($target_id);
+               }
+               if (!in_array($target_id, $ids)) {
+-                unset($element['#options'][$key]);
++                  $element['#options_attributes'][$key] = array('disabled' => 'disabled');
+               }
+             }
+
+@@ -191,12 +191,18 @@ abstract class SelectiveFilterBase {
+         elseif (!empty($settings['options_hide_when_empty'])) {
+           $element['#access'] = FALSE;
+         }
++        else {
++            // If view result is empty, disable all filter options.
++            foreach ($element['#options'] as $key => $option) {
++                $element['#options_attributes'][$key] = array('disabled' => 'disabled');
++            }
++        }
+       }
+       else {
+         if (!empty($settings['options_show_only_used_filtered'])) {
+           $user_input = $form_state->getUserInput();
+           if (isset($user_input[$identifier])) {
+-            unset($user_input[$identifier]);
++//            unset($user_input[$identifier]);
+           }
+         }
+         else {

@@ -1,0 +1,11 @@
+name: BBB Media Document
+description: 'Provides document media type and related configuration.'
+type: module
+package: BBB
+core_version_requirement: '^9 || ^10'
+dependencies:
+  - drupal:field
+  - drupal:media
+  - bbb_taxonomy:bbb_taxonomy
+  - drupal:acquia_cms_document
+  - drupal:media_entity_download

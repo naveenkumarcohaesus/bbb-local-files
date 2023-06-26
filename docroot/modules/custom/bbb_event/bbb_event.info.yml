@@ -1,0 +1,8 @@
+name: BBB Event
+description: 'Provides Event content type and related configuration. A structured content type used for creating various types of events.'
+type: module
+core_version_requirement: '^9 || ^10'
+package: BBB
+dependencies:
+  - bbb_article:bbb_article
+  - bbb_case_study:bbb_case_study

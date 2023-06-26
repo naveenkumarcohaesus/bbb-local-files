@@ -1,0 +1,407 @@
+views.view.case_study_listing:
+  expected_config: {  }
+  update_actions:
+    add:
+      display:
+        our_case_studies:
+          id: our_case_studies
+          display_title: 'Our success stories'
+          display_plugin: page
+          position: 4
+          display_options:
+            exposed_form:
+              type: bef
+              options:
+                submit_button: 'Apply filters'
+                reset_button: true
+                reset_button_label: 'Reset all filters'
+                exposed_sorts_label: 'Sort by'
+                expose_sort_order: false
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+                text_input_required: 'Select any filter and click on Apply to see results'
+                text_input_required_format: filtered_html
+                bef:
+                  general:
+                    autosubmit: true
+                    autosubmit_exclude_textfield: false
+                    autosubmit_textfield_delay: 500
+                    autosubmit_hide: true
+                    input_required: false
+                    allow_secondary: false
+                    secondary_label: 'Advanced options'
+                    secondary_open: false
+                    reset_button_always_show: true
+                  sort:
+                    plugin_id: default
+                    advanced:
+                      combine: false
+                      combine_rewrite: ''
+                      reset: false
+                      reset_label: ''
+                      collapsible: false
+                      collapsible_label: 'Sort options'
+                      is_secondary: false
+                  filter:
+                    field_finance_type_target_id:
+                      plugin_id: bef
+                      advanced:
+                        sort_options: false
+                        rewrite:
+                          filter_rewrite_values: ''
+                        collapsible: true
+                        is_secondary: false
+                      select_all_none: false
+                      select_all_none_nested: false
+                      display_inline: false
+                    field_programme_target_id:
+                      plugin_id: bef
+                      advanced:
+                        sort_options: false
+                        rewrite:
+                          filter_rewrite_values: ''
+                        collapsible: true
+                        is_secondary: false
+                      select_all_none: false
+                      select_all_none_nested: false
+                      display_inline: false
+                    field_region_target_id:
+                      plugin_id: bef
+                      advanced:
+                        sort_options: false
+                        rewrite:
+                          filter_rewrite_values: ''
+                        collapsible: true
+                        is_secondary: false
+                      select_all_none: false
+                      select_all_none_nested: false
+                      display_inline: false
+                    field_sector_target_id:
+                      plugin_id: bef
+                      advanced:
+                        sort_options: false
+                        rewrite:
+                          filter_rewrite_values: ''
+                        collapsible: true
+                        is_secondary: false
+                      select_all_none: false
+                      select_all_none_nested: false
+                      display_inline: false
+            sorts:
+              created:
+                id: created
+                table: node_field_data
+                field: created
+                relationship: none
+                group_type: group
+                admin_label: ''
+                entity_type: node
+                entity_field: created
+                plugin_id: date
+                order: DESC
+                expose:
+                  label: 'Most Recent'
+                  field_identifier: created
+                exposed: true
+                granularity: second
+              title:
+                id: title
+                table: node_field_data
+                field: title
+                relationship: none
+                group_type: group
+                admin_label: ''
+                entity_type: node
+                entity_field: title
+                plugin_id: standard
+                order: ASC
+                expose:
+                  label: Alphabetical
+                  field_identifier: title
+                exposed: true
+            filters:
+              field_finance_type_target_id:
+                id: field_finance_type_target_id
+                table: node__field_finance_type
+                field: field_finance_type_target_id
+                relationship: none
+                group_type: group
+                admin_label: ''
+                plugin_id: taxonomy_index_tid
+                operator: or
+                value: {  }
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: field_finance_type_target_id_op
+                  label: 'Finance type'
+                  description: ''
+                  use_operator: false
+                  operator: field_finance_type_target_id_op
+                  operator_limit_selection: false
+                  operator_list: {  }
+                  identifier: finance_type
+                  required: false
+                  remember: false
+                  multiple: true
+                  remember_roles:
+                    authenticated: authenticated
+                    administrator: '0'
+                    developer: '0'
+                    site_builder: '0'
+                    content_administrator: '0'
+                    content_author: '0'
+                    content_editor: '0'
+                    user_administrator: '0'
+                    anonymous: '0'
+                    content_factory: '0'
+                    bankers: '0'
+                  reduce: false
+                is_grouped: false
+                group_info:
+                  label: 'Finance Type (field_finance_type)'
+                  description: ''
+                  identifier: field_finance_type_target_id
+                  optional: true
+                  widget: select
+                  multiple: true
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items:
+                    1:
+                      title: ''
+                      operator: or
+                      value: null
+                    2:
+                      title: ''
+                      operator: or
+                      value: null
+                    3:
+                      title: ''
+                      operator: or
+                      value: null
+                reduce_duplicates: false
+                vid: finance_type
+                type: select
+                hierarchy: false
+                limit: true
+                error_message: true
+              field_sector_target_id:
+                id: field_sector_target_id
+                table: node__field_sector
+                field: field_sector_target_id
+                relationship: none
+                group_type: group
+                admin_label: ''
+                plugin_id: taxonomy_index_tid
+                operator: or
+                value: {  }
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: field_sector_target_id_op
+                  label: Sector
+                  description: ''
+                  use_operator: false
+                  operator: field_sector_target_id_op
+                  operator_limit_selection: false
+                  operator_list: {  }
+                  identifier: sector
+                  required: false
+                  remember: false
+                  multiple: true
+                  remember_roles:
+                    authenticated: authenticated
+                    administrator: '0'
+                    developer: '0'
+                    site_builder: '0'
+                    content_administrator: '0'
+                    content_author: '0'
+                    content_editor: '0'
+                    user_administrator: '0'
+                    anonymous: '0'
+                    content_factory: '0'
+                    bankers: '0'
+                  reduce: false
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                reduce_duplicates: false
+                vid: sector
+                type: select
+                hierarchy: false
+                limit: true
+                error_message: true
+              field_region_target_id:
+                id: field_region_target_id
+                table: node__field_region
+                field: field_region_target_id
+                relationship: none
+                group_type: group
+                admin_label: ''
+                plugin_id: taxonomy_index_tid
+                operator: or
+                value: {  }
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: field_region_target_id_op
+                  label: Region
+                  description: ''
+                  use_operator: false
+                  operator: field_region_target_id_op
+                  operator_limit_selection: false
+                  operator_list: {  }
+                  identifier: region
+                  required: false
+                  remember: false
+                  multiple: true
+                  remember_roles:
+                    authenticated: authenticated
+                    administrator: '0'
+                    developer: '0'
+                    site_builder: '0'
+                    content_administrator: '0'
+                    content_author: '0'
+                    content_editor: '0'
+                    user_administrator: '0'
+                    anonymous: '0'
+                    content_factory: '0'
+                    bankers: '0'
+                  reduce: false
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                reduce_duplicates: false
+                vid: region
+                type: select
+                hierarchy: false
+                limit: true
+                error_message: true
+              field_programme_target_id:
+                id: field_programme_target_id
+                table: node__field_programme
+                field: field_programme_target_id
+                relationship: none
+                group_type: group
+                admin_label: ''
+                plugin_id: taxonomy_index_tid
+                operator: or
+                value: {  }
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: field_programme_target_id_op
+                  label: Programme
+                  description: ''
+                  use_operator: false
+                  operator: field_programme_target_id_op
+                  operator_limit_selection: false
+                  operator_list: {  }
+                  identifier: programme
+                  required: false
+                  remember: false
+                  multiple: true
+                  remember_roles:
+                    authenticated: authenticated
+                    administrator: '0'
+                    developer: '0'
+                    site_builder: '0'
+                    content_administrator: '0'
+                    content_author: '0'
+                    content_editor: '0'
+                    user_administrator: '0'
+                    anonymous: '0'
+                    content_factory: '0'
+                    bankers: '0'
+                  reduce: false
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                reduce_duplicates: false
+                vid: programme
+                type: select
+                hierarchy: false
+                limit: true
+                error_message: true
+              status:
+                id: status
+                table: node_field_data
+                field: status
+                entity_type: node
+                entity_field: status
+                plugin_id: boolean
+                value: '1'
+                group: 1
+                expose:
+                  operator: ''
+                  operator_limit_selection: false
+                  operator_list: {  }
+              type:
+                id: type
+                table: node_field_data
+                field: type
+                entity_type: node
+                entity_field: type
+                plugin_id: bundle
+                value:
+                  case_study: case_study
+                group: 1
+                expose:
+                  operator_limit_selection: false
+                  operator_list: {  }
+            filter_groups:
+              operator: AND
+              groups:
+                1: AND
+            style:
+              type: cohesion_layout
+              options:
+                master_template: __none__
+                views_template: view_tpl_our_case_studies
+            row:
+              type: 'entity:node'
+              options:
+                relationship: none
+                view_mode: card
+            defaults:
+              css_class: false
+              exposed_form: false
+              style: false
+              row: false
+              sorts: false
+              filters: false
+              filter_groups: false
+            css_class: views-list-content-container
+            display_description: ''
+            exposed_block: true
+            display_extenders: {  }
+            path: our-case-studies

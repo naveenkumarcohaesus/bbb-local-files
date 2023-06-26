@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: x_large_hero_image_w1248_h400
+label: 'X Large Hero Image W1248 H400'
+effects:
+  7f70b02f-34e1-464d-8c83-0689390f5cc0:
+    uuid: 7f70b02f-34e1-464d-8c83-0689390f5cc0
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 1248
+      height: 400
+      crop_type: focal_point

@@ -1,0 +1,29 @@
+uuid: 79ac3fd5-4473-4263-8130-b89049213808
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_lend_schemes
+    - taxonomy.vocabulary.lender_schemes
+    - taxonomy.vocabulary.partner
+id: taxonomy_term.partner.field_lend_schemes
+field_name: field_lend_schemes
+entity_type: taxonomy_term
+bundle: partner
+label: 'Lender Schemes'
+description: 'This field is BBB FH specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lender_schemes: lender_schemes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

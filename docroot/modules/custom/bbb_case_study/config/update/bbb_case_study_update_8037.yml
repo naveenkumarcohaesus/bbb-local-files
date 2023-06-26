@@ -1,0 +1,26 @@
+views.view.case_study_listing:
+  expected_config: {  }
+  update_actions:
+    change:
+      display:
+        success_story_list:
+          display_options:
+            exposed_form:
+              options:
+                bef:
+                  filter:
+                    field_finance_type_target_id:
+                      options_show_only_used: 1
+                      options_show_only_used_filtered: 1
+                    field_partner_target_id:
+                      options_show_only_used: 1
+                      options_show_only_used_filtered: 1
+                    field_programme_target_id:
+                      options_show_only_used: 1
+                      options_show_only_used_filtered: 1
+                    field_region_target_id:
+                      options_show_only_used: 1
+                      options_show_only_used_filtered: 1
+                    field_sector_target_id:
+                      options_show_only_used: 1
+                      options_show_only_used_filtered: 1

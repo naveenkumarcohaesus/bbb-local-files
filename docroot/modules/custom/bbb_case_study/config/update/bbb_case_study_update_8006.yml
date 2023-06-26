@@ -1,0 +1,15 @@
+core.entity_form_display.node.case_study.default:
+  expected_config: {  }
+  update_actions:
+    change:
+      content:
+        field_content_owner:
+          type: entity_reference_autocomplete
+          weight: 21
+        field_metatags:
+          weight: 22
+field.field.node.case_study.field_teaser_text:
+  expected_config: {  }
+  update_actions:
+    change:
+      description: 'This Text will be used for teaser cards display but not on Detailed page'

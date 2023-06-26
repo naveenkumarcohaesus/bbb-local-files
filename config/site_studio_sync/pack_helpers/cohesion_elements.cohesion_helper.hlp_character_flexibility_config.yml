@@ -1,0 +1,126 @@
+uuid: 14939207-8a2b-4616-aefc-bcbfff03294e
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_elements.cohesion_helper_category.hlp_cat_page_layouts
+label: 'Character flexibility config'
+id: hlp_character_flexibility_config
+json_values: |
+  {
+      "canvas": [
+          {
+              "type": "form-container",
+              "uid": "form-tab-item",
+              "title": "Tab item",
+              "status": {
+                  "collapsed": false
+              },
+              "options": {
+                  "formBuilder": true
+              },
+              "uuid": "38aecc46-84bf-4502-a3e3-913436a35b55",
+              "parentUid": "root",
+              "children": [
+                  {
+                      "type": "form-field",
+                      "uid": "form-checkbox-toggle",
+                      "title": "Toggle",
+                      "translate": true,
+                      "status": {
+                          "collapsed": false
+                      },
+                      "uuid": "a42ea3ed-4f45-4fcd-8fe2-10481a1e2725",
+                      "parentUid": "form-tab-item",
+                      "children": []
+                  },
+                  {
+                      "type": "form-help",
+                      "uid": "form-helptext",
+                      "title": "Help text",
+                      "status": {
+                          "collapsed": false
+                      },
+                      "uuid": "7d2e88f9-ac11-4f30-af0f-771925f8eada",
+                      "parentUid": "form-tab-item",
+                      "children": []
+                  }
+              ]
+          }
+      ],
+      "mapper": {},
+      "model": {
+          "38aecc46-84bf-4502-a3e3-913436a35b55": {
+              "settings": {
+                  "title": "Character flexibility",
+                  "type": "cohTabItem",
+                  "breakpointIcon": ""
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          },
+          "a42ea3ed-4f45-4fcd-8fe2-10481a1e2725": {
+              "settings": {
+                  "title": "Enable Character Flexibility support",
+                  "type": "checkboxToggle",
+                  "schema": {
+                      "type": "string"
+                  },
+                  "toggleType": "string",
+                  "machineName": "enable-character-flexibility-support",
+                  "tooltipPlacement": "auto right",
+                  "trueValue": "extended-layout"
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "model": {
+                  "value": "{{falseValue}}"
+              }
+          },
+          "7d2e88f9-ac11-4f30-af0f-771925f8eada": {
+              "settings": {
+                  "title": "Help text",
+                  "type": "cohHelpText",
+                  "options": {
+                      "showClose": false,
+                      "helpType": "coh-help-text--help",
+                      "helpText": "***Use Cautiously, do not enable if the text content is as per design.***\n\nEnabling character flexibility allows some components which have a overlapping card design (text overlapping on image) to grow beyond the boundaries set by the other element (usually image). \n\nThis option is to be enabled only in such cases where we know our content is larger than advised by the design.\n\nWhen **ON**, this will cause the text content to not overlap and instead grow by pushing the other components on the page."
+                  }
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              }
+          }
+      },
+      "previewModel": {
+          "38aecc46-84bf-4502-a3e3-913436a35b55": {},
+          "a42ea3ed-4f45-4fcd-8fe2-10481a1e2725": {},
+          "7d2e88f9-ac11-4f30-af0f-771925f8eada": {}
+      },
+      "variableFields": {
+          "38aecc46-84bf-4502-a3e3-913436a35b55": [],
+          "a42ea3ed-4f45-4fcd-8fe2-10481a1e2725": [],
+          "7d2e88f9-ac11-4f30-af0f-771925f8eada": []
+      },
+      "meta": {
+          "fieldHistory": [
+              {
+                  "uuid": "a42ea3ed-4f45-4fcd-8fe2-10481a1e2725",
+                  "type": "form-checkbox-toggle",
+                  "machineName": "enable-character-flexibility-support"
+              }
+          ]
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+category: hlp_cat_page_layouts
+preview_image: ''
+entity_type_access: {  }
+bundle_access: {  }
+weight: 0

@@ -1,0 +1,19 @@
+{% if links -%}
+  {%- for key, item in links -%}
+    {%- if item.link -%}
+      {%- if key > 0 -%}
+        <li class="coh-list-item">
+          <a href="{{ item.link }}#filter-results"
+            {%- if item.class -%} class="{{ item.class }}" {%- endif -%} rel="bookmark" >
+            <span class="visually-hidden">{{ 'Read related posts from'| t }}</span> {{ item.text }}
+          </a>
+        </li>
+      {% else %}
+        <a href="{{ item.link }}#filter-results"
+          {%- if item.class -%} class="{{ item.class }}" {%- endif -%} rel="bookmark" >
+          <span class="visually-hidden">{{ 'Read related posts from'| t }}</span> {{ item.text }}
+        </a>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif %}

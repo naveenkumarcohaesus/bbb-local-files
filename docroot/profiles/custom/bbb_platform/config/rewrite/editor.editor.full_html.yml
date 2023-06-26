@@ -1,0 +1,101 @@
+uuid: 79cb342b-b88e-4c03-91f7-b63cefbad3fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Strike
+            - Bold
+            - Italic
+            - Underline
+            - RemoveFormat
+            - footnotes
+        -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+            - Outdent
+            - Indent
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalMediaLibrary
+        -
+          name: Tools
+          items:
+            - Undo
+            - Redo
+            - Table
+            - SpecialChar
+            - Maximize
+            - PasteFromWord
+            - PasteText
+            - Source
+            - Copy
+            - Cut
+            - Paste
+            - HorizontalRule
+            - Superscript
+            - Subscript
+        -
+          name: Styles
+          items:
+            - Format
+            - DX8Styles
+        -
+          name: Table
+          items:
+            - tableinsert
+            - tabledelete
+            - tableproperties
+            - tablerowinsertbefore
+            - tablerowinsertafter
+            - tablerowdelete
+            - tablecolumninsertbefore
+            - tablecolumninsertafter
+            - tablecolumndelete
+            - tablecellinsertbefore
+            - tablecellinsertafter
+            - tablecelldelete
+            - tablecellproperties
+            - tablecellsmerge
+            - tablecellmergeright
+            - tablecellmergedown
+            - tablecellsplithorizontal
+            - tablecellsplitvertical
+  plugins:
+    indentblock:
+      enable: 1
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

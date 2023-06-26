@@ -1,0 +1,509 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Config\FileStorage;
+
+/**
+ * Update help text for Success Story node title.
+ */
+function bbb_case_study_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8001');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Add Horizontal card view mode for Success Story CT.
+ */
+function bbb_case_study_update_8002() {
+  // Manually import view mode config from install folder.
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.case_study.horizontal_card', 'bbb_case_study', 'install');
+}
+
+/**
+ * Update the default - Full view mode for Success Story CT.
+ */
+function bbb_case_study_update_8003() {
+  // Manually import view mode config from install folder.
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.case_study.default', 'bbb_case_study', 'install');
+}
+
+/**
+ * Enable Card view mode and Success Story listing view.
+ */
+function bbb_case_study_update_8004() {
+  // Manually import config from optional folder.
+  _bbb_article_rewrite_configuration('block.block.views_block__case_study_listing_case_study_list_block', 'bbb_case_study', 'optional');
+  // Manually import config from install folder.
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.case_study.card', 'bbb_case_study', 'install');
+  _bbb_article_rewrite_configuration('views.view.case_study_listing', 'bbb_case_study', 'install');
+}
+
+/**
+ * Implements hook_update_dependencies().
+ */
+function bbb_case_study_update_dependencies() {
+  // Adding dependency to ensure the required modules are enabled
+  // before block is imported.
+  $dependencies['bbb_case_study'][8004] = [
+    'bbb_platform' => 8022,
+  ];
+  $dependencies['bbb_case_study'][8005] = [
+    'bbb_article' => 8005,
+  ];
+  $dependencies['bbb_case_study'][8011] = [
+    'bbb_article' => 8012,
+  ];
+  $dependencies['bbb_case_study'][8010] = [
+    'bbb_article' => 8014,
+  ];
+  return $dependencies;
+}
+
+/**
+ * Remove body field and update content owner field to user reference.
+ */
+function bbb_case_study_update_8005() {
+
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_case_study') . '/config/install';
+  $source = new FileStorage($config_path);
+  // Manually import content owner config from install folder.
+  $config_storage = \Drupal::service('config.storage');
+  $config_storage->write('field.field.node.case_study.field_content_owner', $source->read('field.field.node.case_study.field_content_owner'));
+  // Meta tag for Success Story.
+  $config_storage->write('field.field.node.case_study.field_metatags', $source->read('field.field.node.case_study.field_metatags'));
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8005');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update teaser text field description.
+ */
+function bbb_case_study_update_8006() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8006');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update card and horizontal view modes.
+ */
+function bbb_case_study_update_8007() {
+  // Manually import config from install folder.
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.case_study.card', 'bbb_case_study', 'install');
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.case_study.horizontal_card', 'bbb_case_study', 'install');
+}
+
+/**
+ * Update Success Story Listing view.
+ */
+function bbb_case_study_update_8008() {
+  // Manually import config from install folder.
+  _bbb_article_rewrite_configuration('views.view.case_study_listing', 'bbb_case_study', 'install');
+}
+
+/**
+ * Update the Success Story listing view with pager config.
+ */
+function bbb_case_study_update_8009() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8009');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Removed bbb_case_study_update_8010.
+ *
+ * Update case listing page view for related Success Stories.
+ */
+function bbb_case_study_update_8011() {
+  // Manually import config from install folder.
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.case_study.related_content', 'bbb_case_study', 'install');
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8011');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update case listing page view for related Success Stories.
+ */
+function bbb_case_study_update_8012() {
+  // Manually import config from optional folder.
+  _bbb_article_rewrite_configuration('block.block.views_block__case_study_listing_related_case_studies', 'bbb_case_study', 'optional');
+}
+
+/**
+ * Create a view for related reading programme.
+ */
+function bbb_case_study_update_8013() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8013');
+  // Manually import config from optional folder.
+  _bbb_article_rewrite_configuration('core.entity_view_mode.node.mini_list', 'bbb_case_study', 'optional');
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.case_study.mini_list', 'bbb_case_study', 'optional');
+  _bbb_article_rewrite_configuration('block.block.views_block__case_study_listing_related_reading_programme', 'bbb_case_study', 'optional');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Add Hero Background Pattern field for existing sites.
+ */
+function bbb_case_study_update_8014() {
+
+  // Manually import config from optional folder.
+  $module_path = \Drupal::service('extension.list.module')->getPath('bbb_case_study');
+  $config_optional_path = $module_path . '/config/optional';
+  $config_manager = Drupal::service('config.manager');
+  $source = new FileStorage($config_optional_path);
+
+  $page_module_path = \Drupal::service('extension.list.module')->getPath('bbb_page');
+  $storage_config_path = $page_module_path . '/config/optional';
+  $storage_source = new FileStorage($storage_config_path);
+
+  $entity_type_manager = Drupal::entityTypeManager();
+  $field_storage = $entity_type_manager->getStorage('field_storage_config');
+  $field_config = $entity_type_manager->getStorage('field_config');
+
+  // Only try to create the field if it doesn't already exist.
+  if (!$field_storage->load('node.field_hero_background_pattern')) {
+    $config_record = $storage_source->read('field.storage.node.field_hero_background_pattern');
+    $entity_type = $config_manager->getEntityTypeIdByName('field.storage.node.field_hero_background_pattern');
+
+    /** @var \Drupal\Core\Config\Entity\ConfigEntityStorageInterface $storage */
+    $storage = $entity_type_manager->getStorage($entity_type);
+
+    // Create the config entity.
+    $storage->createFromStorageRecord($config_record)->save();
+  }
+
+  if (!$field_config->load('node.case_study.field_hero_background_pattern')) {
+    $config_record = $source->read('field.field.node.case_study.field_hero_background_pattern');
+    $entity_type = $config_manager->getEntityTypeIdByName('field.field.node.case_study.field_hero_background_pattern');
+
+    /** @var \Drupal\Core\Config\Entity\ConfigEntityStorageInterface $storage */
+    $storage = $entity_type_manager->getStorage($entity_type);
+
+    // Create the config entity.
+    $storage->createFromStorageRecord($config_record)->save();
+  }
+  _bbb_article_rewrite_configuration('core.entity_form_display.node.case_study.default', 'bbb_case_study', 'optional');
+}
+
+/**
+ * Update the quick links widget to link_attributes.
+ */
+function bbb_case_study_update_8015() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8015');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Removed bbb_case_study_update_8016.
+ *
+ * Updating the pager count for Success Story listing.
+ */
+function bbb_case_study_update_8017() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8017');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Adds a custom block type, allows to use components outside of node templates.
+ */
+function bbb_case_study_update_8018() {
+  // Install block content core module.
+  \Drupal::service('module_installer')->install([
+    'block_content',
+    'bbb_default_content',
+  ]);
+
+  // Custom Block type.
+  _bbb_article_rewrite_configuration('block_content.type.custom_layout_canvas_block', 'bbb_case_study', 'optional');
+
+  // Add layout canvas field and place the block.
+  _bbb_article_create_field_storage('field.storage.block_content.field_layout_canvas', 'bbb_case_study', 'optional');
+  _bbb_article_rewrite_configuration('field.field.block_content.custom_layout_canvas_block.field_layout_canvas', 'bbb_case_study', 'optional');
+  _bbb_article_rewrite_configuration('core.entity_form_display.block_content.custom_layout_canvas_block.default', 'bbb_case_study', 'optional');
+  _bbb_article_rewrite_configuration('core.entity_view_display.block_content.custom_layout_canvas_block.default', 'bbb_case_study', 'optional');
+}
+
+/**
+ * Update Success Story listing view.
+ */
+function bbb_case_study_update_8019() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8019');
+  // Add Success Story listing views block.
+  _bbb_article_rewrite_configuration('block.block.exposedformcase_study_listingour_case_studies', 'bbb_case_study', 'optional');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update Success Story listing page for optional argument.
+ */
+function bbb_case_study_update_8020() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8020');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Removed bbb_case_study_update_8021.
+ *
+ * Update Success Story views to show no result message.
+ */
+function bbb_case_study_update_8022() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8022');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Adds a separate custom blocks for Hero Branded Component & breadcrumb.
+ */
+function bbb_case_study_update_8023() {
+  // Import hero_branded,breadcrumb blocks.
+  _bbb_article_rewrite_configuration('block.block.hero_branded', 'bbb_case_study', 'optional');
+  _bbb_article_rewrite_configuration('block.block.breadcrumb', 'bbb_case_study', 'optional');
+  // Place hero_branded block to content region.
+  $hero_branded_block = Block::load('hero_branded');
+  $hero_branded_block->setRegion('content');
+  $hero_branded_block->save();
+  // Place breadcrumb block to content region.
+  $breadcrumb_block = Block::load('breadcrumb');
+  $breadcrumb_block->setRegion('content');
+  $breadcrumb_block->save();
+}
+
+/**
+ * Adds a block for Success Story list top section.
+ */
+function bbb_case_study_update_8024() {
+  // Import default content.
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_case_study");
+
+  // Import Success Story list top section block.
+  _bbb_article_rewrite_configuration('block.block.case_study_listing_content', 'bbb_case_study', 'optional');
+  // Place Success Story list top section block to content region.
+  $hero_branded_block = Block::load('case_study_listing_content');
+  $hero_branded_block->setRegion('content');
+  $hero_branded_block->save();
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8024');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Adds a block for Success Story list top section.
+ */
+function bbb_case_study_update_8025() {
+  // Import Success Story list top section block.
+  _bbb_article_rewrite_configuration('block.block.case_study_listing_content', 'bbb_case_study', 'optional');
+  // Place Success Story list top section block to content region.
+  $hero_branded_block = Block::load('case_study_listing_content');
+  $hero_branded_block->setRegion('content');
+  $hero_branded_block->save();
+}
+
+/**
+ * Enable apply filters submit button on Success Story list.
+ */
+function bbb_case_study_update_8026() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8026');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update the SS default content in top sectiopn block.
+ */
+function bbb_case_study_update_8027() {
+  // Import default content.
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_case_study");
+}
+
+/**
+ * Update the no results text for Success Story view.
+ */
+function bbb_case_study_update_8028() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8028');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Updated view modes for Success Story.
+ */
+function bbb_case_study_update_8029() {
+  $configs = [
+    'core.entity_view_display.node.case_study.card_h2',
+    'core.entity_view_display.node.case_study.card_h4',
+    'core.entity_view_display.node.case_study.horizontal_card_h2',
+    'core.entity_view_display.node.case_study.horizontal_card_h4',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_case_study', 'install');
+  }
+}
+
+/**
+ * Update case study labels to Success Story.
+ */
+function bbb_case_study_update_8030() {
+  _bbb_article_rewrite_configuration('views.view.case_study_listing', 'bbb_case_study', 'install');
+  _bbb_article_rewrite_configuration('node.type.case_study', 'bbb_case_study', 'install');
+  _bbb_article_rewrite_configuration('block.block.case_study_listing_content', 'bbb_case_study', 'optional');
+  _bbb_article_rewrite_configuration('field.field.taxonomy_term.partner.field_case_study_url', 'bbb_partner', 'install');
+}
+
+/**
+ * Update the SS default content in top section block.
+ */
+function bbb_case_study_update_8031() {
+  // Import default content.
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_case_study");
+}
+
+/**
+ * Update view mode for related content component.
+ */
+function bbb_case_study_update_8032() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8032');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update success story view for empty behaviour.
+ */
+function bbb_case_study_update_8033() {
+  _bbb_article_rewrite_configuration('views.view.case_study_listing', 'bbb_case_study', 'install');
+}
+
+/**
+ * Update success story view to block listing.
+ */
+function bbb_case_study_update_8034() {
+  _bbb_article_rewrite_configuration('views.view.case_study_listing', 'bbb_case_study', 'install');
+
+  // Success story listing views exposed filter block.
+  _bbb_article_rewrite_configuration('block.block.views_block__case_study_listing_success_story_list', 'bbb_case_study', 'optional');
+  _bbb_article_rewrite_configuration('block.block.exposedform_success_story_list', 'bbb_case_study', 'optional');
+  $block = Block::load('views_block__case_study_listing_success_story_list');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+  $block = Block::load('exposedform_success_story_list');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+
+  _bbb_article_rewrite_configuration('site_settings.site_setting_entity_type.case_study', 'bbb_case_study', 'install');
+  _bbb_article_rewrite_configuration('field.field.site_setting_entity.case_study.field_url_alias', 'bbb_case_study', 'install');
+  _bbb_article_rewrite_configuration('core.entity_form_display.site_setting_entity.case_study.default', 'bbb_case_study', 'install');
+  // Create a default Site setting.
+  $entity = \Drupal::entityTypeManager()->getStorage('site_setting_entity')->create([
+    'type'  => 'case_study',
+    'name' => 'Success story',
+    'field_url_alias' => [
+      'value' => 'success-stories',
+    ],
+  ]);
+  $entity->save();
+
+  // Import hero_branded,breadcrumb blocks.
+  _bbb_article_rewrite_configuration('block.block.hero_branded', 'bbb_case_study', 'optional');
+
+  // Enable revisions for Custom Layout Canvas Block.
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8033');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update breadcrumb block.
+ */
+function bbb_case_study_update_8035() {
+  _bbb_article_rewrite_configuration('block.block.breadcrumb', 'bbb_case_study', 'optional');
+  _bbb_article_rewrite_configuration('views.view.case_study_listing', 'bbb_case_study', 'install');
+}
+
+/**
+ * Update success story view fallback and hide on no results.
+ */
+function bbb_case_study_update_8036() {
+  _bbb_article_rewrite_configuration('views.view.case_study_listing', 'bbb_case_study', 'install');
+}
+
+/**
+ * Update view config for exposed filters.
+ */
+function bbb_case_study_update_8037() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_case_study', 'bbb_case_study_update_8037');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

@@ -1,0 +1,27 @@
+uuid: b3ebe8a4-e855-483b-a8e0-7149da462ac0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.research_and_publication
+id: node.research_and_publication.field_media_document
+field_name: field_media_document
+entity_type: node
+bundle: research_and_publication
+label: 'Media Document'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

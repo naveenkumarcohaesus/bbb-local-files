@@ -1,0 +1,97 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+/**
+ * Update business_structure vocabulary name.
+ */
+function bbb_taxonomy_update_8001() {
+  _bbb_article_rewrite_configuration('taxonomy.vocabulary.business_structure', 'bbb_taxonomy', 'install');
+}
+
+/**
+ * Create vocabularies for finance type fields.
+ */
+function bbb_taxonomy_update_8002() {
+  // Create new vocabularies.
+  $configs = [
+    'taxonomy.vocabulary.finance_amount_of_finance',
+    'taxonomy.vocabulary.finance_assets',
+    'taxonomy.vocabulary.finance_business_stage',
+    'taxonomy.vocabulary.finance_category',
+    'taxonomy.vocabulary.finance_profits',
+    'taxonomy.vocabulary.finance_reason_for_finance',
+  ];
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_taxonomy', 'install');
+  }
+}
+
+/**
+ * Update rabbit hole settings for all taxonomies.
+ */
+function bbb_taxonomy_update_8003() {
+  \Drupal::service('module_installer')->install(['rabbit_hole']);
+  \Drupal::service('module_installer')->install(['rh_node']);
+  \Drupal::service('module_installer')->install(['rh_taxonomy']);
+
+  $configs = [
+    'taxonomy.vocabulary.business_structure',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_audience',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_business_structure',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_business_topic',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_categories',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_content_topology',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_designation',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_document_type',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_finance_type',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_image_type',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_partner',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_programme',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_region',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_sector',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_signature_campaigns',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_team_member_group',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_video_type',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_taxonomy', 'install');
+  }
+}
+
+/**
+ * Update rabbit hole settings for all taxonomies.
+ */
+function bbb_taxonomy_update_8004() {
+
+  $configs = [
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_finance_amount_of_finance',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_finance_assets',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_finance_category',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_finance_profits',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_finance_reason_for_finance',
+    'rabbit_hole.behavior_settings.taxonomy_vocabulary_finance_business_stage',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_taxonomy', 'install');
+  }
+  _bbb_article_rewrite_configuration('rabbit_hole.behavior_settings.taxonomy_vocabulary_tags', 'bbb_taxonomy', 'optional');
+
+}
+
+/**
+ * Disable rabbit hole settings to override.
+ */
+function bbb_taxonomy_update_8005() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_taxonomy', 'bbb_taxonomy_update_8005');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

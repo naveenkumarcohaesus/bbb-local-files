@@ -1,0 +1,12 @@
+# Application 'bbbwebsites', environment '01test'.
+01test:
+  root: /var/www/html/bbbwebsites.01test/docroot
+  ac-site: bbbwebsites
+  ac-env: 01test
+  ac-realm: enterprise-g1
+  uri: preprodbpc.test-bbbwebsites.acsitefactory.com
+  01test.livedev:
+    parent: '@bbbwebsites.01test'
+    root: /mnt/gfs/bbbwebsites.01test/livedev/docroot
+  host: bbbwebsites01test.ssh.enterprise-g1.acquia-sites.com
+  user: bbbwebsites.01test

@@ -1,0 +1,18 @@
+views.view.partners:
+  expected_config: { }
+  update_actions:
+    change:
+      display:    
+        partner_list:
+          display_options:    
+            header:
+              result:
+                id: result
+                table: views
+                field: result
+                relationship: none
+                group_type: group
+                admin_label: ''
+                plugin_id: result
+                empty: false
+                content: 'Showing @start - @end of @total results'

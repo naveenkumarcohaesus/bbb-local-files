@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: component_content
+  uuid: 29237529-3175-4f3c-9adb-d9e1c9b1c0b9
+  default_langcode: en
+  depends:
+    318058c9-7247-4c44-b380-059b43e40f80: cohesion_layout
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'Social Links'
+  uid:
+    -
+      target_id: 1
+  created:
+    -
+      value: 1667814449
+  layout_canvas:
+    -
+      entity: 318058c9-7247-4c44-b380-059b43e40f80
+  component:
+    -
+      target_id: cpt_social_links_card
+  revision_translation_affected:
+    -
+      value: true

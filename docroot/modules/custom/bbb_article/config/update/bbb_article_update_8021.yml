@@ -1,0 +1,275 @@
+views.view.article:
+  expected_config: {  }
+  update_actions:
+    add:
+      display:
+        articles_list:
+          cache_metadata:
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - 'url.query_args:sort_by'
+              - user
+              - 'user.node_grants:view'
+              - user.permissions
+            max-age: -1
+            tags: {  }
+          display_options:
+            arguments:
+              'null':
+                admin_label: ''
+                default_action: ignore
+                default_argument_options:
+                  argument: ''
+                default_argument_skip_url: true
+                default_argument_type: fixed
+                exception:
+                  title: All
+                  title_enable: false
+                  value: all
+                field: 'null'
+                group_type: group
+                id: 'null'
+                must_not_be: false
+                plugin_id: 'null'
+                relationship: none
+                specify_validation: false
+                summary:
+                  format: default_summary
+                  number_of_records: 0
+                  sort_order: asc
+                summary_options:
+                  base_path: ''
+                  count: true
+                  items_per_page: 25
+                  override: false
+                table: views
+                title: ''
+                title_enable: false
+                validate:
+                  fail: 'not found'
+                  type: none
+                validate_options: {  }
+            css_class: views-list-content-container
+            defaults:
+              arguments: false
+              css_class: false
+              exposed_form: false
+              filter_groups: false
+              filters: false
+              pager: false
+              row: false
+              sorts: false
+              style: false
+              title: false
+              use_ajax: false
+            display_description: ''
+            display_extenders: {  }
+            exposed_block: true
+            exposed_form:
+              options:
+                bef:
+                  filter:
+                    field_topic_target_id:
+                      advanced:
+                        collapsible: true
+                        is_secondary: false
+                        rewrite:
+                          filter_rewrite_values: ''
+                        sort_options: false
+                      display_inline: false
+                      plugin_id: bef
+                      select_all_none: false
+                      select_all_none_nested: false
+                  general:
+                    allow_secondary: false
+                    autosubmit: true
+                    autosubmit_exclude_textfield: false
+                    autosubmit_hide: true
+                    autosubmit_textfield_delay: 500
+                    input_required: false
+                    reset_button_always_show: true
+                    secondary_label: 'Advanced options'
+                    secondary_open: false
+                  sort:
+                    advanced:
+                      collapsible: false
+                      collapsible_label: 'Sort options'
+                      combine: false
+                      combine_rewrite: ''
+                      is_secondary: false
+                      reset: false
+                      reset_label: ''
+                    plugin_id: default
+                expose_sort_order: false
+                exposed_sorts_label: 'Sort by'
+                reset_button: true
+                reset_button_label: 'Reset all filters'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+                submit_button: Apply
+                text_input_required: 'Select any filter and click on Apply to see results'
+                text_input_required_format: filtered_html
+              type: bef
+            filter_groups:
+              groups:
+                1: AND
+              operator: AND
+            filters:
+              field_topic_target_id:
+                admin_label: ''
+                error_message: true
+                expose:
+                  description: ''
+                  identifier: business_topic
+                  label: Topic
+                  multiple: true
+                  operator: field_topic_target_id_op
+                  operator_id: field_topic_target_id_op
+                  operator_limit_selection: false
+                  operator_list: {  }
+                  reduce: false
+                  remember: false
+                  remember_roles:
+                    administrator: '0'
+                    anonymous: '0'
+                    authenticated: authenticated
+                    bankers: '0'
+                    content_administrator: '0'
+                    content_author: '0'
+                    content_editor: '0'
+                    content_factory: '0'
+                    developer: '0'
+                    site_builder: '0'
+                    user_administrator: '0'
+                  required: false
+                  use_operator: false
+                exposed: true
+                field: field_topic_target_id
+                group: 1
+                group_info:
+                  default_group: All
+                  default_group_multiple: {  }
+                  description: ''
+                  group_items: {  }
+                  identifier: ''
+                  label: ''
+                  multiple: false
+                  optional: true
+                  remember: false
+                  widget: select
+                group_type: group
+                hierarchy: false
+                id: field_topic_target_id
+                is_grouped: false
+                limit: true
+                operator: or
+                plugin_id: taxonomy_index_tid
+                reduce_duplicates: false
+                relationship: none
+                table: node__field_topic
+                type: select
+                value: {  }
+                vid: business_topic
+              status:
+                entity_field: status
+                entity_type: node
+                expose:
+                  operator: ''
+                  operator_limit_selection: false
+                  operator_list: {  }
+                field: status
+                group: 1
+                id: status
+                plugin_id: boolean
+                table: node_field_data
+                value: '1'
+              type:
+                entity_field: type
+                entity_type: node
+                expose:
+                  operator_limit_selection: false
+                  operator_list: {  }
+                field: type
+                id: type
+                plugin_id: bundle
+                table: node_field_data
+                value:
+                  article: article
+            pager:
+              options:
+                expose:
+                  items_per_page: false
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options: '5, 10, 25, 50'
+                  items_per_page_options_all: false
+                  items_per_page_options_all_label: '- All -'
+                  offset: false
+                  offset_label: Offset
+                id: 0
+                items_per_page: 18
+                offset: 0
+                quantity: 5
+                tags:
+                  first: '« First'
+                  last: 'Last »'
+                  next: 'Next ›'
+                  previous: '‹ Previous'
+                total_pages: null
+              type: full
+            path: articles
+            row:
+              options:
+                relationship: none
+                view_mode: card
+              type: 'entity:node'
+            sorts:
+              created:
+                admin_label: ''
+                entity_field: created
+                entity_type: node
+                expose:
+                  field_identifier: created
+                  label: 'Most recent'
+                exposed: true
+                field: created
+                granularity: second
+                group_type: group
+                id: created
+                order: DESC
+                plugin_id: date
+                relationship: none
+                table: node_field_data
+              title:
+                admin_label: ''
+                entity_field: title
+                entity_type: node
+                expose:
+                  field_identifier: title
+                  label: Alphabetical
+                exposed: true
+                field: title
+                group_type: group
+                id: title
+                order: ASC
+                plugin_id: standard
+                relationship: none
+                table: node_field_data
+            style:
+              options:
+                master_template: __none__
+                views_template: view_tpl_article_list
+              type: cohesion_layout
+            title: Article
+            use_ajax: true
+          display_plugin: page
+          display_title: 'Article listing'
+          id: articles_list
+          position: 2
+        default:
+          cache_metadata:
+            contexts:
+              - 'url.query_args:sort_by'
+              - 'url.query_args:sort_order'

@@ -1,0 +1,14 @@
+smtp.settings:
+  expected_config:
+    smtp_allowhtml: ''
+    smtp_host: ''
+    smtp_on: false
+    smtp_port: '25'
+    smtp_protocol: standard
+  update_actions:
+    change:
+      smtp_allowhtml: '0'
+      smtp_host: smtp.office365.com
+      smtp_on: true
+      smtp_port: '587'
+      smtp_protocol: tls

@@ -1,0 +1,12 @@
+views.view.case_study_listing:
+  expected_config: {  }
+  update_actions:
+    change:
+      display:
+        our_case_studies:
+          display_options:
+            exposed_form:
+              options:
+                bef:
+                  general:
+                    autosubmit_hide: false

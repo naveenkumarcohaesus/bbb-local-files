@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: x_large_card_w276_h184
+label: 'X Large Card W276 H184'
+effects:
+  af28c012-5406-4f38-8332-be728b3c8ff9:
+    uuid: af28c012-5406-4f38-8332-be728b3c8ff9
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 276
+      height: 184
+      crop_type: focal_point

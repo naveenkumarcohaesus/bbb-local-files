@@ -1,0 +1,10 @@
+locale.settings:
+  expected_config:
+    translation:
+      path: sites/default/files/translations
+      use_source: remote_and_local
+  update_actions:
+    change:
+      translation:
+        path: ''
+        use_source: local

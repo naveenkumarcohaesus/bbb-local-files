@@ -1,0 +1,9 @@
+name: BBB Success Story
+description: 'Provides Success Story content type and related configuration. (Previously BBB Case Study)'
+type: module
+core_version_requirement: '^9 || ^10'
+package: BBB
+dependencies:
+  - bbb_article:bbb_article
+  - bbb_page:bbb_page
+  - drupal:better_exposed_filters

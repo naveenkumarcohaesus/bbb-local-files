@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function bbb_page_install() {
+  // module_set_weight('bbb_page', 50);
+  // First, do everything in acquia_cms_page module.
+  include_once DRUPAL_ROOT . '/modules/contrib/acquia_cms_page/acquia_cms_page.install';
+  acquia_cms_page_install();
+}
+
+/**
+ * Add metatags field for page content type.
+ */
+function bbb_page_update_8001() {
+
+  // Add metatags field for page content type.
+  _bbb_article_rewrite_configuration('field.field.node.page.field_metatags', 'bbb_page', 'optional');
+  _bbb_article_rewrite_configuration('core.entity_form_display.node.page.default', 'bbb_page', 'rewrite');
+}
+
+/**
+ * Update Hero background pattern field options.
+ */
+function bbb_page_update_8002() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_page', 'bbb_page_update_8002');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Updated view modes for Page.
+ */
+function bbb_page_update_8003() {
+  $configs = [
+    'core.entity_view_display.node.page.card_h2',
+    'core.entity_view_display.node.page.card_h4',
+    'core.entity_view_display.node.page.horizontal_card_h2',
+    'core.entity_view_display.node.page.horizontal_card_h4',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_page', 'optional');
+  }
+}
+
+/**
+ * Set `Preview before submitting` to `optional`.
+ */
+function bbb_page_update_8004() {
+  _bbb_article_rewrite_configuration('node.type.page', 'bbb_page', 'rewrite');
+}

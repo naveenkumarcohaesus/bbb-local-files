@@ -1,0 +1,14 @@
+name: 'BBB Search'
+description: 'A module to manage BBB search related configurations and features.'
+type: module
+core_version_requirement: '^9 || ^10'
+package: BBB
+dependencies:
+  - search_api_solr:search_api_solr
+  - acquia_search:acquia_search
+  - bbb_article:bbb_article
+  - bbb_page:bbb_page
+  - bbb_case_study:bbb_case_study
+  - bbb_event:bbb_event
+  - bbb_news:bbb_news
+  - bbb_product:bbb_product

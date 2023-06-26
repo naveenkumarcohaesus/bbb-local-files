@@ -1,0 +1,12 @@
+views.view.case_study_listing:
+  expected_config: {  }
+  update_actions:
+    change:
+      display:
+        our_case_studies:
+          display_options:
+            empty:
+              area:
+                content:
+                  format: cohesion
+                  value: "<div class=\"no-results-text coh-style-headline-3\">No results found</div>\r\n<div class=\"no-results-desc coh-style-body-large\">Try adjusting your filters to find what you are looking for.</div>"

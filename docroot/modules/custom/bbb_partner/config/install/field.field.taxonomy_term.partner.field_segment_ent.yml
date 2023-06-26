@@ -1,0 +1,29 @@
+uuid: 605f835a-51a0-4c23-95f8-21372410e501
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_segment_ent
+    - taxonomy.vocabulary.partner
+    - taxonomy.vocabulary.segment
+id: taxonomy_term.partner.field_segment_ent
+field_name: field_segment_ent
+entity_type: taxonomy_term
+bundle: partner
+label: Segment
+description: 'This field is BBB specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      segment: segment
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

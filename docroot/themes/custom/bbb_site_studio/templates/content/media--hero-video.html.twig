@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ */
+#}
+{{ attach_library('bbb_media_hero_video/hero_video') }}
+{% set poster_image = file_url(media.field_poster_image.entity.fileuri) ? file_url(media.field_poster_image.entity.fileuri) : '' %}
+{% set transcript = file_url(media.field_transcript.entity.fileuri) ? file_url(media.field_transcript.entity.fileuri) : '' %}
+{% set media_type = "video/" ~ name|split('.')|last %}
+
+{% if content %}
+  <video autoplay="" loop="" muted="" playsinline="" poster="{{ poster_image }}" class="hero-video decorative" aria-hidden="true">
+    <source src={{ file_url(media.field_media_video_file.entity.fileuri) }} type="{{ media_type }}">
+    {% if transcript|length %}
+      <track label="{{ language_name }}" kind="description" srclang="{{ langcode }}" src="{{ transcript }}" default="">
+    {% endif %}
+  </video>
+  {# To handle no js scenario, button is disabled and enabled by the JS which handles the button events. #}
+  <button type="button" class="btn site-hero-button play-video visually-hidden" data-play-text="Play Video" data-pause-text="Pause Video">
+    <span class="visually-hidden">{{ "Video is playing, click to"|t }} </span>
+    {{ "Pause Video"|t }}
+  </button>
+{% endif %}

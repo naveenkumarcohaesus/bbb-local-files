@@ -1,0 +1,26 @@
+uuid: e5f0ed4d-7432-482c-a501-79d0f90c1a17
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_layout_canvas_block
+    - field.field.block_content.custom_layout_canvas_block.field_layout_canvas
+  module:
+    - cohesion_elements
+id: block_content.custom_layout_canvas_block.default
+targetEntityType: block_content
+bundle: custom_layout_canvas_block
+mode: default
+content:
+  field_layout_canvas:
+    type: cohesion_entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

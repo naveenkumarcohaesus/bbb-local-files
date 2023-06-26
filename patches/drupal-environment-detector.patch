@@ -1,0 +1,16 @@
+diff --git a/src/AcquiaDrupalEnvironmentDetector.php b/src/AcquiaDrupalEnvironmentDetector.php
+index 2322ffa..57c4f9d 100644
+--- a/src/AcquiaDrupalEnvironmentDetector.php
++++ b/src/AcquiaDrupalEnvironmentDetector.php
+@@ -196,9 +196,8 @@ class AcquiaDrupalEnvironmentDetector {
+    * @return string|null
+    *   ACSF db name.
+    */
+-  public static function getAcsfDbName(): ?string {
+-    $gardens_site_settings = getenv('gardens_site_settings');
+-    return is_array($gardens_site_settings) && self::isAcsfEnv() ? $gardens_site_settings['conf']['acsf_db_name'] : NULL;
++  public static function getAcsfDbName() {
++     return isset($GLOBALS['gardens_site_settings']) && self::isAcsfEnv() ? $GLOBALS['gardens_site_settings']['conf']['acsf_db_name'] : NULL;
+   }
+
+   /**

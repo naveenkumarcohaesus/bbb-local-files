@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: horizontal_cta_w96_h96
+label: 'Horizontal CTA W96 H96'
+effects:
+  69edae7a-9c1e-4d2f-a749-e365939387a3:
+    uuid: 69edae7a-9c1e-4d2f-a749-e365939387a3
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 96
+      height: 96
+      crop_type: focal_point

@@ -1,0 +1,62 @@
+uuid: b2a73b41-5688-4d87-9f28-dd9f05b6afd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_custom_styles.cohesion_custom_style.63181883
+    - cohesion_elements.cohesion_component.cpt_drupal_blocks
+    - cohesion_elements.cohesion_component_category.cpt_cat_dynamic_components
+label: 'News list block'
+id: cpt_news_list_block
+json_values: |
+  {
+      "canvas": [
+          {
+              "uid": "cpt_drupal_blocks",
+              "type": "component",
+              "title": "Drupal blocks",
+              "enabled": true,
+              "category": "category-3",
+              "componentId": "cpt_drupal_blocks",
+              "componentType": "container",
+              "uuid": "6754e868-9062-4bde-bcdd-1123aa380c39",
+              "parentUid": "root",
+              "status": {},
+              "children": []
+          }
+      ],
+      "componentForm": [],
+      "mapper": {},
+      "model": {
+          "6754e868-9062-4bde-bcdd-1123aa380c39": {
+              "settings": {
+                  "title": "Drupal blocks"
+              },
+              "33477453-ecf9-49b5-873b-67737b65fefe": "views_block_news_list_block",
+              "dda7054d-09f6-4fdc-82f6-138404466a96": "dark-title",
+              "609b5301-04bf-45ce-82af-509436f29597": "coh-style-margin-bottom-small"
+          }
+      },
+      "previewModel": {
+          "6754e868-9062-4bde-bcdd-1123aa380c39": {}
+      },
+      "variableFields": {
+          "6754e868-9062-4bde-bcdd-1123aa380c39": []
+      },
+      "disabledNodes": [],
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_dynamic_components
+preview_image: ''
+has_quick_edit: null
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-news-list-block
+weight: 0

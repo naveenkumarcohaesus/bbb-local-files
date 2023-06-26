@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_text_cta_w720_h840
+label: 'Large Text CTA W720 H840'
+effects:
+  da0412b7-3233-44b7-8b57-1850c2eaa029:
+    uuid: da0412b7-3233-44b7-8b57-1850c2eaa029
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 720
+      height: 840
+      crop_type: focal_point

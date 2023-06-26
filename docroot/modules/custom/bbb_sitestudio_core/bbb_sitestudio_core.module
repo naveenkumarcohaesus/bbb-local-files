@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Site Studio Specific Configurations.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function bbb_sitestudio_core_theme($existing, $type, $theme, $path) {
+  return [
+    'link_accessibility' => [
+      'variables' => [
+        'links' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_link_attributes_plugin_alter().
+ */
+function bbb_sitestudio_core_link_attributes_plugin_alter(&$plugins) {
+  // Update the title of name attribute.
+  $plugins['name']['title'] = t('Additional Context Text');
+}

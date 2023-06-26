@@ -1,0 +1,19 @@
+uuid: 4e6019f7-a63f-4eac-a9e7-722197a7f3d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_text
+    - node.type.research_and_publication
+id: node.research_and_publication.field_teaser_text
+field_name: field_teaser_text
+entity_type: node
+bundle: research_and_publication
+label: 'Teaser Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

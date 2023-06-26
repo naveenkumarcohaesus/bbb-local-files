@@ -1,0 +1,9 @@
+name: BBB Breadcrumb
+type: module
+description: Provides config and functionality related to path aliases and breadcrumbs.
+package: BBB
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:pathauto
+  - drupal:config_rewrite
+  - drupal:menu_breadcrumb

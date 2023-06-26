@@ -1,0 +1,179 @@
+uuid: efff088d-9477-44c3-9306-a0cdf21415ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.cohesion
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - media.type.document
+    - media.type.image
+    - media.type.video
+    - node.type.article
+    - node.type.case_study
+    - node.type.event
+    - node.type.landing_page
+    - node.type.news
+    - node.type.page
+    - node.type.person
+    - node.type.place
+    - node.type.product
+    - node.type.team_member
+    - workflows.workflow.editorial
+  module:
+    - acquia_cms_tour
+    - cohesion
+    - cohesion_elements
+    - content_moderation
+    - content_translation
+    - entity_clone
+    - filter
+    - media
+    - media_entity_download
+    - moderation_dashboard
+    - moderation_sidebar
+    - node
+    - scheduler
+    - system
+    - toolbar
+id: content_editor
+label: 'Content Editor'
+weight: -5
+is_admin: null
+permissions:
+  - 'access acquia cms tour'
+  - 'access animate on view'
+  - 'access component builder elements group'
+  - 'access component content'
+  - 'access components'
+  - 'access content'
+  - 'access content elements group'
+  - 'access content overview'
+  - 'access cpt_cat_accordion_components cohesion_component_category group'
+  - 'access cpt_cat_basic_components cohesion_component_category group'
+  - 'access cpt_cat_card_components cohesion_component_category group'
+  - 'access cpt_cat_dynamic_components cohesion_component_category group'
+  - 'access cpt_cat_feature_sections cohesion_component_category group'
+  - 'access cpt_cat_general_components cohesion_component_category group'
+  - 'access cpt_cat_hero_components cohesion_component_category group'
+  - 'access cpt_cat_interactive_components cohesion_component_category group'
+  - 'access cpt_cat_layout_components cohesion_component_category group'
+  - 'access cpt_cat_map_components cohesion_component_category group'
+  - 'access cpt_cat_media_components cohesion_component_category group'
+  - 'access cpt_cat_read_more_components cohesion_component_category group'
+  - 'access cpt_cat_slider_components cohesion_component_category group'
+  - 'access cpt_cat_tab_components cohesion_component_category group'
+  - 'access cpt_cat_template_components cohesion_component_category group'
+  - 'access custom elements group'
+  - 'access drupal core elements group'
+  - 'access elements'
+  - 'access fields'
+  - 'access form fields fields group'
+  - 'access form help fields group'
+  - 'access form layout fields group'
+  - 'access helpers'
+  - 'access hlp_cat_dynamic_helpers cohesion_helper_category group'
+  - 'access hlp_cat_general_helpers cohesion_helper_category group'
+  - 'access hlp_cat_interactive_helpers cohesion_helper_category group'
+  - 'access hlp_cat_layout_helpers cohesion_helper_category group'
+  - 'access hlp_cat_media_helpers cohesion_helper_category group'
+  - 'access interactive elements group'
+  - 'access layout elements group'
+  - 'access media elements group'
+  - 'access media overview'
+  - 'access menu elements group'
+  - 'access toolbar'
+  - 'access view elements group'
+  - 'administer component content'
+  - 'administer themes'
+  - 'clone node entity'
+  - 'clone node entity'
+  - 'create article content'
+  - 'create case_study content'
+  - 'create document media'
+  - 'create event content'
+  - 'create image media'
+  - 'create landing_page content'
+  - 'create media'
+  - 'create news content'
+  - 'create page content'
+  - 'create product content'
+  - 'create team_member content'
+  - 'create video media'
+  - 'delete any document media'
+  - 'delete any document media'
+  - 'delete any page content'
+  - 'delete any person content'
+  - 'delete any place content'
+  - 'delete any video media'
+  - 'delete any video media'
+  - 'delete own article content'
+  - 'delete own case_study content'
+  - 'delete own document media'
+  - 'delete own event content'
+  - 'delete own image media'
+  - 'delete own landing_page content'
+  - 'delete own news content'
+  - 'delete own page content'
+  - 'delete own product content'
+  - 'delete own team_member content'
+  - 'delete own video media'
+  - 'download media'
+  - 'edit any article content'
+  - 'edit any case_study content'
+  - 'edit any document media'
+  - 'edit any document media'
+  - 'edit any document media'
+  - 'edit any event content'
+  - 'edit any image media'
+  - 'edit any landing_page content'
+  - 'edit any news content'
+  - 'edit any page content'
+  - 'edit any person content'
+  - 'edit any place content'
+  - 'edit any product content'
+  - 'edit any team_member content'
+  - 'edit any video media'
+  - 'edit any video media'
+  - 'edit any video media'
+  - 'edit own article content'
+  - 'edit own case_study content'
+  - 'edit own document media'
+  - 'edit own event content'
+  - 'edit own image media'
+  - 'edit own landing_page content'
+  - 'edit own news content'
+  - 'edit own page content'
+  - 'edit own product content'
+  - 'edit own team_member content'
+  - 'edit own video media'
+  - 'override news authored on option'
+  - 'override news sticky option'
+  - 'schedule publishing of nodes'
+  - 'update content translations'
+  - 'update media'
+  - 'use editorial transition archive'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation dashboard'
+  - 'use moderation sidebar'
+  - 'use text format cohesion'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view article revisions'
+  - 'view case_study revisions'
+  - 'view event revisions'
+  - 'view landing_page revisions'
+  - 'view latest version'
+  - 'view media'
+  - 'view news revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view product revisions'
+  - 'view scheduled content'
+  - 'view team_member revisions'
+  - 'view the administration theme'

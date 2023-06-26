@@ -1,0 +1,19 @@
+uuid: 4b2b1bb4-a167-4450-8cdf-fdcea94b9178
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_amount_of_finance_needed
+field_name: field_amount_of_finance_needed
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

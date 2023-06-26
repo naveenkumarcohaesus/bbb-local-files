@@ -1,0 +1,17 @@
+uuid: 0430085e-bd30-4c96-a4dd-6fc0d3b1bbb9
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_large_w720_h700
+label: 'Hero Large W720 H700'
+effects:
+  661d35c9-527e-44b5-8757-b4df929099fd:
+    uuid: 661d35c9-527e-44b5-8757-b4df929099fd
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 700
+      crop_type: focal_point

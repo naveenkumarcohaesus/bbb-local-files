@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: component_content
+  uuid: 4a754b85-44cf-4fcd-893b-d859a749ea4e
+  default_langcode: en
+  depends:
+    ecd83840-97cf-494e-b7aa-4a02cc661cc9: cohesion_layout
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  title:
+    -
+      value: 'BBI Half Color Logo'
+  uid:
+    -
+      target_id: 1
+  created:
+    -
+      value: 1663299826
+  layout_canvas:
+    -
+      entity: ecd83840-97cf-494e-b7aa-4a02cc661cc9
+  component:
+    -
+      target_id: cpt_logo_card
+  revision_translation_affected:
+    -
+      value: true

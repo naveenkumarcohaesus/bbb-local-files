@@ -1,0 +1,79 @@
+name: BBB Platform Profile
+core_version_requirement: ^9
+type: profile
+description: "An opinionated implementation of Drupal 9 for BBB using Acquia CMS minimal starter kit."
+distribution:
+  name: BBB
+  install:
+    theme: acquia_claro
+    finish_url: '/admin/tour/dashboard'
+install:
+  - acquia_cms_site_studio
+  - acquia_cms_page
+  - acquia_cms_search
+  - acquia_cms_tour
+  - acquia_cms_toolbar
+  - acquia_cms_common
+  - acquia_cms_image
+  - acquia_cms_video
+  - acquia_cms_document
+  - acquia_cms_person
+  - autologout
+  - better_exposed_filters
+  - block_content
+  - config_update
+  - ckeditor_indentblock
+  - fakeobjects
+  - footnotes
+  - form_options_attributes
+  - inline_form_errors
+  - metatag_views
+  - memcache
+  - node_title_help_text
+  - recaptcha_v3
+  - samlauth
+  - smtp
+  - svg_image
+  - theme_tokens
+  - update_helper
+  - chosen
+  - link_attributes
+  - selective_better_exposed_filters
+  - sitestudio_acsf
+  - rabbit_hole
+  - rh_node
+  - rh_taxonomy
+  - multiple_select
+  - webform
+  - google_tag
+  - remove_http_headers
+  - password_policy_blacklist
+  - password_policy_characters
+  - password_policy_consecutive
+  - password_policy_history
+  - bbb_authentication
+  - bbb_breadcrumb
+  - bbb_multilingual
+  - bbb_taxonomy
+  - bbb_article
+  - bbb_case_study
+  - bbb_landing_page
+  - bbb_news
+  - bbb_team_member
+  - bbb_event
+  - bbb_page
+  - bbb_partner
+  - bbb_product
+  - bbb_regional_support
+  - bbb_research_publication
+  - bbb_roles_permissions
+  - bbb_media_image
+  - bbb_media_video
+  - bbb_media_document
+  - bbb_sitestudio_core
+  - bbb_core
+  - bbb_search
+  - bbb_finance_type
+themes:
+  - acquia_claro
+  - bbb_site_studio

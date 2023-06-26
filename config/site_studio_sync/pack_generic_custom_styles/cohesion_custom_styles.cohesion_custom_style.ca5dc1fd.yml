@@ -1,0 +1,108 @@
+uuid: 8d8456a9-ab14-44f6-a493-f757650b6275
+langcode: en
+status: true
+dependencies: {  }
+label: 'Upper Roman Numeral List'
+id: ca5dc1fd
+json_values: |
+  {
+      "preview": {
+          "text": "<p><strong>Unordered list<\/strong><\/p>\n\n<ul class=\"coh-preview\">\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ul>\n\n<p>&nbsp;<\/p>\n\n<p><strong>Ordered list<\/strong><\/p>\n\n<ol class=\"coh-preview\">\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ol>\n",
+          "textFormat": "cohesion"
+      },
+      "styles": {
+          "settings": {
+              "element": "ul,ol,dl",
+              "class": "",
+              "combinator": "",
+              "pseudo": ""
+          },
+          "e5d54ff2-2b9c-4570-b143-935e26ee87a7": {
+              "settings": {
+                  "element": "li",
+                  "class": "",
+                  "combinator": "",
+                  "pseudo": ""
+              },
+              "styles": {
+                  "xs": {
+                      "custom-css": [
+                          {
+                              "customCssProperty": {
+                                  "value": "list-style-type"
+                              },
+                              "customCss": {
+                                  "value": "upper-roman !important"
+                              }
+                          }
+                      ]
+                  }
+              }
+          }
+      },
+      "sBackgroundColour": "#FFFFFF",
+      "variableFields": []
+  }
+json_mapper: |
+  {
+      "styles": {
+          "title": "List",
+          "selectorType": "topLevel",
+          "formDefinition": [],
+          "items": [
+              {
+                  "title": "li",
+                  "type": "container",
+                  "items": [],
+                  "form": null,
+                  "selectorType": "child",
+                  "model": "li",
+                  "uuid": "e5d54ff2-2b9c-4570-b143-935e26ee87a7",
+                  "allowedTypes": [
+                      "child",
+                      "pseudo",
+                      "modifier"
+                  ],
+                  "formDefinition": [
+                      {
+                          "formKey": "custom-css",
+                          "children": [
+                              {
+                                  "formKey": "css-property-and-css-value",
+                                  "breakpoints": [
+                                      {
+                                          "name": "xs"
+                                      }
+                                  ],
+                                  "activeFields": [
+                                      {
+                                          "name": "custom-css",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customCssProperty",
+                                          "active": true
+                                      },
+                                      {
+                                          "name": "customCss",
+                                          "active": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "form": null
+      }
+  }
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-upper-roman-numeral-list
+custom_style_type: list
+available_in_wysiwyg: true
+parent: null
+weight: 0

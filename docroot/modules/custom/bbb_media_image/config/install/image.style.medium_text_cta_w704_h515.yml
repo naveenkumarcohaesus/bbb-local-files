@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: medium_text_cta_w704_h515
+label: 'Medium Text CTA W704 H515'
+effects:
+  81fc377c-de1d-472e-9230-6ac950c5e4cf:
+    uuid: 81fc377c-de1d-472e-9230-6ac950c5e4cf
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 704
+      height: 515
+      crop_type: focal_point

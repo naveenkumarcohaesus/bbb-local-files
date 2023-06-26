@@ -1,0 +1,34 @@
+uuid: cc73d9e5-82ff-42ef-8a04-493de10d260f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.case_study_listing
+  module:
+    - cohesion
+    - collapsiblock
+    - views
+  theme:
+    - bbb_site_studio
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: views_block__case_study_listing_related_case_studies
+theme: bbb_site_studio
+region: dx8_hidden
+weight: 1
+provider: null
+plugin: 'views_block:case_study_listing-related_case_studies'
+settings:
+  id: 'views_block:case_study_listing-related_case_studies'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0

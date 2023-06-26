@@ -1,0 +1,13 @@
+uuid: 384adf7e-183c-4d1f-86ee-35b323b5479c
+langcode: en
+status: true
+dependencies:
+  config:
+    - key.key.tfa_key
+  module:
+    - real_aes
+id: tfa_ep
+label: 'TFA EP'
+encryption_method: real_aes
+encryption_method_configuration: {  }
+encryption_key: tfa_key

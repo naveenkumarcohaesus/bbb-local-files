@@ -1,0 +1,266 @@
+<?php
+
+/**
+ * @file
+ * Module file for hooks.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\search_api\Entity\Index;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_form_alter().
+ */
+function bbb_search_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form['#id'] === 'views-exposed-form-solr-search-search') {
+    $form['search']['#weight'] = 0;
+    $form['actions']['#weight'] = 1;
+    $form['category']['#weight'] = 2;
+    $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'search_form_submit';
+    $form['actions']['submit']['#attributes']['class'][] = 'search-form__button';
+
+    // Adding wrapper for search field and submit.
+    $form['search']['#prefix'] = '<div class="search-textfieldwrapper">';
+    $form['actions']['#suffix'] = '</div>';
+  }
+  $form['#attached']['library'][] = 'bbb_search/search';
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function bbb_search_views_pre_view(ViewExecutable $view, $display_id, &$args) {
+  if (isset($view) && $view->id() == 'solr_search') {
+    // Get params from url.
+    $keyword = \Drupal::request()->query->get('search');
+    $tid = \Drupal::request()->query->get('category');
+
+    if (!empty($tid)) {
+      $term = Term::load($tid);
+      if (!empty($term)) {
+        $typology = $term->get('name')->value;
+      }
+    }
+
+    $noresults_text = '';
+    if (!empty($keyword) || !empty($typology)) {
+      $text = ' ' . t('for')->__toString() . ':';
+      if (!empty($keyword)) {
+        $text .= sprintf(' "%s"', $keyword);
+        $noresults_text = $text;
+
+        if (empty($typology)) {
+          $typology = t("all categories");
+        }
+        $text .= sprintf(' in "%s"', $typology);
+      }
+      elseif (!empty($typology)) {
+        $text .= sprintf(' "%s"', $typology);
+      }
+    }
+
+    if (!empty($text)) {
+      // Update the views header result text.
+      $options = [
+        'id' => 'area_text_custom',
+        'table' => 'views',
+        'field' => 'area_text_custom',
+        'relationship' => 'none',
+        'group_type' => 'none',
+        'admin_label' => '',
+        'empty' => FALSE,
+        'tokenize' => FALSE,
+        'content' => $text,
+        'plugin_id' => 'text_custom',
+      ];
+      $view->setHandler($display_id, 'header', 'area_text_custom', $options);
+
+      // Add views no results text.
+      $help_text = t('Please adjust your search and try again or explore results from our alternate sites')->__toString();
+      $noresults = \Drupal::token()->replace('[bbb-search:no-results]');
+      if (empty($noresults)) {
+        $help_text = t('Please adjust your search and try again')->__toString();
+      }
+      // Get site name.
+      $config = \Drupal::config('system.site');
+      $text = t('0 results found @text on @sitename',
+        ['@text' => $noresults_text, '@sitename' => $config->get('name')]);
+      $markup = '<div class="no-results" role="status"><div class="no-results-icon"></div>';
+      $markup .= sprintf('<div class="no-results-text coh-style-headline-3">%s</div>', $text);
+      $markup .= sprintf('<div class="no-results-desc coh-style-body-large">%s.</div></div>', $help_text);
+      $item = [
+        'id' => 'area',
+        'table' => 'views',
+        'field' => 'area',
+        'relationship' => 'none',
+        'group_type' => 'group',
+        'admin_label' => '',
+        'empty' => TRUE,
+        'tokenize' => FALSE,
+        'content' => [
+          'value' => $markup,
+          'format' => "cohesion",
+        ],
+        'plugin_id' => 'text',
+      ];
+
+      $view->setHandler($display_id, 'empty', 'area', $item);
+    }
+  }
+}
+
+/**
+ * Implements hook_token_info().
+ */
+function bbb_search_token_info() {
+  $types['bbb-search'] = [
+    'name' => t('BBB search Tokens'),
+    'description' => t('Tokens related to search'),
+  ];
+
+  $indexes = ['bbb', 'bbi', 'bpc', 'sul'];
+
+  foreach ($indexes as $id) {
+    // Set token for search result count for multi sites.
+    $tokens[$id] = [
+      'name' => t('Search count:')->__toString() . strtoupper($id),
+      'description' => t('Returns search result count for respective site.'),
+    ];
+  }
+
+  $tokens['no-results'] = [
+    'name' => t('Search: empty results'),
+    'description' => t('Returns empty string, if 0 results for all sites results.'),
+  ];
+
+  return [
+    'types' => $types,
+    'tokens' => [
+      'bbb-search' => $tokens,
+    ],
+  ];
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function bbb_search_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+  // If the type is the one that we want.
+  if ($type == 'bbb-search') {
+    $url = \Drupal::request()->query;
+    $keyword = $url->get('search');
+    $content_typology = $url->get('category');
+
+    foreach ($tokens as $name => $original) {
+      if ($name == 'no-results') {
+        $count = "";
+        $modules = [
+          'bbi' => 'bbi_core',
+          'bpc' => 'bpc_core',
+          'bbb' => 'bbb',
+          'sul' => 'sul_core',
+        ];
+        foreach ($modules as $key => $module) {
+          if (empty($count)) {
+            $count = _bbb_search_site_search_count($key, $module, $keyword, $content_typology);
+          }
+        }
+
+        $replacements[$original] = $count;
+        continue;
+      }
+      $count = _bbb_search_get_search_count($name, $keyword, $content_typology);
+      $replacements[$original] = $count;
+    }
+  }
+
+  return $replacements;
+}
+
+/**
+ * Implements hook_tokens_alter().
+ */
+function bbb_search_tokens_alter(array &$replacements, array $context) {
+  // Return current url with query parameters from URL.
+  // No value is set default to [current-page:query] token.
+  if (\Drupal::routeMatch()->getRouteName() != 'views.ajax') {
+    $current_uri = \Drupal::request()->getRequestUri();
+  }
+  else {
+    // Create url when ajax is triggered.
+    $query_options = \Drupal::request()->query->all();
+    $current_uri = \Drupal::service('path.current')->getPath();
+    if (!empty($query_options)) {
+      $query = http_build_query($query_options);
+      $current_uri = sprintf('%s?%s', $current_uri, $query);
+    }
+  }
+
+  $replacements['[current-page:query]'] = $current_uri;
+
+  if (isset($replacements['[view:total-rows]']) && $replacements['[view:total-rows]'] == 0) {
+    // Replace the zero to empty string to use in hide if empty condition.
+    $replacements['[view:total-rows]'] = "";
+  }
+}
+
+/**
+ * Returns search result count using solr API.
+ */
+function _bbb_search_get_search_count($name, $keyword, $content_typology) {
+  $count = "";
+  $indexid = 'solr_index_' . $name;
+  /** @var \Drupal\search_api\IndexInterface $search_api_index */
+  $index = Index::load($indexid);
+  if (!empty($index)) {
+    $server = $index->getServerInstance();
+    // Check if solr server is connected.
+    if ($server->getBackend()->getSolrConnector()->pingServer()) {
+      // Create the query.
+      $query = $index->query();
+      if (!empty($keyword)) {
+        // Set fulltext search keywords and fields.
+        $query->keys($keyword);
+        $query->setFulltextFields(['title', 'rendered_item']);
+      }
+      if (!empty($content_typology) && is_numeric($content_typology)) {
+        // Set additional conditions.
+        $query->addCondition('field_content_typology', $content_typology);
+      }
+
+      // Change the parse mode for the search.
+      $parse_mode = \Drupal::service('plugin.manager.search_api.parse_mode')
+        ->createInstance('phrase');
+      $parse_mode->setConjunction('OR');
+      $query->setParseMode($parse_mode);
+
+      // Execute the search.
+      $results = $query->execute();
+      if (!empty($results)) {
+        $count = $results->getResultCount();
+        $empty[$name] = $count;
+        if ($count == 0) {
+          $count = "";
+        }
+      }
+    }
+  }
+  return $count;
+}
+
+/**
+ * Returns site specific search result count.
+ */
+function _bbb_search_site_search_count($key, $module, $keyword, $content_typology) {
+  $count = "";
+  $moduleHandler = \Drupal::service('module_handler');
+  // Skip for the current site.
+  if (!$moduleHandler->moduleExists($module)) {
+    $count = _bbb_search_get_search_count($key, $keyword, $content_typology);
+  }
+  return $count;
+}

@@ -1,0 +1,312 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Config\FileStorage;
+use Drupal\Core\Entity\Entity\EntityViewMode;
+use Drupal\field\Entity\FieldConfig;
+
+/**
+ * Update help text for news node title.
+ */
+function bbb_news_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_news', 'bbb_news_update_8001');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Add Horizontal card view mode for News CT.
+ */
+function bbb_news_update_8002() {
+  // Manually import view mode config from install folder.
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_news') . '/config/install';
+
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+
+  $config_storage->write('field.field.node.news.field_image', $source->read('field.field.node.news.field_image'));
+  $config_storage->write('core.entity_view_display.node.news.featured', $source->read('core.entity_view_display.node.news.featured'));
+  $config_storage->write('core.entity_view_display.node.news.horizontal_card', $source->read('core.entity_view_display.node.news.horizontal_card'));
+}
+
+/**
+ * Update manage form display for news content type.
+ */
+function bbb_news_update_8003() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_news', 'bbb_news_update_8003');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Remove body field and update required field validation.
+ */
+function bbb_news_update_8004() {
+
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_news') . '/config/install';
+  $source = new FileStorage($config_path);
+  // Manually import metatag config from install folder.
+  $config_storage = \Drupal::service('config.storage');
+  // Meta tag for news.
+  $config_storage->write('field.field.node.news.field_metatags', $source->read('field.field.node.news.field_metatags'));
+
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_news', 'bbb_news_update_8004');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update teaser text field description.
+ */
+function bbb_news_update_8005() {
+  // Delete body field from news.
+  FieldConfig::loadByName('node', 'news', 'body')->delete();
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_news', 'bbb_news_update_8005');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update the quick links widget to link_attributes.
+ */
+function bbb_news_update_8006() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_news', 'bbb_news_update_8006');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Remove Layout Canvas label.
+ */
+function bbb_news_update_8007() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_news', 'bbb_news_update_8007');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Create published on field and update news display modes.
+ */
+function bbb_news_update_8008() {
+  // Update Product CT Entity view display.
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.news.featured', 'bbb_news', 'install');
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.news.horizontal_card', 'bbb_news', 'install');
+
+  $view_mode = 'node.mini_list';
+  // Create the display mini_list for news, if view mode exists.
+  if (EntityViewMode::load($view_mode)) {
+    _bbb_article_rewrite_configuration('core.entity_view_display.node.news.mini_list', 'bbb_news', 'optional');
+  }
+
+  // News views.
+  _bbb_article_rewrite_configuration('views.view.news', 'bbb_news', 'optional');
+  // Latest news views block.
+  _bbb_article_rewrite_configuration('block.block.views_block__news_latest_news', 'bbb_news', 'optional');
+}
+
+/**
+ * Add news list views.
+ */
+function bbb_news_update_8009() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_news', 'bbb_news_update_8009');
+  // News card display.
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.news.card', 'bbb_news', 'optional');
+  // News listing views exposed filter block.
+  _bbb_article_rewrite_configuration('block.block.exposed_form_news_list', 'bbb_news', 'optional');
+  $block = Block::load('exposed_form_news_list');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update filters order for news listing.
+ */
+function bbb_news_update_8010() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_news', 'bbb_news_update_8010');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update filters order for news listing.
+ */
+function bbb_news_update_8011() {
+  // News list views.
+  _bbb_article_rewrite_configuration('views.view.news', 'bbb_news', 'optional');
+}
+
+/**
+ * Adds a custom block for Article list top section and import default content.
+ */
+function bbb_news_update_8012() {
+  // Import bbb_news_content block's content.
+  $service = \Drupal::service('default_content.importer');
+  $service->importContent("bbb_news");
+}
+
+/**
+ * Limit the date range to last five years.
+ */
+function bbb_news_update_8013() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_news', 'bbb_news_update_8013');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Update list view no results section style.
+ */
+function bbb_news_update_8014() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_news', 'bbb_news_update_8014');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Latest news section view block.
+ */
+function bbb_news_update_8015() {
+  // Latest news list views.
+  _bbb_article_rewrite_configuration('views.view.news', 'bbb_news', 'optional');
+  // Import latest news block.
+  _bbb_article_rewrite_configuration('block.block.views_block__news_latest_news_block', 'bbb_news', 'optional');
+
+  // Place latest news block to dx8_hidden region.
+  $block = Block::load('views_block__news_latest_news_block');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+}
+
+/**
+ * Updated view modes for News.
+ */
+function bbb_news_update_8016() {
+  $configs = [
+    'core.entity_view_display.node.news.card_h2',
+    'core.entity_view_display.node.news.card_h4',
+    'core.entity_view_display.node.news.horizontal_card_h2',
+    'core.entity_view_display.node.news.horizontal_card_h4',
+    'core.entity_view_display.node.news.featured_h2',
+    'core.entity_view_display.node.news.featured_h4',
+  ];
+
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_news', 'install');
+  }
+}
+
+/**
+ * Update listing views to block.
+ */
+function bbb_news_update_8017() {
+  // Update News views.
+  _bbb_article_rewrite_configuration('views.view.news', 'bbb_news', 'optional');
+  // Delete News block's content.
+  $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', '0cc3a8c6-77f9-458c-ab31-c69183d073eb');
+  if ($block_content) {
+    $block_content->delete();
+  }
+
+  // Delete success story block's content.
+  $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', 'ee27d36d-bcaa-4eb6-b7a0-36c74bbd20fe');
+  if ($block_content) {
+    $block_content->delete();
+  }
+
+  // Delete news top section block and exposed form block.
+  /** @var \Drupal\Core\Entity\EntityStorageInterface $block_storage */
+  $block_storage = \Drupal::service('entity_type.manager')->getStorage('block');
+  $array = [
+    '4ac91b75-d0ed-42ff-aa56-376c3a92d4f1',
+    '55ed4ba9-35af-4558-93bb-26379e2de632',
+    '078f95dc-0a92-44ee-ac2c-81aa2c7976c3',
+  ];
+
+  foreach ($array as $item) {
+    /** @var \Drupal\block\Entity\Block[] $blocks */
+    $blocks = $block_storage->loadByProperties(['uuid' => $item]);
+    if ($blocks) {
+      foreach ($blocks as $block) {
+        $block->delete();
+      }
+    }
+  }
+
+  _bbb_article_rewrite_configuration('block.block.exposedform_news_list_block', 'bbb_news', 'optional');
+  _bbb_article_rewrite_configuration('block.block.views_block_news_list_block', 'bbb_news', 'optional');
+  // Place news list exposed block to site studio region.
+  $block = Block::load('exposedform_news_list_block');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+  // Place news list block to site studio region.
+  $block = Block::load('views_block_news_list_block');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+}
+
+/**
+ * Fix the year filter range until current year.
+ */
+function bbb_news_update_8018() {
+  // Update News views.
+  _bbb_article_rewrite_configuration('views.view.news', 'bbb_news', 'optional');
+}
+
+/**
+ * Hide teaser text field label.
+ */
+function bbb_news_update_8019() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_news', 'bbb_news_update_8019');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}

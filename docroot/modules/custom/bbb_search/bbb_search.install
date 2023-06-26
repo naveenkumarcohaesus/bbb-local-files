@@ -1,0 +1,133 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\block\Entity\Block;
+
+/**
+ * Search page view and view modes.
+ */
+function bbb_search_install() {
+  // Disable the search view created by Search API module.
+  $view = \Drupal::service('entity_type.manager')->getStorage('view')->load('search');
+  if (!is_null($view)) {
+    $view->setStatus(FALSE);
+    $view->save();
+  }
+  // Disable the search view created by Acquia Search module.
+  $view = \Drupal::service('entity_type.manager')->getStorage('view')->load('acquia_search');
+  if (!is_null($view)) {
+    $view->setStatus(FALSE);
+    $view->save();
+  }
+  // Update display for page search_results.
+  _bbb_article_rewrite_configuration('core.entity_view_display.node.page.search_results', 'bbb_search', 'optional');
+}
+
+/**
+ * Update search view query parse mode.
+ */
+function bbb_search_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_search', 'bbb_search_update_8001');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Add search block in hidden region for search block in header component.
+ */
+function bbb_search_update_8002() {
+  // Manually import config from install folder.
+  _bbb_article_rewrite_configuration('block.block.exposedformsolr_searchsearch', 'bbb_search', 'optional');
+}
+
+/**
+ * Update solr server configurations.
+ */
+function bbb_search_update_8003() {
+  // Update the solr search server config.
+  _bbb_article_rewrite_configuration('search_api.server.acquia_search_server', 'bbb_search', 'rewrite');
+  // Update the search exposed filter block.
+  _bbb_article_rewrite_configuration('block.block.exposedformsolr_searchsearch', 'bbb_search', 'optional');
+  _bbb_article_rewrite_configuration('views.view.solr_search', 'bbb_search', 'install');
+  // Add the search exposed filter block for header region.
+  _bbb_article_rewrite_configuration('block.block.exposedformsolr_search_header', 'bbb_search', 'optional');
+  // Place search exposed form block to dx8_hidden region.
+  $block = Block::load('exposedformsolr_search_header');
+  $block->setRegion('dx8_hidden');
+  $block->save();
+
+  // Create solr indexes for multi sites.
+  _bbb_article_rewrite_configuration('search_api.index.solr_index_bbb', 'bbb_search', 'install');
+  _bbb_article_rewrite_configuration('search_api.index.solr_index_bbi', 'bbb_search', 'install');
+  _bbb_article_rewrite_configuration('search_api.index.solr_index_bpc', 'bbb_search', 'install');
+  _bbb_article_rewrite_configuration('search_api.index.solr_index_sul', 'bbb_search', 'install');
+  _bbb_article_rewrite_configuration('search_api.index.solr_index', 'bbb_search', 'install');
+}
+
+/**
+ * Update solr search views configurations.
+ */
+function bbb_search_update_8004() {
+  _bbb_article_rewrite_configuration('views.view.solr_search', 'bbb_search', 'install');
+}
+
+/**
+ * Update solr search views configurations.
+ */
+function bbb_search_update_8005() {
+  _bbb_article_rewrite_configuration('views.view.solr_search', 'bbb_search', 'install');
+}
+
+/**
+ * Update view config for exposed filters.
+ */
+function bbb_search_update_8006() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_search', 'bbb_search_update_8006');
+
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Disable selective better exposed filter for search.
+ */
+function bbb_search_update_8007() {
+  _bbb_article_rewrite_configuration('views.view.solr_search', 'bbb_search', 'install');
+}
+
+/**
+ * Disable Index items immediately.
+ */
+function bbb_search_update_8008() {
+  /** @var \Drupal\update_helper\Updater $updater */
+  $updater = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updater->executeUpdate('bbb_search', 'bbb_search_update_8008');
+  // Output logged messages to related channel of update execution.
+  return $updater->logger()->output();
+}
+
+/**
+ * Enable highlight matching terms.
+ */
+function bbb_search_update_8009() {
+  _bbb_article_rewrite_configuration('search_api.server.acquia_search_server', 'bbb_search', 'rewrite');
+}
+
+/**
+ * Disable view expose search filter block in hidden region.
+ */
+function bbb_search_update_8010() {
+  _bbb_article_rewrite_configuration('block.block.exposedformsearchsearch', 'bbb_search', 'optional');
+}

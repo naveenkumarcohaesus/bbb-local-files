@@ -1,0 +1,17 @@
+views.view.solr_search:
+  expected_config: {  }
+  update_actions:
+    add:
+      display:
+        default:
+          display_options:
+            exposed_form:
+              options:
+                bef:
+                  filter:
+                    field_content_typology:
+                      options_show_only_used: 1
+                      options_show_only_used_filtered: 0
+                    search_api_fulltext:
+                      options_show_only_used: false
+                      options_show_only_used_filtered: false

@@ -1,0 +1,71 @@
+core.entity_form_display.node.page.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_bpc_background_image:
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          type: media_library_widget
+          weight: 4
+    change:
+      content:
+        field_hero_background_pattern:
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+          type: options_select
+          weight: 3
+core.entity_view_display.node.page.default:
+  expected_config: {  }
+  update_actions:
+    change:
+      hidden:
+        field_hero_background_pattern: true
+        field_bpc_background_image: true
+core.entity_view_display.node.case_study.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      hidden:
+        field_bpc_background_image: true
+core.entity_form_display.node.case_study.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_bpc_background_image:
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          type: media_library_widget
+          weight: 18
+    change:
+      content:
+        field_hero_background_pattern:
+          weight: 17
+core.entity_view_display.node.product.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      hidden:
+        field_bpc_background_image: true
+core.entity_form_display.node.product.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_bpc_background_image:
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+          type: media_library_widget
+          weight: 3
+    change:
+      content:
+        field_hero_background_pattern:
+          weight: 2

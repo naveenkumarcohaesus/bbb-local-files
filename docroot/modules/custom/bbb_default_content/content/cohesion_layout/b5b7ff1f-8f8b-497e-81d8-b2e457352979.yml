@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: cohesion_layout
+  uuid: b5b7ff1f-8f8b-497e-81d8-b2e457352979
+  default_langcode: en
+default:
+  json_values:
+    -
+      value: '{"canvas":[{"uid":"cpt_logo_card","type":"component","title":"Logo card","enabled":true,"category":"category-2","componentId":"cpt_logo_card","componentType":"container","uuid":"f33540f9-892e-48d5-ae22-ce7fa887149f","parentUid":"root","status":[],"model":{"settings":{"title":"BPC Color Logo"}},"children":[]}],"mapper":[],"model":{"f33540f9-892e-48d5-ae22-ce7fa887149f":{"settings":{"title":"Logo card"},"50e621fb-db73-40b9-854f-ed892cfa8852":"[media-reference:media:700ded7e-cdd5-4961-8d0e-65ef986f9beb]","e96be6d7-fee2-43c5-993b-126166cd7ff8":"BPC Color Logo","c1a6be89-9798-40ff-905d-20eda8400069":"https:\/\/www.britishpatientcapital.co.uk\/","7921ccdd-2c07-4f44-b37b-1c7943fa7d6c":"","fcd919de-6660-45ca-bd32-56fa9a4cbde6":"","836e2632-c930-41da-b899-15517f0f34f7":"British Business Investments"}},"previewModel":{"f33540f9-892e-48d5-ae22-ce7fa887149f":[]},"variableFields":{"f33540f9-892e-48d5-ae22-ce7fa887149f":[]},"meta":{"fieldHistory":[]}}'
+  styles:
+    -
+      value: '[]'
+  template:
+    -
+      value: '{"bbb_site_studio":"{\u0022metadata\u0022:{\u0022contexts\u0022:[]},\u0022twig\u0022:\u0022{{ attach_library(\u0027cohesion\\\/global_libraries.responsiveJs\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.matchHeight\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.cohMatchHeights\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.windowscroll\u0027) }} {{ attach_library(\u0027cohesion\\\/element_templates.link\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.parallax_scrolling\u0027) }} {% set component_variable_50e621fb_db73_40b9_854f_ed892cfa8852 %}{{ processtoken(\\\u0022[media-reference:media:700ded7e-cdd5-4961-8d0e-65ef986f9beb]\\\u0022, {\\\u0022media-reference\\\u0022: media_reference}, _context, false) }}{% endset %} {% set component_variable_e96be6d7_fee2_43c5_993b_126166cd7ff8 %}BPC Color Logo{% endset %} {% set component_variable_c1a6be89_9798_40ff_905d_20eda8400069 %}https:\\\/\\\/www.britishpatientcapital.co.uk\\\/{% endset %} {% set component_variable_7921ccdd_2c07_4f44_b37b_1c7943fa7d6c %}{% endset %} {% set component_variable_fcd919de_6660_45ca_bd32_56fa9a4cbde6 %}{% endset %} {% set component_variable_836e2632_c930_41da_b899_15517f0f34f7 %}British Business Investments{% endset %} {{ renderComponent(\\\u0022cpt_logo_card\\\u0022, false, _context, {\\\u002250e621fb-db73-40b9-854f-ed892cfa8852\\\u0022:\\\u0022component_variable_50e621fb_db73_40b9_854f_ed892cfa8852\\\u0022,\\\u0022e96be6d7-fee2-43c5-993b-126166cd7ff8\\\u0022:\\\u0022component_variable_e96be6d7_fee2_43c5_993b_126166cd7ff8\\\u0022,\\\u0022c1a6be89-9798-40ff-905d-20eda8400069\\\u0022:\\\u0022component_variable_c1a6be89_9798_40ff_905d_20eda8400069\\\u0022,\\\u00227921ccdd-2c07-4f44-b37b-1c7943fa7d6c\\\u0022:\\\u0022component_variable_7921ccdd_2c07_4f44_b37b_1c7943fa7d6c\\\u0022,\\\u0022fcd919de-6660-45ca-bd32-56fa9a4cbde6\\\u0022:\\\u0022component_variable_fcd919de_6660_45ca_bd32_56fa9a4cbde6\\\u0022,\\\u0022836e2632-c930-41da-b899-15517f0f34f7\\\u0022:\\\u0022component_variable_836e2632_c930_41da_b899_15517f0f34f7\\\u0022}, \\\u0022f33540f9-892e-48d5-ae22-ce7fa887149f\\\u0022, \\\u0022\\\u0022)  }} \\n{% if content is defined %}{% set catch_cache = content|render %}{% endif %}\u0022}"}'
+  last_entity_update:
+    -
+      value: entityupdate_0036
+  revision_translation_affected:
+    -
+      value: true

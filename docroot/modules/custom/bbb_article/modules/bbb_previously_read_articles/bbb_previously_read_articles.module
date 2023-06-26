@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Previously Read Articles related configurations and functions.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_theme() for previously read articles template.
+ */
+function bbb_previously_read_articles_theme($existing, $type, $theme, $path) {
+  return [
+    'previously_read_articles' => [
+      'template' => 'previously-read-articles',
+      'variables' => [
+        'settings' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view_alter().
+ *
+ * Attach JS library to article full view content display.
+ */
+function bbb_previously_read_articles_node_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  $bundle = $entity->bundle();
+  $view_mode = $build['#view_mode'];
+
+  // Exit if entity is not created.
+  if ($entity->isNew()) {
+    return;
+  }
+
+  if ($bundle == 'article' && $view_mode == 'full') {
+    $unique_id = $entity->uuid();
+    $host = \Drupal::request()->getHost();
+    $article_nid = $entity->id();
+    $article_title = $entity->getTitle();
+    $article_url = $entity->toUrl()->toString();
+    $article_details[$host][$unique_id]['article_nid'] = $article_nid;
+    $article_details[$host][$unique_id]['article_title'] = $article_title;
+    $article_details[$host][$unique_id]['article_url'] = $article_url;
+    $build['#attached']['library'][] = 'bbb_previously_read_articles/previously_read_articles';
+    $build['#attached']['drupalSettings']['host'] = $host;
+    $build['#attached']['drupalSettings']['article_details'] = $article_details;
+    $build['#attached']['drupalSettings']['current_node_uuid'] = $unique_id;
+    $build['#attached']['drupalSettings']['bundle'] = ucfirst($bundle);
+  }
+}

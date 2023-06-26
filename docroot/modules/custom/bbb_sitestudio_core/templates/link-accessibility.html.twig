@@ -1,0 +1,18 @@
+{% if links -%}
+  <ul class="coh-list-container coh-unordered-list">
+    {%- for item in links -%}
+        {%- if item.link -%}
+          <li class="coh-list-item">
+            <a href="{{ item.link }}" target="{{ item.target }}"
+              {%- if item.class -%} class="{{ item.class }}" {%- endif -%}
+              {%- if item.rel -%} rel="{{ item.rel }}" {%- endif -%} >
+              {{ item.text|t }}
+              {%- if item.accessibility_text -%}
+                <span class="visually-hidden">{{ item.accessibility_text }}</span>
+              {%- endif -%}
+            </a>
+          </li>
+        {%- endif -%}
+    {%- endfor -%}
+  </ul>
+{%- endif %}

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_structure
+    - node.type.article
+    - taxonomy.vocabulary.business_structure
+id: node.article.field_business_structure
+field_name: field_business_structure
+entity_type: node
+bundle: article
+label: 'Business Structure'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      business_structure: business_structure
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,54 @@
+uuid: deeb4fbc-e68a-4de2-be8d-a8f57fee6b98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.case_study.field_url_alias
+    - site_settings.site_setting_entity_type.case_study
+id: site_setting_entity.case_study.default
+targetEntityType: site_setting_entity
+bundle: case_study
+mode: default
+content:
+  field_url_alias:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  fieldset:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

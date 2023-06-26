@@ -1,0 +1,30 @@
+uuid: f5380016-1476-4461-9fb8-ceb04aed3079
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_templates.cohesion_master_templates.master_template
+label: 'Full content (Node, Place)'
+id: node_place_full
+json_values: |
+  {
+      "canvas": [],
+      "mapper": {},
+      "model": [],
+      "previewModel": {},
+      "variableFields": {},
+      "meta": {
+          "fieldHistory": []
+      }
+  }
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+modified: true
+selectable: true
+custom: false
+twig_template: node--cohesion--node-place-full
+default: false
+entity_type: node
+bundle: place
+view_mode: full
+master_template: __none__

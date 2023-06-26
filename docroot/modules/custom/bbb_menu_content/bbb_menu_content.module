@@ -1,0 +1,104 @@
+<?php
+
+/**
+ * @file
+ * Contains functaionlaity related to menu content.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_form_alter() for node_form().
+ *
+ * Add a checkbox to hide current menu link.
+ */
+function bbb_menu_content_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  if (isset($form['menu'])) {
+    $node = $form_state->getFormObject()->getEntity();
+    $menu_enabled = bbb_menu_content_is_menu_enabled($node);
+    $form['menu']['hide_from_menu'] = [
+      '#type' => 'checkbox',
+      '#title' => t('<strong>Hide this link from menu</strong>'),
+      '#description' => t('If checked, this link will not appear in menu and menu configuration page.'),
+      '#default_value' => $menu_enabled,
+      '#states' => [
+        'invisible' => [
+          'input[name="menu[enabled]"]' => ['checked' => FALSE],
+        ],
+      ],
+    ];
+    foreach (array_keys($form['actions']) as $action) {
+      if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+        $form['actions'][$action]['#submit'][] = 'bbb_menu_content_node_form_submit';
+      }
+    }
+  }
+}
+
+/**
+ * Returns the value 'hide_from_menu' field for current node.
+ *
+ * @param \Drupal\node\NodeInterface $node
+ *   The node entity.
+ *
+ * @return int
+ *   Value for 'hide_from_menu' field.
+ */
+function bbb_menu_content_is_menu_enabled(NodeInterface $node) {
+  $menu_defaults = menu_ui_get_menu_link_defaults($node);
+  $id = $menu_defaults['entity_id'];
+  if ($id != 0) {
+    $menu_link = MenuLinkContent::load($id);
+    $menu_link = \Drupal::service('entity.repository')->getTranslationFromContext($menu_link);
+    $menu_enabled = $menu_link->enabled->value == '0' ? 1 : 0;
+  }
+  else {
+    $menu_enabled = 1;
+  }
+  return $menu_enabled;
+}
+
+/**
+ * Implements hook_node_form_submit().
+ *
+ * Sets value of `enabled` field of menu link
+ * based on the value of `hide_from_menu`.
+ */
+function bbb_menu_content_node_form_submit($form, FormStateInterface $form_state) {
+  $values = $form_state->getValue('menu');
+  if (!empty($values['entity_id'])) {
+    $entity = MenuLinkContent::load($values['entity_id']);
+    if ($entity) {
+      $entity->enabled->value = $values['hide_from_menu'] == 0 ? '1' : '0';
+      $entity->save();
+    }
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ *
+ * Move the bbb_menu_content's form alter at the end,
+ * so it gets called after `menu_ui` form alter.
+ */
+function bbb_menu_content_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'form_alter') {
+    $group = $implementations['bbb_menu_content'];
+    unset($implementations['bbb_menu_content']);
+    $implementations['bbb_menu_content'] = $group;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Keeps the `Hide disabled items` checkbox checked by default.
+ */
+function bbb_menu_content_form_alter(array &$form, FormStateInterface &$form_state, string $form_id): void {
+  if ($form_id == 'menu_edit_form') {
+    $form['field_enabled_toggle']['#default_value'] = TRUE;
+  }
+}

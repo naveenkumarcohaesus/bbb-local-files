@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_quote_text
+    - taxonomy.vocabulary.partner
+  module:
+    - text
+  enforced:
+    module:
+      - bbb_partner
+id: taxonomy_term.partner.field_quote_text
+field_name: field_quote_text
+entity_type: taxonomy_term
+bundle: partner
+label: 'Quote Text'
+description: 'This field is SUL specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

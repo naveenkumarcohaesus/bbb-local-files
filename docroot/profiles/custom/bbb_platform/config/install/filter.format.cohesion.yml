@@ -1,0 +1,81 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embedded
+    - core.entity_view_mode.media.original
+  module:
+    - bbb_on_this_page
+    - editor
+    - footnotes
+    - media
+name: 'Site Studio'
+format: cohesion
+weight: -10
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -9
+    settings:
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <li> <dt> <dd> <u> <ul type class="coh-style-pagination-list coh-style-tick-list"> <ol start type class="coh-style-pagination-list coh-style-tick-list"> <pre> <button class="coh-style-button-cta coh-style-button-solid coh-style-button-unstyled coh-style-button-outline"> <dl class="coh-style-pagination-list coh-style-tick-list"> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <p class="coh-style-image-caption coh-style-video-caption coh-style-paragraph-large coh-style-paragraph-extra-large coh-style-paragraph-small coh-style-paragraph-large"> <span class="red-pill blue-pill coh-style-breadcrumb-block coh-style-button-cta coh-style-pagination-list coh-style-button-solid coh-style-button-unstyled coh-style-button-outline coh-style-link-location-with-icon coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-link-with-icon coh-style-link-button-fluid-width coh-style-link-button coh-style-tick-list coh-style-image-caption coh-style-video-caption coh-style-paragraph-large coh-color-black coh-color-color-1 coh-color-color-3 coh-color-color-4 coh-color-gray coh-color-light-1 coh-color-light-2 coh-color-white coh-style-paragraph-extra-large coh-style-link-button-light coh-style-heading-3-size coh-style-default-font coh-style-link-with-icon coh-style-heading-2-size coh-style-tick-list coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-link-button-dark coh-style-paragraph-small coh-style-pre-heading-blue coh-style-heading-1-size coh-style-heading-xl coh-style-heading-4-size coh-style-cta-button coh-style-link-button-color coh-style-large-font coh-style-pre-heading-light coh-style-paragraph-large coh-color-base-bbbsecondary50 coh-color-bbb-backgroundaccent2 coh-color-brand-color coh-color-brand-color-dark coh-color-brand-color-light coh-color-gray-10 coh-color-gray-12 coh-color-gray-20 coh-color-gray-30 coh-color-black coh-color-gray-35 coh-color-core-brand coh-color-gray-70 coh-color-gray-80 coh-color-gray-90 coh-color-white coh-color-bbb-backgroundaccent3 coh-color-base-bbineutral10 coh-color-base-bbineutraldefault coh-color-base-bbbsecondary40"> <fn> <s> <a href hreflang class=" coh-style-link-location-with-icon coh-style-link-with-icon coh-style-link-button-fluid-width coh-style-link-button coh-style-link-button-light coh-style-link-with-icon coh-style-link-button-dark coh-style-link-button-color coh-style-link-button-light coh-style-link-with-icon coh-style-link-button-dark coh-style-overlay-link coh-style-link-button-color"> <hr> <sup> <sub> <h1 class="heading-2 heading-1 coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-3-size coh-style-heading-2-size coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-heading-xl coh-style-heading-4-size coh-style-pre-heading-light coh-style-headline-4 coh-style-heading-3-size coh-style-headline-1 coh-style-display-3 coh-style-heading-2-size coh-style-headline-2 coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-headline-3 coh-style-heading-xl coh-style-heading-4-size coh-style-headline-5 coh-style-pre-heading-light coh-style-display-1 coh-style-display-2"> <h2 id class="heading-3 coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-3-size coh-style-heading-2-size coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-heading-xl coh-style-heading-4-size coh-style-pre-heading-light coh-style-headline-4 coh-style-heading-3-size coh-style-headline-1 coh-style-display-3 coh-style-heading-2-size coh-style-headline-2 coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-headline-3 coh-style-heading-xl coh-style-heading-4-size coh-style-headline-5 coh-style-pre-heading-light coh-style-display-1 coh-style-display-2"> <h3 id class="heading-4 coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-3-size coh-style-heading-2-size coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-heading-xl coh-style-heading-4-size coh-style-pre-heading-light coh-style-headline-4 coh-style-heading-3-size coh-style-headline-1 coh-style-display-3 coh-style-heading-2-size coh-style-headline-2 coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-headline-3 coh-style-heading-xl coh-style-heading-4-size coh-style-headline-5 coh-style-pre-heading-light coh-style-display-1 coh-style-display-2"> <h4 id class="coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-3-size coh-style-heading-2-size coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-heading-xl coh-style-heading-4-size coh-style-pre-heading-light coh-style-headline-4 coh-style-heading-3-size coh-style-headline-1 coh-style-display-3 coh-style-heading-2-size coh-style-headline-2 coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-headline-3 coh-style-heading-xl coh-style-heading-4-size coh-style-headline-5 coh-style-pre-heading-light coh-style-display-1 coh-style-display-2"> <h5 id class="coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-3-size coh-style-heading-2-size coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-heading-xl coh-style-heading-4-size coh-style-pre-heading-light coh-style-headline-4 coh-style-heading-3-size coh-style-headline-1 coh-style-display-3 coh-style-heading-2-size coh-style-headline-2 coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-headline-3 coh-style-heading-xl coh-style-heading-4-size coh-style-headline-5 coh-style-pre-heading-light coh-style-display-1 coh-style-display-2"> <h6 id class="coh-style-heading-3-size coh-style-pre-heading coh-style-heading-1-size coh-style-heading-4-size coh-style-sub-heading coh-style-heading-3-size coh-style-heading-2-size coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-heading-xl coh-style-heading-4-size coh-style-pre-heading-light coh-style-headline-4 coh-style-heading-3-size coh-style-headline-1 coh-style-display-3 coh-style-heading-2-size coh-style-headline-2 coh-style-pre-heading coh-style-pre-heading-dark coh-style-heading-5-size coh-style-pre-heading-blue coh-style-heading-1-size coh-style-headline-3 coh-style-heading-xl coh-style-heading-4-size coh-style-headline-5 coh-style-pre-heading-light coh-style-display-1 coh-style-display-2"> <img src alt data-entity-type data-entity-uuid data-align data-caption>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 0
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: embedded
+      allowed_view_modes:
+        default: default
+        embedded: embedded
+        original: original
+      allowed_media_types: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_footnotes:
+    id: filter_footnotes
+    provider: footnotes
+    status: true
+    weight: 0
+    settings:
+      footnotes_collapse: '0'
+      footnotes_html: '1'
+      footnotes_footer_disable: '1'
+  heading_id_filter:
+    id: heading_id_filter
+    provider: auto_heading_ids
+    status: true
+    weight: 10
+    settings: {  }

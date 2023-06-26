@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_background_pattern
+    - node.type.product
+  module:
+    - options
+id: node.product.field_hero_background_pattern
+field_name: field_hero_background_pattern
+entity_type: node
+bundle: product
+label: 'Hero Background Pattern'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: factory-blue
+default_value_callback: ''
+settings: {  }
+field_type: list_string

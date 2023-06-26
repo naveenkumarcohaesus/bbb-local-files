@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override for a view template to display a list of rows.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the container.
+ * - rows: A list of rows for this list.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's contents.
+ * - title: The title of this group of rows. May be empty.
+ * - list: @todo.
+ *   - type: Starting tag will be either a ul or ol.
+ *   - attributes: HTML attributes for the list element.
+ *
+ * @see template_preprocess_views_view_list()
+ */
+#}
+{{ attach_library('bbb_faq/faq_question_list') }}
+{% if attributes -%}
+  <div{{ attributes }}>
+{% endif %}
+
+    {% for row in rows %}
+
+      {% set term = row.content['#row']._entity %}
+      {% set tag = row.content['#row'].tag %}
+      {% set class = row.content['#row'].class %}
+      {% set id = term.name.value|lower|replace({' ': '-'}) %}
+
+      {% if term.description.value|raw is not empty %}
+        <div class="faq-list-item">
+          <{{ tag }} class="coh-faq-title"><a href="#{{ id }}" class="coh-faq-link" aria-expanded="false">{{term.name.value}}</a></{{ tag }}>
+          <div id="{{term.name.value|lower|replace({' ': '-'}) }}" class="coh-faq-tabs-content">
+            {{term.description.value|raw}}
+          </div>
+        </div>
+      {% else %}
+        <{{ tag }} class="{{ class }}">{{term.name.value}}</{{ tag }}>
+      {% endif %}
+
+    {% endfor %}
+
+{% if attributes -%}
+  </div>
+{% endif %}

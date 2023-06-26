@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+/**
+ * Add Home link to breadcrumbs for all pages.
+ */
+function bbb_breadcrumb_update_8001() {
+  _bbb_article_rewrite_configuration('menu_breadcrumb.settings', 'bbb_breadcrumb', 'rewrite');
+}
+
+/**
+ * Disable 'Exclude disabled menu items' option in Menu breadcrumb settings.
+ */
+function bbb_breadcrumb_update_8002() {
+  _bbb_article_rewrite_configuration('menu_breadcrumb.settings', 'bbb_breadcrumb', 'rewrite');
+}

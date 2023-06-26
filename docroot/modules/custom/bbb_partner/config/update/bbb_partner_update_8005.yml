@@ -1,0 +1,87 @@
+core.entity_form_display.taxonomy_term.partner.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+    change:
+      content:
+        field_amount_of_finance_needed:
+          weight: 11
+        field_business_stages:
+          weight: 22
+        field_case_study_url:
+          weight: 19
+        field_content_areas:
+          weight: 24
+        field_exclude_from_support_finde:
+          weight: 25
+        field_exclude_region:
+          weight: 9
+        field_expertise:
+          weight: 29
+        field_finance_type:
+          weight: 23
+        field_geofield:
+          weight: 17
+        field_investment_manager:
+          weight: 26
+        field_investment_range:
+          region: content
+          settings:
+            placeholder: ''
+            size: 60
+          third_party_settings: {  }
+          type: string_textfield
+          weight: 32
+        field_investment_types:
+          weight: 28
+        field_lender_schemes:
+          weight: 20
+        field_logo:
+          weight: 12
+        field_partner_types:
+          weight: 21
+        field_show_at_portfolio_module:
+          weight: 18
+        field_stages:
+          weight: 27
+        field_supporting_business:
+          weight: 30
+        field_type_of_funding:
+          weight: 10
+        path:
+          weight: 34
+        simple_sitemap:
+          weight: 35
+        status:
+          weight: 36
+      third_party_settings:
+        field_group:
+          group_fi:
+            weight: 13
+          group_personal_information:
+            weight: 14
+          group_quote:
+            weight: 31
+core.entity_view_display.taxonomy_term.partner.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_investment_range:
+          label: above
+          region: content
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          type: string
+          weight: 41
+      hidden:
+        field_geofield: true
+        field_type_of_funding: true
+core.entity_view_display.taxonomy_term.partner.notes_to_editor:
+  expected_config: {  }
+  update_actions:
+    add:
+      hidden:
+        field_investment_range: true

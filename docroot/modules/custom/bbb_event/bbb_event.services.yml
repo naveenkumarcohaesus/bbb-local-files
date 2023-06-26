@@ -1,0 +1,6 @@
+services:
+  bbb_event.redirectmycontenttype:
+    class: Drupal\bbb_event\EventSubscriber\EventRedirectSubscriber
+    arguments: ['@current_user']
+    tags:
+      - { name: event_subscriber }

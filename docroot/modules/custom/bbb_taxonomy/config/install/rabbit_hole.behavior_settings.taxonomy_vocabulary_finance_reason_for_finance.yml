@@ -1,0 +1,14 @@
+uuid: 3ad61270-f8e5-4fd7-95f8-e689315eb645
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.finance_reason_for_finance
+id: taxonomy_vocabulary_finance_reason_for_finance
+entity_type_id: taxonomy_vocabulary
+entity_id: finance_reason_for_finance
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

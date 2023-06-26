@@ -1,0 +1,21 @@
+_meta:
+  version: '1.0'
+  entity_type: cohesion_layout
+  uuid: 36c65d3f-57a6-45ba-b173-40accd69a4a0
+  default_langcode: en
+default:
+  json_values:
+    -
+      value: '{"canvas":[{"uid":"cpt_hero_branded","type":"component","title":"Hero Branded","enabled":true,"category":"category-10","componentId":"cpt_hero_branded","componentType":"container","uuid":"12a5db74-f6ba-4510-a96e-d6e69a982ecc","parentUid":"root","status":{},"children":[]}],"mapper":{},"model":{"12a5db74-f6ba-4510-a96e-d6e69a982ecc":{"18e6a7f3-ff6f-408d-ad1e-34a2263172c1":"coh-ink-blue"}},"previewModel":{},"variableFields":{},"meta":{"fieldHistory":[]}}'
+  styles:
+    -
+      value: '[]'
+  template:
+    -
+      value: '{"bbb_site_studio":"{\u0022metadata\u0022:{\u0022contexts\u0022:[]},\u0022twig\u0022:\u0022{{ attach_library(\u0027cohesion\\\/global_libraries.responsiveJs\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.matchHeight\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.cohMatchHeights\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.windowscroll\u0027) }} {{ attach_library(\u0027cohesion\\\/element_templates.link\u0027) }} {{ attach_library(\u0027cohesion\\\/global_libraries.parallax_scrolling\u0027) }} {% set component_variable_18e6a7f3_ff6f_408d_ad1e_34a2263172c1 %}coh-ink-blue{% endset %} {{ renderComponent(\\\u0022cpt_hero_branded\\\u0022, false, _context, {\\\u002218e6a7f3-ff6f-408d-ad1e-34a2263172c1\\\u0022:\\\u0022component_variable_18e6a7f3_ff6f_408d_ad1e_34a2263172c1\\\u0022}, \\\u002212a5db74-f6ba-4510-a96e-d6e69a982ecc\\\u0022, \\\u0022\\\u0022)  }} \\n{% if content is defined %}{% set catch_cache = content|render %}{% endif %}\u0022}"}'
+  last_entity_update:
+    -
+      value: entityupdate_0036
+  revision_translation_affected:
+    -
+      value: true

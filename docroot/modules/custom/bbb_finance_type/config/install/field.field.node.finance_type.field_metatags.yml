@@ -1,0 +1,21 @@
+uuid: c6b644c4-92ae-4d7d-a9a2-5526991d41f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.finance_type
+  module:
+    - metatag
+id: node.finance_type.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: finance_type
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

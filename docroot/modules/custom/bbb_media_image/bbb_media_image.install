@@ -1,0 +1,168 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall module functions.
+ */
+
+use Drupal\Core\Config\FileStorage;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Update the config for page content form display.
+ *
+ * @implements hook_install
+ */
+function bbb_media_image_install() {
+  // Import Hero medium image styles config from install folder.
+  $config_path = \Drupal::service('extension.list.module')->getPath('bbb_media_image') . '/config/optional';
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+
+  // Create field Image type.
+  $config_record = $source->read('field.storage.media.field_image_type');
+  FieldStorageConfig::create($config_record)->save();
+  $config_storage->write('field.field.media.image.field_image_type', $source->read('field.field.media.image.field_image_type'));
+  // Update the form display for Image media type.
+  $config_storage->write('core.entity_form_display.media.image.default', $source->read('core.entity_form_display.media.image.default'));
+  $config_storage->write('core.entity_form_display.media.image.media_library', $source->read('core.entity_form_display.media.image.media_library'));
+}
+
+/**
+ * Image W816 view mode for image style.
+ */
+function bbb_media_image_update_8001() {
+  // Manually import config from install folder.
+  $module_path = \Drupal::service('extension.list.module')->getPath('bbb_media_image');
+  $config_install_path = $module_path . '/config/optional';
+
+  // Config Storage Service.
+  $config_storage = \Drupal::service('config.storage');
+
+  // Manually import config from install folder.
+  $source = new FileStorage($config_install_path);
+  $config_storage->write('core.entity_view_mode.media.image_w816', $source->read('core.entity_view_mode.media.image_w816'));
+  $config_storage->write('core.entity_view_display.media.image.image_w816', $source->read('core.entity_view_display.media.image.image_w816'));
+}
+
+/**
+ * Original view mode for svg images rendering through CKeditor.
+ */
+function bbb_media_image_update_8002() {
+  // Manually import config from install folder.
+  $module_path = \Drupal::service('extension.list.module')->getPath('bbb_media_image');
+  $config_install_path = $module_path . '/config/optional';
+
+  // Config Storage Service.
+  $config_storage = \Drupal::service('config.storage');
+
+  // Manually import config from install folder.
+  $source = new FileStorage($config_install_path);
+  $config_storage->write('core.entity_view_mode.media.original', $source->read('core.entity_view_mode.media.original'));
+}
+
+/**
+ * Updated Original view mode.
+ */
+function bbb_media_image_update_8003() {
+  // Enable Original view mode.
+  _bbb_article_rewrite_configuration('core.entity_view_display.media.image.original', 'bbb_media_image', 'optional');
+}
+
+/**
+ * Add Hero 720 * 700 image styles.
+ */
+function bbb_media_image_update_8004() {
+  _bbb_article_rewrite_configuration('image.style.hero_large_w720_h700', 'bbb_media_image', 'install');
+}
+
+/**
+ * Updated Hero medium 390 * 284 image styles effects.
+ */
+function bbb_media_image_update_8005() {
+  _bbb_article_rewrite_configuration('image.style.small390_hero_medium_w390', 'bbb_media_image', 'install');
+}
+
+/**
+ * Update image styles effects to use focal point.
+ */
+function bbb_media_image_update_8006() {
+  $configs = [
+    'image.style.background_cta_mobile_w390_h420',
+    'image.style.hero_mobile_w390_h160',
+    'image.style.hero_w280_h256',
+    'image.style.horizontal_card_w600_h379',
+    'image.style.horizontal_cta_w96_h96',
+    'image.style.large_2_col_card_w444_h296',
+    'image.style.large_background_cta_w1253_h488',
+    'image.style.large_background_cta_w1440_h840',
+    'image.style.large_card_mobile_w296_h296',
+    'image.style.large_card_w210_h164',
+    'image.style.large_card_w478_h478',
+    'image.style.large_cta_card_w678_h452',
+    'image.style.large_header_w335_h209',
+    'image.style.large_hero_medium_w1020_h440',
+    'image.style.large_hero_mobile_w375_h388',
+    'image.style.large_hero_w696_h748',
+    'image.style.large_image_w600_h220',
+    'image.style.large_related_content_w210_h210',
+    'image.style.large_related_content_w288_h192',
+    'image.style.large_text_cta_mobile_w390_h455',
+    'image.style.large_text_cta_w444_h325',
+    'image.style.large_text_cta_w720_h840',
+    'image.style.mediaum_related_content_w340_h340',
+    'image.style.medium_card_w249_h166',
+    'image.style.medium_cta_card_w704_h469',
+    'image.style.medium_hero_medium_w979_h340',
+    'image.style.medium_related_content_w340_h226',
+    'image.style.medium_text_cta_w704_h515',
+    'image.style.small_background_cta_w640_h249',
+    'image.style.small_card_w358_h238',
+    'image.style.small_hero_medium_w320_h233',
+    'image.style.small_hero_w390_h200',
+    'image.style.small_related_content_w171_h171',
+    'image.style.small_related_content_w358_h192',
+    'image.style.small_text_cta_w358_h262',
+    'image.style.small390_hero_medium_w390',
+    'image.style.team_member_hero_w384_h352',
+    'image.style.x_large_background_cta_w1440_h56',
+    'image.style.x_large_card_w276_h184',
+    'image.style.x_large_card_w600_h400',
+    'image.style.x_large_cta_card_w816_h544',
+    'image.style.x_large_header_w336_h224',
+    'image.style.x_large_hero_image_w1248_h400',
+    'image.style.x_large_hero_medium_w1440_h500',
+    'image.style.x_large_image_w816_h300',
+    'image.style.x_large_related_content_w276_h276',
+    'image.style.x_large_related_content_w384_h256',
+    'image.style.x_large_text_cta_w600_h440',
+  ];
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_media_image', 'install');
+  }
+
+  $configs = [
+    'image.style.card_scaled_focal_crop',
+    'image.style.coh_large_landscape',
+    'image.style.coh_large_super_landscape',
+    'image.style.coh_medium_landscape',
+    'image.style.coh_medium_super_landscape',
+    'image.style.coh_small_landscape',
+    'image.style.coh_small_square',
+    'image.style.coh_x_large_landscape',
+    'image.style.coh_x_large_super_landscape',
+    'image.style.coh_xx_large_landscape',
+    'image.style.coh_xx_small_landscape',
+    'image.style.featured_cta_w600_h440',
+  ];
+  foreach ($configs as $config) {
+    _bbb_article_rewrite_configuration($config, 'bbb_media_image', 'optional');
+  }
+}
+
+/**
+ * Created Featured Research 600 * 336 image style.
+ */
+function bbb_media_image_update_8007() {
+  _bbb_article_rewrite_configuration('image.style.featured_research_w600_h336', 'bbb_media_image', 'install');
+}

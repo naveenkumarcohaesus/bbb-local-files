@@ -1,0 +1,9 @@
+name: BBB Core
+type: module
+description: 'Common core functionalities and configurations.'
+core_version_requirement: ^9 || ^10
+package: BBB
+dependencies:
+    - drupal:cohesion
+    - drupal:collapsiblock
+    - drupal:system

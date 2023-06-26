@@ -1,0 +1,29 @@
+uuid: 31396ac0-f943-4447-a00f-661f9fb79cb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_type_funding
+    - taxonomy.vocabulary.funding_type
+    - taxonomy.vocabulary.partner
+id: taxonomy_term.partner.field_type_funding
+field_name: field_type_funding
+entity_type: taxonomy_term
+bundle: partner
+label: 'Type of Funding'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      funding_type: funding_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

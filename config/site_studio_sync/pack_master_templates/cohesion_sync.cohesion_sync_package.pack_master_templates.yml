@@ -1,0 +1,29 @@
+uuid: 5d8852f2-f7b9-4c73-82d8-788263476bc5
+langcode: en
+status: true
+dependencies: {  }
+id: pack_master_templates
+label: 'Master Templates'
+description: 'Contains Master Templates packages'
+excluded_entity_types: '{"cohesion_base_styles":true,"cohesion_color":true,"cohesion_custom_style":true,"cohesion_font_library":true,"cohesion_font_stack":true,"cohesion_icon_library":true,"image_style":true,"cohesion_website_settings":true}'
+settings: |
+  {
+      "52356992-2678-4b59-ac70-dea55789858f": {
+          "type": "cohesion_master_templates",
+          "items": {
+              "52356992-2678-4b59-ac70-dea55789858f": {
+                  "type": "cohesion_master_templates"
+              }
+          },
+          "checked": true
+      },
+      "474e6b1b-a967-42e3-bd41-e09d0f622e9f": {
+          "type": "cohesion_master_templates",
+          "items": {
+              "474e6b1b-a967-42e3-bd41-e09d0f622e9f": {
+                  "type": "cohesion_master_templates"
+              }
+          },
+          "checked": true
+      }
+  }

@@ -1,0 +1,71 @@
+uuid: e53301d7-cbb5-4cf7-a61c-28a9651149d5
+langcode: en
+status: true
+dependencies: {  }
+id: pack_linked_feature_card
+label: 'Linked feature card'
+description: 'Linked feature card package which includes Feature Card and Large Text Image Overlay'
+excluded_entity_types: '[]'
+settings: |
+  {
+      "9ea9b016-c909-470a-940c-9131d2e51cdc": {
+          "type": "cohesion_component",
+          "items": {
+              "7537520d-a261-4677-9d32-4360363091fa": {
+                  "type": "cohesion_color"
+              },
+              "cdaf7689-df7c-4071-8d1b-9de741c6c568": {
+                  "type": "cohesion_color"
+              },
+              "67fdab6d-3720-4fdb-b337-1b2c69e5d343": {
+                  "type": "cohesion_color"
+              },
+              "157ba886-7382-4f5a-8f2a-f57421ba36dc": {
+                  "type": "cohesion_color"
+              },
+              "9ea9b016-c909-470a-940c-9131d2e51cdc": {
+                  "type": "cohesion_component"
+              },
+              "542fa8c4-82fa-4a16-8a54-a4dfd968263b": {
+                  "type": "cohesion_component_category"
+              },
+              "0374099d-e586-413e-9a93-02fd70ef3c00": {
+                  "type": "cohesion_custom_style"
+              },
+              "2ff021c3-3455-45e4-b08d-f32cc5f7d96c": {
+                  "type": "cohesion_custom_style"
+              },
+              "6f70161e-75bf-4d97-9b57-22d829618abb": {
+                  "type": "cohesion_custom_style"
+              },
+              "0afe34a6-58f6-4790-90bc-a40de84c6605": {
+                  "type": "file"
+              },
+              "207381f5-4cdd-43a1-90a8-70057af12ed0": {
+                  "type": "file"
+              },
+              "5ba698c9-9123-4b97-a095-9a62c7285bc8": {
+                  "type": "image_style"
+              }
+          },
+          "checked": true
+      },
+      "4dacb655-3dea-4e97-af6d-720a6ec700a0": {
+          "type": "cohesion_style_helper",
+          "items": {
+              "4dacb655-3dea-4e97-af6d-720a6ec700a0": {
+                  "type": "cohesion_style_helper"
+              }
+          },
+          "checked": true
+      },
+      "be3b895e-300e-430d-bd14-d02c9608ac33": {
+          "type": "cohesion_style_helper",
+          "items": {
+              "be3b895e-300e-430d-bd14-d02c9608ac33": {
+                  "type": "cohesion_style_helper"
+              }
+          },
+          "checked": true
+      }
+  }

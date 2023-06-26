@@ -1,0 +1,55 @@
+uuid: 93f3f38a-b196-4bd9-8ff1-2d2f0c49ab40
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.featured_h4
+    - field.field.node.news.field_content_typology
+    - field.field.node.news.field_image
+    - field.field.node.news.field_layout_canvas
+    - field.field.node.news.field_metatags
+    - field.field.node.news.field_quick_links
+    - field.field.node.news.field_region
+    - field.field.node.news.field_teaser_text
+    - node.type.news
+  module:
+    - text
+    - user
+id: node.news.featured_h4
+targetEntityType: node
+bundle: news
+mode: featured_h4
+content:
+  field_content_typology:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_teaser_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_layout_canvas: true
+  field_metatags: true
+  field_quick_links: true
+  field_region: true
+  footnotes_group: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

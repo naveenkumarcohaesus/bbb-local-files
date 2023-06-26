@@ -1,0 +1,36 @@
+uuid: 696fef1a-8b9b-4ffb-be8f-435ddd384bfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_menu_content
+    - node.type.article
+    - node.type.case_study
+    - node.type.event
+    - system.menu.main
+id: menu_link_content.main.field_menu_content
+field_name: field_menu_content
+entity_type: menu_link_content
+bundle: main
+label: 'Menu Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      event: event
+      news: news
+      product: product
+      research_and_publication: research_and_publication
+      case_study: case_study
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference
