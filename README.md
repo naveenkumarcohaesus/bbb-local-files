@@ -1,0 +1,2 @@
+# bbb-local-files
+compare
