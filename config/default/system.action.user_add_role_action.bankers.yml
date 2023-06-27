@@ -1,0 +1,14 @@
+uuid: afcad133-1fbe-4a8e-93d1-0f66de803b0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bankers
+  module:
+    - user
+id: user_add_role_action.bankers
+label: 'Add the Bankers role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bankers

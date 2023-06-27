@@ -1,0 +1,14 @@
+uuid: 7513f8bd-e7cd-4359-8c36-7b4ce2fef492
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_factory
+  module:
+    - user
+id: user_add_role_action.content_factory
+label: 'Add the Content Factory role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: content_factory

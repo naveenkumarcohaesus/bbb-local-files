@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: AYzWQ4KjM4oOs50iQqYCRIIDUgrUNRK3dtQZt69pr5E
+shield_enable: true
+credential_provider: shield
+credentials:
+  shield:
+    user: bbbweb
+    pass: 'gyr#teys346'
+allow_cli: true
+debug_header: false
+unset_basic_auth_headers: true
+print: Hello!
+method: 0
+paths: /acquia-contenthub/webhook
+allowlist: "127.0.0.1\r\n193.36.8.0/21"
+http_method_allowlist: {  }
+domains: ''

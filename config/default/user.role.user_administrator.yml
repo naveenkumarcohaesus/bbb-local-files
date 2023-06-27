@@ -1,0 +1,30 @@
+uuid: 878dc055-c8cf-4e52-b6af-3103f2f194fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - captcha
+    - password_policy
+    - seckit
+    - shield
+    - sitestudio_page_builder
+    - system
+    - tfa
+    - toolbar
+id: user_administrator
+label: 'User Administrator'
+weight: -4
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'access visual page builder'
+  - 'administer CAPTCHA settings'
+  - 'administer honeypot'
+  - 'administer recaptcha'
+  - 'administer seckit'
+  - 'administer shield'
+  - 'administer site configuration'
+  - 'administer tfa for other users'
+  - 'administer users'
+  - 'manage password reset'
+  - 'view the administration theme'

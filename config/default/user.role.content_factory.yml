@@ -1,0 +1,16 @@
+uuid: ef075dec-b7e6-4d17-b99a-cc3bb17d321e
+langcode: en
+status: true
+dependencies:
+  module:
+    - sitestudio_page_builder
+    - tfa
+_core:
+  default_config_hash: 2Iz1ICiZD0ahkWsX1F0B-BYDfz7vOToe-T2ggedeZbk
+id: content_factory
+label: 'Content Factory'
+weight: 2
+is_admin: null
+permissions:
+  - 'access visual page builder'
+  - 'setup own tfa'

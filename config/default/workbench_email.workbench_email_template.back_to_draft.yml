@@ -1,0 +1,70 @@
+uuid: 5f5b4fab-7bfa-4881-82b0-63ba8c2fae31
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+    - node.type.person
+    - node.type.place
+  module:
+    - acquia_cms_common
+third_party_settings:
+  acquia_cms_common:
+    workflow_id: editorial
+    workflow_transitions:
+      - create_new_draft
+_core:
+  default_config_hash: Kx5HbQ134GOra0WA1ifauZSHIB7FliU5j3c720ZRs9s
+id: back_to_draft
+label: 'Back to Draft'
+format: null
+subject: '[node:title] State Changed'
+body:
+  value: '[node:title] is moved back to draft, Please check.'
+  format: plain_text
+bundles:
+  'node:page': 'node:page'
+  'node:person': 'node:person'
+  'node:place': 'node:place'
+recipient_types:
+  author:
+    id: author
+    provider: workbench_email
+    status: true
+    settings: {  }
+  email:
+    id: email
+    provider: workbench_email
+    status: false
+    settings:
+      fields: {  }
+  entity_reference_user:
+    id: entity_reference_user
+    provider: workbench_email
+    status: false
+    settings:
+      fields: {  }
+  fixed_email:
+    id: fixed_email
+    provider: workbench_email
+    status: false
+    settings:
+      recipients: ''
+  last_revision_author:
+    id: last_revision_author
+    provider: workbench_email
+    status: false
+    settings: {  }
+  role:
+    id: role
+    provider: workbench_email
+    status: false
+    settings:
+      roles: {  }
+  roles_with_access:
+    id: roles_with_access
+    provider: workbench_email
+    status: false
+    settings:
+      roles: {  }
+replyTo: null

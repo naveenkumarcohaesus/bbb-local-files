@@ -1,0 +1,18 @@
+uuid: cbdf1779-8997-49b7-905f-22aad94f08a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - search_api_autocomplete
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'use search_api_autocomplete for search'
+  - 'view media'

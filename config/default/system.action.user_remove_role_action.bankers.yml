@@ -1,0 +1,14 @@
+uuid: 2685f37a-697b-441f-a02f-e77dc3944f31
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bankers
+  module:
+    - user
+id: user_remove_role_action.bankers
+label: 'Remove the Bankers role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bankers
