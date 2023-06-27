@@ -1,0 +1,26 @@
+uuid: 34757712-88f2-4b60-abb2-7cd6fd77c408
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_layout_canvas
+    - node.type.news
+  module:
+    - cohesion_elements
+_core:
+  default_config_hash: 3_i-VThw1c8jnPSTk3R_QzjLw5RWTlTmGh61MgovCKc
+id: node.news.field_layout_canvas
+field_name: field_layout_canvas
+entity_type: node
+bundle: news
+label: 'Layout Canvas'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:cohesion_layout'
+  handler_settings: {  }
+  access_elements: '0'
+field_type: cohesion_entity_reference_revisions

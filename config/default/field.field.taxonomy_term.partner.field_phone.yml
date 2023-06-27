@@ -1,0 +1,26 @@
+uuid: c7bb1cd4-10a1-4bab-a61a-b84952b3701d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_phone
+    - taxonomy.vocabulary.partner
+  module:
+    - telephone
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: EK4doj5F9tsoPueC0S_p6lOrMIor1RfgYl5T2DIZeaE
+id: taxonomy_term.partner.field_phone
+field_name: field_phone
+entity_type: taxonomy_term
+bundle: partner
+label: Phone
+description: 'This field is BBB FH specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

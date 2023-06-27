@@ -1,0 +1,23 @@
+uuid: 05a22ca7-c1b1-4850-bb21-2037db47ac7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.page
+  module:
+    - metatag
+id: node.page.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: page
+label: Metatags
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'a:1:{s:20:"schema_article_image";s:102:"a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:47:"[node:field_page_image:entity:image:entity:url]";}";}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

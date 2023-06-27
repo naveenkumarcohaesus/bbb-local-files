@@ -1,0 +1,23 @@
+uuid: 1f9012fe-f630-4ba7-a09f-e355073f8500
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: WvRZgITVi6uYb1VGOtsHfNezs6SZpUTnf_kl2EEZZTU
+id: taxonomy_term.field_annual_turnover
+field_name: field_annual_turnover
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

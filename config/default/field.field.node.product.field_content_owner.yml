@@ -1,0 +1,31 @@
+uuid: 9a352cf5-f054-4c8b-99de-b799315711f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_owner
+    - node.type.product
+_core:
+  default_config_hash: 9_oU6iqySXJdRIzVHvr5gbTt9nHiy4Mj4qaMzJBbPn4
+id: node.product.field_content_owner
+field_name: field_content_owner
+entity_type: node
+bundle: product
+label: 'Content Owner'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: false
+field_type: entity_reference

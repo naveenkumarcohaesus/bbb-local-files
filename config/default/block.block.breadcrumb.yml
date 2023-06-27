@@ -1,0 +1,54 @@
+uuid: e326a5cb-f696-4ef2-91e8-bb79ac465f4d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:custom_layout_canvas_block:dc7c21a5-951a-41f8-8529-b61d40e1532f'
+  module:
+    - block_content
+    - cohesion
+    - collapsiblock
+    - node
+    - system
+  theme:
+    - bbb_site_studio
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+id: breadcrumb
+theme: bbb_site_studio
+region: content
+weight: 3
+provider: null
+plugin: 'block_content:dc7c21a5-951a-41f8-8529-b61d40e1532f'
+settings:
+  id: 'block_content:dc7c21a5-951a-41f8-8529-b61d40e1532f'
+  label: Breadcrumb
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 1
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      case_study: case_study
+      event: event
+      news: news
+      page: page
+      product: product
+      research_and_publication: research_and_publication
+      team_member: team_member
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/debt-finance\r\n/equity-capital\r\n/equity-capital/managed-funds\r\n/equity-capital/regional-angels-programme\r\n/debt-finance/debt-funds\r\n/debt-finance/fintech\r\n/debt-finance/structured-capital-solutions"

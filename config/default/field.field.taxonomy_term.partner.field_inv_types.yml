@@ -1,0 +1,29 @@
+uuid: baf9a55e-cd22-45d5-8b33-ad79078e49d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_inv_types
+    - taxonomy.vocabulary.investment_types
+    - taxonomy.vocabulary.partner
+id: taxonomy_term.partner.field_inv_types
+field_name: field_inv_types
+entity_type: taxonomy_term
+bundle: partner
+label: 'Investment Types'
+description: 'This field is BPC specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      investment_types: investment_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: x_large_card_w600_h400
+label: 'X Large Card W600 H400'
+effects:
+  3081447d-e12b-4d64-82fd-f17ee6aa0e33:
+    uuid: 3081447d-e12b-4d64-82fd-f17ee6aa0e33
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 600
+      height: 400
+      crop_type: focal_point

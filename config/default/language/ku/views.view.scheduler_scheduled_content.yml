@@ -1,0 +1,56 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: پاڵێو
+          reset_button_label: 'گەڕاندنەوە بۆ باری سەرەتایی'
+      pager:
+        options:
+          tags:
+            previous: 'پێشتر ‹'
+            next: 'دواتر ›'
+            first: 'سەرەتا «'
+            last: 'کۆتا »'
+      fields:
+        node_bulk_form:
+          action_title: کردار
+        title:
+          label: ناونیشان
+        name:
+          label: نووسەر
+        status:
+          label: ڕەوش
+          settings:
+            format_custom_true: بڵاوکراوەتەوە
+        operations:
+          label: کاره‌کان
+      filters:
+        title:
+          expose:
+            label: ناونیشان
+        type:
+          expose:
+            label: 'جۆری ناوەڕۆک'
+        status:
+          expose:
+            label: ڕەوش
+          group_info:
+            group_items:
+              1:
+                title: بڵاوکراوەتەوە
+        langcode:
+          expose:
+            label: زمان
+  overview:
+    display_options:
+      tab_options:
+        title: ناوەڕۆک
+  user_page:
+    display_options:
+      tab_options:
+        title: ناوەڕۆک
+      arguments:
+        uid:
+          exception:
+            title: هەموو

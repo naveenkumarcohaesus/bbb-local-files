@@ -1,0 +1,19 @@
+uuid: 6226f037-d401-48f8-a01c-1868d5f6b061
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_programme_overview
+    - taxonomy.vocabulary.programme
+id: taxonomy_term.programme.field_programme_overview
+field_name: field_programme_overview
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme Overview'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

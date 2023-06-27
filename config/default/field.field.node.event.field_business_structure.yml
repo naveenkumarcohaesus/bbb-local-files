@@ -1,0 +1,31 @@
+uuid: ab3cbd96-65ed-4c96-a7a6-b7ff1470f2a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_structure
+    - node.type.event
+    - taxonomy.vocabulary.business_structure
+_core:
+  default_config_hash: tJ6_hIJTarohxhf5fyP0sGUlq3MxW_wYNfatnPSXcxU
+id: node.event.field_business_structure
+field_name: field_business_structure
+entity_type: node
+bundle: event
+label: 'Business Structure'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      business_structure: business_structure
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,24 @@
+uuid: 71a07b4a-093f-41e8-af93-6d50354741dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_supporting_business
+    - taxonomy.vocabulary.partner
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: gviD-EaWaq7OCnqDXGijWB9bt5kB2Utiy-PYX4FM2ls
+id: taxonomy_term.partner.field_supporting_business
+field_name: field_supporting_business
+entity_type: taxonomy_term
+bundle: partner
+label: 'Supporting Business in…'
+description: 'This field is SUL specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

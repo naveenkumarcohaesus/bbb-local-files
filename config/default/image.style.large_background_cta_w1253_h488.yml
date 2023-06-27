@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_background_cta_w1253_h488
+label: 'Large Background CTA W1253 H488'
+effects:
+  1f1545d9-d2a8-4241-a5fb-d12e8a3851f2:
+    uuid: 1f1545d9-d2a8-4241-a5fb-d12e8a3851f2
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 1253
+      height: 488
+      crop_type: focal_point

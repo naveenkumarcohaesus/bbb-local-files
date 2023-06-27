@@ -1,0 +1,82 @@
+display:
+  default:
+    display_title: Domyślny
+    display_options:
+      fields:
+        title:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'Następna ›'
+            previous: '‹ Poprzednia'
+            first: '« Pierwsza'
+            last: 'Ostatnia »'
+          expose:
+            items_per_page_label: 'Elementów na stronę'
+            items_per_page_options_all_label: '- Wszystko -'
+            offset_label: Przesunięcie
+      exposed_form:
+        options:
+          submit_button: 'Zastosuj filtry'
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+          text_input_required: 'Wybierz dowolny filtr i naciśnij Zastosuj, żeby zobaczyć wyniki.'
+          bef:
+            general:
+              secondary_label: 'Zaawansowane ustawienia'
+  case_study_list_block:
+    display_title: Blok
+  our_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Zastosuj filtry'
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+          text_input_required: 'Wybierz dowolny filtr i naciśnij Zastosuj, żeby zobaczyć wyniki.'
+          bef:
+            general:
+              secondary_label: 'Zaawansowane ustawienia'
+      arguments:
+        'null':
+          exception:
+            title: Wszystko
+      filters:
+        field_region_target_id:
+          expose:
+            label: Region
+  related_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Zastosuj filtry'
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      arguments:
+        nid:
+          exception:
+            title: Wszystko
+  related_reading_programme:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        type:
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: 'Zastosuj filtry'
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      arguments:
+        nid:
+          exception:
+            title: Wszystko
+        tid:
+          exception:
+            title: Wszystko

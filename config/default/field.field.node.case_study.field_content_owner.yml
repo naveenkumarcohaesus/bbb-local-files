@@ -1,0 +1,31 @@
+uuid: ee82bca7-a024-4df9-b1dd-ebb3d9d267b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_owner
+    - node.type.case_study
+_core:
+  default_config_hash: NOEGJf-o7QXgN2zPJP-4USlftadrtCB5ZT0EuaC8qR8
+id: node.case_study.field_content_owner
+field_name: field_content_owner
+entity_type: node
+bundle: case_study
+label: 'Content Owner'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: false
+field_type: entity_reference

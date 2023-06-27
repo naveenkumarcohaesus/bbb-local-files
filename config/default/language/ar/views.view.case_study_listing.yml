@@ -1,0 +1,77 @@
+display:
+  default:
+    display_title: الافتراضي
+    display_options:
+      fields:
+        title:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'التالي ›'
+            previous: '‹ السابق'
+          expose:
+            items_per_page_options_all_label: '- الكل -'
+            offset_label: الإزاحة
+      exposed_form:
+        options:
+          submit_button: 'عمل تصفية'
+          exposed_sorts_label: 'الترتيب حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+          bef:
+            general:
+              secondary_label: 'الخيارات المتقدمة'
+  case_study_list_block:
+    display_title: الصندوق
+  our_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'عمل تصفية'
+          exposed_sorts_label: 'الترتيب حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+          bef:
+            general:
+              secondary_label: 'الخيارات المتقدمة'
+      arguments:
+        'null':
+          exception:
+            title: الكل
+      filters:
+        field_region_target_id:
+          expose:
+            label: المنطقة
+  related_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'عمل تصفية'
+          exposed_sorts_label: 'الترتيب حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+      arguments:
+        nid:
+          exception:
+            title: الكل
+  related_reading_programme:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        type:
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: 'عمل تصفية'
+          exposed_sorts_label: 'الترتيب حسب'
+          sort_asc_label: تصاعدي
+          sort_desc_label: تنازلي
+      arguments:
+        nid:
+          exception:
+            title: الكل
+        tid:
+          exception:
+            title: الكل

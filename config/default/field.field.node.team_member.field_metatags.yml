@@ -1,0 +1,23 @@
+uuid: 01117413-105a-4545-83dd-280c24306b6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.team_member
+  module:
+    - metatag
+_core:
+  default_config_hash: 52LbYBmrzXQKTKk63OwC-ryRQjbFBJuoZG7fpwqF3-0
+id: node.team_member.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: team_member
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

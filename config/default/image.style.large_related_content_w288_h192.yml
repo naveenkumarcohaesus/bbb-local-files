@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_related_content_w288_h192
+label: 'Large Related Content W288 H192'
+effects:
+  4e563cf5-0bbb-4ee2-93fb-8a257a290930:
+    uuid: 4e563cf5-0bbb-4ee2-93fb-8a257a290930
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 288
+      height: 192
+      crop_type: focal_point

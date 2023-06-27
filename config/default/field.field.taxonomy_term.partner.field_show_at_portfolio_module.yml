@@ -1,0 +1,28 @@
+uuid: c3328196-7288-4cc4-86ea-f8c3afb0294c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_show_at_portfolio_module
+    - taxonomy.vocabulary.partner
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: D1RWgIqWXZWTSIvY0U6hm1GZD85-Tb9HFA___KYtrXQ
+id: taxonomy_term.partner.field_show_at_portfolio_module
+field_name: field_show_at_portfolio_module
+entity_type: taxonomy_term
+bundle: partner
+label: 'Show at Portfolio Module'
+description: 'This field is BBB FH specific.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

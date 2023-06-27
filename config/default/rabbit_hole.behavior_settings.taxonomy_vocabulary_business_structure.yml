@@ -1,0 +1,14 @@
+uuid: b85334b6-5533-47c5-9665-c089fd348091
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.business_structure
+id: taxonomy_vocabulary_business_structure
+entity_type_id: taxonomy_vocabulary
+entity_id: business_structure
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

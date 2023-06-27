@@ -1,0 +1,22 @@
+label: Artykuł
+display:
+  default:
+    display_title: Domyślny
+    display_options:
+      fields:
+        title:
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: Zastosuj
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      arguments:
+        nid:
+          exception:
+            title: Wszystko
+        tid:
+          exception:
+            title: Wszystko

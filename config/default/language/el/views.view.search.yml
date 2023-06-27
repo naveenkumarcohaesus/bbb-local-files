@@ -1,0 +1,23 @@
+label: Αναζήτηση
+display:
+  default:
+    display_options:
+      title: Αναζήτηση
+      pager:
+        options:
+          tags:
+            next: 'Επόμενο ›'
+            previous: '‹ Προηγούμενο'
+          expose:
+            items_per_page_label: 'Είδη ανά σελίδα'
+            items_per_page_options_all_label: '- Όλα -'
+            offset_label: Αντιστάθμιση
+      exposed_form:
+        options:
+          submit_button: Αναζήτηση
+          reset_button_label: Επαναφορά
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+  search:
+    display_title: Σελίδα

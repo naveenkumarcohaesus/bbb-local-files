@@ -1,0 +1,26 @@
+uuid: 7fda3b5a-19f4-45e7-8c3e-c1bbbd3b5c6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: CzLi1H0dHh_ChB-hgG_JA2-rSDLUrdp9X2gdgki76cY
+id: taxonomy_term.field_quote_credit
+field_name: field_quote_credit
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

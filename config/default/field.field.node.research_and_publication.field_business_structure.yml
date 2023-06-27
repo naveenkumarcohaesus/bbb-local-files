@@ -1,0 +1,29 @@
+uuid: 33879640-c3e4-49c0-8849-097cffb46dc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_structure
+    - node.type.research_and_publication
+    - taxonomy.vocabulary.business_structure
+id: node.research_and_publication.field_business_structure
+field_name: field_business_structure
+entity_type: node
+bundle: research_and_publication
+label: 'Business Structure'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      business_structure: business_structure
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

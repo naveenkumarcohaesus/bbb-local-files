@@ -1,0 +1,30 @@
+uuid: 564e5fc5-bd03-4c62-bc63-014721df8bdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.case_study
+_core:
+  default_config_hash: APkUEYuAhTsrUZYthWrOswtiAuYgaI5thXdEQA3Zs5k
+id: node.case_study.field_image
+field_name: field_image
+entity_type: node
+bundle: case_study
+label: 'Hero Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

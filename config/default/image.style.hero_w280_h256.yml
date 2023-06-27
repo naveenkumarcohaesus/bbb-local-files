@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_w280_h256
+label: 'Hero W280 H256'
+effects:
+  8c2c14bc-8aa6-4e4f-801a-96b533fbde78:
+    uuid: 8c2c14bc-8aa6-4e4f-801a-96b533fbde78
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 280
+      height: 256
+      crop_type: focal_point

@@ -1,0 +1,17 @@
+uuid: b590a7c9-0688-44c7-8fd7-030144d861fd
+langcode: en
+status: true
+dependencies: {  }
+label: 'Lower Roman Numeral List'
+id: 30e05f85
+json_values: '{"preview":{"text":"<p><strong>Unordered list<\/strong><\/p>\n\n<ul class=\"coh-preview\">\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ul>\n\n<p>&nbsp;<\/p>\n\n<p><strong>Ordered list<\/strong><\/p>\n\n<ol class=\"coh-preview\">\n\t<li>List item 1<\/li>\n\t<li>List item 2<\/li>\n\t<li>List item 3<\/li>\n<\/ol>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"ul,ol,dl","class":"","combinator":"","pseudo":""},"37a9f0d8-45a0-4530-b3a8-3d21d4736308":{"settings":{"element":"li","class":"","combinator":"","pseudo":""},"styles":{"xs":{"custom-css":[{"customCssProperty":{"value":"list-style-type"},"customCss":{"value":"lower-roman !important"}}]}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+json_mapper: '{"styles":{"title":"List","selectorType":"topLevel","formDefinition":[],"items":[{"title":"li","type":"container","items":[],"form":null,"selectorType":"child","model":"li","uuid":"37a9f0d8-45a0-4530-b3a8-3d21d4736308","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xs"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}]}],"form":null}}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-small-roman-numeral-list
+custom_style_type: list
+available_in_wysiwyg: true
+parent: null
+weight: 0

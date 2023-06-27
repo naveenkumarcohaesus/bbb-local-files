@@ -1,0 +1,20 @@
+uuid: 7e804def-0b48-4d8b-9074-9d1b51d19c86
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_templates.cohesion_master_templates.master_template
+label: 'Full content (Node, News)'
+id: node_news_full
+json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"iconColor":"layout","uuid":"efbcfe82-4dfa-4a8e-8cda-89d059c08f8e","parentUid":"root","children":[{"type":"container","uid":"drupal-field","title":"Field","status":{"collapsed":true},"uuid":"531ac432-5b4d-470b-b6de-72d94281ffdb","parentUid":"container","children":[]},{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"82f38e87-ca75-4f8b-9c41-8d2cf89f3393","parentUid":"container","children":[]}]}],"mapper":{"efbcfe82-4dfa-4a8e-8cda-89d059c08f8e":{},"531ac432-5b4d-470b-b6de-72d94281ffdb":{},"82f38e87-ca75-4f8b-9c41-8d2cf89f3393":{}},"model":{"efbcfe82-4dfa-4a8e-8cda-89d059c08f8e":{"settings":{"width":"fluid"}},"531ac432-5b4d-470b-b6de-72d94281ffdb":{"settings":{"title":"Field","settings":{"drupalField":""},"drupalField":"content.field_layout_canvas"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"drupal-field"}}},"82f38e87-ca75-4f8b-9c41-8d2cf89f3393":{"settings":{"title":"Footnotes Block","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"all","block":"footnotesgroup"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}}},"previewModel":{"531ac432-5b4d-470b-b6de-72d94281ffdb":{},"82f38e87-ca75-4f8b-9c41-8d2cf89f3393":{}},"variableFields":{"531ac432-5b4d-470b-b6de-72d94281ffdb":[],"82f38e87-ca75-4f8b-9c41-8d2cf89f3393":[]},"meta":{"fieldHistory":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+modified: true
+selectable: true
+custom: false
+twig_template: node--cohesion--node-news-full
+default: true
+entity_type: node
+bundle: news
+view_mode: full
+master_template: __none__

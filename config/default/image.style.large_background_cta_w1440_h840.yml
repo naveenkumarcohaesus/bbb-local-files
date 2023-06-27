@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_background_cta_w1440_h840
+label: 'Large Background CTA W1440 H840'
+effects:
+  667442cb-53c5-4dcf-ba94-ef29c316b936:
+    uuid: 667442cb-53c5-4dcf-ba94-ef29c316b936
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 1440
+      height: 840
+      crop_type: focal_point

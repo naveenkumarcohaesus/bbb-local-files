@@ -1,0 +1,21 @@
+uuid: fe47321d-316e-4023-a1eb-b9bb01d9ae80
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_download_cta
+field_name: field_download_cta
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

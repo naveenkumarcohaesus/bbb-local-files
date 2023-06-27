@@ -1,0 +1,60 @@
+uuid: bc2befff-9579-4cc5-89c0-b4cd287dd131
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.person.field_categories
+    - field.field.node.person.field_email
+    - field.field.node.person.field_job_title
+    - field.field.node.person.field_metatags
+    - field.field.node.person.field_person_image
+    - field.field.node.person.field_person_mobile
+    - field.field.node.person.field_person_telephone
+    - field.field.node.person.field_person_type
+    - field.field.node.person.field_place
+    - field.field.node.person.field_tags
+    - node.type.person
+  module:
+    - user
+  enforced:
+    module:
+      - acquia_cms_person
+      - acquia_cms_person
+_core:
+  default_config_hash: 7UzUpJNLSGJPZ6W_FVSxrSld4XH7qI61EUI_cJ4Rnzs
+id: node.person.card
+targetEntityType: node
+bundle: person
+mode: card
+content:
+  field_person_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: x_small_square
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_person_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  content_moderation_control: true
+  field_categories: true
+  field_email: true
+  field_job_title: true
+  field_metatags: true
+  field_person_mobile: true
+  field_person_telephone: true
+  field_place: true
+  field_tags: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

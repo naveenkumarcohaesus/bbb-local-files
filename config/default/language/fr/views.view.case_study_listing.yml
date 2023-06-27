@@ -1,0 +1,82 @@
+display:
+  default:
+    display_title: 'Par défaut'
+    display_options:
+      fields:
+        title:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'Suivant ›'
+            previous: '‹ Précédent'
+            first: '« Premier'
+            last: 'Dernier »'
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+      exposed_form:
+        options:
+          submit_button: 'Appliquer les filtres'
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
+          bef:
+            general:
+              secondary_label: 'Options avancées'
+  case_study_list_block:
+    display_title: Bloc
+  our_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Appliquer les filtres'
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
+          bef:
+            general:
+              secondary_label: 'Options avancées'
+      arguments:
+        'null':
+          exception:
+            title: Tout
+      filters:
+        field_region_target_id:
+          expose:
+            label: Région
+  related_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Appliquer les filtres'
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        nid:
+          exception:
+            title: Tout
+  related_reading_programme:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        type:
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: 'Appliquer les filtres'
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        nid:
+          exception:
+            title: Tout
+        tid:
+          exception:
+            title: Tout

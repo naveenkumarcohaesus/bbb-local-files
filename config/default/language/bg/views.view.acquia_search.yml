@@ -1,0 +1,19 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Търси
+          reset_button_label: Рестартирай
+      fields:
+        type:
+          label: Тип
+      filters:
+        search_api_fulltext:
+          expose:
+            label: Търси
+      title: Търси
+  page:
+    display_options:
+      menu:
+        title: Търси

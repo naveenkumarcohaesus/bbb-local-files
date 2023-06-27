@@ -1,0 +1,19 @@
+uuid: be33d4a7-6f83-4d18-adcf-81229b2beab9
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.spacing
+label: 'Spacing 1 Top'
+id: 4084edf9
+json_values: '{"preview":{"text":"<div class=\"coh-preview\">Default content for ''Generic''.<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"styles":{"xs":{"margin":{"margin-top":{"value":"[style-guide:spacing:spacing-1-small-size]"}}},"sm":{"margin":{"margin-top":{"value":"[style-guide:spacing:spacing-1-medium-size]"}}},"xl":{"margin":{"margin-top":{"value":"[style-guide:spacing:spacing-1-large-size]"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":["styles.styles.xs.margin.margin-top.value","styles.styles.sm.margin.margin-top.value","styles.styles.xl.margin.margin-top.value"]}'
+json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xs"},{"name":"sm"},{"name":"xl"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":true},{"name":"margin-bottom","active":false},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}],"items":[],"form":null}}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-spacing-1-top
+custom_style_type: generic
+available_in_wysiwyg: true
+parent: null
+weight: 399

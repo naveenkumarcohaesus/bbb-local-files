@@ -1,0 +1,24 @@
+uuid: bf09168a-8131-4838-9926-3dc814e35753
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - text
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: yHLgmHBXYtzg7itv2B4f6Sydro-qLmS_In3EEgm2Kfo
+id: taxonomy_term.field_expertise
+field_name: field_expertise
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

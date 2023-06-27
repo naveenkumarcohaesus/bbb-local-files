@@ -1,0 +1,26 @@
+uuid: c00d76e4-5618-4ea8-8c7a-955a406e3d71
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: 4JnOt0Zv_A_OAUd8lMnxdOUg5RSlZ-MZcE6HBh_7dxU
+id: taxonomy_term.field_supporting_business
+field_name: field_supporting_business
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

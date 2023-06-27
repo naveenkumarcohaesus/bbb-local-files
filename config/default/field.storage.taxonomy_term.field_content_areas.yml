@@ -1,0 +1,24 @@
+uuid: 1e22a04a-8f9f-4027-b274-a89fe61a9ece
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: fGGWGFT-VUQuzVsh8z6EC3CNkyxZepwPp__Q4BigUyY
+id: taxonomy_term.field_content_areas
+field_name: field_content_areas
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

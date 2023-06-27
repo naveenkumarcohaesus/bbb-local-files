@@ -1,0 +1,24 @@
+uuid: a2f0c74b-de16-4e9a-9e7d-2b6b1e2d711e
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: xEdiIvMFUEkQa8YT04L8CX-GF1fNcgSBYPLblPZ0MgY
+id: taxonomy_term.field_website_link_clbils
+field_name: field_website_link_clbils
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

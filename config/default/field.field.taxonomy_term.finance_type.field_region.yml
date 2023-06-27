@@ -1,0 +1,31 @@
+uuid: fe56dfa7-7be7-4b28-a5bb-44ae02fc0f65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_region
+    - taxonomy.vocabulary.finance_type
+    - taxonomy.vocabulary.region
+_core:
+  default_config_hash: G0kRXCEftIgWJ67JSpF96vqHTp64qkYvBUgD8Hooyc8
+id: taxonomy_term.finance_type.field_region
+field_name: field_region
+entity_type: taxonomy_term
+bundle: finance_type
+label: Region
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      region: region
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

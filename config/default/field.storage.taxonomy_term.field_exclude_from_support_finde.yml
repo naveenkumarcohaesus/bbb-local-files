@@ -1,0 +1,23 @@
+uuid: 872fb248-d4bb-442c-9206-d5b504d5e5cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: HSy6zJ7Y12qv5upZMWgGq7kMCzlPd76OezZ7ZcDdemY
+id: taxonomy_term.field_exclude_from_support_finde
+field_name: field_exclude_from_support_finde
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

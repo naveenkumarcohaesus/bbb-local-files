@@ -1,0 +1,40 @@
+uuid: a95e4f25-b9e2-4929-ada9-1f56b92a29e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.mini_list
+    - field.field.node.news.field_content_typology
+    - field.field.node.news.field_image
+    - field.field.node.news.field_layout_canvas
+    - field.field.node.news.field_metatags
+    - field.field.node.news.field_quick_links
+    - field.field.node.news.field_region
+    - field.field.node.news.field_teaser_text
+    - node.type.news
+  module:
+    - datetime
+    - user
+id: node.news.mini_list
+targetEntityType: node
+bundle: news
+mode: mini_list
+content:
+  field_content_typology:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_image: true
+  field_layout_canvas: true
+  field_metatags: true
+  field_quick_links: true
+  field_region: true
+  field_teaser_text: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

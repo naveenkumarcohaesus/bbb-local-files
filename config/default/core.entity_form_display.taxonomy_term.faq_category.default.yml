@@ -1,0 +1,79 @@
+uuid: 51679586-5c63-4e87-9921-5ba8c6f85445
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.faq_category.field_category_icon
+    - field.field.taxonomy_term.faq_category.field_cta_url
+    - field.field.taxonomy_term.faq_category.field_show_on_website
+    - taxonomy.vocabulary.faq_category
+  module:
+    - link_attributes
+    - media_library
+    - path
+_core:
+  default_config_hash: nKmNjUr9zvRebPaHHdd4eGFXQ9yTannxBjN3tWCgZAE
+id: taxonomy_term.faq_category.default
+targetEntityType: taxonomy_term
+bundle: faq_category
+mode: default
+content:
+  field_category_icon:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_cta_url:
+    type: link_attributes
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: true
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+        title: false
+        aria-label: false
+    third_party_settings: {  }
+  field_show_on_website:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true

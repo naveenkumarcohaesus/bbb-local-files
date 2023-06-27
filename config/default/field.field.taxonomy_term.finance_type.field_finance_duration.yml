@@ -1,0 +1,21 @@
+uuid: 697dd061-1af9-4489-8805-83949f43ded3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_finance_duration
+    - taxonomy.vocabulary.finance_type
+_core:
+  default_config_hash: 1VJPNvPG0ep0eGlPJuMRE8-vqnfIrhQo2h1Xn4GOE-Q
+id: taxonomy_term.finance_type.field_finance_duration
+field_name: field_finance_duration
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'Duration of finance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,28 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: پاڵێو
+          reset_button_label: 'گەڕاندنەوە بۆ باری سەرەتایی'
+      pager:
+        options:
+          tags:
+            previous: 'پێشتر ‹'
+            next: 'دواتر ›'
+            first: 'سەرەتا «'
+            last: 'کۆتا »'
+      fields:
+        redirect_source__path:
+          label: له‌لایەن
+        created:
+          label: درووستکراوە
+      filters:
+        redirect_source__path:
+          expose:
+            label: له‌لایەن
+        redirect_redirect__uri:
+          expose:
+            label: بۆ
+  page_1:
+    display_title: پەڕە

@@ -1,0 +1,26 @@
+uuid: 01622d78-3164-464f-9c2e-725938d5723b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topic
+    - node.type.article
+    - taxonomy.vocabulary.business_topic
+_core:
+  default_config_hash: A6xAOkPLaYgikxHS_wBOg2X95pzPwe_4f0F3tRq5wtM
+id: node.article.field_topic
+field_name: field_topic
+entity_type: node
+bundle: article
+label: Topic
+description: null
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      - business_topic
+field_type: entity_reference

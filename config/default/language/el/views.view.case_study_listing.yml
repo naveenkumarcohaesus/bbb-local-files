@@ -1,0 +1,74 @@
+display:
+  default:
+    display_title: Προεπιλεγμένο
+    display_options:
+      fields:
+        title:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'Επόμενο ›'
+            previous: '‹ Προηγούμενο'
+          expose:
+            items_per_page_label: 'Είδη ανά σελίδα'
+            items_per_page_options_all_label: '- Όλα -'
+            offset_label: Αντιστάθμιση
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+          bef:
+            general:
+              secondary_label: 'Προχωρημένες επιλογές'
+  case_study_list_block:
+    display_title: Μπλοκ
+  our_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+          bef:
+            general:
+              secondary_label: 'Προχωρημένες επιλογές'
+      arguments:
+        'null':
+          exception:
+            title: Όλες
+      filters:
+        field_region_target_id:
+          expose:
+            label: Περιοχή
+  related_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+      arguments:
+        nid:
+          exception:
+            title: Όλες
+  related_reading_programme:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        type:
+          separator: ', '
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+      arguments:
+        nid:
+          exception:
+            title: Όλες
+        tid:
+          exception:
+            title: Όλες

@@ -1,0 +1,29 @@
+uuid: 192acf07-3f89-44dd-93eb-0371aa5fe283
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_bbls_financial_variant
+    - taxonomy.vocabulary.financial_variant
+    - taxonomy.vocabulary.partner
+id: taxonomy_term.partner.field_bbls_financial_variant
+field_name: field_bbls_financial_variant
+entity_type: taxonomy_term
+bundle: partner
+label: 'BBLS Financial Variant'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      financial_variant: financial_variant
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,25 @@
+uuid: b2b6c206-37e0-451d-96bc-442faefacfae
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.person
+    - node.type.person
+  enforced:
+    module:
+      - acquia_cms_person
+      - acquia_cms_person
+_core:
+  default_config_hash: SW5J4G0CvvrXfOoloqlA3DZpJSRhZXEPCTTzVzXA8ks
+id: node.person.title
+field_name: title
+entity_type: node
+bundle: person
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

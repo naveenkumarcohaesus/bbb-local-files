@@ -1,0 +1,78 @@
+display:
+  default:
+    display_title: Alapértelmezés
+    display_options:
+      fields:
+        title:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'Következő ›'
+            previous: '‹ Előző'
+            first: '« Első'
+            last: 'Utolsó »'
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: 'Szűrők alkalmazása'
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+          text_input_required: 'Az eredmények megjelennek bármely szűrő kiválasztása után, az Alkalmaz gombra kattintva'
+          bef:
+            general:
+              secondary_label: 'Haladó lehetőségek'
+  case_study_list_block:
+    display_title: Blokk
+  our_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Szűrők alkalmazása'
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+          text_input_required: 'Az eredmények megjelennek bármely szűrő kiválasztása után, az Alkalmaz gombra kattintva'
+          bef:
+            general:
+              secondary_label: 'Haladó lehetőségek'
+      arguments:
+        'null':
+          exception:
+            title: Mind
+      filters:
+        field_region_target_id:
+          expose:
+            label: Régió
+  related_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Szűrők alkalmazása'
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      arguments:
+        nid:
+          exception:
+            title: Mind
+  related_reading_programme:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        type:
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: 'Szűrők alkalmazása'
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      arguments:
+        nid:
+          exception:
+            title: Mind
+        tid:
+          exception:
+            title: Mind

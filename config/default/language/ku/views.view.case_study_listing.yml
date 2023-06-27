@@ -1,0 +1,41 @@
+display:
+  default:
+    display_title: بنه‌ڕه‌ت
+    display_options:
+      exposed_form:
+        options:
+          bef:
+            general:
+              secondary_label: 'هەڵبژاردنە ئاڵۆزەکان'
+  case_study_list_block:
+    display_title: بلۆک
+  our_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          bef:
+            general:
+              secondary_label: 'هەڵبژاردنە ئاڵۆزەکان'
+      arguments:
+        'null':
+          exception:
+            title: هەموو
+      filters:
+        field_region_target_id:
+          expose:
+            label: ناوچە
+  related_case_studies:
+    display_options:
+      arguments:
+        nid:
+          exception:
+            title: هەموو
+  related_reading_programme:
+    display_options:
+      arguments:
+        nid:
+          exception:
+            title: هەموو
+        tid:
+          exception:
+            title: هەموو

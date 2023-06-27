@@ -1,0 +1,75 @@
+uuid: 9b6e0573-264e-4a71-ae73-24bed67df8d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_results
+    - field.field.node.person.field_categories
+    - field.field.node.person.field_email
+    - field.field.node.person.field_job_title
+    - field.field.node.person.field_metatags
+    - field.field.node.person.field_person_image
+    - field.field.node.person.field_person_mobile
+    - field.field.node.person.field_person_telephone
+    - field.field.node.person.field_person_type
+    - field.field.node.person.field_place
+    - field.field.node.person.field_tags
+    - node.type.person
+  module:
+    - user
+  enforced:
+    module:
+      - acquia_cms_person
+      - acquia_cms_person
+_core:
+  default_config_hash: vTz_Nl7rR4fnmEho4toZGeKejCKDtIKvIq7C1JCKnOA
+id: node.person.search_results
+targetEntityType: node
+bundle: person
+mode: search_results
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_job_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_person_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: x_small_square
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_person_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  field_categories: true
+  field_email: true
+  field_metatags: true
+  field_person_mobile: true
+  field_person_telephone: true
+  field_place: true
+  field_tags: true
+  langcode: true
+  search_api_excerpt: true

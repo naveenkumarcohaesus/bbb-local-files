@@ -1,0 +1,54 @@
+display:
+  default:
+    display_title: Diofyn
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Eitemau pob tudalen'
+            offset_label: Ongli
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Dosbarthu drwy'
+          bef:
+            general:
+              secondary_label: 'Dewisiadau uwch'
+  case_study_list_block:
+    display_title: Bloc
+  our_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Dosbarthu drwy'
+          bef:
+            general:
+              secondary_label: 'Dewisiadau uwch'
+      arguments:
+        'null':
+          exception:
+            title: 'I gyd'
+      filters:
+        field_region_target_id:
+          expose:
+            label: Rhanbarth
+  related_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Dosbarthu drwy'
+      arguments:
+        nid:
+          exception:
+            title: 'I gyd'
+  related_reading_programme:
+    display_options:
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Dosbarthu drwy'
+      arguments:
+        nid:
+          exception:
+            title: 'I gyd'
+        tid:
+          exception:
+            title: 'I gyd'

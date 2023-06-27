@@ -1,0 +1,72 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: 'گەڕاندنەوە بۆ باری سەرەتایی'
+      fields:
+        created:
+          label: درووستکراوە
+        remote_addr:
+          label: 'ئەدرێسی ئای.پی.'
+        view_webform_submission:
+          label: کاره‌کان
+          text: پیشاندان
+      arguments:
+        in_draft:
+          exception:
+            title: هەموو
+  embed_administer:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: کردار
+        locked:
+          label: کلیلدراوە
+        created:
+          label: درووستکراوە
+        remote_addr:
+          label: 'ئەدرێسی ئای.پی.'
+        operations:
+          label: کاره‌کان
+      filters:
+        locked:
+          expose:
+            label: کلیلدراوە
+  embed_manage:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: کردار
+        locked:
+          label: کلیلدراوە
+        created:
+          label: درووستکراوە
+        remote_addr:
+          label: 'ئەدرێسی ئای.پی.'
+        view_webform_submission:
+          label: کاره‌کان
+          text: پیشاندان
+        edit_webform_submission:
+          label: کاره‌کان
+          text: ده‌ستکاریکردن
+      filters:
+        locked:
+          expose:
+            label: کلیلدراوە
+  embed_review:
+    display_options:
+      fields:
+        locked:
+          label: کلیلدراوە
+        created:
+          label: درووستکراوە
+        remote_addr:
+          label: 'ئەدرێسی ئای.پی.'
+        view_webform_submission:
+          label: کاره‌کان
+          text: پیشاندان
+      filters:
+        locked:
+          expose:
+            label: کلیلدراوە

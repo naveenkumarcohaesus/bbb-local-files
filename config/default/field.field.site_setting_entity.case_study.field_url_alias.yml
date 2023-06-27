@@ -1,0 +1,21 @@
+uuid: bd6c1386-bef0-42b4-8e7c-7ffe2e4b7dd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_url_alias
+    - site_settings.site_setting_entity_type.case_study
+id: site_setting_entity.case_study.field_url_alias
+field_name: field_url_alias
+entity_type: site_setting_entity
+bundle: case_study
+label: 'Url alias'
+description: "Add a url alias for the articles listing page. eg. \"success-stories\"<br>\r\nDo not add leading or trailing slashes (\"/\") to the url's."
+required: true
+translatable: false
+default_value:
+  -
+    value: success-stories
+default_value_callback: ''
+settings: {  }
+field_type: string

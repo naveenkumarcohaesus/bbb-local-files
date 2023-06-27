@@ -1,0 +1,26 @@
+uuid: 6b20fc9b-744d-4115-9081-60b3a5c5ae6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_expertise
+    - taxonomy.vocabulary.partner
+  module:
+    - text
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: 8Xg5xbq-IOSEzoly2ZZ19lU5zcj_gPdOUw7YkEkIL40
+id: taxonomy_term.partner.field_expertise
+field_name: field_expertise
+entity_type: taxonomy_term
+bundle: partner
+label: Expertise
+description: 'This field is SUL specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

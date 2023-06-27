@@ -1,0 +1,24 @@
+uuid: 69ed875c-52f8-452d-af2e-7d73a6971ce1
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: gEJaSD-ZH9SnS9rhxt1E1W4z498U9B69J7APA4Xt7sA
+id: taxonomy_term.field_cbils_financial_variant
+field_name: field_cbils_financial_variant
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

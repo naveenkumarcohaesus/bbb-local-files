@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: horizontal_card_w600_h379
+label: 'Horizontal Card W600 H379'
+effects:
+  4f332553-ba1f-4b96-b3ef-eb92760e13d9:
+    uuid: 4f332553-ba1f-4b96-b3ef-eb92760e13d9
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 600
+      height: 379
+      crop_type: focal_point

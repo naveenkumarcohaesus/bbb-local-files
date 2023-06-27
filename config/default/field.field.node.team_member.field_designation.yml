@@ -1,0 +1,26 @@
+uuid: b4b2f38b-9d56-4fe2-9775-6b5f7e8d0a6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_designation
+    - node.type.team_member
+    - taxonomy.vocabulary.designation
+_core:
+  default_config_hash: dIG_Umlu9gQOvhUWWxRVhxLkybppLlYVpf35ogFrPqg
+id: node.team_member.field_designation
+field_name: field_designation
+entity_type: node
+bundle: team_member
+label: Designation
+description: null
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      - designation
+field_type: entity_reference

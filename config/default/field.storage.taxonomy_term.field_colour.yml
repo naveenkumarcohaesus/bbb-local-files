@@ -1,0 +1,32 @@
+uuid: d248eb38-4ddb-4c50-8aec-050ba640ac67
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+_core:
+  default_config_hash: 66c4YTrKgwFZWqYbcihrNCbumSebkv-4LxZAPq2BYF0
+id: taxonomy_term.field_colour
+field_name: field_colour
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: .background-accent-1
+      label: background-accent-1
+    -
+      value: .background-accent-2
+      label: background-accent-2
+    -
+      value: .background-accent-3
+      label: background-accent-3
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

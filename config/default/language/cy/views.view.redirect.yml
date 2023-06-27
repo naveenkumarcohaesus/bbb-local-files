@@ -1,0 +1,32 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Hidlydd
+          reset_button_label: Ailosod
+          exposed_sorts_label: 'Dosbarthu drwy'
+      pager:
+        options:
+          tags:
+            previous: '< blaenorol'
+            next: 'nesaf >'
+            first: Cyntaf
+            last: 'olaf >>'
+          expose:
+            items_per_page_label: 'Eitemau pob tudalen'
+            offset_label: Ongli
+      fields:
+        redirect_source__path:
+          label: Gan
+        created:
+          label: 'Wedi ei greu'
+      filters:
+        redirect_source__path:
+          expose:
+            label: Gan
+        redirect_redirect__uri:
+          expose:
+            label: I
+  page_1:
+    display_title: Tudalen

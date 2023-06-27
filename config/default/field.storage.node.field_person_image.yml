@@ -1,0 +1,25 @@
+uuid: 5d349072-6d90-489b-99e6-1bafa8dd2164
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+  enforced:
+    module:
+      - acquia_cms_person
+_core:
+  default_config_hash: FfVvIkjPaPEw6rkXFOHZYLZOUHhIuvZtY8gMvzjBIIk
+id: node.field_person_image
+field_name: field_person_image
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

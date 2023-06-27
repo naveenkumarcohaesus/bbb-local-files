@@ -1,0 +1,31 @@
+uuid: ad10b546-5f0c-4084-b56f-8fbf839f0ae4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_assets
+    - taxonomy.vocabulary.finance_assets
+    - taxonomy.vocabulary.finance_type
+_core:
+  default_config_hash: SPljrjCIm7U5CMo2DsXHEOKYi3_SDSpD6O9iwJM84x4
+id: taxonomy_term.finance_type.field_assets
+field_name: field_assets
+entity_type: taxonomy_term
+bundle: finance_type
+label: Assets
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      finance_assets: finance_assets
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

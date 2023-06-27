@@ -1,0 +1,21 @@
+uuid: d48dfce6-a99d-4633-b4af-0fbe4df0ff94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_amount_elaboration
+    - taxonomy.vocabulary.finance_type
+_core:
+  default_config_hash: wStB_6qW0WXe6w7BrpkKXX1UGNt8iM0zdsbpwSD8keg
+id: taxonomy_term.finance_type.field_amount_elaboration
+field_name: field_amount_elaboration
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'Amount of finance elaboration'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

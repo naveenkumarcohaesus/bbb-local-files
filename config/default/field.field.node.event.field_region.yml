@@ -1,0 +1,31 @@
+uuid: ab02295c-a066-4b88-9d35-e62aceccbcdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_region
+    - node.type.event
+    - taxonomy.vocabulary.region
+_core:
+  default_config_hash: aEDbHCWf2o5s8A4ujRH0LnJgQP_5RN1zCCQpSKSgvAA
+id: node.event.field_region
+field_name: field_region
+entity_type: node
+bundle: event
+label: Region
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      region: region
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,82 @@
+display:
+  default:
+    display_title: 'Por defecto'
+    display_options:
+      fields:
+        title:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'Siguiente >'
+            previous: '‹ Anterior'
+            first: '« Primero'
+            last: 'Último »'
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      exposed_form:
+        options:
+          submit_button: 'Aplicar filtros'
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
+          bef:
+            general:
+              secondary_label: 'Opciones avanzadas'
+  case_study_list_block:
+    display_title: Bloque
+  our_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Aplicar filtros'
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Seleccione cualquier filtro y pulse Aplicar para ver los resultados'
+          bef:
+            general:
+              secondary_label: 'Opciones avanzadas'
+      arguments:
+        'null':
+          exception:
+            title: Todo(s)
+      filters:
+        field_region_target_id:
+          expose:
+            label: Región
+  related_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Aplicar filtros'
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        nid:
+          exception:
+            title: Todo(s)
+  related_reading_programme:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        type:
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: 'Aplicar filtros'
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        nid:
+          exception:
+            title: Todo(s)
+        tid:
+          exception:
+            title: Todo(s)

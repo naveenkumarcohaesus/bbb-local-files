@@ -1,0 +1,36 @@
+label: پەڕگەکان
+display:
+  default:
+    display_title: بنه‌ڕه‌ت
+    display_options:
+      title: پەڕگەکان
+      fields:
+        filename:
+          label: ناو
+        filesize:
+          label: قەبارە
+        status:
+          label: ڕەوش
+        count:
+          label: 'بەکارهاتووە لە'
+      exposed_form:
+        options:
+          submit_button: پاڵێو
+          reset_button_label: 'گەڕاندنەوە بۆ باری سەرەتایی'
+      filters:
+        filename:
+          expose:
+            label: 'ناوی پەڕگە'
+        status:
+          expose:
+            label: ڕەوش
+  page_1:
+    display_options:
+      menu:
+        title: پەڕگەکان
+  page_2:
+    display_options:
+      arguments:
+        fid:
+          exception:
+            title: هەموو

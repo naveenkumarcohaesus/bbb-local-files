@@ -1,0 +1,23 @@
+uuid: b93f9c44-39e4-4709-a7ef-e0101d8bfe33
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: 9w_kDyLXNF85R_hhXG8lGBBkcbz97lZOsVk9TVg1TZM
+id: taxonomy_term.field_include_quote_section
+field_name: field_include_quote_section
+entity_type: taxonomy_term
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

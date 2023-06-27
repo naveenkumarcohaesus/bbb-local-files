@@ -1,0 +1,14 @@
+uuid: bb845920-b1af-4cbf-a38d-fce75b491dbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.finance_category
+id: taxonomy_vocabulary_finance_category
+entity_type_id: taxonomy_vocabulary
+entity_id: finance_category
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

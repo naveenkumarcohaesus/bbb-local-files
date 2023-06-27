@@ -1,0 +1,49 @@
+label: خەڵک
+display:
+  default:
+    display_title: بنه‌ڕه‌ت
+    display_options:
+      title: خەڵک
+      fields:
+        name:
+          label: 'ناوی تێپەڕبوون'
+        status:
+          label: ڕەوش
+          settings:
+            format_custom_false: بلۆککراوە
+            format_custom_true: چالاکە
+        roles_target_id:
+          label: ڕۆڵەکان
+        operations:
+          label: کاره‌کان
+      exposed_form:
+        options:
+          submit_button: پاڵێو
+          reset_button_label: 'گەڕاندنەوە بۆ باری سەرەتایی'
+      empty:
+        area_text_custom:
+          content: 'هیچ کەسێک نییە.'
+      filters:
+        status:
+          group_info:
+            label: ڕەوش
+            group_items:
+              1:
+                title: چالاکە
+              2:
+                title: بلۆککراوە
+        roles_target_id:
+          expose:
+            label: ڕۆل
+        permission:
+          expose:
+            label: 'مۆڵەت پێدان'
+      use_more_text: زیاتر
+  page_1:
+    display_title: پەڕە
+    display_options:
+      menu:
+        title: لیستە
+      tab_options:
+        title: خەڵک
+        description: 'بەڕێوەبردنی هەژماری بەکارهێنەران، ڕۆڵەکان و مۆڵەتپێدانەکان.'

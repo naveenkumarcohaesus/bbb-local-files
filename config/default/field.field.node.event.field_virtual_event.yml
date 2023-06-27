@@ -1,0 +1,23 @@
+uuid: 7c0e2167-d930-4bf5-9280-f17ed79d4b11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_virtual_event
+    - node.type.event
+id: node.event.field_virtual_event
+field_name: field_virtual_event
+entity_type: node
+bundle: event
+label: 'Virtual event'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

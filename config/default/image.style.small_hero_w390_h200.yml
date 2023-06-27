@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: small_hero_w390_h200
+label: 'Small Hero W390 H200'
+effects:
+  d662ad45-3a19-45b8-a44d-8a6309d18547:
+    uuid: d662ad45-3a19-45b8-a44d-8a6309d18547
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 390
+      height: 200
+      crop_type: focal_point

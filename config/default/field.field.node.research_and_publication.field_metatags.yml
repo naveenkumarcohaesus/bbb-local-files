@@ -1,0 +1,21 @@
+uuid: c2315c25-4c9e-471a-8a9e-0c0f7b322bfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.research_and_publication
+  module:
+    - metatag
+id: node.research_and_publication.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: research_and_publication
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

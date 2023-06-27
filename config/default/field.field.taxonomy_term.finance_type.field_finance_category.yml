@@ -1,0 +1,31 @@
+uuid: 07283265-640f-48d2-a173-f304cae1361b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_finance_category
+    - taxonomy.vocabulary.finance_category
+    - taxonomy.vocabulary.finance_type
+_core:
+  default_config_hash: YuwWqj3BSVwPLQeixTawe35pooI1bLRRJtsPGrcytfw
+id: taxonomy_term.finance_type.field_finance_category
+field_name: field_finance_category
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'Finance Category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      finance_category: finance_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,71 @@
+uuid: 4316d92c-2944-47f0-977c-9c407f83f9fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.horizontal_card_h4
+    - field.field.node.case_study.field_audience
+    - field.field.node.case_study.field_business_structure
+    - field.field.node.case_study.field_content_owner
+    - field.field.node.case_study.field_content_typology
+    - field.field.node.case_study.field_finance_type
+    - field.field.node.case_study.field_hero_background_pattern
+    - field.field.node.case_study.field_image
+    - field.field.node.case_study.field_layout_canvas
+    - field.field.node.case_study.field_metatags
+    - field.field.node.case_study.field_partner
+    - field.field.node.case_study.field_programme
+    - field.field.node.case_study.field_quick_links
+    - field.field.node.case_study.field_region
+    - field.field.node.case_study.field_sector
+    - field.field.node.case_study.field_teaser_text
+    - node.type.case_study
+  module:
+    - text
+    - user
+id: node.case_study.horizontal_card_h4
+targetEntityType: node
+bundle: case_study
+mode: horizontal_card_h4
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_programme:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_teaser_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_audience: true
+  field_business_structure: true
+  field_content_owner: true
+  field_content_typology: true
+  field_finance_type: true
+  field_hero_background_pattern: true
+  field_layout_canvas: true
+  field_metatags: true
+  field_partner: true
+  field_quick_links: true
+  field_region: true
+  field_sector: true
+  footnotes_group: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

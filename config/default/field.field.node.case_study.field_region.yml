@@ -1,0 +1,31 @@
+uuid: e96fcad5-d784-438e-8875-64075fa1e6aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_region
+    - node.type.case_study
+    - taxonomy.vocabulary.region
+_core:
+  default_config_hash: hQdwZ0x5nAUANcO7pA_BXq-H3iqFX8rWbyC9e_e5YiE
+id: node.case_study.field_region
+field_name: field_region
+entity_type: node
+bundle: case_study
+label: Region
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      region: region
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

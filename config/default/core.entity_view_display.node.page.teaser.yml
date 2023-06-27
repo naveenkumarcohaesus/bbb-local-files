@@ -1,0 +1,53 @@
+uuid: 4128de5f-756a-4ee7-9147-1de6b466e0a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.field_categories
+    - field.field.node.page.field_hero_background_pattern
+    - field.field.node.page.field_layout_canvas
+    - field.field.node.page.field_metatags
+    - field.field.node.page.field_page_image
+    - field.field.node.page.field_tags
+    - node.type.page
+  module:
+    - user
+  enforced:
+    module:
+      - acquia_cms_page
+_core:
+  default_config_hash: PgLAjs4co__I_2H_ipbhBv5IWwacfNrckbht7pUT4Uw
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_page_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_categories: true
+  field_hero_background_pattern: true
+  field_layout_canvas: true
+  field_metatags: true
+  field_tags: true
+  footnotes_group: true
+  langcode: true
+  search_api_excerpt: true

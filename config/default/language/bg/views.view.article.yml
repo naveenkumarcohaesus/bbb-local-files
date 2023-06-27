@@ -1,0 +1,16 @@
+label: Статия
+display:
+  default:
+    display_title: 'По подразбиране'
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Търси
+          reset_button_label: Рестартирай
+      arguments:
+        nid:
+          exception:
+            title: Всички
+        tid:
+          exception:
+            title: Всички

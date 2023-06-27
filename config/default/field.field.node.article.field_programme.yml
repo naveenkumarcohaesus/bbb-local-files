@@ -1,0 +1,31 @@
+uuid: 5f7f952f-3687-4d9a-9e60-08acc70a8a34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_programme
+    - node.type.article
+    - taxonomy.vocabulary.programme
+_core:
+  default_config_hash: Iht_zCMyjVuUs4a8DhPMzqlZrpaoBl7hTwppG3wvy8Y
+id: node.article.field_programme
+field_name: field_programme
+entity_type: node
+bundle: article
+label: Programme
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      programme: programme
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,34 @@
+uuid: 7c918eac-6476-4e4b-916a-eebe540081aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_finance_type
+    - taxonomy.vocabulary.finance_type
+    - taxonomy.vocabulary.partner
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: fiLsjcaegKApjtOy4DpfFzqCO9fxYkobebR7H4UGr84
+id: taxonomy_term.partner.field_finance_type
+field_name: field_finance_type
+entity_type: taxonomy_term
+bundle: partner
+label: 'Finance Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      finance_type: finance_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,27 @@
+label: Emberek
+display:
+  default:
+    display_options:
+      title: Emberek
+      fields:
+        field_person_type:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'Következő ›'
+            previous: '‹ Előző'
+            first: '« Első'
+            last: 'Utolsó »'
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      exposed_form:
+        options:
+          submit_button: Alkalmaz
+          reset_button_label: Alaphelyzet
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+  page:
+    display_title: Oldal

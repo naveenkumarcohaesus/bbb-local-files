@@ -1,0 +1,31 @@
+uuid: b39a3a98-c825-416b-a06b-dbfead4db11e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_business_stage
+    - taxonomy.vocabulary.finance_business_stage
+    - taxonomy.vocabulary.finance_type
+_core:
+  default_config_hash: aJzXLSy-uNKluSeHI0UJ2RjhFvoeVIvEB8Uv-Tlq5aY
+id: taxonomy_term.finance_type.field_business_stage
+field_name: field_business_stage
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'Business stage'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      finance_business_stage: finance_business_stage
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

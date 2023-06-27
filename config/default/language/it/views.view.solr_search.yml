@@ -1,0 +1,31 @@
+label: Cerca
+display:
+  default:
+    display_title: Predefinito
+    display_options:
+      title: Cerca
+      fields:
+        title:
+          separator: ', '
+        field_content_typology:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« Prima'
+            last: 'Ultima »'
+          expose:
+            items_per_page_label: 'Voci per pagina'
+            items_per_page_options_all_label: '- Tutto -'
+            offset_label: Scostamento
+      exposed_form:
+        options:
+          submit_button: Applica
+          reset_button_label: Ripristina
+          exposed_sorts_label: 'Ordina per'
+          sort_asc_label: Asc
+          sort_desc_label: Disc
+  search:
+    display_title: Pagina

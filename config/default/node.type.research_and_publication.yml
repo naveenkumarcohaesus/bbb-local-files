@@ -1,0 +1,37 @@
+uuid: 0b948af7-486c-446b-a783-32699a9c5389
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_title_help_text
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  node_title_help_text:
+    title_help: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+_core:
+  default_config_hash: Wcqh9Q-T3WrMUgBQUjL8qgFhDx2cx-jPjp_LeYJpBOo
+name: 'Research and Publication'
+type: research_and_publication
+description: 'A content type to create research and publication content.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

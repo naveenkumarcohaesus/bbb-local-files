@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: x_large_cta_card_w816_h544
+label: 'X Large CTA Card W816 H544'
+effects:
+  9c8fd45c-18ad-4516-a73d-146060759ebe:
+    uuid: 9c8fd45c-18ad-4516-a73d-146060759ebe
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 816
+      height: 544
+      crop_type: focal_point

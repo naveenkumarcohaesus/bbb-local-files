@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_hero_w696_h748
+label: 'Large Hero W696 H748'
+effects:
+  751b91a9-68a3-4119-a739-2842ffe3d28e:
+    uuid: 751b91a9-68a3-4119-a739-2842ffe3d28e
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 696
+      height: 748
+      crop_type: focal_point

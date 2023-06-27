@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: x_large_hero_medium_w1440_h500
+label: 'X Large Hero Medium W1440 H500'
+effects:
+  8b0af107-8439-4cf7-bdd7-fd029cf4d0fb:
+    uuid: 8b0af107-8439-4cf7-bdd7-fd029cf4d0fb
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 1440
+      height: 500
+      crop_type: focal_point

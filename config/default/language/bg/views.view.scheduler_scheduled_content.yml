@@ -1,0 +1,56 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Филтър
+          reset_button_label: Рестартирай
+      pager:
+        options:
+          tags:
+            previous: '‹ предишна'
+            next: 'следваща ›'
+            first: '« първа'
+            last: 'последна »'
+      fields:
+        node_bulk_form:
+          action_title: Действие
+        title:
+          label: Заглавие
+        name:
+          label: Автор
+        status:
+          label: Статус
+          settings:
+            format_custom_true: Публикувано
+        operations:
+          label: Действия
+      filters:
+        title:
+          expose:
+            label: Заглавие
+        type:
+          expose:
+            label: 'Тип на съдържанието'
+        status:
+          expose:
+            label: Статус
+          group_info:
+            group_items:
+              1:
+                title: Публикувано
+        langcode:
+          expose:
+            label: Език
+  overview:
+    display_options:
+      tab_options:
+        title: Съдържание
+  user_page:
+    display_options:
+      tab_options:
+        title: Съдържание
+      arguments:
+        uid:
+          exception:
+            title: Всички

@@ -1,0 +1,19 @@
+uuid: 209fa55c-8612-4016-93b7-1aec6c3e65ef
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - acquia_cms_document
+      - bbb_media_document
+_core:
+  default_config_hash: SCJJEjwDnRiJXmvU3Ghk9b962Jg2OS3wNKaqSwtQKRQ
+id: document
+label: Document
+description: 'Locally hosted documents.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_file
+field_map: {  }

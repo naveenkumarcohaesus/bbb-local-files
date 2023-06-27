@@ -1,0 +1,36 @@
+uuid: 3f31c73e-2f89-4c03-a276-52c68b0b9a16
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.case_study_listing
+  module:
+    - cohesion
+    - collapsiblock
+    - views
+  theme:
+    - bbb_site_studio
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+_core:
+  default_config_hash: mMjhGuFUA8HH3Ye4Yyo_J8S-V-buknn2LyXQaoFYss0
+id: views_block__case_study_listing_related_reading_programme
+theme: bbb_site_studio
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'views_block:case_study_listing-related_reading_programme'
+settings:
+  id: 'views_block:case_study_listing-related_reading_programme'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0

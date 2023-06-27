@@ -1,0 +1,14 @@
+uuid: 5eb1c8a3-848f-4562-8688-7c4ba97c076a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.finance_business_stage
+id: taxonomy_vocabulary_finance_business_stage
+entity_type_id: taxonomy_vocabulary
+entity_id: finance_business_stage
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

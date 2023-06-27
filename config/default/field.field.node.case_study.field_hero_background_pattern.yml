@@ -1,0 +1,25 @@
+uuid: 65ea9a71-9701-46cc-8414-647f0d4ca4d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_background_pattern
+    - node.type.case_study
+  module:
+    - options
+_core:
+  default_config_hash: bYiVsIR5nblEDcrzIG01k3GY4J0dwMsDWTG77IoVVhA
+id: node.case_study.field_hero_background_pattern
+field_name: field_hero_background_pattern
+entity_type: node
+bundle: case_study
+label: 'Hero Background Pattern'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: ceramic
+default_value_callback: ''
+settings: {  }
+field_type: list_string

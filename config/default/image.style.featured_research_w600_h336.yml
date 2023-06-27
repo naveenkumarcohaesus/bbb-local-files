@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: featured_research_w600_h336
+label: 'Featured Research W600 H336'
+effects:
+  0019681d-1e30-48dd-8df5-ae426c70ed79:
+    uuid: 0019681d-1e30-48dd-8df5-ae426c70ed79
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 600
+      height: 336
+      crop_type: focal_point

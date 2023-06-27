@@ -1,0 +1,26 @@
+uuid: 0bbd3fac-ce4d-4ef0-8b1a-9e509caf84a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_layout_canvas
+    - node.type.research_and_publication
+  module:
+    - cohesion_elements
+_core:
+  default_config_hash: '-thFCXCRoc0nRSNJlDNVgmB88uUA4ZbaS5tSU1qbUvY'
+id: node.research_and_publication.field_layout_canvas
+field_name: field_layout_canvas
+entity_type: node
+bundle: research_and_publication
+label: 'Layout Canvas'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:cohesion_layout'
+  handler_settings: {  }
+  access_elements: '0'
+field_type: cohesion_entity_reference_revisions

@@ -1,0 +1,26 @@
+uuid: 98a93c14-cc52-4e3f-9061-d4cb6f3a668a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audience
+    - node.type.case_study
+    - taxonomy.vocabulary.audience
+_core:
+  default_config_hash: vmnd_ZqIckOTjLS0g7beuVlghX0TVTeaX-9CJ6KbzvU
+id: node.case_study.field_audience
+field_name: field_audience
+entity_type: node
+bundle: case_study
+label: Audience
+description: null
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      - audience
+field_type: entity_reference

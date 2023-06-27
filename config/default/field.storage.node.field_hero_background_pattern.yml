@@ -1,0 +1,44 @@
+uuid: cf4c58c1-3db5-4659-bac5-0187d9ecbd69
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: OIToXd1xLqDrXAnoEavb99aIU0pKaFKlny-xRmRtJ-o
+id: node.field_hero_background_pattern
+field_name: field_hero_background_pattern
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: factory-blue
+      label: 'Factory blue with lightbeam device'
+    -
+      value: ceramic
+      label: 'Ceramic with lightbeam device'
+    -
+      value: lab-blue
+      label: 'Laboratory Blue with lightbeam device'
+    -
+      value: ink-factory-blue
+      label: 'Ink Blue with lightbeam device'
+    -
+      value: bbi-light
+      label: 'BBI Light with lightbeam device'
+    -
+      value: bbi-dark
+      label: 'BBI Dark with lightbeam device'
+    -
+      value: bpc-image
+      label: 'BPC Background Image'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

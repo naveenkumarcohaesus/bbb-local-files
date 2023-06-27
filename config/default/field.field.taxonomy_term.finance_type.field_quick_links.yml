@@ -1,0 +1,25 @@
+uuid: 9f8fb376-7fb3-4288-b9f9-00432dfb2dd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_quick_links
+    - taxonomy.vocabulary.finance_type
+  module:
+    - link
+_core:
+  default_config_hash: D3MU0deOn1TFU06MOk2Q3oSzQfUIO4nCy-g_MSX2ATw
+id: taxonomy_term.finance_type.field_quick_links
+field_name: field_quick_links
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'How to apply'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

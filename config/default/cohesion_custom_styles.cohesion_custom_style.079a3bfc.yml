@@ -1,0 +1,19 @@
+uuid: 53764340-2c05-42cc-ab39-164764c3948f
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_style_guide.cohesion_style_guide.aurora_foundations
+label: Text
+id: 079a3bfc
+json_values: '{"preview":{"text":"<div class=\"coh-preview\">Default content for ''Generic''.<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"8ce80b40-7c83-4985-8b7b-756d5f436cb2":{"settings":{"element":"p","class":"","combinator":"","pseudo":""},"styles":{"xs":{"font-family":{"value":"[style-guide:aurora_foundations:body-medium]"}}}},"d4fba28b-e4a1-458e-b6d0-0cc99166d274":{"settings":{"element":"","class":"","combinator":"","pseudo":":last-child"},"styles":{"xs":{"margin":{"margin-bottom":{"value":"0"}}}}}},"sBackgroundColour":"#FFFFFF","variableFields":["styles.8ce80b40-7c83-4985-8b7b-756d5f436cb2.styles.xs.font-family.value"]}'
+json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[],"items":[{"title":"p","type":"container","items":[{"title":":last-child","type":"container","items":[],"form":null,"selectorType":"pseudo","uuid":"d4fba28b-e4a1-458e-b6d0-0cc99166d274","allowedTypes":["child","pseudo"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"margin","breakpoints":[{"name":"xs"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":false},{"name":"margin-bottom","active":true},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]}]}],"form":null,"selectorType":"child","model":"p","uuid":"8ce80b40-7c83-4985-8b7b-756d5f436cb2","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"font","children":[{"formKey":"font-and-color","breakpoints":[{"name":"xs"}],"activeFields":[{"name":"font-family","active":true},{"name":"font-weight","active":false},{"name":"color","active":false}]}]}]}],"form":null}}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-text
+custom_style_type: generic
+available_in_wysiwyg: false
+parent: null
+weight: 16

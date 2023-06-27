@@ -1,0 +1,24 @@
+uuid: e8f56030-8732-4602-83eb-be86e887a7bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: fa0r2SMmapYu2BUNM_XGfqxBhW85VxoVBPB4vRKD4Xk
+id: taxonomy_term.field_website_link_bbls
+field_name: field_website_link_bbls
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

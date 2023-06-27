@@ -1,0 +1,31 @@
+uuid: 50ee925b-4f9c-4cd7-b04b-dcd28c38f2c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_category_icon
+    - media.type.image
+    - taxonomy.vocabulary.faq_category
+_core:
+  default_config_hash: 0_rbggqiiK2Ol7hFORfNYaOw_gN8MSwmoDKuQG6tfXI
+id: taxonomy_term.faq_category.field_category_icon
+field_name: field_category_icon
+entity_type: taxonomy_term
+bundle: faq_category
+label: 'Category Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

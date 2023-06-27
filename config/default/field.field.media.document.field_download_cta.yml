@@ -1,0 +1,19 @@
+uuid: 5109f523-73d0-4098-8a1a-7b4e9ba7463c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_download_cta
+    - media.type.document
+id: media.document.field_download_cta
+field_name: field_download_cta
+entity_type: media
+bundle: document
+label: 'Download CTA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

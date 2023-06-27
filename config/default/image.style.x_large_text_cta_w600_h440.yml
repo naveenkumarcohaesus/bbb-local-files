@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: x_large_text_cta_w600_h440
+label: 'X Large Text CTA W600 H440'
+effects:
+  d631026c-e0c9-4d9b-b46f-0c2a9021e8c1:
+    uuid: d631026c-e0c9-4d9b-b46f-0c2a9021e8c1
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 600
+      height: 440
+      crop_type: focal_point

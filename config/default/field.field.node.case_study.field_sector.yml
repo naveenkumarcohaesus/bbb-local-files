@@ -1,0 +1,31 @@
+uuid: eda01de2-5600-4c49-a7aa-19bbe8429c2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sector
+    - node.type.case_study
+    - taxonomy.vocabulary.sector
+_core:
+  default_config_hash: wz2qiiH8zaQb6k8Sb7thBAbUs6ucqpBydTV8esgWC0Q
+id: node.case_study.field_sector
+field_name: field_sector
+entity_type: node
+bundle: case_study
+label: Sector
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sector: sector
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: small_hero_medium_w320_h233
+label: 'Small Hero Medium W320 H233'
+effects:
+  b9aef4f5-11a9-4a5f-a72a-92e37d07cc48:
+    uuid: b9aef4f5-11a9-4a5f-a72a-92e37d07cc48
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 320
+      height: 233
+      crop_type: focal_point

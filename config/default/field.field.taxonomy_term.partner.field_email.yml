@@ -1,0 +1,24 @@
+uuid: b1abf249-2075-415a-8a51-299606ca5efc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_email
+    - taxonomy.vocabulary.partner
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: oprdwJUd_blW3yOCSzfUaEQAUcYdmQ7c8xMzDSvGmRQ
+id: taxonomy_term.partner.field_email
+field_name: field_email
+entity_type: taxonomy_term
+bundle: partner
+label: Email
+description: 'This field is BBB FH specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

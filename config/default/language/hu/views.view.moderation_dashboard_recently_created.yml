@@ -1,0 +1,35 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Alkalmaz
+          reset_button_label: Alaphelyzet
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+      fields:
+        title:
+          separator: ', '
+        created:
+          separator: ', '
+  block_1:
+    display_title: 'Frissen létrehozott'
+  block_2:
+    display_options:
+      arguments:
+        uid:
+          exception:
+            title: Mind
+        'null':
+          admin_label: 'Jelenlegi felhasználó'
+          exception:
+            title: Mind

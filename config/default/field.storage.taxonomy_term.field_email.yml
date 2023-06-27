@@ -1,0 +1,23 @@
+uuid: dd972218-9987-4495-9e02-7d738dc32f14
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: 82wQXnbQEE1wS56xqi0hCY-knEk6CiENaI5bjx8YLVU
+id: taxonomy_term.field_email
+field_name: field_email
+entity_type: taxonomy_term
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

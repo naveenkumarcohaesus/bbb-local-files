@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: small_card_w358_h238
+label: 'Small Card W358 H238'
+effects:
+  a556237d-ba40-4cde-82d8-481b41a113a0:
+    uuid: a556237d-ba40-4cde-82d8-481b41a113a0
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 358
+      height: 238
+      crop_type: focal_point

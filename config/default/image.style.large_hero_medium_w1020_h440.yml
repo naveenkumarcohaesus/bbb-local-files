@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_hero_medium_w1020_h440
+label: 'Large Hero Medium W1020 H440'
+effects:
+  614a0f5a-f36e-4397-b39a-24324b3b1c23:
+    uuid: 614a0f5a-f36e-4397-b39a-24324b3b1c23
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 1020
+      height: 440
+      crop_type: focal_point

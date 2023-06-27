@@ -1,0 +1,176 @@
+uuid: 04b673ba-def9-416a-8662-78aad7aea914
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_audience
+    - field.field.node.event.field_business_structure
+    - field.field.node.event.field_content_owner
+    - field.field.node.event.field_content_typology
+    - field.field.node.event.field_event_address
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_duration
+    - field.field.node.event.field_event_place
+    - field.field.node.event.field_external_event_link
+    - field.field.node.event.field_finance_type
+    - field.field.node.event.field_geofield
+    - field.field.node.event.field_image
+    - field.field.node.event.field_layout_canvas
+    - field.field.node.event.field_link
+    - field.field.node.event.field_logo
+    - field.field.node.event.field_metatags
+    - field.field.node.event.field_postcode
+    - field.field.node.event.field_region
+    - field.field.node.event.field_registration_link
+    - field.field.node.event.field_sector
+    - field.field.node.event.field_teaser_text
+    - field.field.node.event.field_topic
+    - field.field.node.event.field_virtual_event
+    - node.type.event
+  module:
+    - cohesion_elements
+    - datetime_range
+    - geofield
+    - link
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_content_typology:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_event_address:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_event_date:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_finance_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_geofield:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_layout_canvas:
+    type: cohesion_entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_location:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_logo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_postcode:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_sector:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_virtual_event:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_audience: true
+  field_business_structure: true
+  field_content_owner: true
+  field_event_duration: true
+  field_event_end: true
+  field_event_place: true
+  field_event_start: true
+  field_external_event_link: true
+  field_metatags: true
+  field_region: true
+  field_registration_link: true
+  field_teaser_text: true
+  field_topic: true
+  footnotes_group: true
+  langcode: true
+  search_api_excerpt: true

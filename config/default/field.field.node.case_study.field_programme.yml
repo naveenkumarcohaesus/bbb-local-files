@@ -1,0 +1,31 @@
+uuid: 58fc0211-60f2-4699-8f4c-f7999c924508
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_programme
+    - node.type.case_study
+    - taxonomy.vocabulary.programme
+_core:
+  default_config_hash: sX3HDdH99pcOV0vqTXcXhUT-CrwJ0uXzmUiJbBGKTYw
+id: node.case_study.field_programme
+field_name: field_programme
+entity_type: node
+bundle: case_study
+label: Programme
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      programme: programme
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

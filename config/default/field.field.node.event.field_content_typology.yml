@@ -1,0 +1,31 @@
+uuid: 741c903f-8cc6-4462-8b8f-8e33f0bc4a68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_typology
+    - node.type.event
+    - taxonomy.vocabulary.content_topology
+_core:
+  default_config_hash: 9SA93QrTkpK9ST1BtoUVn_-oglyht5LG1RJt68R47qI
+id: node.event.field_content_typology
+field_name: field_content_typology
+entity_type: node
+bundle: event
+label: 'Content Typology'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_topology: content_topology
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

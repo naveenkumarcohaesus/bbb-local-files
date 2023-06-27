@@ -1,0 +1,24 @@
+uuid: 69561d08-da24-4c25-84dd-fdcda949b625
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_layout_canvas_block
+    - field.storage.block_content.field_layout_canvas
+  module:
+    - cohesion_elements
+id: block_content.custom_layout_canvas_block.field_layout_canvas
+field_name: field_layout_canvas
+entity_type: block_content
+bundle: custom_layout_canvas_block
+label: 'Layout Canvas'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:cohesion_layout'
+  handler_settings: {  }
+  access_elements: '0'
+field_type: cohesion_entity_reference_revisions

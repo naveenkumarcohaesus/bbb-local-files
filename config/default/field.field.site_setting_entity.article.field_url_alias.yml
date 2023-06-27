@@ -1,0 +1,21 @@
+uuid: 8729fe5b-7e2f-4ab8-9253-83ef3f435abb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_url_alias
+    - site_settings.site_setting_entity_type.article
+id: site_setting_entity.article.field_url_alias
+field_name: field_url_alias
+entity_type: site_setting_entity
+bundle: article
+label: 'Url alias'
+description: "Add a url alias for the articles listing page. eg. \"articles\"<br>\r\nDo not add leading or trailing slashes (\"/\") to the url's."
+required: true
+translatable: true
+default_value:
+  -
+    value: articles
+default_value_callback: ''
+settings: {  }
+field_type: string

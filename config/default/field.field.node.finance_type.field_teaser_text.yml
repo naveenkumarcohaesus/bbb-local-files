@@ -1,0 +1,21 @@
+uuid: ea31d06a-6068-4fd2-a70e-5d3b220e1f06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_text
+    - node.type.finance_type
+_core:
+  default_config_hash: DPRRwBrWwlMfM1Q0xKDHfKqf6dDUZrID9qKr-ql2dQ4
+id: node.finance_type.field_teaser_text
+field_name: field_teaser_text
+entity_type: node
+bundle: finance_type
+label: 'Teaser Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

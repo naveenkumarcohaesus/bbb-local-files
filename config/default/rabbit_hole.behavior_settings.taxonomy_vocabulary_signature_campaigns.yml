@@ -1,0 +1,14 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.signature_campaigns
+id: taxonomy_vocabulary_signature_campaigns
+entity_type_id: taxonomy_vocabulary
+entity_id: signature_campaigns
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

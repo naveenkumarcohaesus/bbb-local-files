@@ -1,0 +1,21 @@
+uuid: afd4c6b7-dd7f-45f9-8107-ec98c025cbb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_background_pattern
+    - node.type.research_and_publication
+  module:
+    - options
+id: node.research_and_publication.field_hero_background_pattern
+field_name: field_hero_background_pattern
+entity_type: node
+bundle: research_and_publication
+label: 'Hero Background Pattern'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

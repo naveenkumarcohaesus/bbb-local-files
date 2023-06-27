@@ -1,0 +1,56 @@
+uuid: d4a9213e-5180-4d69-9e3f-444623640042
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.faq_category.field_category_icon
+    - field.field.taxonomy_term.faq_category.field_cta_url
+    - field.field.taxonomy_term.faq_category.field_show_on_website
+    - taxonomy.vocabulary.faq_category
+  module:
+    - link
+    - text
+id: taxonomy_term.faq_category.default
+targetEntityType: taxonomy_term
+bundle: faq_category
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_category_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: original
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_cta_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_show_on_website:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

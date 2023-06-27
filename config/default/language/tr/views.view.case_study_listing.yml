@@ -1,0 +1,78 @@
+display:
+  default:
+    display_title: Varsayılan
+    display_options:
+      fields:
+        title:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'Sonraki ›'
+            previous: '‹ Önceki'
+            first: '« İlk'
+            last: 'Son »'
+          expose:
+            items_per_page_label: 'Sayfa başına öğe sayısı'
+            items_per_page_options_all_label: '- Tümü -'
+            offset_label: 'Başlangıç değeri'
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Sıralama anahtarı'
+          sort_asc_label: Artan
+          sort_desc_label: Azalan
+          text_input_required: 'Herhangi bir süzgeç seçin ve sonuçları görmek için Uygula''ya tıklayın'
+          bef:
+            general:
+              secondary_label: 'Gelişmiş seçenekler'
+  case_study_list_block:
+    display_title: Blok
+  our_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Sıralama anahtarı'
+          sort_asc_label: Artan
+          sort_desc_label: Azalan
+          text_input_required: 'Herhangi bir süzgeç seçin ve sonuçları görmek için Uygula''ya tıklayın'
+          bef:
+            general:
+              secondary_label: 'Gelişmiş seçenekler'
+      arguments:
+        'null':
+          exception:
+            title: Tümü
+      filters:
+        field_region_target_id:
+          expose:
+            label: Bölge
+  related_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Sıralama anahtarı'
+          sort_asc_label: Artan
+          sort_desc_label: Azalan
+      arguments:
+        nid:
+          exception:
+            title: Tümü
+  related_reading_programme:
+    display_options:
+      fields:
+        title:
+          separator: ', '
+        type:
+          separator: ', '
+      exposed_form:
+        options:
+          exposed_sorts_label: 'Sıralama anahtarı'
+          sort_asc_label: Artan
+          sort_desc_label: Azalan
+      arguments:
+        nid:
+          exception:
+            title: Tümü
+        tid:
+          exception:
+            title: Tümü

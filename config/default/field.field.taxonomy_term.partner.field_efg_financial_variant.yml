@@ -1,0 +1,34 @@
+uuid: bb4de4f7-e0cd-4f0d-8320-4b19685200a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_efg_financial_variant
+    - taxonomy.vocabulary.financial_variant
+    - taxonomy.vocabulary.partner
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: YobuQ58-COdsD6sVWlRwu6jbSKeUczx8k_5YD0pV6Ic
+id: taxonomy_term.partner.field_efg_financial_variant
+field_name: field_efg_financial_variant
+entity_type: taxonomy_term
+bundle: partner
+label: 'EFG Financial Variant'
+description: 'This field is BBB specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      financial_variant: financial_variant
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

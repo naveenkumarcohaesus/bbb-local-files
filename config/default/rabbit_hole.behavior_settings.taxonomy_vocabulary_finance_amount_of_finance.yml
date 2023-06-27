@@ -1,0 +1,14 @@
+uuid: 59749a5b-7c74-4797-8a3f-38e9ab828e2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.finance_amount_of_finance
+id: taxonomy_vocabulary_finance_amount_of_finance
+entity_type_id: taxonomy_vocabulary
+entity_id: finance_amount_of_finance
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

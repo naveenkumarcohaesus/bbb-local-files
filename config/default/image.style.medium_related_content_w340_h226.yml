@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: medium_related_content_w340_h226
+label: 'Medium Related Content W340 H226'
+effects:
+  5cd2297e-340f-485c-b41f-686e7851cb6a:
+    uuid: 5cd2297e-340f-485c-b41f-686e7851cb6a
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 340
+      height: 226
+      crop_type: focal_point

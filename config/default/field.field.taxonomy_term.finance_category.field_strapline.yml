@@ -1,0 +1,23 @@
+uuid: 3e914857-e87c-436e-9417-39cd65027933
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_strapline
+    - taxonomy.vocabulary.finance_category
+  module:
+    - text
+_core:
+  default_config_hash: lNhirWAKVcsB85GexPXldEQz3Mr9lawI1eYGWmOjP_k
+id: taxonomy_term.finance_category.field_strapline
+field_name: field_strapline
+entity_type: taxonomy_term
+bundle: finance_category
+label: Strapline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

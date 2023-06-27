@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: small_text_cta_w358_h262
+label: 'Small Text CTA W358 H262'
+effects:
+  708e2e4e-9302-49f3-b738-9135881c982e:
+    uuid: 708e2e4e-9302-49f3-b738-9135881c982e
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 358
+      height: 262
+      crop_type: focal_point

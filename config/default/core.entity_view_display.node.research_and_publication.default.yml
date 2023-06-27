@@ -1,0 +1,51 @@
+uuid: 47c0cc42-03e0-4b98-a865-5867b602f5f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.research_and_publication.field_business_structure
+    - field.field.node.research_and_publication.field_content_owner
+    - field.field.node.research_and_publication.field_content_typology
+    - field.field.node.research_and_publication.field_download_report_link
+    - field.field.node.research_and_publication.field_hero_background_pattern
+    - field.field.node.research_and_publication.field_image
+    - field.field.node.research_and_publication.field_layout_canvas
+    - field.field.node.research_and_publication.field_media_document
+    - field.field.node.research_and_publication.field_metatags
+    - field.field.node.research_and_publication.field_quick_links
+    - field.field.node.research_and_publication.field_teaser_text
+    - field.field.node.research_and_publication.field_topic
+    - node.type.research_and_publication
+  module:
+    - cohesion_elements
+    - user
+id: node.research_and_publication.default
+targetEntityType: node
+bundle: research_and_publication
+mode: default
+content:
+  field_layout_canvas:
+    type: cohesion_entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 108
+    region: content
+hidden:
+  field_business_structure: true
+  field_content_owner: true
+  field_content_typology: true
+  field_download_report_link: true
+  field_hero_background_pattern: true
+  field_image: true
+  field_media_document: true
+  field_metatags: true
+  field_quick_links: true
+  field_teaser_text: true
+  field_topic: true
+  footnotes_group: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

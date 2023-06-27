@@ -1,0 +1,14 @@
+uuid: cf54c192-d272-4177-a9fe-5d75b49f1c09
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.finance_profits
+id: taxonomy_vocabulary_finance_profits
+entity_type_id: taxonomy_vocabulary
+entity_id: finance_profits
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

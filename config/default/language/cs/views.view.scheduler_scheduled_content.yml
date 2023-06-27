@@ -1,0 +1,69 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtr
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          tags:
+            previous: '‹ předchozí'
+            next: 'následující ›'
+            first: '« první'
+            last: 'poslední »'
+      fields:
+        node_bulk_form:
+          action_title: Akce
+        title:
+          label: Nadpis
+          separator: ', '
+        type:
+          separator: ', '
+        name:
+          label: Autor
+          separator: ', '
+        status:
+          label: Stav
+          settings:
+            format_custom_true: Zveřejněno
+          separator: ', '
+        publish_on:
+          separator: ', '
+        unpublish_on:
+          separator: ', '
+        operations:
+          label: Operace
+      filters:
+        title:
+          expose:
+            label: Nadpis
+        type:
+          expose:
+            label: 'Typ obsahu'
+        status:
+          expose:
+            label: Stav
+          group_info:
+            label: 'Status zveřejnění'
+            group_items:
+              1:
+                title: Zveřejněno
+        langcode:
+          expose:
+            label: Jazyk
+  overview:
+    display_options:
+      tab_options:
+        title: Obsah
+  user_page:
+    display_options:
+      tab_options:
+        title: Obsah
+      arguments:
+        uid:
+          exception:
+            title: Vše

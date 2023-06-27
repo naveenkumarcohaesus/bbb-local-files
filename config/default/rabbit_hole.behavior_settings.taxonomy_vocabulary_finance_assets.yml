@@ -1,0 +1,14 @@
+uuid: 1fb2f466-fc67-450f-b603-cddfa6627bc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.finance_assets
+id: taxonomy_vocabulary_finance_assets
+entity_type_id: taxonomy_vocabulary
+entity_id: finance_assets
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

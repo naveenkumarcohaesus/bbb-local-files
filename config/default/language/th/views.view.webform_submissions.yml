@@ -1,0 +1,105 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Apply
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« first'
+            last: 'last »'
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+      fields:
+        created:
+          label: สร้างเมื่อ
+        remote_addr:
+          label: 'ที่อยู IP'
+        view_webform_submission:
+          label: Operations
+          text: view
+      header:
+        result:
+          content: 'แสดง @start - @end of @total'
+      arguments:
+        in_draft:
+          exception:
+            title: ทั้งหมด
+  embed_administer:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: แอคชั่น
+        sticky:
+          label: ปักหมุด
+        locked:
+          label: ถูกล็อค
+        created:
+          label: สร้างเมื่อ
+        remote_addr:
+          label: 'ที่อยู IP'
+        operations:
+          label: Operations
+      filters:
+        sticky:
+          expose:
+            label: ปักหมุด
+        locked:
+          expose:
+            label: ถูกล็อค
+  embed_manage:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: แอคชั่น
+        sticky:
+          label: ปักหมุด
+        locked:
+          label: ถูกล็อค
+        created:
+          label: สร้างเมื่อ
+        remote_addr:
+          label: 'ที่อยู IP'
+        view_webform_submission:
+          label: Operations
+          text: view
+        edit_webform_submission:
+          label: Operations
+          text: แก้ไข
+      filters:
+        sticky:
+          expose:
+            label: ปักหมุด
+        locked:
+          expose:
+            label: ถูกล็อค
+  embed_review:
+    display_options:
+      fields:
+        sticky:
+          label: ปักหมุด
+        locked:
+          label: ถูกล็อค
+        created:
+          label: สร้างเมื่อ
+        remote_addr:
+          label: 'ที่อยู IP'
+        view_webform_submission:
+          label: Operations
+          text: view
+      filters:
+        sticky:
+          expose:
+            label: ปักหมุด
+        locked:
+          expose:
+            label: ถูกล็อค

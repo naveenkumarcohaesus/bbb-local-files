@@ -1,0 +1,26 @@
+uuid: 722fced1-cc33-41ab-affb-b996b3a513eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_layout_canvas
+    - node.type.case_study
+  module:
+    - cohesion_elements
+_core:
+  default_config_hash: mQw5kpb98dBUeXVh1I_nKP6Xe32Ghfp86_8JfkEQ5e0
+id: node.case_study.field_layout_canvas
+field_name: field_layout_canvas
+entity_type: node
+bundle: case_study
+label: 'Layout Canvas'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:cohesion_layout'
+  handler_settings: {  }
+  access_elements: '0'
+field_type: cohesion_entity_reference_revisions

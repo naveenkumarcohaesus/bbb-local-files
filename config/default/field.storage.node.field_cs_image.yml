@@ -1,0 +1,22 @@
+uuid: c1da542f-2187-46b2-b977-c2ca049c8804
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+_core:
+  default_config_hash: fwMLPw9IGScR9_pC2Rj21jn1_nL_lR9c7yJnAKR2roI
+id: node.field_cs_image
+field_name: field_cs_image
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

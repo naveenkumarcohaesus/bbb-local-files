@@ -1,0 +1,19 @@
+uuid: d431904e-fce8-4694-a69d-508ae8a798de
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_custom_styles.cohesion_custom_style.8f79b34a
+label: 'Team Member Card list'
+id: 42b2b8e2
+json_values: '{"preview":{"text":"<p><strong>Unordered list<\/strong><\/p>\n\n<ul>\n\t<li class=\"coh-preview\">List item 1<\/li>\n\t<li class=\"coh-preview\">List item 2<\/li>\n\t<li class=\"coh-preview\">List item 3<\/li>\n<\/ul>\n\n<p>&nbsp;<\/p>\n\n<p><strong>Ordered list<\/strong><\/p>\n\n<ol>\n\t<li class=\"coh-preview\">List item 1<\/li>\n\t<li class=\"coh-preview\">List item 2<\/li>\n\t<li class=\"coh-preview\">List item 3<\/li>\n<\/ol>\n\n<p>&nbsp;<\/p>\n\n<p><strong>Description list<\/strong><\/p>\n\n<dl>\n\t<dt class=\"coh-preview\">List term 1<\/dt>\n\t<dd class=\"coh-preview\">List description 1<\/dd>\n\t<dt class=\"coh-preview\">List term 2<\/dt>\n\t<dd class=\"coh-preview\">List description 2<\/dd>\n\t<dt class=\"coh-preview\">List term 3<\/dt>\n\t<dd class=\"coh-preview\">List description 3<\/dd>\n<\/dl>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"li,dd,dt","class":"","combinator":"","pseudo":""},"63ad4840-9e40-49d9-8371-9251c39c1b95":{"settings":{"element":".team--member-card.coh-style-team-member-card","class":"","combinator":"","pseudo":""},"styles":{"xs":{"position":{"value":"static"},"custom-css":[{"customCssProperty":{"value":"clip-path"},"customCss":{"value":"none"}}],"margin":{"margin-bottom":{"value":"0"}}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+json_mapper: '{"styles":{"title":"List","selectorType":"topLevel","formDefinition":[],"items":[{"title":".team--member-card.coh-style-team-member-card","type":"container","items":[],"form":null,"selectorType":"child","model":".team--member-card.coh-style-team-member-card","uuid":"63ad4840-9e40-49d9-8371-9251c39c1b95","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"position","breakpoints":[{"name":"xs"}],"activeFields":[{"name":"position","active":true},{"name":"top","active":true},{"name":"bottom","active":true},{"name":"left","active":true},{"name":"right","active":true},{"name":"z-index","active":true}]},{"formKey":"margin","breakpoints":[{"name":"xs"}],"activeFields":[{"name":"margin-equal","active":false},{"name":"margin-top","active":false},{"name":"margin-bottom","active":true},{"name":"margin-left","active":false},{"name":"margin-right","active":false},{"name":"margin-block-start","active":false},{"name":"margin-block-end","active":false},{"name":"margin-inline-start","active":false},{"name":"margin-inline-end","active":false}]}]},{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xs"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}]}],"form":null}}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-team-member-card-list
+custom_style_type: list_item
+available_in_wysiwyg: false
+parent: null
+weight: 0

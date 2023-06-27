@@ -1,0 +1,22 @@
+label: Artikel
+display:
+  default:
+    display_title: Standard
+    display_options:
+      fields:
+        title:
+          separator: ', '
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      arguments:
+        nid:
+          exception:
+            title: Alle
+        tid:
+          exception:
+            title: Alle

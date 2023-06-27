@@ -1,0 +1,20 @@
+_core:
+  default_config_hash: mNK3ZrqDVYFY2yk0AUlJOc374zlf5Bndk5rjgJZsbgM
+enabled: true
+settings:
+  redirect_url: ''
+  client_id: ClientID
+  client_secret: ClientSecret
+  enable_single_sign_out: 0
+  authorization_endpoint_wa: 'https://login.microsoftonline.com/common/oauth2/authorize'
+  token_endpoint_wa: 'https://login.microsoftonline.com/common/oauth2/token'
+  map_ad_groups_to_roles: 1
+  group_mapping:
+    method: '1'
+    mappings: bankers|1
+    strict: 0
+  userinfo_graph_api_wa: '1'
+  userinfo_endpoint_wa: 'https://example.com/oauth2/UserInfo'
+  userinfo_graph_api_use_other_mails: 0
+  userinfo_update_email: 1
+  hide_email_address_warning: 0

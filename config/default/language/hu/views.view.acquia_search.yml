@@ -1,0 +1,35 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Keresés
+          reset_button_label: Alaphelyzet
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elemek száma oldalanként'
+            items_per_page_options_all_label: '– Mind –'
+            offset_label: Eltolás
+          tags:
+            previous: '‹ Előző'
+            next: 'Következő ›'
+            first: '« Első'
+            last: 'Utolsó »'
+      fields:
+        title:
+          separator: ', '
+        type:
+          label: Típus
+          separator: ', '
+      filters:
+        search_api_fulltext:
+          expose:
+            label: Keresés
+      title: Keresés
+  page:
+    display_options:
+      menu:
+        title: Keresés

@@ -1,0 +1,26 @@
+uuid: a4e1a0c0-2026-4c70-b273-4af71fc930f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audience
+    - node.type.article
+    - taxonomy.vocabulary.audience
+_core:
+  default_config_hash: DrJ71qoODOZ_XttT9HpHa4n93_s0eraJd3dEjhbbAxI
+id: node.article.field_audience
+field_name: field_audience
+entity_type: node
+bundle: article
+label: Audience
+description: null
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      - audience
+field_type: entity_reference

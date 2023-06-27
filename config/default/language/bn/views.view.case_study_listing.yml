@@ -1,0 +1,30 @@
+display:
+  default:
+    display_title: ডিফল্ট
+  case_study_list_block:
+    display_title: ব্লক
+  our_case_studies:
+    display_options:
+      arguments:
+        'null':
+          exception:
+            title: সমস্ত
+      filters:
+        field_region_target_id:
+          expose:
+            label: অঞ্চল
+  related_case_studies:
+    display_options:
+      arguments:
+        nid:
+          exception:
+            title: সমস্ত
+  related_reading_programme:
+    display_options:
+      arguments:
+        nid:
+          exception:
+            title: সমস্ত
+        tid:
+          exception:
+            title: সমস্ত

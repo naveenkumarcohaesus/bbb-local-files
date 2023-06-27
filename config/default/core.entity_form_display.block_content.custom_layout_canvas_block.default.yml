@@ -1,0 +1,36 @@
+uuid: a4dee1bb-19cf-4f31-b5e6-5ef6cdf1c00b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_layout_canvas_block
+    - field.field.block_content.custom_layout_canvas_block.field_layout_canvas
+  module:
+    - cohesion_elements
+id: block_content.custom_layout_canvas_block.default
+targetEntityType: block_content
+bundle: custom_layout_canvas_block
+mode: default
+content:
+  field_layout_canvas:
+    type: cohesion_layout_builder_widget
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

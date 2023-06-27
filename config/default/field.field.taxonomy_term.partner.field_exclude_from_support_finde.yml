@@ -1,0 +1,28 @@
+uuid: f8b81b77-81d1-4447-abb4-3de894cfa028
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_exclude_from_support_finde
+    - taxonomy.vocabulary.partner
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: pYq_VTwQGE6BetUtHM8-Ocve6GHSuE3iMbm-86m5avI
+id: taxonomy_term.partner.field_exclude_from_support_finde
+field_name: field_exclude_from_support_finde
+entity_type: taxonomy_term
+bundle: partner
+label: 'Exclude from support finder tool'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

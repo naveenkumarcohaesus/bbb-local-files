@@ -1,0 +1,21 @@
+uuid: ea460ba8-ab90-4d44-b523-1d6950370f8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: AE1tVBqycBVv3ggisXbGlG7Gy68_U1WFTZa_jw7NqnY
+id: taxonomy_term.field_assets
+field_name: field_assets
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+uuid: 135c02be-a25c-4787-861a-358c8989aac0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_structure
+    - node.type.product
+    - taxonomy.vocabulary.business_structure
+_core:
+  default_config_hash: Uh3aH9Cg3RuldrG242l3hPGlb_LjjoucCkjhF7N8mmw
+id: node.product.field_business_structure
+field_name: field_business_structure
+entity_type: node
+bundle: product
+label: 'Business Structure'
+description: null
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      - business_structure
+field_type: entity_reference

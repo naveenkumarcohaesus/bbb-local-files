@@ -1,0 +1,20 @@
+uuid: e6e8f5a0-a4f5-4e3a-ba7c-070735cfeee9
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_templates.cohesion_master_templates.master_template
+label: 'Full content (Node, Team Member)'
+id: node_team_member_full
+json_values: '{"canvas":[{"type":"container","uid":"container","title":"Container","status":{"collapsed":false},"uuid":"2f40c52b-df28-4771-ad83-1e991fc42d1a","parentUid":"root","children":[{"type":"container","uid":"drupal-field","title":"Field","status":{"collapsed":true},"uuid":"01caf9e5-219b-4c1a-99df-4a746b49ec14","parentUid":"container","children":[]},{"type":"item","uid":"drupal-block","title":"Block","status":{"collapsed":true},"uuid":"a5f6852c-86a1-49e8-95a7-5ba8d93fb846","parentUid":"container","children":[]}]}],"mapper":{"2f40c52b-df28-4771-ad83-1e991fc42d1a":{},"01caf9e5-219b-4c1a-99df-4a746b49ec14":{},"a5f6852c-86a1-49e8-95a7-5ba8d93fb846":{}},"model":{"2f40c52b-df28-4771-ad83-1e991fc42d1a":{"settings":{"width":"fluid"}},"01caf9e5-219b-4c1a-99df-4a746b49ec14":{"settings":{"title":"Field","settings":{"drupalField":""},"drupalField":"content.field_layout_canvas"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"drupal-field"}}},"a5f6852c-86a1-49e8-95a7-5ba8d93fb846":{"settings":{"title":"Footnotes Block","customStyle":[{"customStyle":""}],"settings":{"theme":"all","customStyle":[{"customStyle":""}]},"theme":"all","block":"footnotesgroup"},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"block"}}}},"previewModel":{"01caf9e5-219b-4c1a-99df-4a746b49ec14":{},"a5f6852c-86a1-49e8-95a7-5ba8d93fb846":{}},"variableFields":{"01caf9e5-219b-4c1a-99df-4a746b49ec14":[],"a5f6852c-86a1-49e8-95a7-5ba8d93fb846":[]},"meta":{"fieldHistory":[]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+modified: true
+selectable: true
+custom: false
+twig_template: node--cohesion--node-team-member-full
+default: true
+entity_type: node
+bundle: team_member
+view_mode: full
+master_template: __none__

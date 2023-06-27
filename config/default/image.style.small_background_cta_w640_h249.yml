@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: small_background_cta_w640_h249
+label: 'Small Background CTA W640 H249'
+effects:
+  aa1e5d6c-a841-4eff-851a-07afcc580f1b:
+    uuid: aa1e5d6c-a841-4eff-851a-07afcc580f1b
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 640
+      height: 249
+      crop_type: focal_point

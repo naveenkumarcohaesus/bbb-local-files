@@ -1,0 +1,21 @@
+uuid: 4bdebe61-2237-443f-ad17-00b2480eb2e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: NX5wHzGCbG8CRerAOMc5GWr31aXNYVZhnVMR-xEsaCA
+id: taxonomy_term.field_finance_amount
+field_name: field_finance_amount
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

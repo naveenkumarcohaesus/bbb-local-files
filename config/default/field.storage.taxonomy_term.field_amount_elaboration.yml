@@ -1,0 +1,23 @@
+uuid: 7027cebb-15ae-447a-97d0-3c036f3d2b54
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: wr2S8zzjVCrC74Wob3Zgm0rg-mkVqxhM1b5726UOVDA
+id: taxonomy_term.field_amount_elaboration
+field_name: field_amount_elaboration
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

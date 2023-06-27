@@ -1,0 +1,36 @@
+description: 'پەیامە نوێیەکانی تۆمار'
+display:
+  default:
+    display_title: بنه‌ڕه‌ت
+    display_options:
+      title: 'پەیامە نوێیەکانی تۆمار'
+      fields:
+        severity:
+          label: دژواری
+        type:
+          label: جۆر
+        timestamp:
+          label: ڕێکەوت
+        message:
+          label: پەیام
+        name:
+          label: بەکارهێنەر
+        link:
+          label: کاره‌کان
+      exposed_form:
+        options:
+          submit_button: پاڵێو
+          reset_button_label: 'گەڕاندنەوە بۆ باری سەرەتایی'
+      empty:
+        area:
+          admin_label: 'هیچ پەیامێکی تۆمار نییە.'
+          content: 'هیچ پەیامێکی تۆمار نییە.'
+      filters:
+        type:
+          expose:
+            label: جۆر
+        severity:
+          expose:
+            label: دژواری
+  page:
+    display_title: پەڕە

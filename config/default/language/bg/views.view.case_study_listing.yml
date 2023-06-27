@@ -1,0 +1,41 @@
+display:
+  default:
+    display_title: 'По подразбиране'
+    display_options:
+      exposed_form:
+        options:
+          bef:
+            general:
+              secondary_label: 'Разширени опции'
+  case_study_list_block:
+    display_title: Блокирай
+  our_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          bef:
+            general:
+              secondary_label: 'Разширени опции'
+      arguments:
+        'null':
+          exception:
+            title: Всички
+      filters:
+        field_region_target_id:
+          expose:
+            label: 'Област на сайта'
+  related_case_studies:
+    display_options:
+      arguments:
+        nid:
+          exception:
+            title: Всички
+  related_reading_programme:
+    display_options:
+      arguments:
+        nid:
+          exception:
+            title: Всички
+        tid:
+          exception:
+            title: Всички

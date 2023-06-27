@@ -1,0 +1,22 @@
+uuid: 13a16597-154f-482e-a129-6068dabaa2c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_custom_styles.cohesion_custom_style.b29f11c8
+    - cohesion_elements.cohesion_component_category.cpt_cat_card_components
+label: 'Team Member'
+id: cpt_team_member
+json_values: '{"canvas":[{"type":"container","uid":"list-container","title":"List container","status":{"collapsed":false},"iconColor":"content","uuid":"1fdd6c0e-dbbd-4ec7-a8a1-4b69fa7d4bfe","parentUid":"root","children":[{"type":"item","uid":"component-drop-zone-placeholder","title":"Component drop zone","status":{"collapsed":true},"uuid":"8a57ae0a-2afa-4106-ba7c-8733ad347f19","parentUid":"list-container","children":[]}]}],"componentForm":[{"type":"form-container","uid":"form-tab-container","title":"Tab container","status":{"collapsed":false},"options":{"formBuilder":true},"uuid":"5ceb4eaf-b433-4fc0-94be-074364681003","parentUid":"root","children":[{"type":"form-container","uid":"form-tab-item","title":"Tab item","status":{"collapsed":false},"options":{"formBuilder":true},"uuid":"148ff8d7-6018-4f47-993e-d85eb0435480","parentUid":"form-tab-container","children":[{"type":"form-field","uid":"form-select","title":"Select","translate":false,"status":{"collapsed":false},"uuid":"83d9c354-dcee-4d13-9ae3-2d4a08a84dcb","parentUid":"form-tab-item","children":[]}]}]}],"mapper":{"8a57ae0a-2afa-4106-ba7c-8733ad347f19":{},"1fdd6c0e-dbbd-4ec7-a8a1-4b69fa7d4bfe":{"settings":{"formDefinition":[{"formKey":"list-container-settings","children":[{"formKey":"list-container-type","breakpoints":[],"activeFields":[{"name":"element","active":true}]},{"formKey":"list-container-style","breakpoints":[],"activeFields":[{"name":"customStyle","active":true},{"name":"customStyle","active":true}]}]}],"selectorType":"topLevel","form":null,"items":[]},"markup":{"formDefinition":[{"formKey":"tab-markup-classes-and-ids","children":[{"formKey":"tab-markup-add-classes","breakpoints":[],"activeFields":[{"name":"classes","active":true}]}]}],"title":"Markup","selectorType":"topLevel","form":null,"items":[]}}},"model":{"1fdd6c0e-dbbd-4ec7-a8a1-4b69fa7d4bfe":{"settings":{"title":"List container","element":"ul","customStyle":[{"customStyle":"coh-style-team-member-grid-list"}],"settings":{"element":"ul","customStyle":[{"customStyle":""}]}},"context-visibility":{"contextVisibility":{"condition":"ALL"}},"styles":{"settings":{"element":"list-container"}},"markup":{"classes":"team--member-grid [field.83d9c354-dcee-4d13-9ae3-2d4a08a84dcb]"}},"8a57ae0a-2afa-4106-ba7c-8733ad347f19":{"settings":{"dropzoneHideSelector":""}},"5ceb4eaf-b433-4fc0-94be-074364681003":{"settings":{"title":"Tab container","type":"cohTabContainer","responsiveMode":true},"contextVisibility":{"condition":"ALL"}},"148ff8d7-6018-4f47-993e-d85eb0435480":{"settings":{"title":"Variation","type":"cohTabItem","breakpointIcon":""},"contextVisibility":{"condition":"ALL"}},"83d9c354-dcee-4d13-9ae3-2d4a08a84dcb":{"settings":{"title":"Component style","type":"cohSelect","selectType":"custom","schema":{"type":"string"},"options":[{"label":"Default","value":""},{"label":"Colleagues Section","value":"colleagues-section"}],"machineName":"component-style","tooltipPlacement":"auto right"},"contextVisibility":{"condition":"ALL"},"model":{"value":null}}},"previewModel":{"1fdd6c0e-dbbd-4ec7-a8a1-4b69fa7d4bfe":{},"5ceb4eaf-b433-4fc0-94be-074364681003":{},"148ff8d7-6018-4f47-993e-d85eb0435480":{},"83d9c354-dcee-4d13-9ae3-2d4a08a84dcb":{}},"variableFields":{"1fdd6c0e-dbbd-4ec7-a8a1-4b69fa7d4bfe":[],"5ceb4eaf-b433-4fc0-94be-074364681003":[],"148ff8d7-6018-4f47-993e-d85eb0435480":[],"83d9c354-dcee-4d13-9ae3-2d4a08a84dcb":[]},"disabledNodes":[],"meta":{"fieldHistory":[{"uuid":"83d9c354-dcee-4d13-9ae3-2d4a08a84dcb","type":"form-select","machineName":"component-style"},{"uuid":"09ddb193-4ecf-417c-aa69-080d06fe3e97","type":"form-entity-browser","machineName":"heading"}]}}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+category: cpt_cat_card_components
+preview_image: ''
+has_quick_edit: null
+entity_type_access: {  }
+bundle_access: {  }
+twig_template: component--cohesion-cpt-team-member
+weight: 0

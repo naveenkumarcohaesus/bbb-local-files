@@ -1,0 +1,40 @@
+label: 'کتابخانه بلوک سفارشی'
+display:
+  default:
+    display_title: پیش‌فرض
+    display_options:
+      title: 'کتابخانه بلوک سفارشی'
+      fields:
+        info:
+          label: 'توضیحات بلوک'
+        type:
+          label: 'نوع بلاک'
+        changed:
+          label: به‌روز
+        operations:
+          label: کارکردها
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'آیتم‌ها در هر صفحه'
+            items_per_page_options_all_label: '- همه -'
+            offset_label: جابجایی
+      exposed_form:
+        options:
+          submit_button: تایید
+          reset_button_label: بازنشانی
+          exposed_sorts_label: 'مرتب کن بر اساس'
+          sort_asc_label: صعودی
+          sort_desc_label: نزولی
+      filters:
+        info:
+          expose:
+            label: 'توضیحات بلوک'
+        type:
+          expose:
+            label: 'نوع بلاک'
+  page_1:
+    display_title: صفحه
+    display_options:
+      menu:
+        title: 'کتابخانه بلوک سفارشی'

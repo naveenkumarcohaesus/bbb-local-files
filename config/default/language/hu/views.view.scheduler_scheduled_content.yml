@@ -1,0 +1,71 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Szűrő
+          reset_button_label: Alaphelyzet
+          sort_asc_label: Növ
+          sort_desc_label: Csökk
+      pager:
+        options:
+          tags:
+            previous: '‹ előző'
+            next: 'következő ›'
+            first: '« első'
+            last: 'utolsó »'
+      fields:
+        node_bulk_form:
+          action_title: Művelet
+        title:
+          label: Cím
+          separator: ', '
+        type:
+          separator: ', '
+        name:
+          label: Szerző
+          separator: ', '
+        status:
+          label: Állapot
+          settings:
+            format_custom_true: Közzétéve
+            format_custom_false: Rejtett
+          separator: ', '
+        publish_on:
+          separator: ', '
+        unpublish_on:
+          separator: ', '
+        operations:
+          label: Műveletek
+      filters:
+        title:
+          expose:
+            label: Cím
+        type:
+          expose:
+            label: Tartalomtípus
+        status:
+          expose:
+            label: Állapot
+          group_info:
+            label: 'Közzététel állapota'
+            group_items:
+              1:
+                title: Közzétéve
+              2:
+                title: Rejtett
+        langcode:
+          expose:
+            label: Nyelv
+  overview:
+    display_options:
+      tab_options:
+        title: Tartalom
+  user_page:
+    display_options:
+      tab_options:
+        title: Tartalom
+      arguments:
+        uid:
+          exception:
+            title: Mind

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_hero_mobile_w375_h388
+label: 'Large Hero Mobile W375 H388'
+effects:
+  2e27b8fe-74b9-41bd-882a-ed52c16bc234:
+    uuid: 2e27b8fe-74b9-41bd-882a-ed52c16bc234
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 375
+      height: 388
+      crop_type: focal_point

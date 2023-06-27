@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_header_w335_h209
+label: 'Large Header W335 H209'
+effects:
+  7693b1b7-1fef-4861-b662-43df21b7fb31:
+    uuid: 7693b1b7-1fef-4861-b662-43df21b7fb31
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 335
+      height: 209
+      crop_type: focal_point

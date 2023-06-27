@@ -1,0 +1,88 @@
+uuid: e7c40469-baf3-4ed3-9000-175e8efac354
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.hero_video.field_media_video_file
+    - field.field.media.hero_video.field_poster_image
+    - field.field.media.hero_video.field_transcript
+    - image.style.thumbnail
+    - media.type.hero_video
+  module:
+    - file
+    - path
+    - svg_image
+_core:
+  default_config_hash: WMZ4Yg0rJM5PUxkuLBCiVd1oo6mlBs1wmbxWZrtR3Wo
+id: media.hero_video.default
+targetEntityType: media
+bundle: hero_video
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_video_file:
+    type: file_generic
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_poster_image:
+    type: image_image
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_transcript:
+    type: file_generic
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 5
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

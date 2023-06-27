@@ -1,0 +1,19 @@
+uuid: b7213c6a-d3db-49fc-a7a0-0bd942010719
+langcode: en
+status: true
+dependencies:
+  config:
+    - cohesion_custom_styles.cohesion_custom_style.7f93b7a9
+label: 'Team Member Grid'
+id: 326e23c9
+json_values: '{"preview":{"text":"<div class=\"coh-preview\">Default content for ''Layout''.<\/div>\n","textFormat":"cohesion"},"styles":{"settings":{"element":"div","class":"","combinator":"","pseudo":""},"styles":{"xs":{"custom-css":[{"customCssProperty":{"value":"display"},"customCss":{"value":"grid"}},{"customCssProperty":{"value":"grid-template-columns"},"customCss":{"value":"2fr 2fr"}},{"customCssProperty":{"value":"grid-column-gap"},"customCss":{"value":"16px"}}]},"sm":{"custom-css":[{"customCssProperty":{"value":"grid-column-gap"},"customCss":{"value":"24px"}}]},"md":{"custom-css":[{"customCssProperty":{"value":"grid-template-columns"},"customCss":{"value":"1fr 1fr 1fr 1fr"}}]},"xl":{"custom-css":[{"customCssProperty":{"value":"grid-column-gap"},"customCss":{"value":"48px"}}]}},"3258cb00-5c2d-4752-b0b9-ea628d98093f":{"settings":{"element":"","class":"","combinator":"","pseudo":":before"},"styles":{"xs":{"custom-css":[{"customCssProperty":{"value":"content"},"customCss":{"value":"none"}}]}}},"a66b1c4a-8ae7-4be4-a2ce-8f99773905d5":{"settings":{"element":"> .coh-style-fill-space","class":"","combinator":"","pseudo":""},"styles":{"xs":{"display":{"value":"flex"}}}},"318cd8e3-4690-4472-8d01-792472631fc6":{"settings":{"element":"> article","class":"","combinator":"","pseudo":""},"styles":{"xs":{"display":{"value":"flex"}}}}},"sBackgroundColour":"#FFFFFF","variableFields":[]}'
+json_mapper: '{"styles":{"title":"Layout","selectorType":"topLevel","formDefinition":[{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xs"},{"name":"sm"},{"name":"md"},{"name":"xl"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}],"items":[{"title":":before","type":"container","items":[],"form":null,"selectorType":"pseudo","uuid":"3258cb00-5c2d-4752-b0b9-ea628d98093f","allowedTypes":["child","pseudo"],"formDefinition":[{"formKey":"custom-css","children":[{"formKey":"css-property-and-css-value","breakpoints":[{"name":"xs"}],"activeFields":[{"name":"custom-css","active":true},{"name":"customCssProperty","active":true},{"name":"customCss","active":true}]}]}]},{"title":"> .coh-style-fill-space","type":"container","items":[{"title":"> article","type":"container","items":[],"form":null,"selectorType":"child","model":"> article","uuid":"318cd8e3-4690-4472-8d01-792472631fc6","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"display","breakpoints":[{"name":"xs"}],"activeFields":[{"name":"display","active":true},{"name":"visibility","active":false},{"name":"overflow","active":false},{"name":"overflow-x","active":false},{"name":"overflow-y","active":false}]}]}]}],"form":null,"selectorType":"child","model":"> .coh-style-fill-space","uuid":"a66b1c4a-8ae7-4be4-a2ce-8f99773905d5","allowedTypes":["child","pseudo","modifier"],"formDefinition":[{"formKey":"layout","children":[{"formKey":"display","breakpoints":[{"name":"xs"}],"activeFields":[{"name":"display","active":true},{"name":"visibility","active":false},{"name":"overflow","active":false},{"name":"overflow-x","active":false},{"name":"overflow-y","active":false}]}]}]}],"form":null}}'
+last_entity_update: entityupdate_0036
+locked: false
+modified: true
+selectable: true
+class_name: .coh-style-team-member-grid
+custom_style_type: layout
+available_in_wysiwyg: false
+parent: null
+weight: 44

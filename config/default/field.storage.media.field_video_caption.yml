@@ -1,0 +1,23 @@
+uuid: c6bf65cc-fa49-470a-a99a-78d9f527dca7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: '-nUT_A5onFjFH6Vo-TPX8q6xaO7f7NOhl3OGGIulDCI'
+id: media.field_video_caption
+field_name: field_video_caption
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

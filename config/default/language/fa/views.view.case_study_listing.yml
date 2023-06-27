@@ -1,0 +1,63 @@
+display:
+  default:
+    display_title: پیش‌فرض
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'آیتم‌ها در هر صفحه'
+            items_per_page_options_all_label: '- همه -'
+            offset_label: جابجایی
+      exposed_form:
+        options:
+          exposed_sorts_label: 'مرتب کن بر اساس'
+          sort_asc_label: صعودی
+          sort_desc_label: نزولی
+          bef:
+            general:
+              secondary_label: 'گزینه‌های پیشرفته'
+  case_study_list_block:
+    display_title: بلوک
+  our_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          exposed_sorts_label: 'مرتب کن بر اساس'
+          sort_asc_label: صعودی
+          sort_desc_label: نزولی
+          bef:
+            general:
+              secondary_label: 'گزینه‌های پیشرفته'
+      arguments:
+        'null':
+          exception:
+            title: همه
+      filters:
+        field_region_target_id:
+          expose:
+            label: ناحیه
+  related_case_studies:
+    display_options:
+      exposed_form:
+        options:
+          exposed_sorts_label: 'مرتب کن بر اساس'
+          sort_asc_label: صعودی
+          sort_desc_label: نزولی
+      arguments:
+        nid:
+          exception:
+            title: همه
+  related_reading_programme:
+    display_options:
+      exposed_form:
+        options:
+          exposed_sorts_label: 'مرتب کن بر اساس'
+          sort_asc_label: صعودی
+          sort_desc_label: نزولی
+      arguments:
+        nid:
+          exception:
+            title: همه
+        tid:
+          exception:
+            title: همه

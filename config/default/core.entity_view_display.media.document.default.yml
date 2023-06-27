@@ -1,0 +1,87 @@
+uuid: b15d281c-8353-4470-b1c5-d9f7162ebea1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.document.field_categories
+    - field.field.media.document.field_document_type
+    - field.field.media.document.field_download_assistive_text
+    - field.field.media.document.field_download_cta
+    - field.field.media.document.field_media_file
+    - field.field.media.document.field_tags
+    - image.style.thumbnail
+    - media.type.document
+  module:
+    - file
+    - svg_image
+    - user
+_core:
+  default_config_hash: 84hsY6iR3VlumXlbcGjc27M7-MJnGNVMhWJAJHsP2aA
+id: media.document.default
+targetEntityType: media
+bundle: document
+mode: default
+content:
+  created:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_document_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_media_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  uid:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_categories: true
+  field_download_assistive_text: true
+  field_download_cta: true
+  field_tags: true
+  langcode: true
+  search_api_excerpt: true

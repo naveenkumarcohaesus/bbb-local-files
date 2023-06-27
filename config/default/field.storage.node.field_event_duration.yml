@@ -1,0 +1,23 @@
+uuid: f281a76d-c114-435a-8d08-c29ae1942046
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Vj1v52Lx7WUMRifSz6x6ohPwuwMxAQG8YQ0g0W2IM4E
+id: node.field_event_duration
+field_name: field_event_duration
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

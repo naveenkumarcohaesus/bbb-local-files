@@ -1,0 +1,34 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Αναζήτηση
+          reset_button_label: Επαναφορά
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Είδη ανά σελίδα'
+            items_per_page_options_all_label: '- Όλα -'
+            offset_label: Αντιστάθμιση
+          tags:
+            previous: '‹ Προηγούμενο'
+            next: 'Επόμενο ›'
+      fields:
+        title:
+          separator: ', '
+        type:
+          label: Τύπος
+          separator: ', '
+      filters:
+        search_api_fulltext:
+          expose:
+            label: Αναζήτηση
+      title: Αναζήτηση
+  page:
+    display_options:
+      menu:
+        title: Αναζήτηση

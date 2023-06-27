@@ -1,0 +1,24 @@
+uuid: d94ae4fb-b6cc-45a7-b1c3-2acfc396e9be
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: vHhh2cXNBqowGRCujl7AjYDT6xeaJnsP19YiJJjIzIU
+id: taxonomy_term.field_efg_financial_variant
+field_name: field_efg_financial_variant
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,31 @@
+uuid: dac1afbe-141e-40e0-9b69-f779cb5612f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_member_group
+    - node.type.team_member
+    - taxonomy.vocabulary.team_member_group
+_core:
+  default_config_hash: eoNft2z3cQ_x4AGKOCxHY2t9MF3Z2q-x57uTfg3nj34
+id: node.team_member.field_team_member_group
+field_name: field_team_member_group
+entity_type: node
+bundle: team_member
+label: 'Team Member Group'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      team_member_group: team_member_group
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

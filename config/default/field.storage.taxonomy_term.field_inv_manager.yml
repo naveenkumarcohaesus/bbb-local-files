@@ -1,0 +1,19 @@
+uuid: 79cf75ab-b68f-4b4b-9b83-0be1d0f68cff
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_inv_manager
+field_name: field_inv_manager
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

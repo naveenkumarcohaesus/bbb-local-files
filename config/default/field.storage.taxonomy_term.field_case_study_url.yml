@@ -1,0 +1,24 @@
+uuid: 72fb82c2-c486-406e-95b0-94a6700050d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: OKC1lgxN5ptVgPWmTnOUaytECfriTdFXxloHt0aI9ik
+id: taxonomy_term.field_case_study_url
+field_name: field_case_study_url
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,31 @@
+uuid: 1ce838b1-2aee-4c48-8cb9-d3483ae63528
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_structure
+    - node.type.case_study
+    - taxonomy.vocabulary.business_structure
+_core:
+  default_config_hash: wvnP95_pbLqiaygugJ_gI3Nb_Y770EmB9DO75fMYVjM
+id: node.case_study.field_business_structure
+field_name: field_business_structure
+entity_type: node
+bundle: case_study
+label: 'Business Structure'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      business_structure: business_structure
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

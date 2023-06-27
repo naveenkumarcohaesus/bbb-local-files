@@ -1,0 +1,29 @@
+uuid: 9676ab7a-b695-4911-82c0-847dedf20cdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_inv_manager
+    - taxonomy.vocabulary.investment_manager
+    - taxonomy.vocabulary.partner
+id: taxonomy_term.partner.field_inv_manager
+field_name: field_inv_manager
+entity_type: taxonomy_term
+bundle: partner
+label: 'Investment Manager'
+description: 'This field is BBI specific.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      investment_manager: investment_manager
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

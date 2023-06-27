@@ -1,0 +1,21 @@
+uuid: e4320005-261c-4f38-b621-8e88c0725f8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: mtqRLb-hg0q_wdQcJ9M5CHCgFqK5UQ6EAXU8eNacbcY
+id: taxonomy_term.field_finance_category
+field_name: field_finance_category
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

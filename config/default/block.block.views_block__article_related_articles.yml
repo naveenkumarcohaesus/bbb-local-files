@@ -1,0 +1,36 @@
+uuid: 57b6928d-1bca-4082-843b-92353b09e395
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.article
+  module:
+    - cohesion
+    - collapsiblock
+    - views
+  theme:
+    - bbb_site_studio
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+_core:
+  default_config_hash: R_BBXq7sqBG-fPcFL8uuL8jybmmHad-2HEt7SPThDxU
+id: views_block__article_related_articles
+theme: bbb_site_studio
+region: dx8_hidden
+weight: 0
+provider: null
+plugin: 'views_block:article-related_articles'
+settings:
+  id: 'views_block:article-related_articles'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0

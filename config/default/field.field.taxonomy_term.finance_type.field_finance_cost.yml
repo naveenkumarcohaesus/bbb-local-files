@@ -1,0 +1,21 @@
+uuid: 46c42ed9-77df-4b1c-91c7-cdc8c5bb9267
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_finance_cost
+    - taxonomy.vocabulary.finance_type
+_core:
+  default_config_hash: 3kkD1hXj-Z56kveN4F7b-GIb7ocEBaBqyVIElETA_TM
+id: taxonomy_term.finance_type.field_finance_cost
+field_name: field_finance_cost
+entity_type: taxonomy_term
+bundle: finance_type
+label: 'Cost of finance'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

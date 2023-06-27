@@ -1,0 +1,46 @@
+uuid: c63760e0-0913-4d2c-8528-3ad15e7758dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_results
+    - field.field.node.page.field_categories
+    - field.field.node.page.field_layout_canvas
+    - field.field.node.page.field_metatags
+    - field.field.node.page.field_page_image
+    - field.field.node.page.field_tags
+    - node.type.page
+  module:
+    - user
+  enforced:
+    module:
+      - acquia_cms_page
+id: node.page.search_results
+targetEntityType: node
+bundle: page
+mode: search_results
+content:
+  field_page_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: small
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  content_moderation_control: true
+  field_categories: true
+  field_hero_background_pattern: true
+  field_layout_canvas: true
+  field_metatags: true
+  field_tags: true
+  footnotes_group: true
+  langcode: true
+  links: true

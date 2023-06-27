@@ -1,0 +1,22 @@
+uuid: 4bb1067e-461e-4a94-9271-bb7671a824ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: '-RZe-8_vMUMyoZ77WjlJ8-R_lU-8CjYMVijdUpsbqw4'
+id: node.field_region
+field_name: field_region
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

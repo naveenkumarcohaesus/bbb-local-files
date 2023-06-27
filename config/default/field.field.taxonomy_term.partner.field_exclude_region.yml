@@ -1,0 +1,25 @@
+uuid: bf0e3677-a5bc-412b-be01-21f3cf1fe861
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_exclude_region
+    - taxonomy.vocabulary.partner
+_core:
+  default_config_hash: RQH7hCRt60axBBN8R6MmUktTyf3xvuP4P-WqjJnwPJA
+id: taxonomy_term.partner.field_exclude_region
+field_name: field_exclude_region
+entity_type: taxonomy_term
+bundle: partner
+label: 'Exclude Region'
+description: 'This field is BBB specific.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

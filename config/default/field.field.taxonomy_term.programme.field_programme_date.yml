@@ -1,0 +1,21 @@
+uuid: 510903ce-36b1-4c4b-bec6-1b1009aa951e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_programme_date
+    - taxonomy.vocabulary.programme
+  module:
+    - datetime_range
+id: taxonomy_term.programme.field_programme_date
+field_name: field_programme_date
+entity_type: taxonomy_term
+bundle: programme
+label: 'Programme Date'
+description: 'Dates when the Programme starts and ends on.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

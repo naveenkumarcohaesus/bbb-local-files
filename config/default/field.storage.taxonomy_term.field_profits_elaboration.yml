@@ -1,0 +1,23 @@
+uuid: f3be564f-6d92-4704-8f15-c016b8d8390f
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: ROMUIDVMIOOIigEAAH5PVBGkQ73ms9GAborNWpT9EKM
+id: taxonomy_term.field_profits_elaboration
+field_name: field_profits_elaboration
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

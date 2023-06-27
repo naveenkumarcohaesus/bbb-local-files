@@ -1,0 +1,31 @@
+uuid: 02991eb7-6f75-4b2a-84ce-690eff2c21e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_typology
+    - node.type.case_study
+    - taxonomy.vocabulary.content_topology
+_core:
+  default_config_hash: VhD8uyE3CXFLRNV4-GtmBCsRv1CrgVt8T4_RSAPGDOk
+id: node.case_study.field_content_typology
+field_name: field_content_typology
+entity_type: node
+bundle: case_study
+label: 'Content Typology'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_topology: content_topology
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

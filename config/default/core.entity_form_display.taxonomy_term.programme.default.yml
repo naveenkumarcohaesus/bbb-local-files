@@ -1,0 +1,117 @@
+uuid: 12125860-3679-448d-b221-9d4b12116d01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.programme.field_programme_application_date
+    - field.field.taxonomy_term.programme.field_programme_date
+    - field.field.taxonomy_term.programme.field_programme_overview
+    - field.field.taxonomy_term.programme.field_programme_status
+    - field.field.taxonomy_term.programme.field_show_on_website
+    - taxonomy.vocabulary.programme
+  module:
+    - datetime_range
+    - field_group
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_programme:
+      children:
+        - field_programme_overview
+        - field_programme_status
+        - field_programme_date
+        - field_programme_application_date
+      label: Programme
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+id: taxonomy_term.programme.default
+targetEntityType: taxonomy_term
+bundle: programme
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_programme_application_date:
+    type: daterange_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_programme_date:
+    type: daterange_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_programme_overview:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_programme_status:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_show_on_website:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  field_show_on_website: true

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: background_cta_mobile_w390_h420
+label: 'Background CTA Mobile W390 H420'
+effects:
+  7f94b564-9533-4bbc-b379-10690c28a9e9:
+    uuid: 7f94b564-9533-4bbc-b379-10690c28a9e9
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 390
+      height: 420
+      crop_type: focal_point

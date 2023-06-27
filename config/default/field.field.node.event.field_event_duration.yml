@@ -1,0 +1,21 @@
+uuid: 3d2cbaad-f2a4-4bf0-9b3b-57d264718de6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_duration
+    - node.type.event
+_core:
+  default_config_hash: 4JFvmUuMjD990h2DZSOq9gt6DwL4rPMsvKjHY54fgsc
+id: node.event.field_event_duration
+field_name: field_event_duration
+entity_type: node
+bundle: event
+label: Duration
+description: null
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

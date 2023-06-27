@@ -1,0 +1,21 @@
+uuid: c89b6cfe-fd40-4b19-b0b7-f0648f08ed42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_text
+    - node.type.product
+_core:
+  default_config_hash: 5OZP2sCoYivPQEekK0UjFxgWqZq2jjKDs38JNzMszp8
+id: node.product.field_teaser_text
+field_name: field_teaser_text
+entity_type: node
+bundle: product
+label: 'Teaser Text'
+description: 'This Text will be used for teaser cards display but not on Detailed page'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

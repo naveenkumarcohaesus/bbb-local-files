@@ -1,0 +1,24 @@
+uuid: 488817f4-0d5c-4991-889d-369be4429221
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - text
+  enforced:
+    module:
+      - bbb_partner
+_core:
+  default_config_hash: D1XBcwfVw_4slx0N_5CifUi9fmbb4CpaFnmYRb6Rjm4
+id: taxonomy_term.field_quote_text
+field_name: field_quote_text
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

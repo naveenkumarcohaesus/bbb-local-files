@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_2_col_card_w444_h296
+label: 'Large 2 col Card W444 H296'
+effects:
+  54848bb2-1825-4ebd-9000-f7f8b61a06ea:
+    uuid: 54848bb2-1825-4ebd-9000-f7f8b61a06ea
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 444
+      height: 296
+      crop_type: focal_point
