@@ -1,4 +1,4 @@
-uuid: 03ad4f24-44a0-4d16-b4f0-af8e583df90a
+uuid: null
 langcode: en
 status: true
 dependencies:
@@ -12,6 +12,8 @@ dependencies:
 third_party_settings:
   workbench_email:
     workbench_email_templates:
+      review:
+        transition_to_review: transition_to_review
       create_new_draft:
         back_to_draft: back_to_draft
       archive:
@@ -20,8 +22,6 @@ third_party_settings:
         to_published: to_published
       archived_published:
         to_published: to_published
-      review:
-        transition_to_review: transition_to_review
 id: editorial
 label: Editorial
 type: content_moderation

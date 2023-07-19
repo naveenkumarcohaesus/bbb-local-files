@@ -1,4 +1,4 @@
-uuid: 08eefe6f-9058-425a-81f8-8c5ff124e9d9
+uuid: 794e013d-3e4a-4780-80d7-61629a155af6
 langcode: en
 status: true
 dependencies:
@@ -33,18 +33,30 @@ recipient_types:
     provider: workbench_email
     status: true
     settings: {  }
-  email:
-    id: email
+  role:
+    id: role
     provider: workbench_email
     status: false
     settings:
-      fields: {  }
+      roles: {  }
   entity_reference_user:
     id: entity_reference_user
     provider: workbench_email
     status: false
     settings:
       fields: {  }
+  email:
+    id: email
+    provider: workbench_email
+    status: false
+    settings:
+      fields: {  }
+  roles_with_access:
+    id: roles_with_access
+    provider: workbench_email
+    status: false
+    settings:
+      roles: {  }
   fixed_email:
     id: fixed_email
     provider: workbench_email
@@ -56,16 +68,4 @@ recipient_types:
     provider: workbench_email
     status: false
     settings: {  }
-  role:
-    id: role
-    provider: workbench_email
-    status: false
-    settings:
-      roles: {  }
-  roles_with_access:
-    id: roles_with_access
-    provider: workbench_email
-    status: false
-    settings:
-      roles: {  }
 replyTo: null

@@ -1,9 +1,9 @@
-uuid: 473d6ec5-1041-40bd-90b1-e19c44e11d35
+uuid: d329acea-c5c9-4916-a0c9-6d9576cc40eb
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: mYDACxNk3ZGST4Qi85qfcXBoLLfv6seFT0Z-jt7IltA
+  default_config_hash: nytyfySLIP5mavdEus6LGHBkecMXAyilkXeqFCy2fs4
 id: text_tr_7_0_0
 label: 'Turkish Text Field'
 minimum_solr_version: 7.0.0
@@ -356,8 +356,10 @@ text_files:
     karşın
   synonyms: |
     drupal, durpal
-  nouns: ''
-  protwords: ''
+  nouns: |
+
+  protwords: |
+
   accents: |
     # À => A
     "\u00C0" => "A"

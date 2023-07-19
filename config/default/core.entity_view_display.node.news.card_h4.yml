@@ -16,6 +16,8 @@ dependencies:
   module:
     - media
     - user
+_core:
+  default_config_hash: tN64U7idESvzDh-TuioARfM3MYeJolU6PZiqyiM0REo
 id: node.news.card_h4
 targetEntityType: node
 bundle: news
@@ -46,6 +48,7 @@ hidden:
   field_quick_links: true
   field_region: true
   field_teaser_text: true
+  footnotes_group: true
   langcode: true
   links: true
   search_api_excerpt: true

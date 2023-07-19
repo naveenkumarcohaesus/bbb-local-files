@@ -1,18 +1,22 @@
+uuid: ded173cd-95a3-44fe-b2fb-cd4c5dccfc0f
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.large_super_landscape
     - field.field.media.image.field_categories
+    - field.field.media.image.field_image_type
     - field.field.media.image.field_tags
     - field.field.media.image.image
     - image.style.coh_x_large_super_landscape
     - media.type.image
   module:
-    - image
+    - svg_image
   enforced:
     module:
       - acquia_cms_image
+_core:
+  default_config_hash: x8rh1GceEBGAUqrmVxoaGK6_PoBtQOpNrnA-8vm8DkI
 id: media.image.large_super_landscape
 targetEntityType: media
 bundle: image
@@ -32,6 +36,7 @@ content:
 hidden:
   created: true
   field_categories: true
+  field_image_type: true
   field_tags: true
   langcode: true
   name: true

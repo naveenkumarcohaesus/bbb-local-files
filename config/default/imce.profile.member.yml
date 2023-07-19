@@ -1,4 +1,4 @@
-uuid: 5883487a-367b-4b5a-a16d-d7f7b14fb61a
+uuid: 265160f4-f509-493e-bdab-dcfce27174b0
 langcode: en
 status: true
 dependencies: {  }
@@ -10,8 +10,8 @@ description: 'Configuration for site members'
 conf:
   usertab: false
   extensions: 'jpg png gif'
-  maxsize: !!float 2
-  quota: !!float 50
+  maxsize: 2
+  quota: 50
   maxwidth: 1024
   maxheight: 1024
   replace: 0
@@ -25,6 +25,3 @@ conf:
         browse_files: true
         upload_files: true
         delete_files: true
-    -
-      path: cohesion
-      permissions: {  }

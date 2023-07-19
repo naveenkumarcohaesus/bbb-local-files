@@ -1,9 +1,10 @@
-uuid: 3f93c8c1-176b-490f-b4a5-28b0a9b4803c
+uuid: 158b5a0e-0b9d-4960-b49b-70fc885a3845
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_results
+    - field.field.node.place.body
     - field.field.node.place.field_categories
     - field.field.node.place.field_geofield
     - field.field.node.place.field_metatags
@@ -15,23 +16,52 @@ dependencies:
     - node.type.place
   module:
     - address
+    - smart_trim
     - user
   enforced:
     module:
       - acquia_cms_place
 _core:
-  default_config_hash: FL4DL6PM916I4JPtuf5JQxDKoqnX3Xfl-d2m08DNz7o
+  default_config_hash: ebhDS9hRT1sy69yMKcv-rf47siIA8rhBkLSV5s2gl8s
 id: node.place.search_results
 targetEntityType: node
 bundle: place
 mode: search_results
 content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 128
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: trim
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_place_address:
     type: address_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_place_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_place_telephone:
     type: string
@@ -41,15 +71,6 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  field_place_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: teaser
-      link: true
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   content_moderation_control: true
   field_categories: true
@@ -57,6 +78,7 @@ hidden:
   field_metatags: true
   field_place_type: true
   field_tags: true
+  footnotes_group: true
   langcode: true
   links: true
   search_api_excerpt: true

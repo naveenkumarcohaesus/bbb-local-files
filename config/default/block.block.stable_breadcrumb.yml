@@ -1,0 +1,48 @@
+uuid: 84d40d78-56bf-4a3f-a6d8-c2f706044b23
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - collapsiblock
+    - node
+  theme:
+    - stable
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+_core:
+  default_config_hash: WQVlj4JOYvJI_HHAagxjVlFPn_xWd7GJzxPKrJEKDq4
+id: stable_breadcrumb
+theme: stable
+region: content
+weight: 3
+provider: null
+plugin: 'block_content:dc7c21a5-951a-41f8-8529-b61d40e1532f'
+settings:
+  id: 'block_content:dc7c21a5-951a-41f8-8529-b61d40e1532f'
+  label: Breadcrumb
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 1
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      case_study: case_study
+      event: event
+      news: news
+      page: page
+      product: product
+      research_and_publication: research_and_publication
+      team_member: team_member

@@ -1,11 +1,8 @@
-uuid: 699d9164-a02a-437c-b0e6-cf92f88b5785
+uuid: 48397846-4481-496e-b222-3058f0edbb32
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.page
-    - node.type.person
-    - node.type.place
     - user.role.content_administrator
     - user.role.content_editor
   module:
@@ -16,7 +13,7 @@ third_party_settings:
     workflow_transitions:
       - review
 _core:
-  default_config_hash: zvvO6CYe5XkstBc3TkRikr6aaJ_JOfJr1dlolxsGDnk
+  default_config_hash: tjDUe6FfycbLiDey4z4gOgk1FxWdVD86z9W3R1Pi4uk
 id: transition_to_review
 label: 'Transition to Review'
 format: null
@@ -24,10 +21,7 @@ subject: '[node:title] State Changed'
 body:
   value: '[node:title] needs review.'
   format: plain_text
-bundles:
-  'node:page': 'node:page'
-  'node:person': 'node:person'
-  'node:place': 'node:place'
+bundles: {  }
 recipient_types:
   role:
     id: role
@@ -37,23 +31,24 @@ recipient_types:
       roles:
         content_administrator: content_administrator
         content_editor: content_editor
-  author:
-    id: author
-    provider: workbench_email
-    status: false
-    settings: {  }
-  email:
-    id: email
-    provider: workbench_email
-    status: false
-    settings:
-      fields: {  }
   entity_reference_user:
     id: entity_reference_user
     provider: workbench_email
     status: false
     settings:
       fields: {  }
+  email:
+    id: email
+    provider: workbench_email
+    status: false
+    settings:
+      fields: {  }
+  roles_with_access:
+    id: roles_with_access
+    provider: workbench_email
+    status: false
+    settings:
+      roles: {  }
   fixed_email:
     id: fixed_email
     provider: workbench_email
@@ -65,10 +60,9 @@ recipient_types:
     provider: workbench_email
     status: false
     settings: {  }
-  roles_with_access:
-    id: roles_with_access
+  author:
+    id: author
     provider: workbench_email
     status: false
-    settings:
-      roles: {  }
+    settings: {  }
 replyTo: null

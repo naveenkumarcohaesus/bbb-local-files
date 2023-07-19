@@ -1,4 +1,4 @@
-uuid: 8468bcbf-b001-4450-85aa-00db2c8abed6
+uuid: 2038150d-a2c5-476f-a577-5512f7114235
 langcode: en
 status: true
 dependencies:
@@ -29,7 +29,7 @@ third_party_settings:
       label: Taxonomy
       region: content
       parent_name: ''
-      weight: 17
+      weight: 18
       format_type: fieldset
       format_settings:
         classes: ''
@@ -38,7 +38,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: lAxpjGyzVxsLB0HvnSMJXUdbFWik-bj2Gpgbj1H-VSM
+  default_config_hash: Uk7tsw6hhZUd2qc2Rfq7a4alNkhwn3JvoyS8aK8DeSA
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -85,13 +85,13 @@ content:
       placeholder_url: ''
       placeholder_title: ''
       enabled_attributes:
-        name: true
-        target: true
-        rel: true
-        id: false
-        class: false
         accesskey: false
         aria-label: false
+        class: false
+        id: false
+        name: true
+        rel: true
+        target: true
         title: false
     third_party_settings: {  }
   field_region:

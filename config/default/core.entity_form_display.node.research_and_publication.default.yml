@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.research_and_publication.field_content_owner
     - field.field.node.research_and_publication.field_content_typology
     - field.field.node.research_and_publication.field_download_report_link
+    - field.field.node.research_and_publication.field_hero_background_pattern
     - field.field.node.research_and_publication.field_image
     - field.field.node.research_and_publication.field_layout_canvas
     - field.field.node.research_and_publication.field_media_document
@@ -59,6 +60,8 @@ third_party_settings:
         id: ''
         description: ''
         required_fields: true
+_core:
+  default_config_hash: 28VRUNYXMFYkC35KrUf5qzNFR6smOXWguBQRbimPGYo
 id: node.research_and_publication.default
 targetEntityType: node
 bundle: research_and_publication
@@ -72,7 +75,7 @@ content:
     third_party_settings: {  }
   field_bpc_background_image:
     type: media_library_widget
-    weight: 19
+    weight: 17
     region: content
     settings:
       media_types: {  }
@@ -89,7 +92,7 @@ content:
     third_party_settings: {  }
   field_content_owner:
     type: entity_reference_autocomplete
-    weight: 20
+    weight: 19
     region: content
     settings:
       match_operator: CONTAINS
@@ -109,7 +112,7 @@ content:
     third_party_settings: {  }
   field_download_report_link:
     type: link_attributes
-    weight: 22
+    weight: 21
     region: content
     settings:
       placeholder_url: ''
@@ -124,13 +127,13 @@ content:
     third_party_settings: {  }
   field_hero_background_pattern:
     type: options_select
-    weight: 18
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   field_image:
     type: media_library_widget
-    weight: 17
+    weight: 19
     region: content
     settings:
       media_types: {  }
@@ -143,7 +146,7 @@ content:
     third_party_settings: {  }
   field_media_document:
     type: media_library_widget
-    weight: 16
+    weight: 18
     region: content
     settings:
       media_types: {  }
@@ -181,7 +184,7 @@ content:
     third_party_settings: {  }
   field_topic:
     type: entity_reference_autocomplete
-    weight: 21
+    weight: 20
     region: content
     settings:
       match_operator: CONTAINS

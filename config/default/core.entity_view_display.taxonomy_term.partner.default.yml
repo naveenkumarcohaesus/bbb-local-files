@@ -54,6 +54,8 @@ dependencies:
   enforced:
     module:
       - bbb_partner
+_core:
+  default_config_hash: z0djSjafif4eugqrxGY-IA251fOWyzUM_Le4OjjGbFE
 id: taxonomy_term.partner.default
 targetEntityType: taxonomy_term
 bundle: partner
@@ -426,15 +428,6 @@ content:
     weight: 2
     region: content
 hidden:
-  field_business_stages: true
   field_geofield: true
-  field_hide_on_map: true
-  field_hide_on_map_listing: true
-  field_investment_manager: true
-  field_investment_types: true
-  field_lender_schemes: true
-  field_partner_types: true
-  field_segment: true
-  field_stages: true
   langcode: true
   search_api_excerpt: true

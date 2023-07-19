@@ -1,11 +1,10 @@
-uuid: 0bf4040d-bae7-4eef-b0c9-a090ba256841
+uuid: 4adf36d0-a460-498b-8f8e-5732e4847f07
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.cohesion
     - filter.format.filtered_html
-    - filter.format.full_html
   module:
     - cohesion
     - cohesion_base_styles
@@ -20,7 +19,7 @@ dependencies:
     - system
     - toolbar
 _core:
-  default_config_hash: j2btxb3z4ieHNNjC4PY0d-b3GK9DVznNNDmBeTRjSag
+  default_config_hash: RGiytH_gys7NukzdOm-WdLQ9Me58mePaX7M8FV8uqSo
 id: developer
 label: 'Low Code Site Builder'
 weight: -9

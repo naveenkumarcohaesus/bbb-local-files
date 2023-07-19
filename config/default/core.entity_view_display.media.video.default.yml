@@ -1,4 +1,4 @@
-uuid: 53fbddf3-68a3-4e3b-b871-61746a5f7d39
+uuid: 9c81e269-fea1-43b9-829a-54ee89da0a5b
 langcode: en
 status: true
 dependencies:
@@ -13,44 +13,40 @@ dependencies:
     - svg_image
     - user
 _core:
-  default_config_hash: NhkfMu08aVPZxQm1-61vhiYVxjtLQShYS47bnXfCYg4
+  default_config_hash: ELVuY2CoNx9y6XjRxLcSytsWxSBXrPVaEsOxeo5fGYU
 id: media.video.default
 targetEntityType: media
 bundle: video
 mode: default
 content:
   created:
-    label: hidden
     type: timestamp
-    weight: 0
-    region: content
+    label: hidden
     settings:
       date_format: medium
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
-  thumbnail:
-    type: image
-    weight: 5
-    label: hidden
-    settings:
-      image_style: thumbnail
-      image_link: ''
-      image_loading:
-        attribute: lazy
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-    region: content
-    third_party_settings: {  }
-  uid:
-    label: hidden
-    type: author
     weight: 0
     region: content
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  uid:
+    type: author
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_categories: true
   field_media_oembed_video: true

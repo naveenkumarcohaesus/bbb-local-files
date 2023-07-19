@@ -1,0 +1,28 @@
+uuid: f40840b1-90e7-4d63-a474-2fc68cc359bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.person
+  module:
+    - text
+  enforced:
+    module:
+      - acquia_cms_person
+_core:
+  default_config_hash: uiiOe8WzwYAGd8oD4g4uVclbqGro2EFQ1gS85DmQsUk
+id: node.person.body
+field_name: body
+entity_type: node
+bundle: person
+label: Bio
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,9 +1,9 @@
-uuid: 2bceada4-972d-4a59-812b-f5c337378b00
+uuid: 7df06440-9c65-4fe9-a609-63f4b666702e
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: XE6jgR_8ObNN15XY4HQdP7H0-DGQezp9l7V-8piPqr8
+  default_config_hash: jnaL5MHwilD0PzIGla_HqozecpwTPyrtmVlN0xKhvpY
 id: text_es_6_0_0
 label: 'Spanish Text Field'
 minimum_solr_version: 6.0.0
@@ -541,8 +541,10 @@ text_files:
     tened
   synonyms: |
     drupal, durpal
-  nouns: ''
-  protwords: ''
+  nouns: |
+
+  protwords: |
+
   accents: |
     # À => A
     "\u00C0" => "A"

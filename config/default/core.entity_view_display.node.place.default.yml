@@ -1,8 +1,9 @@
-uuid: 3d566577-5f52-43c2-bb6d-42b5e81d2c45
+uuid: f302229c-f2af-4d69-8813-8e110f1daf16
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.place.body
     - field.field.node.place.field_categories
     - field.field.node.place.field_geofield
     - field.field.node.place.field_metatags
@@ -15,17 +16,25 @@ dependencies:
   module:
     - address
     - geofield
+    - text
     - user
   enforced:
     module:
       - acquia_cms_place
 _core:
-  default_config_hash: 2St0U1snsqzTD60rqOZQXPqkKoqOIs8WYF2dBcg65lA
+  default_config_hash: YRS89HkyPNk5I5K8YNITSOI5Yj3SU-SQHaydV4TEvYQ
 id: node.place.default
 targetEntityType: node
 bundle: place
 mode: default
 content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_geofield:
     type: geofield_default
     label: above
@@ -42,6 +51,15 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_place_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: large_super_landscape
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_place_telephone:
     type: string
     label: above
@@ -50,21 +68,13 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-  field_place_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: large_super_landscape
-      link: true
-    third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   content_moderation_control: true
   field_categories: true
   field_metatags: true
   field_place_type: true
   field_tags: true
+  footnotes_group: true
   langcode: true
   links: true
   search_api_excerpt: true

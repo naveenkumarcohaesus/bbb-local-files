@@ -1,8 +1,9 @@
-uuid: f2754480-6961-4040-b9ea-cdb416b811f7
+uuid: 2bd3776b-119b-4fb2-9bee-4bf60d28cd1b
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.body
     - field.field.node.page.field_categories
     - field.field.node.page.field_hero_background_pattern
     - field.field.node.page.field_layout_canvas
@@ -11,13 +12,12 @@ dependencies:
     - field.field.node.page.field_tags
     - node.type.page
   module:
-    - cohesion_elements
     - user
   enforced:
     module:
       - acquia_cms_page
 _core:
-  default_config_hash: JX1Vkec-PfpxCVEWBxFbiCuI7zKK9LPy0GSSCFWYIWA
+  default_config_hash: vz015P-2SCdKH4JYTSJjiMF3ndw1Ezrk31tC9VtYEEg
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -28,6 +28,20 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_page_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: large_super_landscape
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_layout_canvas:
     type: cohesion_entity_reference_revisions_entity_view
     label: hidden
@@ -37,21 +51,8 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_page_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: full
-      link: true
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
 hidden:
+  body: true
   field_categories: true
   field_hero_background_pattern: true
   field_layout_canvas: true

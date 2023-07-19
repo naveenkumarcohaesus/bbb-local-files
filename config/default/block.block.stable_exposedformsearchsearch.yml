@@ -1,0 +1,31 @@
+uuid: 515246a4-0208-4c28-8892-3220e6921d7c
+langcode: en
+status: false
+dependencies:
+  module:
+    - cohesion
+    - collapsiblock
+  theme:
+    - stable
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+_core:
+  default_config_hash: r_L_pGNI9zBZWGrD68K0n8EazRFdVErZ0W53vXHu2oc
+id: stable_exposedformsearchsearch
+theme: stable
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:search-search'
+settings:
+  id: 'views_exposed_filter_block:search-search'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0

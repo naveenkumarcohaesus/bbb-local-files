@@ -1,9 +1,9 @@
-uuid: 758f7ca6-c1ad-46b2-873d-0d8d8911089b
+uuid: 8e3453a5-3ea2-4a9c-990b-3a8d6a384630
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 7eDd7nPnabUZe-GBXWLFCFnn2sfSPATQKVCE0OVXuSY
+  default_config_hash: '-6JzO7NTl244gKUhz9LGlLlLGZ6pvjQj9susCYQmumk'
 id: text_fr_7_0_0
 label: 'French Text Field'
 minimum_solr_version: 7.0.0
@@ -402,8 +402,10 @@ text_files:
     soi
   synonyms: |
     drupal, durpal
-  nouns: ''
-  protwords: ''
+  nouns: |
+
+  protwords: |
+
   accents: |
     # À => A
     "\u00C0" => "A"

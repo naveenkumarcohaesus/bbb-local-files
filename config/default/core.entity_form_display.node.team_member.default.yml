@@ -1,3 +1,4 @@
+uuid: ff4746c7-a48f-4588-b288-2cb92f33e027
 langcode: en
 status: true
 dependencies:
@@ -11,12 +12,13 @@ dependencies:
     - node.type.team_member
   module:
     - cohesion_elements
-    - content_moderation
     - media_library
     - metatag
     - path
     - scheduler
     - scheduler_content_moderation_integration
+_core:
+  default_config_hash: RU4ePTGou4w19uUUPQMymNZ66ObwrSnVvRKPt2FrtaA
 id: node.team_member.default
 targetEntityType: node
 bundle: team_member

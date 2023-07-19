@@ -1,4 +1,4 @@
-uuid: ac48e406-5964-498f-a456-43aad0bac93b
+uuid: null
 langcode: en
 status: true
 dependencies:
@@ -10,6 +10,8 @@ dependencies:
     - editor
     - footnotes
     - media
+_core:
+  default_config_hash: JtYro1oqCW5_ShRji1ILPK5FClBJgZdFjPCw7ijZBnI
 name: 'Site Studio'
 format: cohesion
 weight: -10
@@ -65,6 +67,12 @@ filters:
     status: true
     weight: 0
     settings: {  }
+  heading_id_filter:
+    id: heading_id_filter
+    provider: bbb_on_this_page
+    status: true
+    weight: 10
+    settings: {  }
   filter_footnotes:
     id: filter_footnotes
     provider: footnotes
@@ -74,9 +82,3 @@ filters:
       footnotes_collapse: '0'
       footnotes_html: '1'
       footnotes_footer_disable: '1'
-  heading_id_filter:
-    id: heading_id_filter
-    provider: bbb_on_this_page
-    status: true
-    weight: 10
-    settings: {  }

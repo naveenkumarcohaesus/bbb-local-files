@@ -1,4 +1,4 @@
-uuid: a79827e4-fe22-4b0b-ad21-899281b6373e
+uuid: 4da4dfb6-9d11-410a-befb-256aeff268ef
 langcode: en
 status: true
 dependencies:
@@ -15,7 +15,7 @@ dependencies:
     - cohesion_elements
     - user
 _core:
-  default_config_hash: H8KLU8MBgg6druw-4lmjrVfP9Ow2KAEDYr0a0rLJqv0
+  default_config_hash: 4NMXidFQGa6Qzg93J1aGyy5FnpMdWvlBvgq5tMySuKY
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -49,5 +49,6 @@ hidden:
   field_quick_links: true
   field_region: true
   field_teaser_text: true
+  footnotes_group: true
   langcode: true
   search_api_excerpt: true

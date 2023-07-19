@@ -1,4 +1,4 @@
-uuid: 38c5d64e-e9cd-4bca-b082-447c038b4885
+uuid: 6015ebfc-f838-42d4-8acc-ed89efa97458
 langcode: en
 status: true
 dependencies:
@@ -8,15 +8,15 @@ dependencies:
     module:
       - acquia_cms_video
 _core:
-  default_config_hash: IjivCiZZ9NDQS782VkA3J58gS3tjHcyrLAWXb80YznA
+  default_config_hash: 2T4rNYHhB5mJQt-p58fD5HunEeqp5tkxDZIcmhPfl7k
 id: media.field_media_oembed_video
 field_name: field_media_oembed_video
 entity_type: media
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

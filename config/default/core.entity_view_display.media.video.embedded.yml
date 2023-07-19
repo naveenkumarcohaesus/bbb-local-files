@@ -1,4 +1,4 @@
-uuid: 83d806ec-e66f-4755-8ec4-9266b3a7038c
+uuid: 7521a0a0-a510-4019-a6af-ae5ae71d8816
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ dependencies:
   module:
     - media
 _core:
-  default_config_hash: OVMs75GVWbcLDRocxiVIzFff9fNX-JGOPWN18NwMwd8
+  default_config_hash: eK0nvy0Jl5WyrzXNZR8NBi4FjnJqSEC2Jt9kXGwEwh0
 id: media.video.embedded
 targetEntityType: media
 bundle: video
@@ -20,13 +20,13 @@ mode: embedded
 content:
   field_media_oembed_video:
     type: oembed
-    weight: 0
-    region: content
     label: visually_hidden
     settings:
       max_width: 960
       max_height: 540
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   created: true
   field_categories: true

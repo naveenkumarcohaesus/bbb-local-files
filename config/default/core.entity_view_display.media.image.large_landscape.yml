@@ -1,10 +1,11 @@
-uuid: 2337c09c-aa7b-41f7-a518-780f84c596c0
+uuid: 6d009104-347a-47b0-906c-271025eb1ab6
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.large_landscape
     - field.field.media.image.field_categories
+    - field.field.media.image.field_image_type
     - field.field.media.image.field_tags
     - field.field.media.image.image
     - image.style.coh_x_large_landscape
@@ -15,7 +16,7 @@ dependencies:
     module:
       - acquia_cms_image
 _core:
-  default_config_hash: I_tYqADLs7lLkVs-zCoPVw8p4TFUDXjvh_BG1Dq9EjA
+  default_config_hash: 63yZkayqbjx1jSmrDQlitjK05Dpd-O5mgenrd0aGuo4
 id: media.image.large_landscape
 targetEntityType: media
 bundle: image
@@ -25,6 +26,7 @@ content:
     type: image
     label: hidden
     settings:
+      image_link: ''
       image_style: coh_x_large_landscape
       image_loading:
         attribute: lazy

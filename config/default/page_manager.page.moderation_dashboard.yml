@@ -1,4 +1,4 @@
-uuid: ad2809a6-2851-43a1-9071-f04fa654620c
+uuid: 8ad063e4-9908-46c3-9b41-f80b6b97908f
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     module:
       - moderation_dashboard
 _core:
-  default_config_hash: VfPvbl_yRuurg4Y5V0nK1u43hSwdwxOZE1RFP81BGSQ
+  default_config_hash: U_yLp-XR9Ds5YdmbCoOf58WXtOVPXgOqEd4TVBSrV2Q
 id: moderation_dashboard
 label: 'Moderation Dashboard'
 description: ''
@@ -19,15 +19,15 @@ access_conditions:
   -
     id: has_moderated_content_type
     negate: false
-    context_mapping: {  }
     enable: true
+    context_mapping: {  }
   -
     id: moderation_dashboard_access
     negate: false
-    context_mapping:
-      dashboard_user: user
-      current_user: current_user
     enable: true
+    context_mapping:
+      dashboard_user: current_user
+      current_user: current_user
 parameters:
   user:
     machine_name: user

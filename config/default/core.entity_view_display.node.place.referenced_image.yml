@@ -1,3 +1,4 @@
+uuid: 01fcc7f4-bb8c-4f3c-b4a2-2a58f054b160
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,7 @@ dependencies:
     - field.field.node.place.body
     - field.field.node.place.field_categories
     - field.field.node.place.field_geofield
+    - field.field.node.place.field_metatags
     - field.field.node.place.field_place_address
     - field.field.node.place.field_place_image
     - field.field.node.place.field_place_telephone
@@ -17,6 +19,8 @@ dependencies:
   enforced:
     module:
       - acquia_cms_place
+_core:
+  default_config_hash: QhvPyEs0lYFHPvwxdfEgN8nPMtRssH3afhFYVODDMvY
 id: node.place.referenced_image
 targetEntityType: node
 bundle: place
@@ -36,10 +40,12 @@ hidden:
   content_moderation_control: true
   field_categories: true
   field_geofield: true
+  field_metatags: true
   field_place_address: true
   field_place_telephone: true
   field_place_type: true
   field_tags: true
+  footnotes_group: true
   langcode: true
   links: true
   search_api_excerpt: true

@@ -1,3 +1,4 @@
+uuid: 54a50c9f-0401-4201-9a21-c570a76539da
 langcode: en
 status: true
 dependencies:
@@ -8,13 +9,15 @@ dependencies:
   enforced:
     module:
       - acquia_cms_person
+_core:
+  default_config_hash: lqnuBzsD-eGXuhZGLGYn__C-DAiNYrF45qSZjO3ClvE
 id: node.person.field_person_image
 field_name: field_person_image
 entity_type: node
 bundle: person
 label: Image
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

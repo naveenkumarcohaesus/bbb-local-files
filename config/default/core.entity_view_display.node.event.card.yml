@@ -11,7 +11,9 @@ dependencies:
     - field.field.node.event.field_event_address
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_duration
+    - field.field.node.event.field_event_end
     - field.field.node.event.field_event_place
+    - field.field.node.event.field_event_start
     - field.field.node.event.field_external_event_link
     - field.field.node.event.field_finance_type
     - field.field.node.event.field_geofield
@@ -30,6 +32,8 @@ dependencies:
     - node.type.event
   module:
     - user
+_core:
+  default_config_hash: p3XVhZvKEV9kqaynZH37nUOqcSmzD-4OVAfpe7MXyZk
 id: node.event.card
 targetEntityType: node
 bundle: event

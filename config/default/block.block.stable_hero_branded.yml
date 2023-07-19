@@ -1,0 +1,49 @@
+uuid: 75e928fd-7468-4a8c-bcaf-60a76679a9b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - collapsiblock
+    - node
+    - system
+  theme:
+    - stable
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+_core:
+  default_config_hash: 3cZuDM6OypIo-tbAZC0dors6ow3SWyfCRuAkRlIknOg
+id: stable_hero_branded
+theme: stable
+region: content
+weight: 1
+provider: null
+plugin: 'block_content:2f974f12-a143-4b02-9dcf-fbc6bfaefc4c'
+settings:
+  id: 'block_content:2f974f12-a143-4b02-9dcf-fbc6bfaefc4c'
+  label: 'Hero Branded'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 1
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      case_study: case_study
+      page: page
+      product: product
+      research_and_publication: research_and_publication

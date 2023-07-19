@@ -106,6 +106,17 @@ json_values: |
                                               "status": {
                                                   "collapsed": true
                                               },
+                                              "uuid": "33841531-083d-45b5-86bc-d7bc26f50377",
+                                              "parentUid": "container",
+                                              "children": []
+                                          },
+                                          {
+                                              "type": "item",
+                                              "uid": "drupal-menu",
+                                              "title": "Menu",
+                                              "status": {
+                                                  "collapsed": true
+                                              },
                                               "uuid": "2b6aa12e-e718-4ae0-b39b-d7873de24ebc",
                                               "parentUid": "container",
                                               "children": []
@@ -5989,7 +6000,8 @@ json_values: |
                   "form": null,
                   "items": []
               }
-          }
+          },
+          "33841531-083d-45b5-86bc-d7bc26f50377": {}
       },
       "model": {
           "f67eb719-47a4-4620-99b2-235ab02b6317": {
@@ -7008,6 +7020,31 @@ json_values: |
                   "classes": "header--menu-wrapper"
               }
           },
+          "33841531-083d-45b5-86bc-d7bc26f50377": {
+              "settings": {
+                  "title": "Top Bar",
+                  "settings": {
+                      "settings": {
+                          "menu": {
+                              "id": "",
+                              "template": ""
+                          }
+                      },
+                      "menu": {
+                          "id": "account",
+                          "template": ""
+                      }
+                  }
+              },
+              "contextVisibility": {
+                  "condition": "ALL"
+              },
+              "styles": {
+                  "settings": {
+                      "element": "drupal-menu"
+                  }
+              }
+          },
           "2b6aa12e-e718-4ae0-b39b-d7873de24ebc": {
               "settings": {
                   "title": "Main Nav",
@@ -7641,8 +7678,7 @@ json_values: |
                   "title": "Drupal blocks"
               },
               "33477453-ecf9-49b5-873b-67737b65fefe": "exposedformsolr_searchsearch",
-              "dda7054d-09f6-4fdc-82f6-138404466a96": "dark-title",
-              "609b5301-04bf-45ce-82af-509436f29597": ""
+              "dda7054d-09f6-4fdc-82f6-138404466a96": "dark-title"
           },
           "aa1d86df-b501-44a1-9915-3c24e812913f": {
               "settings": {
@@ -7759,7 +7795,8 @@ json_values: |
           "c6894425-11cb-425f-8b3f-1bd8942b8bc5": {},
           "be08ff13-5a7e-44df-970f-6a7ee7c76b5c": {},
           "abf20dc1-2e08-45ca-b899-c8b46011b38d": {},
-          "49314e12-2562-4906-9262-2505857b0f6f": {}
+          "49314e12-2562-4906-9262-2505857b0f6f": {},
+          "33841531-083d-45b5-86bc-d7bc26f50377": {}
       },
       "variableFields": {
           "f67eb719-47a4-4620-99b2-235ab02b6317": [
@@ -7793,7 +7830,8 @@ json_values: |
           "c6894425-11cb-425f-8b3f-1bd8942b8bc5": [],
           "be08ff13-5a7e-44df-970f-6a7ee7c76b5c": [],
           "abf20dc1-2e08-45ca-b899-c8b46011b38d": [],
-          "49314e12-2562-4906-9262-2505857b0f6f": []
+          "49314e12-2562-4906-9262-2505857b0f6f": [],
+          "33841531-083d-45b5-86bc-d7bc26f50377": []
       },
       "disabledNodes": [],
       "meta": {

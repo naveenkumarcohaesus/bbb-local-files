@@ -16,6 +16,8 @@ dependencies:
     - media
     - metatag
     - user
+_core:
+  default_config_hash: mNOlRkMxHRQEAgB-BsK-E69_0Jo-KHQOe9WDrLw6HsU
 id: node.team_member.default
 targetEntityType: node
 bundle: team_member
@@ -64,5 +66,6 @@ content:
 hidden:
   field_team_member_group: true
   field_teaser_text: true
+  footnotes_group: true
   langcode: true
   search_api_excerpt: true

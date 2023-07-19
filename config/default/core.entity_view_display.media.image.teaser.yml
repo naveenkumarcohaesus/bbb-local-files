@@ -1,18 +1,22 @@
+uuid: 6c05c4d8-8249-452e-aec8-1c61fe4c63aa
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.teaser
     - field.field.media.image.field_categories
+    - field.field.media.image.field_image_type
     - field.field.media.image.field_tags
     - field.field.media.image.image
     - image.style.x_small_landscape
     - media.type.image
   module:
-    - image
+    - svg_image
   enforced:
     module:
       - acquia_cms_image
+_core:
+  default_config_hash: 9KkynHBr2LzC63C0laNMttbkjfxUeJFb289fCc5LVUY
 id: media.image.teaser
 targetEntityType: media
 bundle: image
@@ -32,6 +36,7 @@ content:
 hidden:
   created: true
   field_categories: true
+  field_image_type: true
   field_tags: true
   langcode: true
   name: true

@@ -1,9 +1,9 @@
-uuid: efc53898-8fa9-489e-b186-7f53b0637ede
+uuid: 09e74354-c9c5-491b-9591-c5fb0067cecc
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 7Ohkk7sjGBgpAlOPkrg0ZtXqEgy7J3-qCBktHyGDErw
+  default_config_hash: obWWxAlrMAkuj-Cs04ArhcGAD05aPtqXQQ2Xa7pBrdI
 id: text_cs_6_0_0
 label: 'Czech Text Field'
 minimum_solr_version: 6.0.0
@@ -387,7 +387,8 @@ text_files:
     na
   synonyms: |
     drupal, durpal
-  protwords: ''
+  protwords: |
+
   accents: |
     # À => A
     "\u00C0" => "A"

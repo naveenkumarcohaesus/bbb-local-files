@@ -1,10 +1,11 @@
-uuid: 25017f59-52ed-4250-b77b-fad102160e4f
+uuid: e71ad173-52c2-463c-b003-02c724fab21d
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.embedded
     - field.field.media.image.field_categories
+    - field.field.media.image.field_image_type
     - field.field.media.image.field_tags
     - field.field.media.image.image
     - image.style.coh_medium
@@ -15,7 +16,7 @@ dependencies:
     module:
       - acquia_cms_image
 _core:
-  default_config_hash: nwQ2DqjYSbG-7ytdOyoOHqb_QfzavxSy6h6dOqLQ990
+  default_config_hash: Me_yYjnZJAEjHbFBAGqJ1hP8c96ApjY2Qob8GedHuMc
 id: media.image.embedded
 targetEntityType: media
 bundle: image
@@ -25,6 +26,7 @@ content:
     type: image
     label: visually_hidden
     settings:
+      image_link: ''
       image_style: coh_medium
       image_loading:
         attribute: lazy

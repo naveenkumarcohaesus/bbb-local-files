@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.horizontal_card_h4
+    - field.field.node.page.body
     - field.field.node.page.field_categories
     - field.field.node.page.field_hero_background_pattern
     - field.field.node.page.field_layout_canvas
@@ -16,6 +17,8 @@ dependencies:
   enforced:
     module:
       - acquia_cms_page
+_core:
+  default_config_hash: 8zCMhaknUqTmv1CG87dEMpRB6c5aGxAZ3d25umHARpo
 id: node.page.horizontal_card_h4
 targetEntityType: node
 bundle: page
@@ -32,6 +35,7 @@ content:
     weight: 1
     region: content
 hidden:
+  body: true
   field_categories: true
   field_hero_background_pattern: true
   field_layout_canvas: true

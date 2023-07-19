@@ -18,6 +18,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: UCahbNhfpCum5pM2uPn_X3g7aFyH07QM5i40bjMFXU0
 id: node.product.card_h2
 targetEntityType: node
 bundle: product
@@ -35,8 +37,7 @@ content:
   field_teaser_text:
     type: text_default
     label: hidden
-    settings:
-      trim_options: {  }
+    settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content

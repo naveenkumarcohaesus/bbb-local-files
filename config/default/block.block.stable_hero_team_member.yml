@@ -1,0 +1,46 @@
+uuid: eb939992-78e4-4f28-9a13-87d53a824ad1
+langcode: en
+status: true
+dependencies:
+  module:
+    - cohesion
+    - collapsiblock
+    - node
+    - system
+  theme:
+    - stable
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+_core:
+  default_config_hash: CmeT4NyuRHzhOvqbip6AL9dk92_cPV5mLsgU7T-k2_s
+id: stable_hero_team_member
+theme: stable
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:6c958be3-6378-4cb3-8212-5415c920646c'
+settings:
+  id: 'block_content:6c958be3-6378-4cb3-8212-5415c920646c'
+  label: 'Hero Team Member'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      team_member: team_member

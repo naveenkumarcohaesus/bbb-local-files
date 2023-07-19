@@ -80,15 +80,15 @@ third_party_settings:
         required_fields: true
     group_fi:
       children:
-        - field_bbls_financial_variant
+        - field_rls_financial_variant
+        - field_efg_financial_variant
         - field_cbils_financial_variant
         - field_clbils_financial_variant
-        - field_efg_financial_variant
-        - field_rls_financial_variant
+        - field_bbls_financial_variant
       label: 'Financial Variants'
       region: content
       parent_name: ''
-      weight: 29
+      weight: 14
       format_type: details
       format_settings:
         classes: ''
@@ -105,7 +105,7 @@ third_party_settings:
       label: 'Personal Information'
       region: content
       parent_name: ''
-      weight: 14
+      weight: 15
       format_type: details
       format_settings:
         classes: ''
@@ -132,6 +132,8 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
+_core:
+  default_config_hash: B6Q7wYDOAbKqy1ngxewQ_rRgyA2oMsdON8ylsIM2G3s
 id: taxonomy_term.partner.default
 targetEntityType: taxonomy_term
 bundle: partner
@@ -158,24 +160,20 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_bbls_financial_variant:
-    type: entity_reference_autocomplete
-    weight: 0
+    type: options_buttons
+    weight: 19
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_bus_stages:
     type: options_buttons
-    weight: 20
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
   field_case_study_url:
     type: link_attributes
-    weight: 17
+    weight: 18
     region: content
     settings:
       placeholder_url: ''
@@ -189,40 +187,28 @@ content:
         accesskey: false
     third_party_settings: {  }
   field_cbils_financial_variant:
-    type: entity_reference_autocomplete
-    weight: 0
+    type: options_buttons
+    weight: 17
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_clbils_financial_variant:
-    type: entity_reference_autocomplete
-    weight: 0
+    type: options_buttons
+    weight: 18
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_content_areas:
     type: options_buttons
-    weight: 22
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
   field_efg_financial_variant:
-    type: entity_reference_autocomplete
-    weight: 0
+    type: options_buttons
+    weight: 16
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_email:
     type: email_default
@@ -234,7 +220,7 @@ content:
     third_party_settings: {  }
   field_exclude_from_support_finde:
     type: boolean_checkbox
-    weight: 23
+    weight: 24
     region: content
     settings:
       display_label: true
@@ -248,7 +234,7 @@ content:
     third_party_settings: {  }
   field_expertise:
     type: text_textarea
-    weight: 27
+    weight: 28
     region: content
     settings:
       rows: 5
@@ -256,13 +242,13 @@ content:
     third_party_settings: {  }
   field_finance_type:
     type: options_buttons
-    weight: 21
+    weight: 22
     region: content
     settings: {  }
     third_party_settings: {  }
   field_geofield:
     type: geofield_latlon
-    weight: 15
+    weight: 16
     region: content
     settings:
       html5_geolocation: false
@@ -276,13 +262,13 @@ content:
     third_party_settings: {  }
   field_inv_manager:
     type: options_buttons
-    weight: 24
+    weight: 25
     region: content
     settings: {  }
     third_party_settings: {  }
   field_inv_types:
     type: options_buttons
-    weight: 26
+    weight: 27
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -296,7 +282,7 @@ content:
     third_party_settings: {  }
   field_lend_schemes:
     type: options_buttons
-    weight: 18
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -315,7 +301,7 @@ content:
     third_party_settings: {  }
   field_partner_stages:
     type: options_buttons
-    weight: 25
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -334,13 +320,13 @@ content:
     third_party_settings: {  }
   field_ptnr_types:
     type: options_buttons
-    weight: 19
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
   field_quote_credit:
     type: string_textfield
-    weight: 37
+    weight: 38
     region: content
     settings:
       size: 60
@@ -348,7 +334,7 @@ content:
     third_party_settings: {  }
   field_quote_pic:
     type: media_library_widget
-    weight: 36
+    weight: 37
     region: content
     settings:
       media_types: {  }
@@ -368,14 +354,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_rls_financial_variant:
-    type: entity_reference_autocomplete
-    weight: 0
+    type: options_buttons
+    weight: 14
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_segment_ent:
     type: options_buttons
@@ -385,7 +367,7 @@ content:
     third_party_settings: {  }
   field_show_at_portfolio_module:
     type: boolean_checkbox
-    weight: 16
+    weight: 17
     region: content
     settings:
       display_label: true
@@ -404,7 +386,7 @@ content:
     third_party_settings: {  }
   field_supporting_business:
     type: string_textfield
-    weight: 28
+    weight: 29
     region: content
     settings:
       size: 60
@@ -534,13 +516,4 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-hidden:
-  field_business_stages: true
-  field_hide_on_map: true
-  field_hide_on_map_listing: true
-  field_investment_manager: true
-  field_investment_types: true
-  field_lender_schemes: true
-  field_partner_types: true
-  field_segment: true
-  field_stages: true
+hidden: {  }

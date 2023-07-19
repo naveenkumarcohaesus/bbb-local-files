@@ -1,9 +1,9 @@
-uuid: e92b2fa1-1904-40c4-a994-0629d6301140
+uuid: b376c8a0-eb09-449a-9c46-a42c73faa2f5
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: tsCSp_bQpXk0s48wXSO9H79651ov1iHSKsebVl0awwc
+  default_config_hash: yZa170ggPy_3x_FZ77sMFaDJv27VR5V5T4wRrPHBGvI
 id: text_el_7_0_0
 label: 'Greek Text Field'
 minimum_solr_version: 7.0.0
@@ -304,8 +304,10 @@ text_files:
     οτι
   synonyms: |
     drupal, durpal
-  nouns: ''
-  protwords: ''
+  nouns: |
+
+  protwords: |
+
   accents: |
     # À => A
     "\u00C0" => "A"

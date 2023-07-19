@@ -6,9 +6,12 @@ dependencies:
     - core.entity_view_mode.node.card
     - node.type.event
   module:
+    - cohesion
     - datetime
     - node
     - user
+_core:
+  default_config_hash: '-BZ9SS1A4lWTNVIdabjZg7dPjfFNksB6dPNxh6YT5WI'
 id: events
 label: Events
 module: views
@@ -239,14 +242,10 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: html_list
+        type: cohesion_layout
         options:
-          row_class: list-item
-          default_row_class: true
-          uses_fields: false
-          type: ul
-          wrapper_class: item-list-wrapper
-          class: list-container
+          views_template: view_tpl_events
+          master_template: master_template_boxed
       row:
         type: 'entity:node'
         options:

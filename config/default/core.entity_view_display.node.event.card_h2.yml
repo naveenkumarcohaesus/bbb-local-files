@@ -11,7 +11,9 @@ dependencies:
     - field.field.node.event.field_event_address
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_duration
+    - field.field.node.event.field_event_end
     - field.field.node.event.field_event_place
+    - field.field.node.event.field_event_start
     - field.field.node.event.field_external_event_link
     - field.field.node.event.field_finance_type
     - field.field.node.event.field_geofield
@@ -30,6 +32,8 @@ dependencies:
     - node.type.event
   module:
     - user
+_core:
+  default_config_hash: s-r24osi9E4c8cCtNGVPV3oL50eHiMLHb6Esa151Z1c
 id: node.event.card_h2
 targetEntityType: node
 bundle: event
@@ -43,7 +47,9 @@ hidden:
   field_event_address: true
   field_event_date: true
   field_event_duration: true
+  field_event_end: true
   field_event_place: true
+  field_event_start: true
   field_external_event_link: true
   field_finance_type: true
   field_geofield: true

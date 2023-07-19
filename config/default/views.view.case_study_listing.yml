@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
-    - core.entity_view_mode.node.mini_list
     - node.type.case_study
     - taxonomy.vocabulary.business_topic
     - taxonomy.vocabulary.finance_type
@@ -18,6 +17,8 @@ dependencies:
     - node
     - taxonomy
     - user
+_core:
+  default_config_hash: Ws9H2TkW0BNguYgZb7XJhmfPxyFSGSL9UUPwziZ5fAw
 id: case_study_listing
 label: 'Success Story Listing'
 module: views

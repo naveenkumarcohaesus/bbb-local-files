@@ -1,9 +1,9 @@
-uuid: 6457f9f3-a131-4432-89f4-ded805303f17
+uuid: a1fc45bc-b7c6-4812-a9c3-c50f5b16165f
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: lgQ-lJnqATuehJsTa54ZuDDub6zGOpHewELofSaFLS0
+  default_config_hash: N_dX3owHonWOWx5N9BEpsc5AhKveNG3w4TTozDWbQ2M
 id: text_it_6_0_0
 label: 'Italian Text Field'
 minimum_solr_version: 6.0.0
@@ -512,8 +512,10 @@ text_files:
     stando
   synonyms: |
     drupal, durpal
-  nouns: ''
-  protwords: ''
+  nouns: |
+
+  protwords: |
+
   accents: |
     # À => A
     "\u00C0" => "A"

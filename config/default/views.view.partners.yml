@@ -16,6 +16,8 @@ dependencies:
     - better_exposed_filters
     - taxonomy
     - user
+_core:
+  default_config_hash: 1I8P2YRiXE9lbrPjKMGllWmgSCZhhwsJGveJAHNOmJM
 id: partners
 label: Partners
 module: views
@@ -1126,7 +1128,6 @@ display:
                 display_inline: false
                 options_show_only_used: 0
                 options_show_only_used_filtered: 0
-                options_hide_when_empty: 0
               field_inv_types_target_id:
                 plugin_id: bef
                 advanced:
@@ -1140,7 +1141,6 @@ display:
                 display_inline: false
                 options_show_only_used: 1
                 options_show_only_used_filtered: 1
-                options_hide_when_empty: 0
               field_programme_target_id:
                 plugin_id: bef
                 advanced:
@@ -1154,7 +1154,6 @@ display:
                 display_inline: false
                 options_show_only_used: 1
                 options_show_only_used_filtered: 1
-                options_hide_when_empty: 0
               field_region_target_id:
                 plugin_id: bef
                 advanced:
@@ -1168,7 +1167,6 @@ display:
                 display_inline: false
                 options_show_only_used: 1
                 options_show_only_used_filtered: 1
-                options_hide_when_empty: 0
               field_finance_type_target_id:
                 plugin_id: bef
                 advanced:
@@ -1182,7 +1180,6 @@ display:
                 display_inline: false
                 options_show_only_used: 1
                 options_show_only_used_filtered: 1
-                options_hide_when_empty: 0
               field_partner_sector_target_id:
                 plugin_id: bef
                 advanced:
@@ -1196,7 +1193,6 @@ display:
                 display_inline: false
                 options_show_only_used: 1
                 options_show_only_used_filtered: 1
-                options_hide_when_empty: 0
               field_partner_stages_target_id:
                 plugin_id: bef
                 advanced:
@@ -1210,7 +1206,6 @@ display:
                 display_inline: false
                 options_show_only_used: 1
                 options_show_only_used_filtered: 1
-                options_hide_when_empty: 0
       empty:
         area:
           id: area
@@ -1685,17 +1680,7 @@ display:
         header: false
       css_class: coh-style-logo-list-styles
       use_ajax: true
-      header:
-        result:
-          id: result
-          table: views
-          field: result
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: result
-          empty: false
-          content: 'Showing @start - @end of @total results'
+      header: {  }
       exposed_block: false
       display_extenders:
         metatag_display_extender:

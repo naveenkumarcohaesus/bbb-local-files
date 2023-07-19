@@ -4,8 +4,8 @@ status: true
 dependencies:
   module:
     - cohesion
-    - moderation_dashboard
-    - webform
+_core:
+  default_config_hash: 2cVfvuuwvZbpwzdbG1Qs31sdXH3f4ULgexwQv3IdcSo
 id: bbb_gtm
 label: 'BBB GTM'
 weight: 0
@@ -21,7 +21,7 @@ blacklist_classes: |-
   customScripts
   customPixels
 include_environment: true
-environment_id: env-4
+environment_id: env-5
 environment_token: Nhk9yPHtLT8555pTQn3U5g
 path_toggle: 'exclude listed'
 path_list: |-
@@ -48,19 +48,3 @@ conditions:
     id: cohesion_master_template
     negate: false
     using_master_template: 0
-  has_moderated_content_type:
-    id: has_moderated_content_type
-    negate: false
-    enable: false
-  moderation_dashboard_access:
-    id: moderation_dashboard_access
-    negate: false
-    context_mapping:
-      dashboard_user: '@user.current_user_context:current_user'
-      current_user: '@user.current_user_context:current_user'
-    enable: false
-  webform:
-    id: webform
-    negate: false
-    context_mapping: {  }
-    webforms: {  }

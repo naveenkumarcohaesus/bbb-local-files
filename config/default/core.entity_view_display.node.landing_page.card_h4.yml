@@ -13,6 +13,8 @@ dependencies:
     - cohesion_elements
     - metatag
     - user
+_core:
+  default_config_hash: SAjyiuDi4aDMYPH00iaL6ShQwceHoXD0ua-roatBjyA
 id: node.landing_page.card_h4
 targetEntityType: node
 bundle: landing_page
@@ -49,5 +51,6 @@ content:
     region: content
 hidden:
   field_teaser_text: true
+  footnotes_group: true
   langcode: true
   search_api_excerpt: true

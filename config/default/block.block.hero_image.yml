@@ -2,10 +2,7 @@ uuid: f3ae6f01-fb9f-4730-b7e7-ad80b69967c7
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:custom_layout_canvas_block:c6b71eeb-f22e-465b-bf42-c3762fc85fb2'
   module:
-    - block_content
     - cohesion
     - collapsiblock
     - node
@@ -20,7 +17,7 @@ _core:
 id: hero_image
 theme: bbb_site_studio
 region: content
-weight: -10
+weight: 2
 provider: null
 plugin: 'block_content:c6b71eeb-f22e-465b-bf42-c3762fc85fb2'
 settings:

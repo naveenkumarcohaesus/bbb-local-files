@@ -1,9 +1,10 @@
-uuid: 07341b8a-6854-4bf9-99ac-60274f48da26
+uuid: 7fe250d3-f60e-45be-9571-badbe09fea27
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.place.body
     - field.field.node.place.field_categories
     - field.field.node.place.field_geofield
     - field.field.node.place.field_metatags
@@ -15,31 +16,43 @@ dependencies:
     - node.type.place
   module:
     - address
+    - smart_trim
     - user
   enforced:
     module:
       - acquia_cms_place
 _core:
-  default_config_hash: 6gstm-J6ZaL4HI4c4J-y4nGJP4geRekOqXxwFPRMxhA
+  default_config_hash: OXlZMyisEd4f31qdgzEAFv7iCGRK7zyXLP3Af0YyYuA
 id: node.place.teaser
 targetEntityType: node
 bundle: place
 mode: teaser
 content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 128
+      trim_type: chars
+      trim_suffix: ..
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: trim
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_place_address:
     type: address_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2
-    region: content
-  field_place_telephone:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 3
     region: content
   field_place_image:
     type: entity_reference_entity_view
@@ -50,6 +63,14 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_place_telephone:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
 hidden:
   content_moderation_control: true
   field_categories: true
@@ -57,6 +78,7 @@ hidden:
   field_metatags: true
   field_place_type: true
   field_tags: true
+  footnotes_group: true
   langcode: true
   links: true
   search_api_excerpt: true

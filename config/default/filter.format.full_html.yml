@@ -1,4 +1,4 @@
-uuid: dceba340-c870-4f38-9cc2-4ca669f82ec3
+uuid: 2024f2b0-48c9-4e44-985b-8a10185bfb9d
 langcode: en
 status: true
 dependencies:
@@ -10,6 +10,8 @@ dependencies:
     - editor
     - footnotes
     - media
+_core:
+  default_config_hash: px_kWOJDA7lGhd6bpUE13TZfGg7VB3H87-SOAa0STPg
 name: 'Full HTML'
 format: full_html
 weight: -9
@@ -83,6 +85,12 @@ filters:
     status: false
     weight: -40
     settings: {  }
+  heading_id_filter:
+    id: heading_id_filter
+    provider: bbb_on_this_page
+    status: true
+    weight: 10
+    settings: {  }
   filter_footnotes:
     id: filter_footnotes
     provider: footnotes
@@ -92,9 +100,3 @@ filters:
       footnotes_collapse: '0'
       footnotes_html: '1'
       footnotes_footer_disable: '1'
-  heading_id_filter:
-    id: heading_id_filter
-    provider: bbb_on_this_page
-    status: true
-    weight: 10
-    settings: {  }

@@ -1,18 +1,22 @@
+uuid: b80146f0-dee1-4ce3-bb0e-4ee665f8c546
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full
     - field.field.media.image.field_categories
+    - field.field.media.image.field_image_type
     - field.field.media.image.field_tags
     - field.field.media.image.image
     - image.style.coh_x_large
     - media.type.image
   module:
-    - image
+    - svg_image
   enforced:
     module:
       - acquia_cms_image
+_core:
+  default_config_hash: e8AyiUFgLnSbkKsAcvyDX-ySY8K0McRIrfogqfA9rvo
 id: media.image.full
 targetEntityType: media
 bundle: image
@@ -32,6 +36,7 @@ content:
 hidden:
   created: true
   field_categories: true
+  field_image_type: true
   field_tags: true
   langcode: true
   name: true

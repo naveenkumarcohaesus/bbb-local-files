@@ -1,0 +1,31 @@
+uuid: 731cb65d-a8f9-4df4-ad85-aea000250d48
+langcode: en
+status: true
+dependencies:
+  module:
+    - bbb_regional_support
+    - cohesion
+    - collapsiblock
+  theme:
+    - stable
+third_party_settings:
+  collapsiblock:
+    collapse_action: 1
+_core:
+  default_config_hash: IvCdJvggIAbEiVYPRPK3usXSmbByg5MerOSgUP7LMHE
+id: stable_regionalsupportblock
+theme: stable
+region: sidebar_first
+weight: 0
+provider: null
+plugin: regional_support
+settings:
+  id: regional_support
+  label: 'Regional Support Block'
+  label_display: '0'
+  provider: bbb_regional_support
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0

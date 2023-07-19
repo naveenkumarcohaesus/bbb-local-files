@@ -1,0 +1,35 @@
+uuid: 3af749b1-fcfa-4d21-9eb7-97bb401d801c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - cohesion
+    - collapsiblock
+    - views
+  theme:
+    - stable
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+_core:
+  default_config_hash: YZO-cdh2137DrmNn0EBvFb-3n2NEqSn6qg4AMshTW1Y
+id: stable_views_block_news_list_block
+theme: stable
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:news-news_list_block'
+settings:
+  id: 'views_block:news-news_list_block'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0

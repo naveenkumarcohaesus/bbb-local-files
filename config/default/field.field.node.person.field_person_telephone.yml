@@ -1,18 +1,14 @@
-uuid: 5867c19b-45c3-4f51-8c19-eb225e4993d7
+uuid: 05fc439b-6533-4a90-8c71-fb4e36bb335c
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_person_telephone
     - node.type.person
-    - field.storage.node.field_person_telephone
-    - node.type.person
   module:
-    - telephone
     - telephone
   enforced:
     module:
-      - acquia_cms_person
       - acquia_cms_person
 _core:
   default_config_hash: AFUW8NLPfJlYr4-6j1P7VvYLn1QRRhkpy5D6-Fl6cVU

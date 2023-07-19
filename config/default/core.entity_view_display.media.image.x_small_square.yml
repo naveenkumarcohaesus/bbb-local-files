@@ -1,18 +1,22 @@
+uuid: 8b1acee3-9a9e-44a6-b336-5f6ea3869792
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.x_small_square
     - field.field.media.image.field_categories
+    - field.field.media.image.field_image_type
     - field.field.media.image.field_tags
     - field.field.media.image.image
     - image.style.x_small_square
     - media.type.image
   module:
-    - image
+    - svg_image
   enforced:
     module:
       - acquia_cms_image
+_core:
+  default_config_hash: rjPWfqqNCeHSXU8DDdiMlH22xFhQcWzifNR1jFjpsxY
 id: media.image.x_small_square
 targetEntityType: media
 bundle: image
@@ -32,6 +36,7 @@ content:
 hidden:
   created: true
   field_categories: true
+  field_image_type: true
   field_tags: true
   langcode: true
   name: true

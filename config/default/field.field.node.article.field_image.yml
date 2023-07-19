@@ -1,10 +1,9 @@
-uuid: a1a034e2-7e75-4bf2-a581-53b5df5305aa
+uuid: e74375a1-5b5a-4955-ba58-531cdc50c9e9
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_image
-    - media.type.image
     - node.type.article
 _core:
   default_config_hash: MTmg310r6koFJ6dTGNt3eMSKC5vp5izN-bUOEPo0cCk
@@ -27,5 +26,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: image
+    auto_create_bundle: ''
 field_type: entity_reference

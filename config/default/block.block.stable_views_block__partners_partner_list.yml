@@ -1,0 +1,36 @@
+uuid: 50f0a42b-2d9b-44ef-ad12-f32145304a04
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.partners
+  module:
+    - cohesion
+    - collapsiblock
+    - views
+  theme:
+    - stable
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+_core:
+  default_config_hash: hCe0LmEojFpUw-JXTwGDfKO_AENiKI6eOYD1Vm_yqOM
+id: stable_views_block__partners_partner_list
+theme: stable
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:partners-partner_list'
+settings:
+  id: 'views_block:partners-partner_list'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0

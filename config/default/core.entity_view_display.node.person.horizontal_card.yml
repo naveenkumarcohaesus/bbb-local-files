@@ -1,15 +1,15 @@
-uuid: ab9ab3b9-32c7-4ced-ab7a-66f267489df6
+uuid: e1ae41ec-5b44-4b63-9370-69e9d7ab4ee4
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.horizontal_card
+    - field.field.node.person.body
     - field.field.node.person.field_categories
     - field.field.node.person.field_email
     - field.field.node.person.field_job_title
     - field.field.node.person.field_metatags
     - field.field.node.person.field_person_image
-    - field.field.node.person.field_person_mobile
     - field.field.node.person.field_person_telephone
     - field.field.node.person.field_person_type
     - field.field.node.person.field_place
@@ -17,18 +17,25 @@ dependencies:
     - node.type.person
   module:
     - telephone
+    - text
     - user
   enforced:
     module:
       - acquia_cms_person
-      - acquia_cms_person
 _core:
-  default_config_hash: OTLRuBcU1MV7Ecg_wsvnYABCcj-o-LeJAh7g8VvlKPw
+  default_config_hash: RdNkrHFSbzkM1IvN2L6IcX421lxMXvgV1hCq4GAe-o4
 id: node.person.horizontal_card
 targetEntityType: node
 bundle: person
 mode: horizontal_card
 content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
@@ -54,7 +61,7 @@ content:
     label: hidden
     settings:
       view_mode: x_small_square
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 2
     region: content
@@ -90,7 +97,7 @@ content:
 hidden:
   field_categories: true
   field_metatags: true
-  field_person_mobile: true
   field_tags: true
+  footnotes_group: true
   langcode: true
   search_api_excerpt: true

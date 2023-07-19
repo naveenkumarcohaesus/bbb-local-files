@@ -1,17 +1,19 @@
-uuid: eb932679-00fa-40a9-a28b-d7f19a49ea50
+uuid: 7bf74bdd-e960-45d1-bcd4-9ffc4d2751f9
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - focal_point
 _core:
-  default_config_hash: aPUcttIMz8StUL9prt7DtFgqg_moz07X6T1_doRwPj8
+  default_config_hash: 6p-25j6cHQXXhdVwxJwoSpB9qakA8jsv_8852w8ksPs
 name: card_w384_h326
 label: 'Card W384 H326'
 effects:
-  935e17e8-b7bf-40f3-a798-fe35bcbfdeaf:
-    uuid: 935e17e8-b7bf-40f3-a798-fe35bcbfdeaf
-    id: image_scale_and_crop
-    weight: 0
+  9f4964e6-4390-460b-b64e-17eb00dd3f56:
+    uuid: 9f4964e6-4390-460b-b64e-17eb00dd3f56
+    id: focal_point_scale_and_crop
+    weight: 2
     data:
       width: 384
       height: 326
-      anchor: center-center
+      crop_type: focal_point

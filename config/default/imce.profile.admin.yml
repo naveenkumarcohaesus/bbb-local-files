@@ -1,4 +1,4 @@
-uuid: 31b12d8b-eb55-40d4-81a0-6863b4c00595
+uuid: 876e00d1-c337-40d1-a4a7-20ecf90c6854
 langcode: en
 status: true
 dependencies: {  }
@@ -10,8 +10,8 @@ description: 'Configuration for site administrators'
 conf:
   usertab: false
   extensions: '*'
-  maxsize: !!float 0
-  quota: !!float 0
+  maxsize: 0
+  quota: 0
   maxwidth: 0
   maxheight: 0
   replace: 0
@@ -23,6 +23,3 @@ conf:
       path: .
       permissions:
         all: true
-    -
-      path: cohesion
-      permissions: {  }

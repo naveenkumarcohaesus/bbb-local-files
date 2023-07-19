@@ -10,7 +10,9 @@ dependencies:
     - field.field.node.event.field_event_address
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_duration
+    - field.field.node.event.field_event_end
     - field.field.node.event.field_event_place
+    - field.field.node.event.field_event_start
     - field.field.node.event.field_external_event_link
     - field.field.node.event.field_finance_type
     - field.field.node.event.field_geofield
@@ -29,7 +31,6 @@ dependencies:
     - node.type.event
   module:
     - cohesion_elements
-    - content_moderation
     - datetime_range
     - field_group
     - geofield
@@ -117,6 +118,8 @@ third_party_settings:
         open: true
         description: ''
         required_fields: true
+_core:
+  default_config_hash: Xg5etNPZFI8WE_NRlcFFjLJ9vvJJGmfnUecWAWIsQaY
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -418,4 +421,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_event_end: true
+  field_event_start: true

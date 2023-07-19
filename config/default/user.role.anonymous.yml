@@ -1,18 +1,17 @@
-uuid: 3cf0b375-a28d-4838-afe0-c247047af70c
+uuid: 721b6a65-71f5-4b5a-9589-0345ef23c665
 langcode: en
 status: true
 dependencies:
   module:
     - media
-    - media_entity_download
-    - search_api_autocomplete
     - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
 label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
   - 'access content'
-  - 'download media'
   - 'use search_api_autocomplete for search'
   - 'view media'

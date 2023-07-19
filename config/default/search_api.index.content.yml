@@ -1,17 +1,18 @@
-uuid: 6e3d0aaa-1bd3-4faa-8c9a-b649460d5833
+uuid: 7044e494-208e-435c-b581-69dc6b9e4594
 langcode: en
-status: false
+status: true
 dependencies:
   config:
+    - field.storage.node.body
     - field.storage.node.field_categories
     - field.storage.node.field_email
-    - field.storage.node.field_job_title
     - field.storage.node.field_person_telephone
     - field.storage.node.field_person_type
     - field.storage.node.field_place_address
     - field.storage.node.field_place_telephone
     - field.storage.node.field_place_type
-    - search_api.server.acquia_search_server
+    - field.storage.node.field_job_title
+    - search_api.server.database
     - core.entity_view_mode.node.search_index
   module:
     - node
@@ -28,6 +29,14 @@ name: Content
 description: 'An index of all content in your site.'
 read_only: false
 field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
   created:
     label: 'Created time'
     datasource_id: 'entity:node'
@@ -162,7 +171,7 @@ field_settings:
     boost: !!float 0
     configuration:
       roles:
-        anonymous: anonymous
+        - anonymous
       view_mode:
         'entity:node':
           person: search_index
@@ -206,6 +215,7 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
   content_access:
     weights:
       preprocess_query: -10
@@ -230,6 +240,7 @@ processor_settings:
       preprocess_query: -8
     all_fields: true
     fields:
+      - body
       - field_categories_name
       - field_email
       - field_job_title
@@ -313,8 +324,4 @@ options:
   cron_limit: 50
   index_directly: true
   track_changes_in_references: true
-server: acquia_search_server
-third_party_settings:
-  search_api_solr:
-    multilingual:
-      specific_languages: {  }
+server: database

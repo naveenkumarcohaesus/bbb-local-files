@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.finance_type.field_finance_type
     - field.field.node.finance_type.field_layout_canvas
+    - field.field.node.finance_type.field_metatags
     - field.field.node.finance_type.field_quick_links
     - field.field.node.finance_type.field_teaser_text
     - node.type.finance_type
@@ -34,6 +35,7 @@ content:
     region: content
 hidden:
   field_finance_type: true
+  field_metatags: true
   field_quick_links: true
   field_teaser_text: true
   footnotes_group: true

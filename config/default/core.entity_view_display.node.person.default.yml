@@ -1,14 +1,14 @@
-uuid: a12aee2b-0801-4d8c-91bb-dc93316fd670
+uuid: 5be4e3e7-f25b-4151-ba9a-a78a70b718f6
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.person.body
     - field.field.node.person.field_categories
     - field.field.node.person.field_email
     - field.field.node.person.field_job_title
     - field.field.node.person.field_metatags
     - field.field.node.person.field_person_image
-    - field.field.node.person.field_person_mobile
     - field.field.node.person.field_person_telephone
     - field.field.node.person.field_person_type
     - field.field.node.person.field_place
@@ -16,18 +16,25 @@ dependencies:
     - node.type.person
   module:
     - telephone
+    - text
     - user
   enforced:
     module:
       - acquia_cms_person
-      - acquia_cms_person
 _core:
-  default_config_hash: avcm3TIYUIRtJb8FGIM_0sn5WdWfiYJ704XLxwRc5iM
+  default_config_hash: jm154B0luyYiNHlAdpgqkXUT491hT2HOhGkXh8W3ECY
 id: node.person.default
 targetEntityType: node
 bundle: person
 mode: default
 content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
@@ -53,16 +60,9 @@ content:
     label: hidden
     settings:
       view_mode: x_small_square
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 2
-    region: content
-  field_person_mobile:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 9
     region: content
   field_person_telephone:
     type: telephone_link
@@ -97,5 +97,6 @@ hidden:
   field_categories: true
   field_metatags: true
   field_tags: true
+  footnotes_group: true
   langcode: true
   search_api_excerpt: true

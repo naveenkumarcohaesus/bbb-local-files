@@ -21,7 +21,7 @@ dependencies:
     - node.type.team_member
     - workflows.workflow.editorial
   module:
-    - bbb_roles_permissions
+    - acquia_cms_tour
     - cohesion
     - cohesion_elements
     - content_moderation
@@ -34,7 +34,6 @@ dependencies:
     - moderation_sidebar
     - node
     - scheduler
-    - sitestudio_page_builder
     - system
     - toolbar
 id: content_editor
@@ -42,6 +41,7 @@ label: 'Content Editor'
 weight: -5
 is_admin: null
 permissions:
+  - 'access acquia cms tour'
   - 'access animate on view'
   - 'access component builder elements group'
   - 'access component content'
@@ -54,11 +54,16 @@ permissions:
   - 'access cpt_cat_card_components cohesion_component_category group'
   - 'access cpt_cat_dynamic_components cohesion_component_category group'
   - 'access cpt_cat_feature_sections cohesion_component_category group'
+  - 'access cpt_cat_general_components cohesion_component_category group'
+  - 'access cpt_cat_hero_components cohesion_component_category group'
+  - 'access cpt_cat_interactive_components cohesion_component_category group'
   - 'access cpt_cat_layout_components cohesion_component_category group'
   - 'access cpt_cat_map_components cohesion_component_category group'
+  - 'access cpt_cat_media_components cohesion_component_category group'
   - 'access cpt_cat_read_more_components cohesion_component_category group'
   - 'access cpt_cat_slider_components cohesion_component_category group'
   - 'access cpt_cat_tab_components cohesion_component_category group'
+  - 'access cpt_cat_template_components cohesion_component_category group'
   - 'access custom elements group'
   - 'access drupal core elements group'
   - 'access elements'
@@ -68,6 +73,8 @@ permissions:
   - 'access form layout fields group'
   - 'access helpers'
   - 'access hlp_cat_dynamic_helpers cohesion_helper_category group'
+  - 'access hlp_cat_general_helpers cohesion_helper_category group'
+  - 'access hlp_cat_interactive_helpers cohesion_helper_category group'
   - 'access hlp_cat_layout_helpers cohesion_helper_category group'
   - 'access hlp_cat_media_helpers cohesion_helper_category group'
   - 'access interactive elements group'
@@ -77,7 +84,6 @@ permissions:
   - 'access menu elements group'
   - 'access toolbar'
   - 'access view elements group'
-  - 'access visual page builder'
   - 'administer component content'
   - 'administer themes'
   - 'clone node entity'

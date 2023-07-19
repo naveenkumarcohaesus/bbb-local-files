@@ -1,9 +1,10 @@
-uuid: 637e0b34-24d5-41f8-b81e-cd1611e70d9c
+uuid: f51fefdd-c1d6-4a66-9297-6f28a7bbbb27
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.places
+    - field.field.node.place.body
     - field.field.node.place.field_categories
     - field.field.node.place.field_geofield
     - field.field.node.place.field_metatags
@@ -20,7 +21,7 @@ dependencies:
     module:
       - acquia_cms_place
 _core:
-  default_config_hash: ythyzQt3BVpcXneucybp2Ude7_YeTouz0WufjjdeTyU
+  default_config_hash: LCpHnw7v7eVSMr4n6PxPOFOivo1ptI9RVoQ6DhYfmZc
 id: node.place.places
 targetEntityType: node
 bundle: place
@@ -42,6 +43,7 @@ content:
     weight: 1
     region: content
 hidden:
+  body: true
   content_moderation_control: true
   field_categories: true
   field_geofield: true
@@ -49,6 +51,7 @@ hidden:
   field_place_image: true
   field_place_type: true
   field_tags: true
+  footnotes_group: true
   langcode: true
   links: true
   search_api_excerpt: true

@@ -1,0 +1,33 @@
+uuid: d02d352d-d7d1-41b1-a803-3e555073b97b
+langcode: en
+status: false
+dependencies:
+  module:
+    - cohesion
+    - collapsiblock
+  theme:
+    - stable
+third_party_settings:
+  collapsiblock:
+    collapse_action: 0
+_core:
+  default_config_hash: i7JKBsHz8hw7ZvoEFbyd9ff12h1LXF93Mev4FNM6Jek
+id: stable_alertbanner
+theme: stable
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:75a69cf5-10e8-4913-a533-cf5df70cfbe0'
+settings:
+  id: 'block_content:75a69cf5-10e8-4913-a533-cf5df70cfbe0'
+  label: 'Alert Banner'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  cohesion_master_template:
+    id: cohesion_master_template
+    negate: false
+    using_master_template: 0

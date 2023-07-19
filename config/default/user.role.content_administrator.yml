@@ -1,16 +1,14 @@
-uuid: 4c9dcd35-ca18-4a56-a135-7ea38a9ff3db
+uuid: 15ce5781-1a6b-4418-a60b-f1dad4274623
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.cohesion
     - filter.format.filtered_html
-    - filter.format.full_html
     - workflows.workflow.editorial
   module:
     - acquia_cms_tour
     - cohesion
-    - cohesion_elements
     - content_moderation
     - entity_clone
     - filter
@@ -25,11 +23,13 @@ dependencies:
     - toolbar
 id: content_administrator
 label: 'Content Administrator'
-weight: -7
+weight: 0
 is_admin: null
 permissions:
+  - 'access accordion_sections cohesion_helper_category group'
   - 'access acquia cms tour dashboard'
   - 'access animate on view'
+  - 'access card_sections cohesion_helper_category group'
   - 'access component builder elements group'
   - 'access component content'
   - 'access components'
@@ -66,6 +66,7 @@ permissions:
   - 'access media elements group'
   - 'access media overview'
   - 'access menu elements group'
+  - 'access tabbed_sections cohesion_helper_category group'
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access view elements group'
@@ -74,7 +75,6 @@ permissions:
   - 'administer moderation sidebar'
   - 'administer nodes'
   - 'administer taxonomy'
-  - 'administer themes'
   - 'bypass node access'
   - 'clone node entity'
   - 'schedule publishing of nodes'

@@ -5,11 +5,16 @@ dependencies:
   config:
     - core.entity_view_mode.node.card
     - field.field.node.team_member.field_designation
+    - field.field.node.team_member.field_image
+    - field.field.node.team_member.field_layout_canvas
+    - field.field.node.team_member.field_metatags
     - field.field.node.team_member.field_team_member_group
     - field.field.node.team_member.field_teaser_text
     - node.type.team_member
   module:
     - user
+_core:
+  default_config_hash: SAhDAupNCRf9d0ZAAtEEiZfUHIiyo1cPoCJ0eFoW8lA
 id: node.team_member.card
 targetEntityType: node
 bundle: team_member
@@ -36,6 +41,7 @@ hidden:
   field_layout_canvas: true
   field_metatags: true
   field_teaser_text: true
+  footnotes_group: true
   langcode: true
   links: true
   search_api_excerpt: true

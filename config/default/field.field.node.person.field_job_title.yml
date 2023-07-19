@@ -1,15 +1,12 @@
-uuid: fcc022c4-92e7-409c-ae22-31b4bfa54a05
+uuid: a0242d81-ca6f-4ae8-80d3-6511c2ad5d18
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_job_title
     - node.type.person
-    - field.storage.node.field_job_title
-    - node.type.person
   enforced:
     module:
-      - acquia_cms_person
       - acquia_cms_person
 _core:
   default_config_hash: RZzmXcDWOHSllunpcSfn8tgzcezub6KACuEEJf5KvZs

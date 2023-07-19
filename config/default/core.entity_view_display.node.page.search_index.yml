@@ -1,9 +1,10 @@
-uuid: c44eac3a-c3d7-4f94-96ad-39e1baa08d8c
+uuid: 55c55ea1-eb2e-4fc8-9613-ca2b3247fd8a
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_index
+    - field.field.node.page.body
     - field.field.node.page.field_categories
     - field.field.node.page.field_hero_background_pattern
     - field.field.node.page.field_layout_canvas
@@ -17,7 +18,7 @@ dependencies:
     module:
       - acquia_cms_page
 _core:
-  default_config_hash: jSksHCuiWhNiroYQTFHYjw38_1doehgKMKjz5OHKqOo
+  default_config_hash: dAYJXBA3oXDFB5kkW35WKLxA2qk_Rd4_yEr2FpzXjQ0
 id: node.page.search_index
 targetEntityType: node
 bundle: page
@@ -34,6 +35,7 @@ content:
     weight: 1
     region: content
 hidden:
+  body: true
   field_categories: true
   field_hero_background_pattern: true
   field_layout_canvas: true

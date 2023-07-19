@@ -10,7 +10,9 @@ dependencies:
     - field.field.node.event.field_event_address
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_duration
+    - field.field.node.event.field_event_end
     - field.field.node.event.field_event_place
+    - field.field.node.event.field_event_start
     - field.field.node.event.field_external_event_link
     - field.field.node.event.field_finance_type
     - field.field.node.event.field_geofield
@@ -33,6 +35,8 @@ dependencies:
     - geofield
     - link
     - user
+_core:
+  default_config_hash: djVAwukxygtivKijeT-aGZGJ6kixe9P61ieAPchsihw
 id: node.event.default
 targetEntityType: node
 bundle: event

@@ -1,9 +1,9 @@
-uuid: 5b8c4c64-45eb-4dae-aca8-633be5524cdd
+uuid: 0e455473-9717-42ba-b844-37e48ea29bba
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: W2u_-2YpJ1ji0DccS3gh5vGJUO48tKA947_eKe67d1A
+  default_config_hash: mIrzTeCHA4iuCJbo2MUcwPOoshcBhJuB0FJSQ0ljst8
 id: text_pl_7_0_0
 label: 'Polish Text Field'
 minimum_solr_version: 7.0.0
@@ -387,8 +387,10 @@ text_files:
     że
   synonyms: |
     drupal, durpal
-  nouns: ''
-  protwords: ''
+  nouns: |
+
+  protwords: |
+
   accents: |
     # À => A
     "\u00C0" => "A"

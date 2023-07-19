@@ -52,6 +52,8 @@ dependencies:
   enforced:
     module:
       - bbb_partner
+_core:
+  default_config_hash: aY_Ovrvo07dvfSaeIJ3j6FHOLcM-hrV4WANCYLOILXc
 id: taxonomy_term.partner.notes_to_editor
 targetEntityType: taxonomy_term
 bundle: partner
@@ -69,7 +71,6 @@ hidden:
   field_amount_of_finance_needed: true
   field_bbls_financial_variant: true
   field_bus_stages: true
-  field_business_stages: true
   field_case_study_url: true
   field_cbils_financial_variant: true
   field_clbils_financial_variant: true
@@ -81,20 +82,14 @@ hidden:
   field_expertise: true
   field_finance_type: true
   field_geofield: true
-  field_hide_on_map: true
-  field_hide_on_map_listing: true
   field_include_quote_section: true
   field_inv_manager: true
   field_inv_types: true
-  field_investment_manager: true
   field_investment_range: true
-  field_investment_types: true
   field_lend_schemes: true
-  field_lender_schemes: true
   field_logo: true
   field_partner_sector: true
   field_partner_stages: true
-  field_partner_types: true
   field_phone: true
   field_programme: true
   field_ptnr_types: true
@@ -103,12 +98,10 @@ hidden:
   field_quote_text: true
   field_region: true
   field_rls_financial_variant: true
-  field_segment: true
   field_segment_ent: true
   field_show_at_portfolio_module: true
   field_show_on_regional_support: true
   field_show_on_website: true
-  field_stages: true
   field_supporting_business: true
   field_type_funding: true
   field_website_link: true

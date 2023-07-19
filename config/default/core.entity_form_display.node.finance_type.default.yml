@@ -5,18 +5,19 @@ dependencies:
   config:
     - field.field.node.finance_type.field_finance_type
     - field.field.node.finance_type.field_layout_canvas
+    - field.field.node.finance_type.field_metatags
     - field.field.node.finance_type.field_quick_links
     - field.field.node.finance_type.field_teaser_text
     - node.type.finance_type
   module:
     - cohesion_elements
-    - content_moderation
     - link
+    - metatag
     - path
     - scheduler
     - scheduler_content_moderation_integration
 _core:
-  default_config_hash: vObHt0TChBTtVCoS0mRsG4dxTYShgVPbljqZ_xbmNpk
+  default_config_hash: YEiNnOWRjnrvH2Ui1yrU41QDKlzTc5QgrHCArlxdLLM
 id: node.finance_type.default
 targetEntityType: node
 bundle: finance_type
